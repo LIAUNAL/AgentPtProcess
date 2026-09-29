@@ -23,6 +23,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      # /atenea/ publica el mismo deck: copia de index.html con <base href="../">
+      # para que las rutas relativas (assets/...) resuelvan desde la raíz.
+      - name: Build /atenea/ alias
+        run: |
+          mkdir -p atenea
+          sed 's#<head>#<head>\n    <base href="../" />#' index.html > atenea/index.html
+          grep -q '<base href="../" />' atenea/index.html
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
