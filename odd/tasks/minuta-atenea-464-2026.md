@@ -105,3 +105,17 @@ Sin commits: commit y push quedan a decisión del usuario (convención vigente d
 - Defecto detectado y corregido: el eje vertical del Gantt se dibujaba antes de las bandas alternas y
   quedaba tapado; reordenado (bandas → eje).
 - Capturas: `/tmp` (3 slides del módulo Minuta + verificación de orden de bandas).
+
+### 3.3 Entrega
+
+- Commit único de contenido: **`f53b6e2`** — `feat(deck): add ATENEA-464-2026 contract context slides and technical summary`
+  (5 archivos, 763 inserciones, 48 borrados).
+- Rama **`slides-admin`** publicada en `origin` con upstream configurado:
+  `local slides-admin == origin/slides-admin == f53b6e2`.
+- **Sin merge a `main`** (verificado con `git merge-base --is-ancestor slides-admin main` → falso;
+  `main` y `origin/main` siguen en `4d23022`).
+- El workflow `Deploy to GitHub Pages` solo dispara con push a `main`, y no se registró ningún run:
+  el push no desplegó nada.
+- Verificación local posterior al commit (servidor `:8017`, recarga sin caché): 44 slides,
+  `railOrderMatchesSlides = true`, 0 desbordes en las 44 slides, desborde de `body` = 0px.
+- Estado final del árbol de trabajo: limpio.
