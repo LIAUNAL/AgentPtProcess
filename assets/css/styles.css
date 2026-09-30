@@ -569,6 +569,17 @@ abbr[title] {
   grid-template-columns: minmax(200px, 30%) minmax(0, 1fr);
 }
 
+/* Slides cuyo diagrama ocupa todo el lienzo, sin columna de texto */
+.slide.is-figure-full {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  align-items: stretch;
+}
+
+.slide.is-figure-full .slide-figure {
+  height: 100%;
+}
+
 .deck-controls {
   display: flex;
   min-width: 0;

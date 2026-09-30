@@ -91,6 +91,14 @@ Sin commits: commit y push quedan a decisión del usuario (convención vigente d
 - [x] T15 — Documentar en `docs/minuta-atenea-464-2026.md` §9.2 la correspondencia actividad → componente
       y marcarla explícitamente como **derivada** (no está publicada en ninguna fuente)
 
+### Ronda 4 — cronograma a pantalla completa
+
+- [x] T16 — Slide 4: eliminar la columna de texto y pasar la slide a `is-figure-full` (diagrama a todo el lienzo)
+- [x] T17 — Rediseñar el SVG a `1200×736`: **actividades a la izquierda**, timeline de 5 meses al centro
+      (con HITO 1 en M1–M3 y HITO 2 en M4–M5) y **entregables a la derecha**
+- [x] T18 — Regla CSS `.slide.is-figure-full` + bump del `?v=` de `styles.css` para invalidar caché
+- [x] T19 — Verificar en navegador (desktop 1440×900 y móvil 390×844)
+
 ---
 
 ## 3. Evidencia
@@ -174,3 +182,24 @@ Sin commits: commit y push quedan a decisión del usuario (convención vigente d
   `viewBox`; **0 colisiones** entre la columna `Producto` y la columna `Componente` (comprobadas por
   `getBBox` fila a fila); 12 códigos E y 12 códigos C leídos en orden correcto; **0 desbordes** de
   contenido en las 44 slides; desborde de `body` = 0px; balance `svg` 38/38 y `text` 723/723.
+
+### 3.6 Ronda 4 — layout a pantalla completa
+
+- La slide 4 pasó de `slide is-figure-wide` a **`slide is-figure-full`** y perdió su `<div
+  class="slide-content">` (21 líneas). El diagrama ocupa **99 % del ancho y 98 % del alto** de la slide.
+- SVG reescrito a `1200×736`: columna izquierda de actividades (con prefijo **C**), columna derecha de
+  entregables (con prefijo **E**), columna intermedia `E` con el producto asociado de cada actividad, y
+  timeline central de 5 columnas de mes (`x=300…900`, 120 por mes) con los dos sombreados de hito.
+- CSS nuevo (`.slide.is-figure-full`): `grid-template-columns: minmax(0,1fr)`,
+  `grid-template-rows: minmax(0,1fr)` y `align-items: stretch`, con `.slide-figure { height: 100% }`.
+  La especificidad `0,2,0` gana a la regla base `.slide` (`0,1,0`) **incluso dentro de los media
+  queries**, porque `grid-template-rows` y `align-items` también están fijados en la regla nueva.
+- **Falso negativo detectado y resuelto:** el CSS servido no se aplicaba porque el navegador reutilizó la
+  caché con el `?v=20260929_1730` sin cambios. Se subió a `?v=20260929_2204` (convención del repo) y se
+  recargó sin caché. Lección: cualquier cambio en `styles.css` requiere bumpear el `?v=` del `<link>`.
+- **Verificación final (Chromium, viewport 1440×900, servidor `:8017`):** 44 slides; **0 desbordes**;
+  **0 elementos SVG** fuera del `viewBox` en las 38 SVGs del deck; desborde de `body` = 0px;
+  margen lateral del contenido dibujado ≈ 62 px sobre 5668 px (prácticamente full-bleed).
+- **Móvil (390×844):** sin cambios respecto al comportamiento previo — en el media query la slide ya era
+  de una columna, así que el ancho del diagrama es el mismo (~352 px) que antes. No es regresión, pero
+  un Gantt de este tamaño es ilegible en un teléfono; pendiente ofrecido al usuario (scroll horizontal).

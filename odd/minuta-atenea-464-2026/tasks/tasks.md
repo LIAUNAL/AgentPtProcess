@@ -27,3 +27,11 @@ Espejo de `odd/tasks/minuta-atenea-464-2026.md` sección 2 (copia visible en Eng
 - [x] T14 — Leyenda de columnas al pie del diagrama y `aria-label` ampliado con la correspondencia
 - [x] T15 — Documentar en `docs/minuta-atenea-464-2026.md` §9.2 la correspondencia actividad → componente
       y marcarla explícitamente como **derivada** (no está publicada en ninguna fuente)
+
+## Ronda 4 — cronograma a pantalla completa
+
+- [x] T16 — Slide 4: eliminar la columna de texto y pasar la slide a `is-figure-full` (diagrama a todo el lienzo)
+- [x] T17 — Rediseñar el SVG a `1200×736`: **actividades a la izquierda**, timeline de 5 meses al centro
+      (con HITO 1 en M1–M3 y HITO 2 en M4–M5) y **entregables a la derecha**
+- [x] T18 — Regla CSS `.slide.is-figure-full` + bump del `?v=` de `styles.css` para invalidar caché
+- [x] T19 — Verificar en navegador (desktop 1440×900 y móvil 390×844)
