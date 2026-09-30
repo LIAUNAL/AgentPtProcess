@@ -99,6 +99,12 @@ Sin commits: commit y push quedan a decisión del usuario (convención vigente d
 - [x] T18 — Regla CSS `.slide.is-figure-full` + bump del `?v=` de `styles.css` para invalidar caché
 - [x] T19 — Verificar en navegador (desktop 1440×900 y móvil 390×844)
 
+### Ronda 5 — quitar el resalte de las siglas y revisión ortográfica
+
+- [x] T20 — Quitar el subrayado punteado de `abbr[title]` (se confundía con un marcador de corrector)
+- [x] T21 — Bump del `?v=` de `styles.css` para invalidar la caché del navegador
+- [x] T22 — Revisión ortográfica del texto visible y de los `aria-label` del deck
+
 ---
 
 ## 3. Evidencia
@@ -203,3 +209,26 @@ Sin commits: commit y push quedan a decisión del usuario (convención vigente d
 - **Móvil (390×844):** sin cambios respecto al comportamiento previo — en el media query la slide ya era
   de una columna, así que el ancho del diagrama es el mismo (~352 px) que antes. No es regresión, pero
   un Gantt de este tamaño es ilegible en un teléfono; pendiente ofrecido al usuario (scroll horizontal).
+
+### 3.7 Ronda 5 — resalte de siglas y ortografía
+
+- **Causa del “resalte”:** la regla `abbr[title] { text-decoration: underline dotted; text-underline-offset: 2px }`
+  del feature de siglas marcaba **los 117 `<abbr>` del deck** con un subrayado punteado, indistinguible de
+  un marcador de corrector ortográfico. Los fondos eran blancos normales: no había resaltado de color.
+- **Arreglo:** `abbr[title] { text-decoration: none; cursor: help }`. Se conserva `cursor: help` para no
+  perder el descubrimiento del tooltip, pero sin ninguna marca visual sobre el texto. `styles.css`
+  re-versionado a `?v=20260929_2217`.
+- **Verificación en Chromium:** 117 abbrs, `textDecorationLine` = `none` en **117/117**; `cursor` = `help`.
+- **Revisión ortográfica — texto visible:** 0 errores reales. El único hallazgo del escaneo heurístico
+  (“escenario”, slide 35) es un **falso positivo**: la palabra se escribe sin tilde.
+- **Revisión ortográfica — `aria-label`:** **37 palabras sin tilde** en 13 slides (1, 2, 3, 7, 10, 11, 12,
+  14, 19, 20, 21, 38, 39): `documentacion`, `metodologia`, `diagnostico`, `tecnica`, `autonomia`,
+  `validacion`, `implementacion`, `definicion`, `especificacion`, `sesion`, `practica`, `integracion`,
+  `presentacion`, `version`, `gestion`, `ultimo`, `segun`, `informacion`, `calculo`, `despues`,
+  `politica`. Es una **convención previa del deck** (todos los `aria-label` se escribieron en ASCII);
+  las slides 1–3 son las mías. **No es visible al ojo, pero es incorrecto para lectores de pantalla.**
+  Se reporta al usuario con dos opciones (corregir solo las mías, o las 13) y no se cambia sin decisión.
+- **Duplicados detectados por el escaneo (ambos falsos positivos o previos):**
+  “plazo Plazo” en la slide 2 es el `h2` “…un plazo” seguido del primer bullet “**Plazo:**”;
+  “Fuentes Fuentes” en la slide 43 (is-wide, preexistente) es el kicker “41 · Fuentes” seguido del `h2`
+  “Fuentes”, que además conserva numeración de kicker desactualizada (“41” en la slide 44).

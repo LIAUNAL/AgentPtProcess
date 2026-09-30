@@ -35,3 +35,9 @@ Espejo de `odd/tasks/minuta-atenea-464-2026.md` sección 2 (copia visible en Eng
       (con HITO 1 en M1–M3 y HITO 2 en M4–M5) y **entregables a la derecha**
 - [x] T18 — Regla CSS `.slide.is-figure-full` + bump del `?v=` de `styles.css` para invalidar caché
 - [x] T19 — Verificar en navegador (desktop 1440×900 y móvil 390×844)
+
+## Ronda 5 — quitar el resalte de las siglas y revisión ortográfica
+
+- [x] T20 — Quitar el subrayado punteado de `abbr[title]` (se confundía con un marcador de corrector)
+- [x] T21 — Bump del `?v=` de `styles.css` para invalidar la caché del navegador
+- [x] T22 — Revisión ortográfica del texto visible y de los `aria-label` del deck

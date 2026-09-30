@@ -508,9 +508,10 @@ p {
   line-height: 1.65;
 }
 
+/* Las siglas llevan tooltip al pasar el cursor, pero sin subrayado punteado:
+   el subrayado se confundia con un marcador de corrector ortografico. */
 abbr[title] {
-  text-decoration: underline dotted;
-  text-underline-offset: 2px;
+  text-decoration: none;
   cursor: help;
 }
 
