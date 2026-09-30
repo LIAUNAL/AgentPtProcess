@@ -74,6 +74,16 @@ Sin commits: commit y push quedan a decisión del usuario (convención vigente d
 - [x] T5 — Levantar servidor local y verificar (render, overflow, navegación, conteo)
 - [x] T6 — Reportar; commit y push a la rama `slides-admin` (sin merge a `main`)
 
+### Ronda 2 — ajustes de contenido y cronograma oficial
+
+- [x] T7 — Portada: enlace `lia.manizales.unal.edu.co` bajo el logo del laboratorio (+ regla `.cover-link`)
+- [x] T8 — Slide 2: `h2` → **SDLC-IA Atenea**; retirar la cifra del alcance
+- [x] T9 — Slide 3: `etapa 1` / `etapa 2` en lugar de “pago” y de cifras; SVG, subtítulo y `aria-label`
+- [x] T10 — Slide 4: reconstruir el cronograma con el **cronograma oficial de la propuesta V3.0**
+      (12 actividades + E1–E8) y sombreado de **HITO 1 (M1–M3)** y **HITO 2 (M4–M5)**
+- [x] T11 — Actualizar `docs/minuta-atenea-464-2026.md` con §9.1 (E1–E8) y §9.2 (cronograma por mes)
+- [x] T12 — Verificar en navegador y reportar
+
 ---
 
 ## 3. Evidencia
@@ -119,3 +129,26 @@ Sin commits: commit y push quedan a decisión del usuario (convención vigente d
 - Verificación local posterior al commit (servidor `:8017`, recarga sin caché): 44 slides,
   `railOrderMatchesSlides = true`, 0 desbordes en las 44 slides, desborde de `body` = 0px.
 - Estado final del árbol de trabajo: limpio.
+
+### 3.4 Ronda 2 — fuente nueva y verificación
+
+- **Fuente añadida:** `~/Downloads/4. Propuesta_ATENEA_IA_UNAL_Manizales_V3.0.docx.pdf` (13 secciones).
+  Sección **9** → entregables **E1–E8** con momento estimado; sección **11** → cronograma de **12
+  actividades** por mes con producto asociado; sección **10** → dirección del proyecto (profesores Jorge
+  Iván Montes Monsalve y Andrés Marino Álvarez Meza). La propuesta **no usa** la palabra “etapa”.
+- **Decisión de nomenclatura:** el deck usa `etapa 1` / `etapa 2` en lugar de “pago” y **no publica
+  cifras**. Retirados de las slides: `$300.000.000 COP` y `$150.000.000` (×2). Las **cifras se conservan**
+  en `docs/minuta-atenea-464-2026.md` por ser un resumen técnico interno — decisión registrada como
+  pregunta abierta al usuario.
+- **Cronograma del slide 4:** sustituido el plan derivado (10 quincenas, F1–F8) por el de la propuesta
+  (5 columnas de mes, 12 filas de actividad + 8 filas de entregable, columna `Producto` con E1–E8,
+  sombreado `HITO 1` en M1–M3 y `HITO 2` en M4–M5, diamantes de cierre de etapa).
+  El SVG pasó de 70 a 126 líneas.
+- **Verificación programática (Chromium, 1440×900, servicio en `:8017`):** 44 slides; enlace de portada
+  con `href` correcto, `target="_blank"`, visible y con color de acento `rgb(138,90,0)`; 5 autores;
+  `h2` de las tres slides = “SDLC-IA Atenea”, “Ocho componentes, dos etapas, un plazo”, “Cronograma y
+  entregables por mes”; **0 desbordes** de contenido en las 44 slides; **0 elementos SVG** fuera del
+  `viewBox`; desborde de `body` = 0px; balance `svg` 38/38.
+- **Cifras restantes en `index.html`:** solo precios de modelos y de infraestructura en slides ajenas al
+  contrato (líneas 1371–1451 y 4063–4126), fuera del módulo Minuta. Ocurrencias de “pago” dentro del
+  módulo Minuta: 0.

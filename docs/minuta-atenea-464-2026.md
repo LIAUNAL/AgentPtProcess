@@ -5,10 +5,14 @@ suscrito entre la **Agencia Distrital para la Educación Superior, la Ciencia y 
 (en adelante, la AGENCIA) y la **Universidad Nacional de Colombia — Sede Manizales** (en adelante, el
 CONTRATISTA).
 
-- **Fuente:** `MINUTA ATENEA 464-2026 UNAL_REVCC.pdf` (15 páginas, 30 cláusulas).
+- **Fuente 1 — minuta:** `MINUTA ATENEA 464-2026 UNAL_REVCC.pdf` (15 páginas, 30 cláusulas).
+- **Fuente 2 — propuesta técnica:** `4. Propuesta_ATENEA_IA_UNAL_Manizales_V3.0` (entregables E1–E8 y cronograma).
 - **Formato de origen:** `CODIGO: F12_P11_C` · `VERSIÓN: 1` · `FECHA: 23/04/2026` · Proceso Gestión Contractual.
-- **Alcance de este documento:** solo lo que la minuta dice. El **Anexo Técnico** se cita como documento
-  vinculante pero **no forma parte del PDF**; ver [§9 Vacíos](#9-vacíos-e-información-no-incluida-en-el-pdf).
+- **Alcance de este documento:** lo que dicen la minuta y la propuesta. El **Anexo Técnico** se cita como
+  documento vinculante pero **no forma parte del PDF de la minuta**; ver
+  [§9 Vacíos](#9-vacíos-e-información-no-incluida-en-el-pdf).
+- **Cifras:** este documento conserva los valores del contrato por ser un resumen técnico interno;
+  **las diapositivas del deck no publican cifras** (ver §9.2).
 
 ---
 
@@ -294,28 +298,77 @@ computa** para los plazos del contrato.
 
 Estos puntos **no pueden responderse con esta fuente** y no se infieren:
 
-1. **Anexo Técnico ausente.** La minuta lo nombra como documento vinculante (cláusulas SEGUNDA, SÉPTIMA y
-   VIGÉSIMA SEGUNDA) pero **no está incluido** en las 15 páginas del PDF. Ahí viven el detalle de
-   actividades, los productos por componente, los criterios de aceptación y el **cronograma oficial**.
+1. **Anexo Técnico ausente del PDF de la minuta.** La minuta lo nombra como documento vinculante
+   (cláusulas SEGUNDA, SÉPTIMA y VIGÉSIMA SEGUNDA) pero **no está incluido** en las 15 páginas.
+   → **La propuesta técnica V3.0 sí aporta el detalle**: ver
+   [§9.1](#91-entregables-según-la-propuesta-técnica-v30) y
+   [§9.2](#92-cronograma-de-la-propuesta-técnica-v30).
 2. **Cronograma contractual.** La minuta fija el plazo (5 meses) y las condiciones de pago, pero **no
-   contiene un cronograma de entregables** por fecha o por quincena.
+   contiene un cronograma de entregables**. → **La propuesta sí lo trae**, por mes
+   ([§9.2](#92-cronograma-de-la-propuesta-técnica-v30)).
 3. **Objetivos específicos formales.** No existe una sección con ese nombre. Los objetivos técnicos de
    [§4.2](#42-objetivos-técnicos) son una derivación de las obligaciones específicas, no texto literal.
-4. **Estudios previos y propuesta del contratista.** Son vinculantes pero no forman parte de este PDF.
-5. **Equipo de trabajo, perfiles y dedicación** comprometidos por UNAL.
+4. **Estudios previos.** Son vinculantes pero no forman parte del PDF de la minuta. **La propuesta sí se
+   revisó** y es la fuente de §9.1 y §9.2.
+5. **Equipo de trabajo completo.** La propuesta nombra la dirección del proyecto (profesores **Jorge Iván
+   Montes Monsalve** y **Andrés Marino Álvarez Meza**) y anuncia que el resto del equipo se formaliza al
+   inicio de la ejecución.
 6. **Criterios de aceptación y recibo a satisfacción** de cada componente.
 7. **Ambiente productivo, infraestructura y herramientas** concretas que dispondrá ATENEA (dependen de las
    autorizaciones y adquisiciones de §5.3).
 
-> Para publicar el cronograma quincenal del deck (slide M3) se usó un **plan de referencia derivado** del
-> plazo de 5 meses y de la secuencia de componentes/causales de pago. **No sustituye el cronograma del
-> Anexo Técnico** y debe conciliarse con él antes de usarse como compromiso.
+### 9.1 Entregables según la propuesta técnica V3.0
+
+Fuente: propuesta `4. Propuesta_ATENEA_IA_UNAL_Manizales_V3.0`, sección 9.
+
+| Código | Entregable | Contenido mínimo | Momento estimado |
+|---|---|---|---|
+| E1 | Informe de diagnóstico institucional | Capacidades, necesidades, recursos TI, fuentes de datos, actores, restricciones, riesgos y caso de uso priorizado | Mes 1–2 |
+| E2 | SDLC-IA para ATENEA | Ciclo de vida adaptado: fases, roles, artefactos, criterios de calidad, pruebas, despliegue, monitoreo y gobernanza básica | Mes 2 |
+| E3 | Arquitectura del caso de uso End-to-End | Configuración funcional y técnica, arquitectura de agentes, flujos, integraciones, datos, herramientas y criterios de aceptación | Mes 2 |
+| E4 | Sistema de agentes y skills implementado | Agentes, skills, flujos, integraciones autorizadas, arneses de prueba y componentes funcionales del caso de uso | Mes 3–4 |
+| E5 | Despliegue y validación del caso de uso | Caso de uso desplegado en el ambiente definido, pruebas funcionales, reporte de validación y ajustes | Mes 4–5 |
+| E6 | Documentación técnica y operativa | Guías de instalación y configuración, operación básica, pruebas, mantenimiento inicial y recomendaciones de escalamiento | Mes 5 |
+| E7 | Workshop de transferencia práctica | Sesiones aplicadas, materiales de soporte, memorias técnicas y acompañamiento al equipo de ATENEA | Mes 2–5 |
+| E8 | Informe final y cierre | Resumen ejecutivo, resultados, lecciones aprendidas, matriz de entregables, recomendaciones y ruta de continuidad | Mes 5 |
+
+### 9.2 Cronograma de la propuesta técnica V3.0
+
+Fuente: propuesta V3.0, sección 11. Cinco meses, con actividades **solapadas** para favorecer la
+**transferencia práctica**, el desarrollo iterativo y la **validación temprana** del caso de uso.
+
+| Fase / actividad | M1 | M2 | M3 | M4 | M5 | Producto |
+|---|:--:|:--:|:--:|:--:|:--:|---|
+| Sesión presencial de inicio / kickoff | X | | | | | E1 |
+| Diagnóstico institucional y priorización del caso de uso | X | X | | | | E1 |
+| Implementación SDLC-IA | X | X | | | | E2 |
+| Arquitectura del caso de uso End-to-End | X | X | | | | E3 |
+| Configuración de entornos y definición de herramientas / licencias | | X | X | | | E3/E4 |
+| Desarrollo de agentes y skills | | X | X | X | | E4 |
+| Ingeniería de pruebas y arneses | | | X | X | | E4/E5 |
+| Integración de agentes y flujos | | | X | X | | E4/E5 |
+| Despliegue, validación y ajustes | | | | X | X | E5 |
+| Workshop de transferencia práctica integrado | | X | X | X | X | E7 |
+| Documentación técnica y operativa | | | | X | X | E6 |
+| Sesión presencial de cierre, presentación de resultados y clausura | | | | | X | E8 |
+
+**Etapas y nomenclatura.** El deck divide el cronograma en dos tramos porque la minuta asocia cada
+mitad de los componentes a un desembolso:
+
+| Tramo | Componentes | Cierre |
+|---|---|---|
+| **Etapa 1** | C1–C4 | **Hito 1**, al terminar el **mes 3** |
+| **Etapa 2** | C5–C8 | **Hito 2**, al terminar el **mes 5** |
+
+El deck usa `etapa 1` / `etapa 2` en lugar de cifras o de la palabra “pago” para no publicar montos; los
+**montos exactos** siguen en la cláusula SÉPTIMA de la minuta y en §5.1 y §7.1 de este documento.
 
 ---
 
 ## 10. Preguntas abiertas para la contraparte
 
-1. ¿Cuál es el cronograma oficial de entregables y el detalle por componente del Anexo Técnico?
+1. ¿El **Anexo Técnico** del contrato confirma el cronograma de la propuesta V3.0
+   ([§9.2](#92-cronograma-de-la-propuesta-técnica-v30)) o lo ajusta?
 2. ¿Qué entornos, repositorios y servicios de modelos quedan autorizados para el tratamiento de datos
    reales, bajo las condiciones de seguridad de ATENEA?
 3. ¿Qué licencias, APIs y servicios de nube están presupuestados y con qué anticipación se habilitarán?
@@ -325,7 +378,8 @@ Estos puntos **no pueden responderse con esta fuente** y no se infieren:
 
 ---
 
-**Nota de trazabilidad.** Este resumen se construyó exclusivamente sobre el PDF de la minuta. Las
-afirmaciones se anclan a la cláusula indicada; las que son derivación (objetivos técnicos, cronograma de
-referencia) están rotuladas como tales. Antes de usar este documento como compromiso contractual debe
-conciliarse con el Anexo Técnico, los estudios previos y la propuesta del contratista.
+**Nota de trazabilidad.** Este resumen se construyó sobre el PDF de la minuta (cláusulas) y la propuesta
+técnica V3.0 (entregables y cronograma). Las afirmaciones se anclan a la cláusula o a la sección
+correspondiente; lo que es derivación (objetivos técnicos de §4.2) está rotulado como tal. Antes de usar
+este documento como compromiso contractual debe conciliarse con el **Anexo Técnico** del contrato, que no
+forma parte del PDF de la minuta.
