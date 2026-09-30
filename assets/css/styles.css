@@ -1468,6 +1468,16 @@ cite {
 }
 
 @media (max-width: 1040px) {
+  /* La fila del grid deja de ser 1fr para que la tarjeta crezca con la lista */
+  .slide.is-figure-full {
+    grid-template-rows: auto;
+    align-items: start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
   .slide.is-figure-full .slide-figure {
     height: auto;
     overflow: visible;
