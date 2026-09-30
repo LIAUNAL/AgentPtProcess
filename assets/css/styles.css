@@ -1457,3 +1457,23 @@ cite {
     white-space: normal;
   }
 }
+
+/* ---------- Cronograma a pantalla completa en móviles ----------
+   El SVG (1200x736) tiene texto de 9-11 px en su propio sistema de
+   coordenadas; encogido al ancho del teléfono queda ilegible. Se mantiene a
+   un ancho mínimo legible y la tarjeta hace scroll horizontal. */
+@media (max-width: 1040px) {
+  .slide.is-figure-full .slide-figure {
+    height: auto;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .slide.is-figure-full .slide-figure svg {
+    width: 1380px;
+    max-width: none;
+    height: auto;
+    aspect-ratio: 1200 / 736;
+  }
+}
