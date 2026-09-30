@@ -1460,20 +1460,112 @@ cite {
 
 /* ---------- Cronograma a pantalla completa en móviles ----------
    El SVG (1200x736) tiene texto de 9-11 px en su propio sistema de
-   coordenadas; encogido al ancho del teléfono queda ilegible. Se mantiene a
-   un ancho mínimo legible y la tarjeta hace scroll horizontal. */
+   coordenadas: encogido al ancho de un teléfono queda ilegible y con scroll
+   horizontal se pierde la relación actividad/entregable. En pantallas
+   pequeñas se muestra una versión en HTML (mismos datos) con texto real. */
+.schedule-mobile {
+  display: none;
+}
+
 @media (max-width: 1040px) {
   .slide.is-figure-full .slide-figure {
     height: auto;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    -webkit-overflow-scrolling: touch;
+    overflow: visible;
   }
 
   .slide.is-figure-full .slide-figure svg {
-    width: 1380px;
-    max-width: none;
-    height: auto;
-    aspect-ratio: 1200 / 736;
+    display: none;
+  }
+
+  .schedule-mobile {
+    display: block;
+    padding: 6px 4px 2px;
+    background: var(--figure-bg);
+    border-radius: 12px;
+  }
+
+  .sched-title {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--fg);
+  }
+
+  .sched-sub {
+    margin: 4px 0 6px;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--subtext);
+  }
+
+  .sched-h {
+    margin: 16px 0 6px;
+    font-size: 0.85rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #8a5a00;
+  }
+
+  .sched-months,
+  .sched-track {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 2px;
+  }
+
+  .sched-months span {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--subtext);
+  }
+
+  .sched-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sched-list li {
+    padding: 7px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .sched-row-title {
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    color: var(--fg);
+  }
+
+  .sched-prod {
+    margin-left: 4px;
+    font-size: 0.8rem;
+    color: var(--subtext);
+    white-space: nowrap;
+  }
+
+  .sched-track {
+    height: 12px;
+    border-radius: 6px;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.16) 0 calc(20% - 2px),
+      transparent calc(20% - 2px) 20%
+    );
+  }
+
+  .sched-bar {
+    border-radius: 6px;
+    height: 12px;
+  }
+
+  .sched-note {
+    margin: 12px 0 0;
+    font-size: 0.78rem;
+    font-style: italic;
+    color: #8a5a00;
   }
 }
