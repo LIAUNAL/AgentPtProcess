@@ -363,6 +363,29 @@ mitad de los componentes a un desembolso:
 El deck usa `etapa 1` / `etapa 2` en lugar de cifras o de la palabra “pago” para no publicar montos; los
 **montos exactos** siguen en la cláusula SÉPTIMA de la minuta y en §5.1 y §7.1 de este documento.
 
+**Correspondencia actividad → componente (derivada).** Ni la minuta ni la propuesta publican esta
+tabla: se deriva del alcance de cada componente (cláusula SÉPTIMA) cruzado con la actividad de la
+propuesta (sección 11) y con el producto asociado que la propia propuesta declara. Es la que usa la
+columna `Componente` del cronograma del deck.
+
+| Actividad (propuesta, sección 11) | Producto | Componente (derivado) |
+|---|---|---|
+| Sesión presencial de inicio / kickoff | E1 | C1 |
+| Diagnóstico institucional y priorización del caso de uso | E1 | C1 / C3 |
+| Implementación SDLC-IA | E2 | C2 |
+| Arquitectura del caso de uso End-to-End | E3 | C3 |
+| Configuración de entornos y definición de herramientas / licencias | E3 / E4 | C3 / C4 |
+| Desarrollo de agentes y skills | E4 | C4 |
+| Ingeniería de pruebas y arneses | E4 / E5 | C4 / C6 |
+| Integración de agentes y flujos | E4 / E5 | C4 / C5 |
+| Despliegue, validación y ajustes | E5 | C6 / C7 |
+| Workshop de transferencia práctica integrado | E7 | C8 |
+| Documentación técnica y operativa | E6 | C8 |
+| Sesión presencial de cierre, presentación de resultados y clausura | E8 | C8 |
+
+Los ocho componentes C1–C8 quedan cubiertos. **Este mapeo es el punto más frágil del deck** y debe
+validarse contra el Anexo Técnico antes de usarse como compromiso.
+
 ---
 
 ## 10. Preguntas abiertas para la contraparte

@@ -20,3 +20,10 @@ Espejo de `odd/tasks/minuta-atenea-464-2026.md` sección 2 (copia visible en Eng
       (12 actividades + E1–E8) y sombreado de **HITO 1 (M1–M3)** y **HITO 2 (M4–M5)**
 - [x] T11 — Actualizar `docs/minuta-atenea-464-2026.md` con §9.1 (E1–E8) y §9.2 (cronograma por mes)
 - [x] T12 — Verificar en navegador y reportar
+
+## Ronda 3 — nomenclatura de componentes
+
+- [x] T13 — Slide 4: columna `Componente` con los códigos **C1–C8** espejo de la columna `Producto` (E1–E8)
+- [x] T14 — Leyenda de columnas al pie del diagrama y `aria-label` ampliado con la correspondencia
+- [x] T15 — Documentar en `docs/minuta-atenea-464-2026.md` §9.2 la correspondencia actividad → componente
+      y marcarla explícitamente como **derivada** (no está publicada en ninguna fuente)

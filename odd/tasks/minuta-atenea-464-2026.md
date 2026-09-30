@@ -84,6 +84,13 @@ Sin commits: commit y push quedan a decisión del usuario (convención vigente d
 - [x] T11 — Actualizar `docs/minuta-atenea-464-2026.md` con §9.1 (E1–E8) y §9.2 (cronograma por mes)
 - [x] T12 — Verificar en navegador y reportar
 
+### Ronda 3 — nomenclatura de componentes
+
+- [x] T13 — Slide 4: columna `Componente` con los códigos **C1–C8** espejo de la columna `Producto` (E1–E8)
+- [x] T14 — Leyenda de columnas al pie del diagrama y `aria-label` ampliado con la correspondencia
+- [x] T15 — Documentar en `docs/minuta-atenea-464-2026.md` §9.2 la correspondencia actividad → componente
+      y marcarla explícitamente como **derivada** (no está publicada en ninguna fuente)
+
 ---
 
 ## 3. Evidencia
@@ -152,3 +159,18 @@ Sin commits: commit y push quedan a decisión del usuario (convención vigente d
 - **Cifras restantes en `index.html`:** solo precios de modelos y de infraestructura en slides ajenas al
   contrato (líneas 1371–1451 y 4063–4126), fuera del módulo Minuta. Ocurrencias de “pago” dentro del
   módulo Minuta: 0.
+
+### 3.5 Ronda 3 — columna `Componente` (C1–C8)
+
+- El cronograma pasó a `viewBox="0 0 700 580"` (antes `660×568`) para alojar una segunda columna de
+  códigos sin tocar la geometría de meses, barras ni separadores: columna `Producto` en `x=600` y
+  `Componente` en `x=650`.
+- **Correspondencia actividad → componente derivada** (no publicada en la minuta ni en la propuesta):
+  C1 → kickoff y diagnóstico; C1/C3 → diagnóstico y priorización; C2 → SDLC-IA; C3 → arquitectura;
+  C3/C4 → entornos y herramientas; C4 → agentes y skills; C4/C6 → pruebas y arneses; C4/C5 → integración;
+  C6/C7 → despliegue y validación; C8 → workshop, documentación y cierre. Los 8 componentes quedan
+  cubiertos. Registrada en `docs/minuta-atenea-464-2026.md` §9.2 como **punto frágil a validar**.
+- **Verificación programática (Chromium 1440×900):** `viewBox` 700×580; **0 elementos** fuera del
+  `viewBox`; **0 colisiones** entre la columna `Producto` y la columna `Componente` (comprobadas por
+  `getBBox` fila a fila); 12 códigos E y 12 códigos C leídos en orden correcto; **0 desbordes** de
+  contenido en las 44 slides; desborde de `body` = 0px; balance `svg` 38/38 y `text` 723/723.
