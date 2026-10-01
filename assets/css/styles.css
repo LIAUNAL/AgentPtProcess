@@ -366,10 +366,18 @@ body {
   letter-spacing: -0.01em;
 }
 
+.cover-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 4vw, 56px);
+  max-width: 100%;
+}
+
 .cover-logo {
   height: clamp(120px, 30vh, 300px);
   width: auto;
-  max-width: 100%;
+  max-width: 48%;
   object-fit: contain;
 }
 
