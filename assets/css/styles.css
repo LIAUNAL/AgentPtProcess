@@ -1003,8 +1003,8 @@ cite {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  flex: 1 1 auto;
-  min-height: 0;
+  flex: 1 0 auto;
+  min-height: min-content;
 }
 
 .cmd-flow svg {
