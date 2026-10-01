@@ -44,7 +44,7 @@
           <div class="rail-dots" id="dots-4"></div>
         </div>
         <div class="rail-module" data-module="5">
-          <button class="rail-title" data-first="28">6. <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></button>
+          <button class="rail-title" data-first="29">6. <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></button>
           <div class="rail-dots" id="dots-5"></div>
         </div>
       </nav>
@@ -2873,34 +2873,36 @@
           >
             <div class="slide-content">
               <p class="slide-kicker">25 &middot; La respuesta</p>
-              <h2>Con workflow vs. sin workflow: menos tokens por tarea</h2>
+              <h2>Lo que cuesta no escribir el spec</h2>
               <ul class="slide-list">
                 <li>
-                  <strong>Pasos acotados:</strong> cada fase carga solo el
-                  contexto que necesita, no todo el repositorio.
+                  <strong>Requisito implícito sin recuperar:</strong> en un
+                  benchmark de resolución de tickets, entre 24,5% y 46% de
+                  los fallos del agente vienen de no recuperar un requisito
+                  implícito —la causa principal identificada—, con una tasa
+                  de resolución global de apenas 31,5% <cite>(Zhou et al.,
+                  2026)</cite>.
                 </li>
                 <li>
-                  <strong>Sesiones limpias:</strong> cada tarea arranca sin
-                  arrastrar el historial de otra.
+                  <strong>Funcionalidad que el propio agente borra:</strong>
+                  evaluando 20 modelos de frontera en generación iterativa de
+                  frontend, la tasa de olvido —funcionalidad ya
+                  implementada que el modelo sobrescribe en un turno
+                  posterior— va de 4,3% a 46,9% según el modelo <cite>(Wu et
+                  al., 2026)</cite>.
                 </li>
                 <li>
-                  <strong>Artefactos dirigidos:</strong> el <abbr title="Product Requirements Document (documento de requisitos de producto)">Product Requirements Document (PRD)</abbr>, las épicas y la
-                  memoria entran como una porción, no como una re-exploración.
+                  <strong>El trabajo encadenado castiga más:</strong> en
+                  Web-Bench —proyectos web reales resueltos como una cadena
+                  de tickets, donde cada ticket se califica con pruebas que
+                  el agente nunca ve— el mejor modelo acierta solo el 25,1%
+                  a la primera <cite>(Xu et al., 2025)</cite>.
                 </li>
                 <li>
-                  <strong>Alineación antes de codear:</strong> el spec se acuerda
-                  con el desarrollador antes de generar cientos de líneas, y
-                  evita el reproceso que más tokens gasta.
-                </li>
-                <li>
-                  <strong>Depende del tamaño del código:</strong> a más
-                  repositorio, más contexto que re-explorar sin workflow —y más
-                  ahorro al acotarlo con él.
-                </li>
-                <li>
-                  <strong>Estimación:</strong> −40 % a −80 % en tokens por tarea,
-                  según el tamaño del proyecto y los supuestos citados; se
-                  validará con un A/B real.
+                  <strong>La lectura común:</strong> tres benchmarks
+                  distintos, un mismo punto de falla —lo que no queda
+                  explícito, el agente lo pierde, lo sobrescribe o lo
+                  encadena mal.
                 </li>
               </ul>
             </div>
@@ -2910,45 +2912,151 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 role="img"
-                aria-label="Gráfica de bandas: los tokens por tarea crecen con el tamaño del código. Sin workflow (prompt suelto) la banda sube de unos 150-260 mil en un proyecto pequeño a 0,8-1,2 millones en uno grande; con workflow SPEC-WEAVER la banda sube de 55-95 mil a 160-260 mil. El hueco entre ambas —los tokens ahorrados— se ensancha con el tamaño: una reducción estimada de 40 a 80 por ciento"
+                aria-label="Tres tarjetas de estadisticas sobre el costo de no escribir el spec. Tarjeta uno, requisito implicito: entre 24,5% y 46% de los fallos del agente vienen de no recuperar un requisito implicito, con una tasa de resolucion global de apenas 31,5% (Zhou et al., 2026). Tarjeta dos, funcionalidad perdida: evaluando 20 modelos de frontera, la tasa de olvido va de 4,3% a 46,9% segun el modelo (Wu et al., 2026)., 2025). Abajo, un recuadro de patron comun: tres benchmarks distintos apuntan al mismo punto de falla, lo implicito se pierde, se sobrescribe o se encadena mal"
               >
-                <text x="260" y="24" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">TOKENS POR TAREA</text>
-                <text x="260" y="41" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5" font-style="italic">estimación · el ahorro crece con el tamaño del código</text>
+                <text x="260" y="16" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11" letter-spacing="2">LO QUE CUESTA NO ESCRIBIR EL SPEC</text>
+                <text x="260" y="30" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8" font-style="italic">tres benchmarks, un mismo patrón de falla</text>
 
-                <!-- Leyenda -->
-                <rect x="60" y="52" width="12" height="12" rx="3" fill="#CB7C94" />
-                <text x="78" y="62" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">sin workflow</text>
-                <rect x="188" y="52" width="12" height="12" rx="3" fill="#66862E" />
-                <text x="206" y="62" fill="#4F6B23" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">con workflow · SPEC-WEAVER</text>
+                <!-- Card 1: Requisito implicito -->
+                <rect x="22" y="50" width="150" height="158" rx="10" fill="#FFFFFF" stroke="#C55A7B" stroke-width="1.4" />
+                <text x="97" y="70" text-anchor="middle" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="600">Requisito implícito</text>
+                <text x="97" y="104" text-anchor="middle" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">24,5&ndash;46%</text>
+                <text x="97" y="120" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="8">de fallos del agente</text>
+                <text x="97" y="134" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="8">sin recuperarlo</text>
+                <text x="97" y="150" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="7.5">31,5% resuelto en total</text>
+                <text x="97" y="192" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="7.5">Zhou et al., 2026</text>
 
-                <!-- Eje Y (referencia) y base -->
-                <line x1="60" y1="300" x2="480" y2="300" stroke="#C8D0DA" stroke-width="1.2" />
-                <text x="52" y="60" text-anchor="end" fill="#8A93A0" font-family="Space Grotesk,sans-serif" font-size="8">1,2 M</text>
-                <text x="52" y="300" text-anchor="end" fill="#8A93A0" font-family="Space Grotesk,sans-serif" font-size="8">0</text>
+                <!-- Card 2: Forgetting -->
+                <rect x="185" y="50" width="150" height="158" rx="10" fill="#FFFFFF" stroke="#C55A7B" stroke-width="1.4" />
+                <text x="260" y="70" text-anchor="middle" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="600">Funcionalidad perdida</text>
+                <text x="260" y="104" text-anchor="middle" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">4,3&ndash;46,9%</text>
+                <text x="260" y="120" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="8">de olvido,</text>
+                <text x="260" y="134" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="8">según el modelo</text>
+                <text x="260" y="150" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="7.5">20 modelos evaluados</text>
+                <text x="260" y="192" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="7.5">Wu et al., 2026</text>
 
-                <!-- Banda sin workflow (min-max) -->
-                <path d="M110 246.9 L275 173.4 L440 55 L440 136.7 L275 218.3 L110 269.4 Z" fill="#CB7C94" opacity="0.30" />
-                <path d="M110 246.9 L275 173.4 L440 55" stroke="#CB7C94" stroke-width="2" fill="none" />
-                <path d="M110 269.4 L275 218.3 L440 136.7" stroke="#CB7C94" stroke-width="1.4" fill="none" stroke-dasharray="3 3" />
-                <text x="446" y="70" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="800">0,8–1,2 M</text>
+                <!-- Card 3: Encadenar castiga -->
+                <rect x="348" y="50" width="150" height="158" rx="10" fill="#FFFFFF" stroke="#C55A7B" stroke-width="1.4" />
+                <text x="423" y="70" text-anchor="middle" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="600">Encadenar castiga</text>
+                <text x="423" y="104" text-anchor="middle" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700">25,1%</text>
+                <text x="423" y="120" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="8">aciertos 1er intento</text>
+                <text x="423" y="134" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="8">(Web-Bench)</text>
+                <text x="423" y="150" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="7.5">tickets secuenciales</text>
+                <text x="423" y="192" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="7.5">Xu et al., 2025</text>
 
-                <!-- Banda con workflow (min-max) -->
-                <path d="M110 280.6 L275 265.3 L440 246.9 L440 267.3 L275 277.5 L110 288.8 Z" fill="#66862E" opacity="0.42" />
-                <path d="M110 280.6 L275 265.3 L440 246.9" stroke="#66862E" stroke-width="2" fill="none" />
-                <text x="446" y="252" fill="#4F6B23" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="800">160–260 k</text>
+                <line x1="22" y1="222" x2="498" y2="222" stroke="#B8C2D0" stroke-width="1" />
 
-                <!-- El hueco = ahorro, que se ensancha -->
-                <line x1="440" y1="140" x2="440" y2="243" stroke="#454F61" stroke-width="1" stroke-dasharray="2 2" />
-                <text x="330" y="205" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="9" font-style="italic">el hueco = tokens ahorrados</text>
+                <rect x="22" y="234" width="476" height="52" rx="10" fill="#EDF1F7" stroke="#A8781A" stroke-width="1.4" />
+                <text x="260" y="253" text-anchor="middle" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600">El patrón común</text>
+                <text x="260" y="269" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="8.5">tres benchmarks distintos, un mismo punto de falla:</text>
+                <text x="260" y="281" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="8.5">lo implícito se pierde, se sobrescribe o se encadena mal</text>
 
-                <!-- Eje X: tamaño del proyecto -->
-                <text x="110" y="316" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Pequeño</text>
-                <text x="275" y="316" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Mediano</text>
-                <text x="440" y="316" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Grande</text>
-                <text x="260" y="333" text-anchor="middle" fill="#8A93A0" font-family="Space Grotesk,sans-serif" font-size="9">tamaño del código →</text>
+              </svg>
+            </figure>
+          </article>
 
-                <!-- Reducción estimada -->
-                <text x="260" y="352" text-anchor="middle" fill="#4F6B23" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="800">−40 % a −80 % <tspan fill="#5B6472" font-weight="400">· caché de lectura ≈ 0,1× · se validará con A/B real</tspan></text>
+          <article
+            class="slide"
+            data-index="28"
+            data-module="4"
+            data-tone="magenta"
+          >
+            <div class="slide-content">
+              <p class="slide-kicker">26 &middot; La respuesta</p>
+              <h2>Escribir el spec primero: la evidencia</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Documentar el contrato antes da mejores resultados:</strong>
+                  en un experimento controlado A/B con el mismo agente,
+                  escribir precondiciones, poscondiciones y casos no
+                  definidos antes de generar las pruebas subió la detección
+                  de errores +9,8 puntos porcentuales y la cobertura de
+                  ramas +2,5 <cite>(Tufano et al., Google, 2026, sobre
+                  generación de pruebas)</cite>.
+                </li>
+                
+                <li>
+                  <strong>Preguntar antes de codear da mejores resultados:</strong> de
+                  427 problemas, 140 resultaron ambiguos —casi un tercio— y
+                  necesitaron 2,85 preguntas en promedio para quedar claros;
+                  insertar ese paso de clarificación de requisitos subió los
+                  aciertos +8,94 puntos porcentuales <cite>(Mu et al., FSE
+                  2024, sobre generación de código a nivel de
+                  función)</cite>.
+                </li>
+                <li>
+                  <strong>Planificar antes de codear da mejores resultados:</strong>
+                  descomponer la intención en un plan antes de implementar
+                  mejoró los aciertos un 25,4% relativo frente a generar
+                  directo <cite>(Jiang et al., TOSEM 2024, sobre generación
+                  de código a nivel de función)</cite>.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg
+                viewBox="0 0 520 360"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Tres tarjetas de estadisticas sobre escribir el spec primero, todas en generacion de codigo a nivel de funcion. Tarjeta uno, specs antes de las pruebas: en un experimento controlado con el mismo agente, escribir el spec del contrato antes de generar pruebas sube la deteccion de errores 9,8 puntos porcentuales y la cobertura de ramas 2,5 puntos porcentuales; el alcance declarado es generacion de pruebas con agentes de Google (Tufano et al., 2026). Tarjeta dos, preguntar antes de codear: de 427 problemas, 140 resultaron ambiguos -casi un tercio- y necesitaron 2,85 preguntas en promedio para quedar claros; insertar ese paso de clarificacion de requisitos subio los aciertos 8,94 puntos porcentuales (Mu et al., FSE 2024). Tarjeta tres, planificar antes de codear: descomponer la intencion en un plan antes de implementar mejoro los aciertos un 25,4 por ciento relativo frente a generar directo (Jiang et al., TOSEM 2024). Abajo, un recuadro de patron comun: las tres mediciones son sobre generacion de codigo a nivel de funcion -benchmarks tipo HumanEval y MBPP-, no sobre ingenieria de software agentica completa Al pie, en grande: La IA ya sabe programar, lo que no sabe es lo que no le dijiste; y debajo, en cursiva: cambiar de modelo cuesta una suscripción, cambiar de método cambia el resultado."
+              >
+                <text x="260" y="16" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11" letter-spacing="2">ESCRIBIR EL SPEC PRIMERO: LA EVIDENCIA</text>
+                <text x="260" y="30" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8" font-style="italic">tres estudios, un mismo patrón: contrato, pregunta o plan antes de codear</text>
+
+                <!-- Card 1: Tufano et al. -->
+                <rect x="22" y="48" width="150" height="158" rx="10" fill="#FFFFFF" stroke="#C55A7B" stroke-width="1.4" />
+                <text x="97" y="68" text-anchor="middle" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="600">Specs antes de las pruebas</text>
+
+                <text x="97" y="100" text-anchor="middle" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">+9,8 pp</text>
+                <text x="97" y="114" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="7.5">detección de errores</text>
+
+                <text x="97" y="134" text-anchor="middle" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">+2,5 pp</text>
+                <text x="97" y="148" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="7.5">cobertura de ramas</text>
+
+                <rect x="30" y="160" width="134" height="26" rx="8" fill="#B86F24" opacity="0.16" />
+                <text x="97" y="170.5" text-anchor="middle" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="6.5" font-weight="700">generación de pruebas</text>
+                <text x="97" y="180" text-anchor="middle" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="6.5" font-weight="700">con agentes de Google</text>
+
+                <text x="97" y="200" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="7.5">Tufano et al., 2026</text>
+
+                <!-- Card 2: Mu et al. (ClarifyGPT) -->
+                <rect x="185" y="48" width="150" height="158" rx="10" fill="#FFFFFF" stroke="#C55A7B" stroke-width="1.4" />
+                <text x="260" y="68" text-anchor="middle" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="600">Preguntar antes de codear</text>
+
+                <text x="260" y="100" text-anchor="middle" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">+8,94 pp</text>
+                <text x="260" y="114" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="7.5">de aciertos al clarificar</text>
+
+                <text x="260" y="134" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="7.5">140 de 427 problemas</text>
+                <text x="260" y="146" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="7.5">ambiguos &mdash; 2,85 preguntas</text>
+                <text x="260" y="158" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="7.5">en promedio</text>
+
+                <rect x="193" y="166" width="134" height="18" rx="8" fill="#B86F24" opacity="0.16" />
+                <text x="260" y="178" text-anchor="middle" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="6.5" font-weight="700">código a nivel de función</text>
+
+                <text x="260" y="200" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="7.5">Mu et al., FSE 2024</text>
+
+                <!-- Card 3: Jiang et al. (Self-Planning) -->
+                <rect x="348" y="48" width="150" height="158" rx="10" fill="#FFFFFF" stroke="#C55A7B" stroke-width="1.4" />
+                <text x="423" y="68" text-anchor="middle" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="600">Planificar antes de codear</text>
+
+                <text x="423" y="108" text-anchor="middle" fill="#A83A59" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700">+25,4%</text>
+                <text x="423" y="124" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="7.5">relativo frente a</text>
+                <text x="423" y="136" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="7.5">generar directo</text>
+
+                <rect x="356" y="160" width="134" height="18" rx="8" fill="#B86F24" opacity="0.16" />
+                <text x="423" y="172" text-anchor="middle" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="6.5" font-weight="700">código a nivel de función</text>
+
+                <text x="423" y="200" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="7.5">Jiang et al., TOSEM 2024</text>
+
+                <line x1="22" y1="222" x2="498" y2="222" stroke="#B8C2D0" stroke-width="1" />
+
+                <rect x="22" y="234" width="476" height="52" rx="10" fill="#EDF1F7" stroke="#A8781A" stroke-width="1.4" />
+
+              
+                <text x="260" y="266" text-anchor="middle" fill="#2B3444" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">La IA ya sabe programar.</text>
+                <text x="260" y="282" text-anchor="middle" fill="#2B3444" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Lo que no sabe es lo que no le dijiste.</text>
+                <text x="260" y="301" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8" font-style="italic">Cambiar de modelo cuesta una suscripción. Cambiar de método cambia el resultado.</text>
               </svg>
             </figure>
           </article>
@@ -2957,12 +3065,12 @@
 
           <article
             class="slide"
-            data-index="28"
+            data-index="29"
             data-module="5"
             data-tone="magenta"
           >
             <div class="slide-content">
-              <p class="slide-kicker">26 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">27 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>El stack <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">SPEC-WEAVER</abbr>: qué se conecta y qué no (todavía)</h2>
               <ul class="slide-list">
                 <li>
@@ -3067,7 +3175,6 @@
                 <line x1="91" y1="462" x2="91" y2="403" stroke="#7189B8" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#ah22)" />
                 <text x="100" y="436" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="7.5" font-style="italic">estado + comentario</text>
 
-
                 <rect x="16" y="300" width="150" height="100" rx="12" fill="#F7F5FA" stroke="#7189B8" stroke-width="1.6" />
                 <text x="91" y="322" text-anchor="middle" fill="#4A5F8C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="800">① Planificar</text>
                 <rect x="26" y="334" width="54" height="17" rx="8.5" fill="#7189B8" opacity="0.16" /><text x="53" y="346" text-anchor="middle" fill="#4A5F8C" font-family="Space Grotesk,sans-serif" font-size="8" font-weight="700">Jira</text>
@@ -3124,12 +3231,12 @@
 
           <article
             class="slide"
-            data-index="29"
+            data-index="30"
             data-module="5"
             data-tone="cyan"
           >
             <div class="slide-content">
-              <p class="slide-kicker">27 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">28 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>Tutorial: SpecWeaver, con un caso real</h2>
               <ul class="slide-list">
                 <li>
@@ -3238,12 +3345,12 @@
 
           <article
             class="slide"
-            data-index="30"
+            data-index="31"
             data-module="5"
             data-tone="blue"
           >
             <div class="slide-content">
-              <p class="slide-kicker">28 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">29 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>Paso 1 — Crear el proyecto desde cero</h2>
               <ul class="slide-list">
                 <li>
@@ -3310,12 +3417,12 @@
 
           <article
             class="slide is-wide"
-            data-index="31"
+            data-index="32"
             data-module="5"
             data-tone="yellow"
           >
             <div class="slide-content">
-              <p class="slide-kicker">29 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">30 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>Los comandos del CLI</h2>
               <p>
                 Un comando arranca el proyecto una sola vez; el resto se repite mientras avanza:
@@ -3402,12 +3509,12 @@
 
           <article
             class="slide is-wide"
-            data-index="32"
+            data-index="33"
             data-module="5"
             data-tone="purple"
           >
             <div class="slide-content">
-              <p class="slide-kicker">30 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">31 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>Los comandos &ldquo;/&rdquo; dentro del harness</h2>
               <p>
                 Cinco puertas de entrada, una sola tubería: todo converge en planificar, construir,
@@ -3537,12 +3644,12 @@
 
           <article
             class="slide is-wide"
-            data-index="33"
+            data-index="34"
             data-module="5"
             data-tone="green"
           >
             <div class="slide-content">
-              <p class="slide-kicker">31 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">32 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>De la idea a las historias: el caso real</h2>
               <ul class="slide-list">
                 <li>
@@ -3609,12 +3716,12 @@
 
           <article
             class="slide is-wide"
-            data-index="34"
+            data-index="35"
             data-module="5"
             data-tone="magenta"
           >
             <div class="slide-content">
-              <p class="slide-kicker">32 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">33 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>El contrato completo: spec.md</h2>
               <ul class="slide-list">
                 <li>
@@ -3671,12 +3778,12 @@
 
           <article
             class="slide is-wide"
-            data-index="35"
+            data-index="36"
             data-module="5"
             data-tone="orange"
           >
             <div class="slide-content">
-              <p class="slide-kicker">33 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">34 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>De SpecWeaver al código, sin saltos</h2>
               <ul class="slide-list">
                 <li>
@@ -3769,12 +3876,12 @@
 
           <article
             class="slide"
-            data-index="36"
+            data-index="37"
             data-module="5"
             data-tone="orange"
           >
             <div class="slide-content">
-              <p class="slide-kicker">34 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">35 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>D&oacute;nde corre el agente: el entorno deja de ser problema de cada quien</h2>
               <ul class="slide-list">
                 <li>
@@ -3863,12 +3970,12 @@
 
           <article
             class="slide"
-            data-index="37"
+            data-index="38"
             data-module="5"
             data-tone="purple"
           >
             <div class="slide-content">
-              <p class="slide-kicker">35 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">36 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>Qu&eacute; es un Sprite: una computadora Linux, no un contenedor</h2>
               <ul class="slide-list">
                 <li>
@@ -3963,12 +4070,12 @@
 
           <article
             class="slide"
-            data-index="38"
+            data-index="39"
             data-module="5"
             data-tone="red"
           >
             <div class="slide-content">
-              <p class="slide-kicker">36 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">37 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>Seguridad: el agente corre con las manos atadas, a prop&oacute;sito</h2>
               <ul class="slide-list">
                 <li>
@@ -4060,12 +4167,12 @@
 
           <article
             class="slide"
-            data-index="39"
+            data-index="40"
             data-module="5"
             data-tone="green"
           >
             <div class="slide-content">
-              <p class="slide-kicker">37 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">38 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>Cu&aacute;nto cuesta y d&oacute;nde encaja con <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">SPEC-WEAVER</abbr></h2>
               <ul class="slide-list">
                 <li>
@@ -4148,12 +4255,12 @@
 
           <article
             class="slide is-figure-wide"
-            data-index="40"
+            data-index="41"
             data-module="5"
             data-tone="red"
           >
             <div class="slide-content">
-              <p class="slide-kicker">38 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">39 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>Levantar la interfaz web</h2>
               <ul class="slide-list">
                 <li>
@@ -4175,12 +4282,12 @@
 
           <article
             class="slide is-figure-wide"
-            data-index="41"
+            data-index="42"
             data-module="5"
             data-tone="cyan"
           >
             <div class="slide-content">
-              <p class="slide-kicker">39 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">40 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>El dashboard: pestaña Dependencias</h2>
               <ul class="slide-list">
                 <li>
@@ -4201,12 +4308,12 @@
 
           <article
             class="slide is-wide"
-            data-index="42"
+            data-index="43"
             data-module="5"
             data-tone="blue"
           >
             <div class="slide-content">
-              <p class="slide-kicker">40 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
+              <p class="slide-kicker">41 &middot; <abbr title="Stack de especificaciones del deck que teje cada etapa del ciclo con su herramienta ('SPEC' = especificaciones, 'WEAVER' = tejedor)">UN-SpecWeaver</abbr></p>
               <h2>El video completo</h2>
               <ul class="slide-list">
                 <li>
@@ -4230,12 +4337,12 @@
 
           <article
             class="slide is-wide"
-            data-index="43"
+            data-index="44"
             data-module="5"
             data-tone="blue"
           >
             <div class="slide-content">
-              <p class="slide-kicker">41 &middot; Fuentes</p>
+              <p class="slide-kicker">42 &middot; Fuentes</p>
               <h2>Fuentes</h2>
               <ul class="slide-list slide-references">
                 <li>
@@ -4333,6 +4440,17 @@
                   >
                 </li>
                 <li>
+                  Jiang, X., Dong, Y., Wang, L., Fang, Z., Shang, Q., Li, G.,
+                  Jin, Z., &amp; Jiao, W. (2024). <em>Self-Planning Code
+                  Generation with Large Language Models</em>. <em>ACM
+                  Transactions on Software Engineering and
+                  Methodology</em>, <em>33</em>(7), Article 182.
+                  arXiv:2303.06689.
+                  <a href="https://arxiv.org/abs/2303.06689"
+                    >https://arxiv.org/abs/2303.06689</a
+                  >
+                </li>
+                <li>
                   Jiménez, C. E., Yang, J., Wettig, A., Yao, S., Pei, K.,
                   Press, O., &amp; Narasimhan, K. (2024). <em><abbr title="Software Engineering Benchmark (punto de referencia de ingeniería de software)">SWE-bench</abbr>: Can
                   language models resolve real-world GitHub issues?</em>
@@ -4357,6 +4475,17 @@
                   >
                 </li>
                 <li>
+                  Mu, F., Shi, L., Wang, S., Yu, Z., Zhang, B., Wang, C.,
+                  Liu, S., &amp; Wang, Q. (2024). <em>ClarifyGPT: A Framework
+                  for Enhancing LLM-Based Code Generation via Requirements
+                  Clarification</em>. <em>Proceedings of the ACM on Software
+                  Engineering</em>, <em>1</em>(FSE), 2332&ndash;2354.
+                  arXiv:2310.10996.
+                  <a href="https://arxiv.org/abs/2310.10996"
+                    >https://arxiv.org/abs/2310.10996</a
+                  >
+                </li>
+                <li>
                   Paradis, E., Grey, K., Madison, Q., Nam, D., Macvean, A.,
                   Meimand, V., Zhang, N., Ferrari-Church, B., &amp; Chandra, S.
                   (2024). <em>How much does <abbr title="Artificial Intelligence (inteligencia artificial)">AI</abbr> impact development speed? An
@@ -4374,9 +4503,47 @@
                   >
                 </li>
                 <li>
+                  Tufano, M., McClure, J., Cambronero, J., Cheng, R., Shi,
+                  S. Y., Wei, R., Chen, D., Ivančić, F., Dalloro, L., &amp;
+                  Rondon, P. (2026). <em>Grounding <abbr title="Artificial Intelligence (inteligencia artificial)">AI</abbr> agents in contracts: An
+                  empirical evaluation of spec-driven test generation</em>.
+                  Google. arXiv:2608.17177.
+                  <a href="https://arxiv.org/abs/2608.17177"
+                    >https://arxiv.org/abs/2608.17177</a
+                  >
+                </li>
+                <li>
                   Veracode. (2025). <em>2025 GenAI code security report</em>.
                   <a href="https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/"
                     >https://www.veracode.com/&hellip;</a
+                  >
+                </li>
+                <li>
+                  Wu, X., Xue, Z., Yin, D., Zhou, S., Chang, K.-W., Peng, N.,
+                  &amp; Wen, Y. (2026). <em>FronTalk: Benchmarking front-end
+                  development as conversational code generation with
+                  multi-modal feedback</em>. arXiv:2601.04203.
+                  <a href="https://arxiv.org/abs/2601.04203"
+                    >https://arxiv.org/abs/2601.04203</a
+                  >
+                </li>
+                <li>
+                  Xu, K., Mao, Y., Guan, X., &amp; Feng, Z. (2025).
+                  <em>Web-Bench: A <abbr title="Large Language Model (modelo de lenguaje grande)">LLM</abbr> code benchmark based on web standards
+                  and frameworks</em>. arXiv:2505.07473.
+                  <a href="https://arxiv.org/abs/2505.07473"
+                    >https://arxiv.org/abs/2505.07473</a
+                  >
+                </li>
+                <li>
+                  Zhou, X., Chong, C. Y., Kim, K., Peng, Y., Shu, R., Wu, Z.,
+                  Han, X., Yuan, G., Zhuang, Z., Kim, J., Ju, J., Ju, S.,
+                  Yoon, T., &amp; Lo, D. (2026). <em>A unified issue
+                  resolution benchmark for requirement clarification,
+                  planning, and code generation for coding agents</em>
+                  (SWE-RPG). arXiv:2608.09072.
+                  <a href="https://arxiv.org/abs/2608.09072"
+                    >https://arxiv.org/abs/2608.09072</a
                   >
                 </li>
               </ul>
