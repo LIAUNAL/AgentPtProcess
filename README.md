@@ -2,7 +2,7 @@
 
 Deck de propuesta y entendimiento sobre la implementación de agentes de <abbr title="Inteligencia Artificial">IA</abbr> en el ciclo de vida del desarrollo de software (<abbr title="Software Development Life Cycle (ciclo de vida del desarrollo de software)">Software Development Life Cycle (SDLC)</abbr>), del Laboratorio de Inteligencia Artificial de la Universidad Nacional de Colombia sede Manizales.
 
-**Presentación en vivo: https://liaunal.github.io/AgentPt/**
+**Presentación en vivo: [https://liaunal.github.io/AgentPt/](https://liaunal.github.io/AgentPtProcess/atenea/)**
 
 Este repositorio es únicamente para `index.html`.
 
