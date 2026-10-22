@@ -110,7 +110,7 @@ def generate_e1_e4_html():
                   </li>
                   <li class="cover-member">
                     <span class="cover-member-name">Prof. Andrés Marino Álvarez Meza</span>
-                    <span class="cover-member-role">Profesor Asociado &middot; Investigador Principal</span>
+                    <span class="cover-member-role">Profesor Asociado - Fac. Ingeniería y Arquitectura, Dir. LIA-UNAL</span>
                   </li>
                   <li class="cover-member">
                     <span class="cover-member-name">Carlos Andrés Pérez Aguirre</span>
