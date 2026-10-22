@@ -3861,48 +3861,54 @@
                   siguiente diapositiva verifica.
                 </li>
               </ul>
-              <div class="doc-excerpt">
-                <p class="doc-excerpt-heading">Requirement: Registro de solicitud de crédito con datos socioeconómicos</p>
-                <p>El sistema SHALL soportar registro de solicitud de crédito con datos socioeconómicos.</p>
-              </div>
-              <div class="doc-excerpt">
-                <p class="doc-excerpt-heading">Scenario: Completa el formulario con ingresos del hogar, número de dependientes, estrato y ocupación</p>
-                <dl class="gwt-list">
-                  <dt class="gwt-key">GIVEN</dt>
-                  <dd>un estudiante autenticado sin solicitud activa</dd>
+              <div class="excerpt-row">
+                <div>
+                  <div class="doc-excerpt">
+                    <p class="doc-excerpt-heading">Requirement: Registro de solicitud de crédito con datos socioeconómicos</p>
+                    <p>El sistema SHALL soportar registro de solicitud de crédito con datos socioeconómicos.</p>
+                  </div>
+                  <div class="doc-excerpt">
+                    <p class="doc-excerpt-heading">Scenario: Completa el formulario con ingresos del hogar, dependientes y estrato</p>
+                    <dl class="gwt-list">
+                      <dt class="gwt-key">GIVEN</dt>
+                      <dd>un estudiante autenticado sin solicitud activa</dd>
 
-                  <dt class="gwt-key">WHEN</dt>
-                  <dd>completa el formulario con ingresos del hogar, número de dependientes, estrato y ocupación del acudiente y lo envía</dd>
+                      <dt class="gwt-key">WHEN</dt>
+                      <dd>completa el formulario con ingresos, estrato y ocupación y lo envía</dd>
 
-                  <dt class="gwt-key">THEN</dt>
-                  <dd>el sistema crea la solicitud con estado <code>borrador</code>, le asigna un identificador único y la asocia al estudiante</dd>
-                </dl>
-              </div>
-              <div class="doc-excerpt">
-                <p class="doc-excerpt-heading">Scenario: Intenta crear una segunda solicitud para el mismo periodo académico</p>
-                <dl class="gwt-list">
-                  <dt class="gwt-key">GIVEN</dt>
-                  <dd>un estudiante que ya tiene una solicitud activa en curso</dd>
+                      <dt class="gwt-key">THEN</dt>
+                      <dd>el sistema crea la solicitud con estado <code>borrador</code> y le asigna un ID único</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div>
+                  <div class="doc-excerpt">
+                    <p class="doc-excerpt-heading">Scenario: Intenta crear una segunda solicitud para el mismo periodo</p>
+                    <dl class="gwt-list">
+                      <dt class="gwt-key">GIVEN</dt>
+                      <dd>un estudiante que ya tiene una solicitud activa en curso</dd>
 
-                  <dt class="gwt-key">WHEN</dt>
-                  <dd>intenta crear una segunda solicitud para el mismo periodo académico</dd>
+                      <dt class="gwt-key">WHEN</dt>
+                      <dd>intenta crear una segunda solicitud para el mismo periodo académico</dd>
 
-                  <dt class="gwt-key">THEN</dt>
-                  <dd>el sistema rechaza la creación y muestra el estado de la solicitud existente</dd>
-                </dl>
-              </div>
-              <div class="doc-excerpt">
-                <p class="doc-excerpt-heading">Scenario: El estudiante intenta enviar la solicitud</p>
-                <dl class="gwt-list">
-                  <dt class="gwt-key">GIVEN</dt>
-                  <dd>un formulario con campos socioeconómicos obligatorios vacíos</dd>
+                      <dt class="gwt-key">THEN</dt>
+                      <dd>el sistema rechaza la creación y muestra el estado de la solicitud existente</dd>
+                    </dl>
+                  </div>
+                  <div class="doc-excerpt">
+                    <p class="doc-excerpt-heading">Scenario: El estudiante intenta enviar la solicitud incompleta</p>
+                    <dl class="gwt-list">
+                      <dt class="gwt-key">GIVEN</dt>
+                      <dd>un formulario con campos socioeconómicos obligatorios vacíos</dd>
 
-                  <dt class="gwt-key">WHEN</dt>
-                  <dd>el estudiante intenta enviar la solicitud</dd>
+                      <dt class="gwt-key">WHEN</dt>
+                      <dd>el estudiante intenta enviar la solicitud</dd>
 
-                  <dt class="gwt-key">THEN</dt>
-                  <dd>el sistema bloquea el envío y resalta los campos faltantes</dd>
-                </dl>
+                      <dt class="gwt-key">THEN</dt>
+                      <dd>el sistema bloquea el envío y resalta los campos faltantes</dd>
+                    </dl>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
@@ -4723,11 +4729,11 @@
                 <p class="cover-team-label">Equipo de Trabajo &middot; LIA UNAL Manizales:</p>
                 <ul class="cover-members">
                   <li class="cover-member">
-                    <span class="cover-member-name">Néstor Darío Duque Méndez</span>
-                    <span class="cover-member-role">Profesor Titular &middot; Director LIA</span>
+                    <span class="cover-member-name">Prof. Jorge Iván Montes Monsalve</span>
+                    <span class="cover-member-role">Profesor Asociado &middot; Fac. de Administración (Sede Manizales)</span>
                   </li>
                   <li class="cover-member">
-                    <span class="cover-member-name">Andrés Marino Álvarez Meza</span>
+                    <span class="cover-member-name">Prof. Andrés Marino Álvarez Meza</span>
                     <span class="cover-member-role">Profesor Asociado &middot; Investigador Principal</span>
                   </li>
                   <li class="cover-member">
