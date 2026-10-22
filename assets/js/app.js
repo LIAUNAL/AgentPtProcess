@@ -291,9 +291,72 @@ function initDeck(deckId) {
 }
 
 // --------------------------------------------------------------------------
+// Hub Selector de Presentaciones (Landing View)
+// --------------------------------------------------------------------------
+const deckHubView = document.getElementById("deck-hub-view");
+const hubCards = Array.from(document.querySelectorAll(".hub-card, .hub-card-btn"));
+
+function showHub(pushState = true) {
+  if (!deckHubView) return;
+  document.body.classList.add("view-hub");
+  document.body.classList.remove("view-deck");
+  if (pushState) {
+    try {
+      const url = new URL(window.location);
+      url.searchParams.delete("deck");
+      window.history.pushState({}, "", url.pathname + (url.search || ""));
+    } catch (_) {}
+  }
+}
+
+function openDeck(deckId, pushState = true) {
+  if (deckHubView) {
+    document.body.classList.remove("view-hub");
+    document.body.classList.add("view-deck");
+  }
+  initDeck(deckId);
+  if (pushState) {
+    try {
+      const url = new URL(window.location);
+      url.searchParams.set("deck", deckId);
+      window.history.pushState({}, "", url);
+    } catch (_) {}
+  }
+}
+
+if (deckHubView) {
+  hubCards.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      const card = el.closest("[data-deck]");
+      const targetDeck = card ? card.dataset.deck : null;
+      if (targetDeck) {
+        e.preventDefault();
+        openDeck(targetDeck);
+      }
+    });
+  });
+}
+
+// Popstate (navegación con botón atrás/adelante del navegador)
+window.addEventListener("popstate", () => {
+  if (!deckHubView) return;
+  const p = new URLSearchParams(window.location.search);
+  const d = p.get("deck");
+  if (d && DECK_CONFIG[d]) {
+    openDeck(d, false);
+  } else {
+    showHub(false);
+  }
+});
+
+// --------------------------------------------------------------------------
 // Modal y Panel de Control
 // --------------------------------------------------------------------------
 function toggleDeckModal(force) {
+  if (deckHubView) {
+    showHub();
+    return;
+  }
   if (!deckModal) return;
   const isOpen = force !== undefined ? force : !deckModal.classList.contains("is-open");
   deckModal.classList.toggle("is-open", isOpen);
@@ -302,7 +365,13 @@ function toggleDeckModal(force) {
 }
 
 if (selectorBtn) {
-  selectorBtn.addEventListener("click", () => toggleDeckModal());
+  selectorBtn.addEventListener("click", () => {
+    if (deckHubView) {
+      showHub();
+    } else {
+      toggleDeckModal();
+    }
+  });
 }
 if (deckCloseBtn) {
   deckCloseBtn.addEventListener("click", () => toggleDeckModal(false));
@@ -316,7 +385,7 @@ deckCards.forEach((card) => {
   card.addEventListener("click", (e) => {
     const targetDeck = card.dataset.deck;
     if (targetDeck) {
-      initDeck(targetDeck);
+      openDeck(targetDeck);
       toggleDeckModal(false);
     }
   });
@@ -344,10 +413,22 @@ window.addEventListener("keydown", (event) => {
     document.body.classList.toggle("focus-mode");
   }
   if (event.key.toLowerCase() === "p" || event.key.toLowerCase() === "m") {
-    toggleDeckModal();
+    if (deckHubView) {
+      if (document.body.classList.contains("view-hub")) {
+        openDeck(currentDeck || "e1-e4");
+      } else {
+        showHub();
+      }
+    } else {
+      toggleDeckModal();
+    }
   }
-  if (event.key === "Escape" && deckModal?.classList.contains("is-open")) {
-    toggleDeckModal(false);
+  if (event.key === "Escape") {
+    if (deckModal?.classList.contains("is-open")) {
+      toggleDeckModal(false);
+    } else if (deckHubView && document.body.classList.contains("view-deck")) {
+      showHub();
+    }
   }
 });
 
@@ -369,19 +450,30 @@ window.addEventListener("touchend", (event) => {
 // --------------------------------------------------------------------------
 // Inicialización al cargar la página
 // --------------------------------------------------------------------------
-document.addEventListener("DOMContentLoaded", () => {
+function initApp() {
   const params = new URLSearchParams(window.location.search);
   const deckParam = params.get("deck");
-  const savedDeck = localStorage.getItem("active-deck");
-  const initialDeck = deckParam || savedDeck || "kickoff";
-  initDeck(initialDeck);
-});
+  if (deckHubView) {
+    if (deckParam && DECK_CONFIG[deckParam]) {
+      openDeck(deckParam, false);
+    } else {
+      // Al iniciar, SOLO debe verse el panel selector de presentaciones
+      showHub(false);
+    }
+  } else {
+    const initialDeck = deckParam || (document.querySelector("[data-deck='e1-e4']") ? "e1-e4" : "kickoff");
+    initDeck(initialDeck);
+  }
+}
 
-// Si DOMContentLoaded ya disparó
+let appInitialized = false;
+function safeInit() {
+  if (appInitialized) return;
+  appInitialized = true;
+  initApp();
+}
+
+document.addEventListener("DOMContentLoaded", safeInit);
 if (document.readyState === "interactive" || document.readyState === "complete") {
-  const params = new URLSearchParams(window.location.search);
-  const deckParam = params.get("deck");
-  const savedDeck = localStorage.getItem("active-deck");
-  const initialDeck = deckParam || savedDeck || "kickoff";
-  initDeck(initialDeck);
+  safeInit();
 }

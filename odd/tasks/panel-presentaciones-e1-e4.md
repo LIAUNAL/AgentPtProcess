@@ -53,3 +53,32 @@ Implementar un panel de control interactivo para seleccionar entre la presentaci
 - [x] Integración del Panel de Control y las presentaciones en `index.html`.
 - [x] Creación de archivos individuales `kickoff.html` y `e1-e4.html`.
 - [x] Verificación técnica integral con `scripts/presentador_deck.py` (0 advertencias, 0 errores).
+
+### 2.1 Iteración 2: Hub Inicial Exclusivo, Remoción de Personal y Tablas/Diagramas Técnicos Completos (Capítulos 1 a 7)
+- [x] Modificación de la pantalla de aterrizaje en `index.html`: ahora al abrir la raíz sin parámetros solo se muestra el **Hub Selector de Presentaciones** (`#deck-hub-view`), ocultando el visor de diapositivas hasta que se elija una presentación.
+- [x] Eliminación de Juan Carlos Aguirre de todas las presentaciones y portadas.
+- [x] Incorporación de todos los diagramas de flujo vectoriales SVG del informe técnico hasta el capítulo 7:
+  - Cronograma de Gantt semanal S1 a S22 (Figura 2.1).
+  - Flujo actual de un requerimiento en ATENEA con sus cuellos de botella (Figura 3.1).
+  - Mapa de infraestructura y desarrollo actual en Azure (Figura 3.2).
+  - Flujo SDLC-IA por etapas y carriles institucionales con las 5 compuertas humanas (Figura 4.1).
+  - Composición de la propuesta y arquitectura institucional del arnés (Figura 5.1).
+  - Flujo integral de artefactos de Aracne en 3 fases (Figura 6.1).
+- [x] Incorporación de todas las tablas de datos estructuradas del informe técnico hasta el capítulo 7:
+  - Condiciones generales del contrato (Tabla 2.1).
+  - Obligaciones específicas del contratista (Tabla 2.2).
+  - Componentes C1 a C8, Entregables E1 a E8 y esquema de pagos (Tablas 2.3 y 2.4).
+  - Portafolio de sistemas y proyectos de ATENEA (Tabla 3.1).
+  - Roles del ciclo de desarrollo y falencias asociadas (Tabla 3.2).
+  - Stack tecnológico e inventario de licencias de IA (Tablas 3.3 y 3.4).
+  - Matriz de los 10 puntos de fricción con datos probatorios (Tabla 3.5).
+  - Intervención agéntica por etapa (Tabla 4.1).
+  - Piezas de contexto del proyecto en el repositorio (Tabla 4.2).
+  - Matriz de componentes de la propuesta (Tabla 5.1).
+  - Comparación de candidatos a Caso de Uso frente a los 7 criterios (Tabla 5.2).
+  - Sistema de agentes base de Aracne (Tabla 6.1).
+  - Catálogo de comandos CLI y skills operativas (Tabla 6.2).
+  - Compromisos de las sesiones técnicas (Tabla 7.1).
+- [x] Exclusión estricta de tablas y figuras de la sección de anexos.
+- [x] Total de diapositivas en E1–E4 ampliado a 26 diapositivas con maquetación responsiva y scroll interno en tablas.
+- [x] Validación estructural completada con éxito en los tres archivos (`index.html`, `kickoff.html`, `e1-e4.html`).

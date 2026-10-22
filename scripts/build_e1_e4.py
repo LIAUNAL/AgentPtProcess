@@ -1,0 +1,2226 @@
+#!/usr/bin/env python3
+"""
+Generador de e1-e4.html con todas las tablas y diagramas de flujo del informe técnico (Capítulos 1 a 7).
+"""
+
+import sys
+from pathlib import Path
+
+def generate_e1_e4_html():
+    html = '''<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Informe Técnico E1–E4: Contrato ATENEA-464-2026 | LIA UNAL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261022_2" />
+  </head>
+  <body class="view-deck">
+    <div class="ambient"></div>
+    <div class="deck-app">
+      <div class="rail-bar-wrapper">
+        <a href="index.html" class="deck-selector-btn" style="text-decoration:none;" title="Volver al Panel Selector de Presentaciones">
+          <span class="deck-selector-badge">DECK</span>
+          <span class="deck-selector-name">E1–E4: Informe de Avance</span>
+          <span class="deck-selector-switch" style="font-size:0.75rem; color:var(--accent); font-weight:700; margin-left:6px;">← Selector</span>
+        </a>
+        <nav class="rail" aria-label="Módulos">
+          <div class="rail-module" data-deck="e1-e4" data-module="cover">
+            <button class="rail-title" type="button" data-first="0">Portada</button>
+            <div class="rail-dots" id="dots-cover"></div>
+          </div>
+          <div class="rail-module" data-deck="e1-e4" data-module="e0">
+            <button class="rail-title" type="button" data-first="1">1 · Marco Contractual</button>
+            <div class="rail-dots" id="dots-e0"></div>
+          </div>
+          <div class="rail-module" data-deck="e1-e4" data-module="e1">
+            <button class="rail-title" type="button" data-first="6">2 · Diagnóstico E1</button>
+            <div class="rail-dots" id="dots-e1"></div>
+          </div>
+          <div class="rail-module" data-deck="e1-e4" data-module="e2">
+            <button class="rail-title" type="button" data-first="12">3 · Metodología E2</button>
+            <div class="rail-dots" id="dots-e2"></div>
+          </div>
+          <div class="rail-module" data-deck="e1-e4" data-module="e3">
+            <button class="rail-title" type="button" data-first="17">4 · Arquitectura E3</button>
+            <div class="rail-dots" id="dots-e3"></div>
+          </div>
+          <div class="rail-module" data-deck="e1-e4" data-module="e4">
+            <button class="rail-title" type="button" data-first="20">5 · Agentes y Skills E4</button>
+            <div class="rail-dots" id="dots-e4"></div>
+          </div>
+          <div class="rail-module" data-deck="e1-e4" data-module="e5">
+            <button class="rail-title" type="button" data-first="23">6 · Decisiones y Cierre</button>
+            <div class="rail-dots" id="dots-e5"></div>
+          </div>
+        </nav>
+      </div>
+
+      <main class="deck-viewport">
+        <section class="stage">
+          <!-- Slide 0: Portada E1-E4 -->
+          <article
+            class="slide is-cover is-active"
+            data-deck="e1-e4"
+            data-module="cover"
+            id="slide-e-cover"
+          >
+            <div class="cover-card">
+              <div class="cover-header">
+                <div class="cover-logos">
+                  <img
+                    class="cover-logo"
+                    src="assets/images/escudo_unal.png"
+                    alt="Universidad Nacional de Colombia"
+                  />
+                  <img
+                    class="cover-logo"
+                    src="assets/images/logo_labIA.png"
+                    alt="Laboratorio de Inteligencia Artificial"
+                  />
+                  <img
+                    class="cover-logo"
+                    src="assets/images/logo-atenea.png"
+                    alt="Agencia Distrital ATENEA"
+                  />
+                </div>
+                <span class="cover-badge">INFORME TÉCNICO DE AVANCE &middot; HITO 1</span>
+              </div>
+              <h1 class="cover-title">
+                Fortalecimiento del ciclo de vida de ingeniería de software con inteligencia artificial en ATENEA
+              </h1>
+              <p class="cover-subtitle">
+                Entregables E1 a E4: Diagnóstico institucional, Metodología SDLC-IA, Arquitectura End-to-End y Sistema de Agentes y Skills al 21 de octubre de 2026.
+              </p>
+              <div class="cover-team">
+                <p class="cover-team-label">Equipo de Trabajo &middot; LIA UNAL Manizales:</p>
+                <ul class="cover-members">
+                  <li class="cover-member">
+                    <span class="cover-member-name">Néstor Darío Duque Méndez</span>
+                    <span class="cover-member-role">Profesor Titular &middot; Director LIA</span>
+                  </li>
+                  <li class="cover-member">
+                    <span class="cover-member-name">Andrés Marino Álvarez Meza</span>
+                    <span class="cover-member-role">Profesor Asociado &middot; Investigador Principal</span>
+                  </li>
+                  <li class="cover-member">
+                    <span class="cover-member-name">Carlos Andrés Pérez Aguirre</span>
+                    <span class="cover-member-role">Estudiante de Doctorado en Ingeniería</span>
+                  </li>
+                  <li class="cover-member">
+                    <span class="cover-member-name">Diego Armando Pérez Rosero</span>
+                    <span class="cover-member-role">Estudiante de Doctorado en Ingeniería</span>
+                  </li>
+                  <li class="cover-member">
+                    <span class="cover-member-name">Juan Sebastián Méndez Rondón</span>
+                    <span class="cover-member-role">Candidato a Ph.D. en Ingeniería</span>
+                  </li>
+                </ul>
+              </div>
+              <p class="cover-meta">
+                <span>Contrato Interadministrativo ATENEA-464-2026 &middot; Hito 1</span>
+                <span>Bogotá D.C. &middot; Manizales, 21 de octubre de 2026</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- ========================================================================= -->
+          <!-- MÓDULO 1: Marco Contractual y Cronograma (Capítulos 1 y 2)                -->
+          <!-- ========================================================================= -->
+
+          <!-- Slide 1: Objeto Contractual y 4 Resultados Exigidos -->
+          <article class="slide" data-deck="e1-e4" data-module="e0">
+            <div class="slide-content">
+              <p class="slide-kicker">1 &middot; Marco Contractual y Alcance</p>
+              <h2>Contrato ATENEA-464-2026: objeto y los cuatro resultados exigidos</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Objeto contractual:</strong> Prestar servicios para fortalecer las capacidades institucionales de la Agencia para mejorar el ciclo de vida de la ingeniería de software, mediante el uso de <abbr title="Inteligencia Artificial">IA</abbr>.
+                </li>
+                <li>
+                  <strong>Partes y condiciones generales:</strong> Suscrito entre la Agencia Distrital <abbr title="Agencia Distrital para la Educación Superior, la Ciencia y la Tecnología">ATENEA</abbr> y la <abbr title="Universidad Nacional de Colombia">UNAL</abbr> Sede Manizales (<abbr title="Laboratorio de Inteligencia Artificial">LIA</abbr>), por un valor de $300.000.000 <abbr title="Pesos Colombianos">COP</abbr> y plazo de hasta 5 meses (22 semanas).
+                </li>
+                <li>
+                  <strong>Cuatro resultados obligatorios de la cláusula segunda:</strong>
+                  1. Marco institucional propio para el ciclo <abbr title="Software Development Life Cycle">SDLC</abbr> mediado por IA;
+                  2. Caso de uso funcional desplegado y operando en un proceso misional;
+                  3. Sistema de agentes y skills con modelo de gobernanza; y
+                  4. Documentación técnica y operativa para autonomía total.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estructura del Contrato ATENEA-464-2026 y los 4 resultados esperados">
+                <rect x="20" y="16" width="480" height="74" rx="10" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.5" />
+                <text x="35" y="42" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">CONTRATO INTERADMINISTRATIVO ATENEA-464-2026</text>
+                <text x="35" y="62" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="11">Agencia ATENEA (Bogotá D.C.) ↔ UNAL Sede Manizales (LIA) · $300.000.000 COP · 22 Semanas</text>
+                <text x="35" y="78" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600">Objeto: Fortalecimiento de capacidades en ingeniería de software mediante IA</text>
+
+                <text x="260" y="114" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700" letter-spacing="1">4 RESULTADOS INSTITUCIONALES EXIGIDOS</text>
+
+                <rect x="25" y="128" width="225" height="98" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.3" />
+                <rect x="35" y="138" width="24" height="20" rx="4" fill="#7FB4CA" />
+                <text x="47" y="152" text-anchor="middle" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">R1</text>
+                <text x="68" y="152" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">Marco Propio SDLC-IA</text>
+                <text x="35" y="174" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">Marco institucional de ciclo de vida</text>
+                <text x="35" y="190" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">mediado por IA, articulado con las</text>
+                <text x="35" y="206" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">herramientas actuales de ATENEA.</text>
+
+                <rect x="270" y="128" width="225" height="98" rx="8" fill="#F8FAFC" stroke="#7AA89F" stroke-width="1.3" />
+                <rect x="280" y="138" width="24" height="20" rx="4" fill="#7AA89F" />
+                <text x="292" y="152" text-anchor="middle" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">R2</text>
+                <text x="313" y="152" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">Caso de Uso Desplegado</text>
+                <text x="280" y="174" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">Proceso misional funcional operando</text>
+                <text x="280" y="190" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">con agentes en ambiente real,</text>
+                <text x="280" y="206" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">validado por el equipo técnico.</text>
+
+                <rect x="25" y="238" width="225" height="98" rx="8" fill="#F8FAFC" stroke="#B7CC85" stroke-width="1.3" />
+                <rect x="35" y="248" width="24" height="20" rx="4" fill="#B7CC85" />
+                <text x="47" y="262" text-anchor="middle" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">R3</text>
+                <text x="68" y="262" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">Banco de Agentes &amp; Skills</text>
+                <text x="35" y="284" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">Catálogo de comandos y skills</text>
+                <text x="35" y="300" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">con modelo de gobernanza,</text>
+                <text x="35" y="316" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">pruebas y límites de acción.</text>
+
+                <rect x="270" y="238" width="225" height="98" rx="8" fill="#F8FAFC" stroke="#DFBD76" stroke-width="1.3" />
+                <rect x="280" y="248" width="24" height="20" rx="4" fill="#DFBD76" />
+                <text x="292" y="262" text-anchor="middle" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">R4</text>
+                <text x="313" y="262" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">Autonomía Institucional</text>
+                <text x="280" y="284" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">Guías operativas, manuales y</text>
+                <text x="280" y="300" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">transferencia que permiten mantener</text>
+                <text x="280" y="316" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">y escalar la solución sin el contratista.</text>
+              </svg>
+            </figure>
+          </article>
+
+          <!-- Slide 2: Ficha Técnica y Condiciones Contractuales (Tabla 2.1) -->
+          <article class="slide" data-deck="e1-e4" data-module="e0">
+            <div class="slide-content">
+              <p class="slide-kicker">1 &middot; Marco Contractual y Alcance</p>
+              <h2>Condiciones generales y cláusulas condicionantes de la minuta</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Marco legal vinculante:</strong> La minuta del Contrato ATENEA-464-2026 fija condiciones estrictas de plazo, ejecución y garantías contractuales para ambas partes.
+                </li>
+                <li>
+                  <strong>Cuatro cláusulas técnicas condicionantes:</strong>
+                  <strong>Confidencialidad (décima):</strong> pena del 15% por fuga de información; el código y actas requieren entornos protegidos.
+                  <strong>Seguridad (undécima):</strong> prohibición de divulgar datos clasificados.
+                  <strong>Propiedad intelectual (vigésima cuarta):</strong> derechos patrimoniales exclusivos de ATENEA; repositorios y modelos deben residir bajo control institucional.
+                  <strong>Recursos (vigésima novena):</strong> sistemas auditables.
+                </li>
+                <li>
+                  <strong>Supervisión técnica:</strong> A cargo del Subgerente de Tecnologías de la Información y Comunicaciones de ATENEA.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 2.1: Condiciones generales del contrato según la minuta (A5)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:28%;">Elemento</th>
+                      <th>Condición en la Minuta Contractual</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Plazo (cláusula cuarta)</strong></td>
+                      <td>Hasta 5 meses a partir del acta de inicio, previo cumplimiento de requisitos de perfeccionamiento y ejecución.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Lugar (quinta)</strong></td>
+                      <td>Bogotá D.C. (ejecución remota y presencial coordinada).</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Valor (sexta)</strong></td>
+                      <td><strong>$300.000.000 COP</strong>, con impuestos y costos directos e indirectos incluidos; la propuesta técnica es parte integral.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Supervisión (octava)</strong></td>
+                      <td>Subgerente de Tecnologías de Información y Comunicaciones de ATENEA (o delegado escrito del ordenador del gasto).</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Garantías (novena)</strong></td>
+                      <td>Cumplimiento (15% del valor, plazo + 6 meses), Calidad del servicio (20%, plazo + 6 meses) y Salarios y prestaciones (5%, plazo + 3 años).</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Liquidación (decimosexta)</strong></td>
+                      <td>De mutuo acuerdo dentro de los 4 meses siguientes al vencimiento del plazo contractual.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Ejecución (trigésima)</strong></td>
+                      <td>Requiere registro presupuestal, aprobación de garantías y suscripción de acta de inicio; perfeccionamiento en SECOP II.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide 3: Obligaciones Específicas del Contratista (Tabla 2.2) -->
+          <article class="slide" data-deck="e1-e4" data-module="e0">
+            <div class="slide-content">
+              <p class="slide-kicker">1 &middot; Marco Contractual y Alcance</p>
+              <h2>Obligaciones específicas del contratista (Literal b, Cláusula 3ª)</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>11 Obligaciones técnicas orientadoras:</strong> Frente a las 24 obligaciones administrativas generales, las 11 obligaciones específicas guían la arquitectura y ejecución del proyecto.
+                </li>
+                <li>
+                  <strong>Articulación con componentes:</strong> Cada obligación se mapea directamente a uno o más componentes contractuales (C1 a C8) pactados con ATENEA.
+                </li>
+                <li>
+                  <strong>Corresponsabilidad institucional:</strong> El literal c fija obligaciones de ATENEA: equipo técnico disponible, acceso a sistemas y datos, autorizaciones de seguridad y modelos, y revisión de entregables.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 2.2: Obligaciones específicas del contratista (Cláusula 3ª, Literal b)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:8%;">N.º</th>
+                      <th>Obligación Específica</th>
+                      <th style="width:20%;">Componente</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><strong>1</strong></td><td>Presentar plan de trabajo en los 8 días hábiles tras acta de inicio o perfeccionamiento.</td><td><span class="table-tag tag-blue">Arranque</span></td></tr>
+                    <tr><td><strong>2</strong></td><td>Realizar diagnóstico técnico y operativo del modelo de desarrollo actual de la entidad.</td><td><span class="table-tag tag-green">C1 (Diagnóstico)</span></td></tr>
+                    <tr><td><strong>3</strong></td><td>Entregar informe de diagnóstico para validación de la supervisión técnica.</td><td><span class="table-tag tag-green">C1 (Validación)</span></td></tr>
+                    <tr><td><strong>4</strong></td><td>Definir metodología SDLC-IA aplicable a las necesidades reales de la entidad.</td><td><span class="table-tag tag-green">C2 (Metodología)</span></td></tr>
+                    <tr><td><strong>5</strong></td><td>Identificar y priorizar un caso de uso institucional para aplicar la metodología.</td><td><span class="table-tag tag-amber">C3 (Caso de Uso)</span></td></tr>
+                    <tr><td><strong>6</strong></td><td>Desarrollar e implementar agentes de IA y skills según la metodología y ciclo definido.</td><td><span class="table-tag tag-green">C4, C5 (Agentes)</span></td></tr>
+                    <tr><td><strong>7</strong></td><td>Ejecutar el desarrollo del caso de uso con los agentes y la metodología SDLC-IA.</td><td><span class="table-tag tag-amber">C5, C6 (Desarrollo)</span></td></tr>
+                    <tr><td><strong>8</strong></td><td>Desplegar el caso de uso en el ambiente productivo dispuesto por la entidad.</td><td><span class="table-tag tag-blue">C7 (Despliegue)</span></td></tr>
+                    <tr><td><strong>9</strong></td><td>Elaborar documentación técnica integral con su transferencia de conocimiento.</td><td><span class="table-tag tag-blue">C8 (Cierre)</span></td></tr>
+                    <tr><td><strong>10</strong></td><td>Cumplir cada componente del anexo técnico y entregar sus productos correspondientes.</td><td><span class="table-tag tag-green">C1 a C8</span></td></tr>
+                    <tr><td><strong>11</strong></td><td>Asistir a las reuniones presenciales y virtuales que requiera la debida ejecución.</td><td><span class="table-tag tag-blue">Transversal</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide 4: Componentes C1-C8 vs Entregables E1-E8 y Pagos (Tablas 2.3 y 2.4) -->
+          <article class="slide" data-deck="e1-e4" data-module="e0">
+            <div class="slide-content">
+              <p class="slide-kicker">1 &middot; Marco Contractual y Alcance</p>
+              <h2>Componentes C1 a C8, entregables E1 a E8 y pagos contractuales</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Estructura en dos pagos iguales:</strong> El contrato se pacta contra dos pagos del 50% ($150.000.000 COP cada uno) condicionados al recibo a satisfacción.
+                </li>
+                <li>
+                  <strong>Hito 1 contractual (50%):</strong> Vence en la Semana 13 y agrupa los componentes C1 a C4 (Entregables E1 a E4).
+                </li>
+                <li>
+                  <strong>Hito 2 contractual (50%):</strong> Vence en la Semana 22 y agrupa los componentes C5 a C8 (Entregables E5 a E8).
+                </li>
+                <li>
+                  <strong>Relación no unívoca:</strong> E1 recoge C1 y la priorización de C3; E4 cubre el banco de agentes inicial de C4 y prepara la construcción en C5.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 2.3 y 2.4: Componentes C1-C8, Entregables E1-E8 y Esquema de Pagos</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:12%;">Cód.</th>
+                      <th>Entregable / Componente Contractual</th>
+                      <th style="width:18%;">Comp. Minuta</th>
+                      <th style="width:18%;">Pago Asignado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="background:rgba(46,125,50,0.06);">
+                      <td><strong style="color:var(--accent);">E1</strong></td>
+                      <td><strong>Informe de Diagnóstico Institucional:</strong> Capacidades TI, roles, stack y caso de uso priorizado.</td>
+                      <td>C1, C3</td>
+                      <td rowspan="4"><strong>Hito 1 (50%)</strong><br /><span style="color:var(--accent); font-weight:700;">$150.000.000 COP</span><br />Vence Semana 13</td>
+                    </tr>
+                    <tr style="background:rgba(46,125,50,0.06);">
+                      <td><strong style="color:var(--accent);">E2</strong></td>
+                      <td><strong>Metodología SDLC-IA para ATENEA:</strong> Fases, artefactos, 5 puertas humanas y gobernanza.</td>
+                      <td>C2</td>
+                    </tr>
+                    <tr style="background:rgba(46,125,50,0.06);">
+                      <td><strong style="color:var(--accent);">E3</strong></td>
+                      <td><strong>Arquitectura End-to-End:</strong> Arnés de agentes, flujos, integraciones y seguridad.</td>
+                      <td>C3</td>
+                    </tr>
+                    <tr style="background:rgba(46,125,50,0.06);">
+                      <td><strong style="color:var(--accent);">E4</strong></td>
+                      <td><strong>Sistema de Agentes y Skills:</strong> Agentes base, comandos CLI, arneses y OpenSpec.</td>
+                      <td>C4, C5</td>
+                    </tr>
+                    <tr>
+                      <td><strong>E5</strong></td>
+                      <td><strong>Despliegue y Validación Misional:</strong> Implementación en ambiente objetivo y pruebas integradas.</td>
+                      <td>C6, C7</td>
+                      <td rowspan="4"><strong>Hito 2 (50%)</strong><br /><span style="color:#2c6b87; font-weight:700;">$150.000.000 COP</span><br />Vence Semana 22</td>
+                    </tr>
+                    <tr>
+                      <td><strong>E6</strong></td>
+                      <td><strong>Documentación Técnica y Operativa:</strong> Manuales de instalación, operación y mantenimiento.</td>
+                      <td>C8</td>
+                    </tr>
+                    <tr>
+                      <td><strong>E7</strong></td>
+                      <td><strong>Workshop de Transferencia:</strong> Sesiones teórico-prácticas y guías de replicabilidad.</td>
+                      <td>C8</td>
+                    </tr>
+                    <tr>
+                      <td><strong>E8</strong></td>
+                      <td><strong>Informe Final y Cierre:</strong> Balance de ejecución, matriz de verificación y sostenibilidad.</td>
+                      <td>C8</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide 5: Cronograma Operativo Semanal S1-S22 y los 4 Hitos (Figura 2.1) -->
+          <article class="slide" data-deck="e1-e4" data-module="e0">
+            <div class="slide-content">
+              <p class="slide-kicker">1 &middot; Marco Contractual y Alcance</p>
+              <h2>Cronograma operativo semanal S1 a S22 y distribución de hitos</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>22 Semanas operativas contadas desde inicio:</strong> Mes 1 (S1-S4), Mes 2 (S5-S9), Mes 3 (S10-S13), Mes 4 (S14-S18) y Mes 5 (S19-S22).
+                </li>
+                <li>
+                  <strong>Hito 1 contractual (S13):</strong> Agrupa las actividades A1 a A13: Diagnóstico [E1], Metodología [E2], Arquitectura [E3], Agentes y arneses iniciales [E4], y pruebas piloto iniciales.
+                </li>
+                <li>
+                  <strong>Hito 2 contractual (S22):</strong> Agrupa las actividades A14 a A20: Despliegue en producción del caso de uso [E5], documentación operativa [E6], talleres de transferencia [E7] y liquidación [E8].
+                </li>
+                <li>
+                  <strong>Corte al 21 de octubre de 2026:</strong> E1 a E4 completados en diseño conceptual y especificación técnica para revisión y adopción de ATENEA.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cronograma de Gantt semanal S1 a S22 del contrato ATENEA-464-2026">
+                <!-- Encabezado de meses -->
+                <rect x="15" y="15" width="490" height="24" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="1" />
+                <text x="65" y="31" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">MES 1 (S1-S4)</text>
+                <text x="160" y="31" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">MES 2 (S5-S9)</text>
+                <text x="260" y="31" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">MES 3 (S10-S13)</text>
+                <text x="365" y="31" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">MES 4 (S14-S18)</text>
+                <text x="460" y="31" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">MES 5 (S19-S22)</text>
+
+                <!-- Barra Hito 1 -->
+                <rect x="15" y="48" width="295" height="18" rx="4" fill="#2C6B87" />
+                <text x="160" y="61" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">HITO 1 CONTRACTUAL (C1–C4 / E1–E4) &middot; SEMANAS 1 A 13</text>
+
+                <!-- Barra Hito 2 -->
+                <rect x="315" y="48" width="190" height="18" rx="4" fill="#5B6472" />
+                <text x="410" y="61" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">HITO 2 (C5–C8 / E5–E8)</text>
+
+                <!-- Barras de actividades individuales -->
+                <g font-family="Space Grotesk,sans-serif" font-size="9">
+                  <!-- A1-A2 -->
+                  <text x="20" y="85" fill="#1B2029" font-weight="600">A1-A2 Kickoff y Diagnóstico [E1]</text>
+                  <rect x="180" y="74" width="45" height="13" rx="3" fill="#7FB4CA" />
+
+                  <!-- A3 Metodología -->
+                  <text x="20" y="107" fill="#1B2029" font-weight="600">A3 Metodología SDLC-IA [E2]</text>
+                  <rect x="205" y="96" width="35" height="13" rx="3" fill="#7FB4CA" />
+
+                  <!-- A4 Caso de uso & Arq -->
+                  <text x="20" y="129" fill="#1B2029" font-weight="600">A4 Arquitectura End-to-End [E3]</text>
+                  <rect x="225" y="118" width="45" height="13" rx="3" fill="#7FB4CA" />
+
+                  <!-- A5 Entornos y accesos -->
+                  <text x="20" y="151" fill="#1B2029" font-weight="600">A5 Accesos, entornos y modelos</text>
+                  <rect x="250" y="140" width="30" height="13" rx="3" fill="#DFBD76" />
+
+                  <!-- A6-A7 Agentes & Arneses -->
+                  <text x="20" y="173" fill="#1B2029" font-weight="600">A6-A7 Agentes y Arneses [E4]</text>
+                  <rect x="260" y="162" width="50" height="13" rx="3" fill="#B7CC85" />
+
+                  <!-- A8 Pruebas -->
+                  <text x="20" y="195" fill="#1B2029" font-weight="600">A8 Ingeniería de pruebas [E5]</text>
+                  <rect x="285" y="184" width="40" height="13" rx="3" fill="#7AA89F" />
+
+                  <!-- A9 Integración flujos -->
+                  <text x="20" y="217" fill="#1B2029" font-weight="600">A9 Integración en flujos ATENEA</text>
+                  <rect x="290" y="206" width="45" height="13" rx="3" fill="#7AA89F" />
+
+                  <!-- A10-A11 Puesta en marcha -->
+                  <text x="20" y="239" fill="#1B2029" font-weight="600">A10 Puesta en marcha &amp; Workshop 1</text>
+                  <rect x="300" y="228" width="40" height="13" rx="3" fill="#7FB4CA" />
+
+                  <!-- A12-A13 Piloto -->
+                  <text x="20" y="261" fill="#1B2029" font-weight="600">A12-A13 Despliegue piloto &amp; ajustes</text>
+                  <rect x="305" y="250" width="35" height="13" rx="3" fill="#DFBD76" />
+
+                  <!-- H1c Hito Contractual -->
+                  <line x1="310" y1="48" x2="310" y2="295" stroke="#1E5631" stroke-width="2" stroke-dasharray="3,3" />
+                  <polygon points="310,295 305,285 315,285" fill="#1E5631" />
+                  <text x="310" y="310" text-anchor="middle" fill="#1E5631" font-weight="700">H1c (Semana 13)</text>
+
+                  <!-- A14-A20 Hito 2 -->
+                  <text x="20" y="285" fill="#5B6472">A14–A20 Despliegue productivo, talleres y cierre</text>
+                  <rect x="345" y="274" width="155" height="13" rx="3" fill="#BAC7D5" />
+
+                  <!-- H2 Hito Contractual Final -->
+                  <line x1="505" y1="48" x2="505" y2="295" stroke="#8A5A00" stroke-width="2" stroke-dasharray="3,3" />
+                  <polygon points="505,295 500,285 510,285" fill="#8A5A00" />
+                  <text x="475" y="325" text-anchor="middle" fill="#8A5A00" font-weight="700">H2 (Semana 22)</text>
+                </g>
+
+                <!-- Leyenda de colores -->
+                <rect x="20" y="335" width="10" height="10" rx="2" fill="#7FB4CA" />
+                <text x="35" y="343" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9">E1 a E3</text>
+                <rect x="80" y="335" width="10" height="10" rx="2" fill="#B7CC85" />
+                <text x="95" y="343" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9">E4 Agentes</text>
+                <rect x="155" y="335" width="10" height="10" rx="2" fill="#DFBD76" />
+                <text x="170" y="343" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9">Accesos / Piloto</text>
+                <rect x="255" y="335" width="10" height="10" rx="2" fill="#BAC7D5" />
+                <text x="270" y="343" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9">Hito 2 (E5 a E8)</text>
+              </svg>
+            </figure>
+          </article>
+
+          <!-- ========================================================================= -->
+          <!-- MÓDULO 2: E1 · Diagnóstico Técnico y de Capacidades (Capítulo 3)          -->
+          <!-- ========================================================================= -->
+
+          <!-- Slide 6: Portafolio de Sistemas y Proyectos (Tabla 3.1) -->
+          <article class="slide" data-deck="e1-e4" data-module="e1">
+            <div class="slide-content">
+              <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
+              <h2>Portafolio de sistemas: aplicaciones misionales y alcance</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Modelo de desarrollo autogestionado:</strong> ATENEA construye, entrega y mantiene internamente sus plataformas con un equipo propio de desarrolladores.
+                </li>
+                <li>
+                  <strong>Núcleo misional en alcance:</strong>
+                  <strong>SICOR Posmedia:</strong> Gestión de becas, convocatorias y giros universitarios; en operación continua con desarrollos evolutivos.
+                  <strong>SICOR CTI (EMA):</strong> Gestión de ciencia, tecnología e innovación; cuenta con dos desarrolladores dedicados.
+                </li>
+                <li>
+                  <strong>Servicio unificado de autenticación:</strong> Desarrollo transversal nuevo con Keycloak (Single Sign-On y directorio activo), candidato principal a caso de uso.
+                </li>
+                <li>
+                  <strong>Límites expresos:</strong> Academia Atenea (Moodle) es solo referencia; y el asistente Hermes queda fuera del contrato por decisión explícita de ATENEA.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 3.1: Portafolio de sistemas y proyectos de ATENEA (A4, R2, R4)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:28%;">Sistema o Proyecto</th>
+                      <th style="width:20%;">Tipo</th>
+                      <th style="width:22%;">Estado Actual</th>
+                      <th>Relación con el Contrato</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>SICOR Posmedia</strong></td>
+                      <td>Aplicación misional; evolutivos sobre el sistema existente.</td>
+                      <td>En operación continua; proyectos activos.</td>
+                      <td><span class="table-tag tag-green">En alcance; candidata a caso de uso (A4)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>SICOR CTI (EMA)</strong></td>
+                      <td>Aplicación misional; evolutivos continuos.</td>
+                      <td>En operación; 2 desarrolladores dedicados.</td>
+                      <td><span class="table-tag tag-green">En alcance (R2)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Servicio unificado de usuarios y roles</strong></td>
+                      <td>Desarrollo transversal nuevo con Keycloak (SSO + AD).</td>
+                      <td>En incorporación técnica.</td>
+                      <td><span class="table-tag tag-green">En alcance; candidato principal a caso de uso (R2)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Academia Atenea</strong></td>
+                      <td>Plataforma de formación sobre Moodle 4.5.</td>
+                      <td>En operación, fuera del núcleo SICOR.</td>
+                      <td><span class="table-tag tag-amber">Referencia; no prioritaria (R4)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Hermes (Asistente Ciudadano)</strong></td>
+                      <td>Asistente WhatsApp y portal; tercerizado.</td>
+                      <td>Migración a Azure como proyecto paralelo.</td>
+                      <td><span class="table-tag tag-red">Fuera del contrato por decisión de ATENEA (R4)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Migración OCI → Azure</strong></td>
+                      <td>Proyecto de infraestructura en 2 fases.</td>
+                      <td>Fase 1 en curso; fase 2 sin decisión.</td>
+                      <td><span class="table-tag tag-blue">Condiciona entorno y pipeline CI/CD (R3, R4)</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide 7: Equipo y Roles (Tabla 3.2) -->
+          <article class="slide" data-deck="e1-e4" data-module="e1">
+            <div class="slide-content">
+              <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
+              <h2>Equipo humano: concentración de funciones y ausencia de arquitecto</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Sobrecarga en la figura del PO:</strong> Cuatro líderes de producto asumen el levantamiento, la especificación en actas de 12 páginas y la gestión de firmas, sin apoyo para descomponer técnicamente.
+                </li>
+                <li>
+                  <strong>Cuello de botella de revisión:</strong> Una sola líder técnica revisa a mano cada cambio antes de integrar; no existen reglas de arquitectura escritas ni estándares automatizados.
+                </li>
+                <li>
+                  <strong>Ausencia crítica de arquitecto (0 personas):</strong> Nadie vigila los estándares ni la deuda técnica acumulada; cada desarrollador estructura el código a su criterio.
+                </li>
+                <li>
+                  <strong>Despliegue dependiente de una persona:</strong> El paso a producción se realiza manualmente por un único profesional de infraestructura, sin pipelines CI/CD.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 3.2: Roles del ciclo de desarrollo en ATENEA y falencias asociadas (tab:e1-roles)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:24%;">Rol</th>
+                      <th style="width:12%;">Personas</th>
+                      <th>Qué hace hoy</th>
+                      <th style="width:30%;">Falencia Identificada</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Negocio o área cliente</strong></td>
+                      <td>Varias áreas</td>
+                      <td>Plantea la necesidad, aprueba el prototipo de palabra y firma el acta.</td>
+                      <td>La firma llega semanas después y suele traer cambios tardíos sobre el código.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Líder de producto (PO)</strong></td>
+                      <td>4 personas</td>
+                      <td>Levanta requerimientos con negocio, redacta actas extensas y gestiona firmas.</td>
+                      <td>Concentra especificación sin herramientas para descomponer en historias estimables.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Diseño UI/UX</strong></td>
+                      <td>1 persona</td>
+                      <td>Participa en mesas virtuales y produce el prototipo comentado en Figma.</td>
+                      <td>Es la única validación previa antes de comenzar a construir código.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Líder técnica de desarrollo</strong></td>
+                      <td>1 persona</td>
+                      <td>Revisa a mano cada commit antes de preproducción; define enfoque técnico.</td>
+                      <td>Cuello de botella severo; no hay reglas escritas contra las cuales validar.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Base de datos</strong></td>
+                      <td>1 persona</td>
+                      <td>Modela y aprueba cambios en el esquema Oracle con la líder.</td>
+                      <td>Decisiones técnicas en la memoria de las personas, sin registro formal.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Desarrolladores</strong></td>
+                      <td>Front/Back</td>
+                      <td>Estiman por interfaz (1-2.5 sem), construyen y compilan localmente.</td>
+                      <td>Estructura heterogénea; calidad validada al final sin pruebas unitarias.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Infraestructura</strong></td>
+                      <td>1 persona</td>
+                      <td>Recibe compilados manuales, despliega en VMs y lidera migración.</td>
+                      <td>Despliegue artesanal altamente dependiente; 0 trazabilidad de despliegue.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Arquitecto de software</strong></td>
+                      <td><span class="table-tag tag-red">0 personas</span></td>
+                      <td><em>Rol inexistente en la estructura actual.</em></td>
+                      <td><strong>Nadie define ni hace cumplir estándares técnicos ni patrones.</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide 8: Flujo Actual de Requerimientos (Diagrama de Flujo / Figura 3.1) -->
+          <article class="slide" data-deck="e1-e4" data-module="e1">
+            <div class="slide-content">
+              <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
+              <h2>Flujo actual de un requerimiento: actas extensas y retrabajos</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Requerimiento sin descomponer:</strong> Las actas de hasta 12 páginas equivalen a épicas completas, imposibles de paralelizar o verificar en partes pequeñas.
+                </li>
+                <li>
+                  <strong>Inicio asumiendo aceptación:</strong> Ante la presión de plazos (1 a 2 semanas), el desarrollo arranca con el Figma sin esperar la firma formal del cliente.
+                </li>
+                <li>
+                  <strong>Bucle de cambios tardíos:</strong> La firma del acta llega semanas después con ajustes que fuerzan a reescribir código ya terminado (reproceso crítico).
+                </li>
+                <li>
+                  <strong>Despliegue manual sin trazabilidad:</strong> Compilados manuales enviados por correo o chat; solo se conserva la última versión desplegada.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de flujo actual de un requerimiento en ATENEA con sus cuellos de botella">
+                <!-- Carriles / Columnas de fases -->
+                <rect x="15" y="15" width="115" height="24" rx="4" fill="#EDF1F7" />
+                <text x="72" y="31" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">1. ENTENDER</text>
+
+                <rect x="135" y="15" width="125" height="24" rx="4" fill="#EDF1F7" />
+                <text x="197" y="31" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">2. VALIDAR / APROBAR</text>
+
+                <rect x="265" y="15" width="120" height="24" rx="4" fill="#EDF1F7" />
+                <text x="325" y="31" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">3. CONSTRUIR</text>
+
+                <rect x="390" y="15" width="115" height="24" rx="4" fill="#EDF1F7" />
+                <text x="447" y="31" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">4. DESPLEGAR</text>
+
+                <!-- Nodo Levantamiento -->
+                <rect x="20" y="55" width="105" height="52" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.2" />
+                <text x="72" y="74" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Levantamiento</text>
+                <text x="72" y="90" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Reunión con cliente</text>
+                <text x="72" y="100" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Notas no estructuradas</text>
+
+                <!-- Flecha 1 -->
+                <path d="M125 81 H145" stroke="#4E93B0" stroke-width="1.5" marker-end="url(#arrow)" />
+
+                <!-- Nodo Especificación -->
+                <rect x="145" y="55" width="105" height="52" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.2" />
+                <text x="197" y="74" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Especificación</text>
+                <text x="197" y="90" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="600">Acta extensa (~12 págs)</text>
+                <text x="197" y="100" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Épica sin descomponer</text>
+
+                <!-- Nodo Diseño Figma -->
+                <rect x="145" y="125" width="105" height="48" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.2" />
+                <text x="197" y="144" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Diseño UI/UX</text>
+                <text x="197" y="160" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Figma con comentarios</text>
+
+                <!-- Flecha vertical spec -> figma -->
+                <path d="M197 107 V125" stroke="#4E93B0" stroke-width="1.5" marker-end="url(#arrow)" />
+
+                <!-- Flecha verde: Inicio asumiendo aceptación -->
+                <path d="M250 149 H275 V81 H270" stroke="#1E5631" stroke-width="1.8" stroke-dasharray="4,2" />
+                <text x="262" y="138" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8" font-weight="700">Inicio asumiendo</text>
+                <text x="262" y="148" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8" font-weight="700">aceptación</text>
+
+                <!-- Nodo Construcción -->
+                <rect x="275" y="55" width="105" height="52" rx="6" fill="#F8FAFC" stroke="#1E5631" stroke-width="1.5" />
+                <text x="327" y="74" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Construcción</text>
+                <text x="327" y="90" text-anchor="middle" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="8.5">Sin arquitectura escrita</text>
+                <text x="327" y="100" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="8.5">Sin pruebas unitarias</text>
+
+                <!-- Nodo Aprobación Formal y Firma -->
+                <rect x="145" y="195" width="105" height="52" rx="6" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.3" />
+                <text x="197" y="214" text-anchor="middle" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Firma del Acta</text>
+                <text x="197" y="228" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Tarda semanas</text>
+                <text x="197" y="238" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Gestión por correo</text>
+
+                <!-- Flecha figma -> firma -->
+                <path d="M197 173 V195" stroke="#DFBD76" stroke-width="1.5" marker-end="url(#arrow)" />
+
+                <!-- Flecha roja: Reproceso por cambios tardíos -->
+                <path d="M250 221 H327 V107" stroke="#B71C1C" stroke-width="1.8" stroke-dasharray="4,2" />
+                <text x="258" y="213" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="700">Cambios tardíos (reproceso)</text>
+
+                <!-- Nodo SharePoint -->
+                <rect x="20" y="195" width="105" height="52" rx="6" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.2" />
+                <text x="72" y="214" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">SharePoint</text>
+                <text x="72" y="230" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Acta firmada +</text>
+                <text x="72" y="240" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">enlace a Figma</text>
+                <path d="M145 221 H125" stroke="#4E93B0" stroke-width="1.5" marker-end="url(#arrow)" />
+
+                <!-- Nodo Despliegue Manual -->
+                <rect x="400" y="55" width="100" height="52" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.2" />
+                <text x="450" y="74" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Entrega Manual</text>
+                <text x="450" y="90" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Compilados a infra</text>
+                <text x="450" y="100" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="8.5">0 pipelines CI/CD</text>
+
+                <!-- Flecha constr -> entrega -->
+                <path d="M380 81 H400" stroke="#4E93B0" stroke-width="1.5" marker-end="url(#arrow)" />
+
+                <!-- Nodo Ambientes -->
+                <rect x="400" y="145" width="100" height="52" rx="6" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.2" />
+                <text x="450" y="164" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Ambientes</text>
+                <text x="450" y="180" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">QA → Preprod → Prod</text>
+                <text x="450" y="190" text-anchor="middle" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="8.5">Copia manual en VMs</text>
+
+                <!-- Flecha entrega -> ambientes -->
+                <path d="M450 107 V145" stroke="#4E93B0" stroke-width="1.5" marker-end="url(#arrow)" />
+
+                <!-- Caja resumen de cuellos de botella -->
+                <rect x="20" y="275" width="480" height="68" rx="8" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.2" />
+                <text x="35" y="295" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">DIAGNÓSTICO DEL FLUJO ACTUAL: PUNTOS DE INESTABILIDAD</text>
+                <text x="35" y="312" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">• Requerimientos en actas-épicas sin desglose técnico impiden estimar con certeza.</text>
+                <text x="35" y="327" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">• La validación ocurre al final en preproducción, provocando defectos tardíos y estrés operativo.</text>
+
+                <defs>
+                  <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#4E93B0" />
+                  </marker>
+                </defs>
+              </svg>
+            </figure>
+          </article>
+
+          <!-- Slide 9: Mapa de Infraestructura y Desarrollo (Diagrama / Figura 3.2) -->
+          <article class="slide" data-deck="e1-e4" data-module="e1">
+            <div class="slide-content">
+              <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
+              <h2>Mapa de infraestructura: clúster Azure y herramientas de soporte</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Herramientas institucionales en uso:</strong> Azure Boards (seguimiento de tareas), Azure Repos (control de versiones Git) y SharePoint (archivo de actas).
+                </li>
+                <li>
+                  <strong>Clúster de servidores en Azure:</strong> Dos servidores de aplicaciones WildFly 34 alojan el back-end en Java 17; bases de datos PostgreSQL 15 y Oracle Cloud; Keycloak centralizado.
+                </li>
+                <li>
+                  <strong>Capa de presentación:</strong> Front-end en Angular 13 alojado en máquinas virtuales dedicadas.
+                </li>
+                <li>
+                  <strong>Asistentes de IA desarticulados:</strong> Uso de Claude Teams y Copilot como chat en ventanas individuales, sin conexión al repositorio, reglas ni trazabilidad de auditoría.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa de infraestructura y herramientas de desarrollo actuales de ATENEA">
+                <!-- Bloque Asistente IA Individual -->
+                <rect x="25" y="15" width="470" height="52" rx="8" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.3" />
+                <rect x="35" y="25" width="22" height="18" rx="3" fill="#DFBD76" />
+                <text x="46" y="38" text-anchor="middle" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">IA</text>
+                <text x="65" y="38" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">Asistentes de IA en Modo Chat (Claude Teams / Copilot)</text>
+                <text x="35" y="55" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Cuentas compartidas individuales &middot; Sin integración a repositorios &middot; Sin traza de cambios para auditoría</text>
+
+                <!-- Bloque Herramientas de Soporte -->
+                <rect x="25" y="78" width="470" height="58" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
+                <text x="35" y="96" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="700">HERRAMIENTAS DE SOPORTE INSTITUCIONAL</text>
+
+                <rect x="35" y="104" width="135" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                <text x="102" y="120" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">SharePoint (Actas)</text>
+
+                <rect x="180" y="104" width="150" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                <text x="255" y="120" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">Azure Boards (Gestión)</text>
+
+                <rect x="340" y="104" width="145" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                <text x="412" y="120" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">Azure Repos (Git)</text>
+
+                <!-- Clúster Azure (Recuadro agrupador) -->
+                <rect x="25" y="148" width="470" height="198" rx="10" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" stroke-dasharray="4,3" />
+                <text x="40" y="168" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">CLÚSTER DE SERVIDORES ATENEA (MIGRACIÓN AZURE)</text>
+
+                <!-- Frontend -->
+                <rect x="40" y="180" width="135" height="65" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.2" />
+                <text x="107" y="200" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Front-End Web</text>
+                <text x="107" y="218" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="600">Angular 13</text>
+                <text x="107" y="232" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">(Sin soporte técnico)</text>
+
+                <!-- Backend -->
+                <rect x="190" y="180" width="140" height="65" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.2" />
+                <text x="260" y="200" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Servidores App (2)</text>
+                <text x="260" y="218" text-anchor="middle" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="600">WildFly 34 &middot; Java 17</text>
+                <text x="260" y="232" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Spring Boot 3</text>
+
+                <!-- Keycloak / Auth -->
+                <rect x="345" y="180" width="135" height="65" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.2" />
+                <text x="412" y="200" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Autenticación</text>
+                <text x="412" y="218" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="600">Keycloak</text>
+                <text x="412" y="232" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">SSO &middot; Directorio Activo</text>
+
+                <!-- Bases de Datos -->
+                <rect x="40" y="260" width="210" height="68" rx="6" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.2" />
+                <text x="145" y="280" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Bases de Datos Relacionales</text>
+                <text x="145" y="298" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">PostgreSQL 15 (Servidores Azure)</text>
+                <text x="145" y="314" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Oracle Database (Esquemas por ambiente)</text>
+
+                <!-- Alerta CI/CD Ausente -->
+                <rect x="270" y="260" width="210" height="68" rx="6" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.2" />
+                <text x="375" y="280" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">BRECHA DE AUTOMATIZACIÓN</text>
+                <text x="375" y="298" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Sin pipelines de CI/CD automatizados</text>
+                <text x="375" y="314" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Compilados y despliegues manuales</text>
+              </svg>
+            </figure>
+          </article>
+
+          <!-- Slide 10: Stack Tecnológico y Licencias de IA (Tablas 3.3 y 3.4) -->
+          <article class="slide" data-deck="e1-e4" data-module="e1">
+            <div class="slide-content">
+              <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
+              <h2>Stack técnico y disponibilidad de herramientas de IA</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Deuda técnica en Frontend:</strong> Angular 13 se encuentra fuera de soporte oficial (desfase de 9 a 10 versiones mayores respecto a las versiones modernas), lo que restringe el uso de librerías actualizadas.
+                </li>
+                <li>
+                  <strong>Solidez en Backend:</strong> Java 17 y Spring Boot 3 sobre WildFly 34 representan una base robusta y moderna para los desarrollos.
+                </li>
+                <li>
+                  <strong>Licenciamiento de IA disponible:</strong> Se cuenta con cuentas activas de Claude Teams (~6 asientos), créditos de OpenRouter (~$400 USD), Copilot y Azure OpenAI habilitable bajo demanda.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 3.3 y 3.4: Stack tecnológico e inventario de IA en ATENEA (R2, R4)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:28%;">Capa o Recurso</th>
+                      <th style="width:26%;">Tecnología / Licencia</th>
+                      <th>Situación y Diagnóstico Técnico</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Frontend</strong></td>
+                      <td>Angular 13</td>
+                      <td><span class="table-tag tag-red">Fuera de soporte oficial</span>; 9-10 versiones de distancia frente a Angular 22/23.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Backend</strong></td>
+                      <td>Java 17 / Spring Boot 3</td>
+                      <td><span class="table-tag tag-green">Moderno y estable</span>; empaquetado en WAR desplegado sobre WildFly 34.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Servidor de Apps</strong></td>
+                      <td>WildFly 34</td>
+                      <td><span class="table-tag tag-green">En operación</span>; dos servidores configurados en Azure.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Bases de Datos</strong></td>
+                      <td>PostgreSQL 15 / Oracle</td>
+                      <td>PostgreSQL en Azure; esquemas Oracle divididos por ambiente (QA/Prod).</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Claude Teams</strong></td>
+                      <td>~6 asientos institucionales</td>
+                      <td>Asistente general de chat compartido; plazos exigidos de 1 a 2 semanas.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>OpenRouter</strong></td>
+                      <td>~$400 USD en créditos</td>
+                      <td>Adquirido tras sesiones con UNAL; acceso a modelos avanzados vía API.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Microsoft Copilot</strong></td>
+                      <td>Cuentas M365</td>
+                      <td>Uso limitado a toma de notas en reuniones y resúmenes de texto.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Azure CSP</strong></td>
+                      <td>Créditos disponibles</td>
+                      <td>Servicios activables: Foundry, Databricks y Azure OpenAI por demanda.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide 11: Los 10 Puntos de Fricción (Tabla 3.5) -->
+          <article class="slide" data-deck="e1-e4" data-module="e1">
+            <div class="slide-content">
+              <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
+              <h2>Los diez puntos de fricción del diagnóstico técnico (F-01 a F-10)</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Sustentación fáctica:</strong> Cada punto de fricción se extrae de las sesiones de levantamiento con ATENEA y se respalda en datos probatorios verificables.
+                </li>
+                <li>
+                  <strong>Fricción de mayor peso (F-04):</strong> La ausencia de arquitecto y de estándares escritos es la brecha crítica; un agente de IA sin arquitectura formal solo replica el desorden a mayor velocidad.
+                </li>
+                <li>
+                  <strong>El cuello de botella no es codificar:</strong> La velocidad de escritura de código no es el problema en ATENEA; el cuello de botella radica en la especificación, estabilidad de requerimientos y despliegue manual.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 3.5: Matriz de puntos de fricción del Acta 01 y datos probatorios (tab:e1-friccion)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:10%;">ID</th>
+                      <th style="width:26%;">Punto de Fricción</th>
+                      <th style="width:28%;">Efecto en la Operación</th>
+                      <th>Dato Probatorio Sustentado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><strong>F-01</strong></td><td>El acta es una épica sin desglose</td><td>Difícil estimar, paralelizar y verificar</td><td>Acta de 12 págs; 0 historias derivadas.</td></tr>
+                    <tr><td><strong>F-02</strong></td><td>Firma tarda; desarrollo arranca</td><td>Reprocesos si la firma trae cambios</td><td>Módulo anterior rechazado en pruebas.</td></tr>
+                    <tr><td><strong>F-03</strong></td><td>Única doc: acta y Figma</td><td>Conocimiento reside en las personas</td><td>0 documentos de arquitectura por sistema.</td></tr>
+                    <tr><td><strong style="color:var(--accent);">F-04</strong></td><td><strong>Sin arquitecto ni estándar</strong></td><td><strong>Código heterogéneo y deuda técnica</strong></td><td><strong>0 arquitectos; carpetas a criterio libre.</strong></td></tr>
+                    <tr><td><strong>F-05</strong></td><td>Calidad se valida al final</td><td>Defectos detectados en preproducción</td><td>0 cobertura de pruebas automatizadas.</td></tr>
+                    <tr><td><strong>F-06</strong></td><td>Despliegue manual sin CI/CD</td><td>Dependencia de 1 persona; sin traza</td><td>0 pipelines; solo se guarda última versión.</td></tr>
+                    <tr><td><strong>F-07</strong></td><td>Estimación con presión de plazos</td><td>Compromisos difíciles de cumplir</td><td>1 a 2.5 semanas por pantalla completa.</td></tr>
+                    <tr><td><strong>F-08</strong></td><td>IA como chat compartido</td><td>Beneficio limitado; sin auditoría</td><td>~6 asientos de Claude sin política de uso.</td></tr>
+                    <tr><td><strong>F-09</strong></td><td>Angular 13 fuera de soporte</td><td>Riesgo de seguridad; incompatibilidad</td><td>Desfase de 9 a 10 versiones mayores.</td></tr>
+                    <tr><td><strong>F-10</strong></td><td>Migración a nube sin ingeniería</td><td>Riesgo de replicar procesos manuales</td><td>Fase 1 sin refactor; fase 2 sin decidir.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- ========================================================================= -->
+          <!-- MÓDULO 3: E2 · Metodología SDLC-IA para ATENEA (Capítulo 4)               -->
+          <!-- ========================================================================= -->
+
+          <!-- Slide 12: Principios del Rediseño SDLC-IA -->
+          <article class="slide" data-deck="e1-e4" data-module="e2">
+            <div class="slide-content">
+              <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+              <h2>Rediseño del ciclo de desarrollo: la IA ejecuta, las personas deciden</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Continuidad sin ruptura:</strong> El flujo parte de los artefactos que ATENEA ya utiliza (notas de levantamiento, diseño en Figma y requerimientos) y los dota de estructura determinista.
+                </li>
+                <li>
+                  <strong>Cierre de las tres brechas críticas:</strong>
+                  1. Desglose en historias estimables con criterios de aceptación;
+                  2. Arquitectura decidida previamente y vinculante para todos;
+                  3. Verificación continua por contrato y evidencia inmutable.
+                </li>
+                <li>
+                  <strong>Seis fases secuenciales:</strong> Entender &rarr; Decidir &rarr; Descomponer &rarr; Traducir &rarr; Construir &rarr; Cerrar.
+                </li>
+                <li>
+                  <strong>La verificación ocurre al construir:</strong> Cada historia se entrega con sus pruebas automatizadas y pasa por compuertas de aprobación humana obligatorias.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Principios metodológicos del flujo SDLC-IA y sus 6 fases">
+                <rect x="25" y="18" width="470" height="58" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
+                <text x="40" y="42" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">PRINCIPIO FUNDAMENTAL DEL REDISEÑO METODOLÓGICO</text>
+                <text x="40" y="60" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">«La inteligencia artificial ejecuta; los profesionales humanos deciden»</text>
+
+                <!-- 6 Cajas de Fases -->
+                <g font-family="Space Grotesk,sans-serif">
+                  <!-- Fase 1 -->
+                  <rect x="25" y="95" width="145" height="105" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.3" />
+                  <rect x="35" y="105" width="22" height="18" rx="3" fill="#7FB4CA" />
+                  <text x="46" y="118" text-anchor="middle" fill="#06080F" font-size="9" font-weight="700">1</text>
+                  <text x="65" y="118" fill="#1B2029" font-size="11" font-weight="700">Entender</text>
+                  <text x="35" y="140" fill="#5B6472" font-size="9">• Notas de levantamiento</text>
+                  <text x="35" y="156" fill="#5B6472" font-size="9">• Brief de producto</text>
+                  <text x="35" y="172" fill="#5B6472" font-size="9">• Preguntas de aclaración</text>
+                  <text x="35" y="188" fill="#2C6B87" font-size="8.5" font-weight="600">Comando: /sw:new</text>
+
+                  <!-- Fase 2 -->
+                  <rect x="187" y="95" width="145" height="105" rx="8" fill="#F8FAFC" stroke="#7AA89F" stroke-width="1.3" />
+                  <rect x="197" y="105" width="22" height="18" rx="3" fill="#7AA89F" />
+                  <text x="208" y="118" text-anchor="middle" fill="#06080F" font-size="9" font-weight="700">2</text>
+                  <text x="227" y="118" fill="#1B2029" font-size="11" font-weight="700">Decidir</text>
+                  <text x="197" y="140" fill="#5B6472" font-size="9">• Arquitectura vinculante</text>
+                  <text x="197" y="156" fill="#5B6472" font-size="9">• Reglas del repositorio</text>
+                  <text x="197" y="172" fill="#5B6472" font-size="9">• Puerta PO y Líder Tec.</text>
+                  <text x="197" y="188" fill="#2C6B87" font-size="8.5" font-weight="600">Doc: architecture-base</text>
+
+                  <!-- Fase 3 -->
+                  <rect x="350" y="95" width="145" height="105" rx="8" fill="#F8FAFC" stroke="#B7CC85" stroke-width="1.3" />
+                  <rect x="360" y="105" width="22" height="18" rx="3" fill="#B7CC85" />
+                  <text x="371" y="118" text-anchor="middle" fill="#06080F" font-size="9" font-weight="700">3</text>
+                  <text x="390" y="118" fill="#1B2029" font-size="11" font-weight="700">Descomponer</text>
+                  <text x="360" y="140" fill="#5B6472" font-size="9">• Épicas e historias</text>
+                  <text x="360" y="156" fill="#5B6472" font-size="9">• Criterios Given/When/Then</text>
+                  <text x="360" y="172" fill="#5B6472" font-size="9">• Plan de olas paralelas</text>
+                  <text x="360" y="188" fill="#2C6B87" font-size="8.5" font-weight="600">Comando: /sw:sprint</text>
+
+                  <!-- Fase 4 -->
+                  <rect x="25" y="215" width="145" height="105" rx="8" fill="#F8FAFC" stroke="#DFBD76" stroke-width="1.3" />
+                  <rect x="35" y="225" width="22" height="18" rx="3" fill="#DFBD76" />
+                  <text x="46" y="238" text-anchor="middle" fill="#06080F" font-size="9" font-weight="700">4</text>
+                  <text x="65" y="238" fill="#1B2029" font-size="11" font-weight="700">Traducir</text>
+                  <text x="35" y="260" fill="#5B6472" font-size="9">• Contratos OpenSpec</text>
+                  <text x="35" y="276" fill="#5B6472" font-size="9">• Traducción determinista</text>
+                  <text x="35" y="292" fill="#5B6472" font-size="9">• Traza requisito-código</text>
+                  <text x="35" y="308" fill="#2C6B87" font-size="8.5" font-weight="600">Tejedor LIA UNAL</text>
+
+                  <!-- Fase 5 -->
+                  <rect x="187" y="215" width="145" height="105" rx="8" fill="#F8FAFC" stroke="#7AA89F" stroke-width="1.3" />
+                  <rect x="197" y="225" width="22" height="18" rx="3" fill="#7AA89F" />
+                  <text x="208" y="238" text-anchor="middle" fill="#06080F" font-size="9" font-weight="700">5</text>
+                  <text x="227" y="238" fill="#1B2029" font-size="11" font-weight="700">Construir</text>
+                  <text x="197" y="260" fill="#5B6472" font-size="9">• Construcción SDD/ODD</text>
+                  <text x="197" y="276" fill="#5B6472" font-size="9">• Test por cada escenario</text>
+                  <text x="197" y="292" fill="#5B6472" font-size="9">• Superficie acotada</text>
+                  <text x="197" y="308" fill="#2C6B87" font-size="8.5" font-weight="600">Comando: /sw:build</text>
+
+                  <!-- Fase 6 -->
+                  <rect x="350" y="215" width="145" height="105" rx="8" fill="#F8FAFC" stroke="#4E93B0" stroke-width="1.3" />
+                  <rect x="360" y="225" width="22" height="18" rx="3" fill="#4E93B0" />
+                  <text x="371" y="238" text-anchor="middle" fill="#06080F" font-size="9" font-weight="700">6</text>
+                  <text x="390" y="238" fill="#1B2029" font-size="11" font-weight="700">Cerrar</text>
+                  <text x="360" y="260" fill="#5B6472" font-size="9">• Validación estricta</text>
+                  <text x="360" y="276" fill="#5B6472" font-size="9">• Fijación de línea base</text>
+                  <text x="360" y="292" fill="#5B6472" font-size="9">• Memoria y lecciones</text>
+                  <text x="360" y="308" fill="#2C6B87" font-size="8.5" font-weight="600">Comando: /sw:close</text>
+                </g>
+                <text x="260" y="340" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">Control transversal: /sw:change (cambios) &middot; /sw:bug (defectos) &middot; /sw:status (tablero)</text>
+              </svg>
+            </figure>
+          </article>
+
+          <!-- Slide 13: Flujo SDLC-IA por Etapas y Carriles (Diagrama de Flujo / Figura 4.1) -->
+          <article class="slide" data-deck="e1-e4" data-module="e2">
+            <div class="slide-content">
+              <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+              <h2>Flujo SDLC-IA por etapas y carriles de intervención técnica</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Cinco carriles institucionales:</strong> Negocio, PO/UX, Arnés de Agentes (LIA UNAL), Desarrollo y Seguridad/Infraestructura.
+                </li>
+                <li>
+                  <strong>Interacción agéntica guiada:</strong> En cada etapa, el arnés toma las salidas de la anterior, produce el artefacto estructurado correspondiente y somete el resultado a la decisión del rol responsable.
+                </li>
+                <li>
+                  <strong>Trazabilidad integral:</strong> De la necesidad al PRD, del PRD a la historia, de la historia al contrato y del contrato al código con pruebas unitarias.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de carriles del flujo SDLC-IA propuesto para ATENEA">
+                <!-- Carriles de roles (Fondo) -->
+                <rect x="15" y="15" width="490" height="38" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="25" y="38" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">1. Negocio / Cliente</text>
+
+                <rect x="15" y="58" width="490" height="42" rx="4" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="25" y="82" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">2. PO y Diseño UI/UX</text>
+
+                <rect x="15" y="105" width="490" height="78" rx="6" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.2" />
+                <text x="25" y="125" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">3. Arnés de Agentes (LIA UNAL)</text>
+
+                <rect x="15" y="188" width="490" height="42" rx="4" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="25" y="212" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">4. Líder Técnico / Devs</text>
+
+                <rect x="15" y="235" width="490" height="42" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="25" y="260" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">5. Infraestructura / QA</text>
+
+                <!-- Nodos horizontales en Carril Agentes -->
+                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
+                  <rect x="155" y="118" width="52" height="52" rx="4" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="181" y="136" text-anchor="middle" font-weight="700" fill="#1E5631">Entender</text>
+                  <text x="181" y="150" text-anchor="middle" fill="#5B6472">/sw:new</text>
+                  <text x="181" y="162" text-anchor="middle" fill="#5B6472">PRD</text>
+
+                  <path d="M207 144 H216" stroke="#1E5631" stroke-width="1.3" />
+
+                  <rect x="216" y="118" width="52" height="52" rx="4" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="242" y="136" text-anchor="middle" font-weight="700" fill="#1E5631">Decidir</text>
+                  <text x="242" y="150" text-anchor="middle" fill="#5B6472">Arq. Base</text>
+                  <text x="242" y="162" text-anchor="middle" fill="#5B6472">Frontera</text>
+
+                  <path d="M268 144 H277" stroke="#1E5631" stroke-width="1.3" />
+
+                  <rect x="277" y="118" width="52" height="52" rx="4" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="303" y="136" text-anchor="middle" font-weight="700" fill="#1E5631">Descomponer</text>
+                  <text x="303" y="150" text-anchor="middle" fill="#5B6472">/sprint</text>
+                  <text x="303" y="162" text-anchor="middle" fill="#5B6472">Olas</text>
+
+                  <path d="M329 144 H338" stroke="#1E5631" stroke-width="1.3" />
+
+                  <rect x="338" y="118" width="52" height="52" rx="4" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="364" y="136" text-anchor="middle" font-weight="700" fill="#1E5631">Traducir</text>
+                  <text x="364" y="150" text-anchor="middle" fill="#5B6472">OpenSpec</text>
+                  <text x="364" y="162" text-anchor="middle" fill="#5B6472">Contrato</text>
+
+                  <path d="M390 144 H399" stroke="#1E5631" stroke-width="1.3" />
+
+                  <rect x="399" y="118" width="52" height="52" rx="4" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="425" y="136" text-anchor="middle" font-weight="700" fill="#1E5631">Construir</text>
+                  <text x="425" y="150" text-anchor="middle" fill="#5B6472">/sw:build</text>
+                  <text x="425" y="162" text-anchor="middle" fill="#5B6472">TDD</text>
+
+                  <path d="M451 144 H460" stroke="#1E5631" stroke-width="1.3" />
+
+                  <rect x="460" y="118" width="40" height="52" rx="4" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="480" y="136" text-anchor="middle" font-weight="700" fill="#1E5631">Cerrar</text>
+                  <text x="480" y="150" text-anchor="middle" fill="#5B6472">Base</text>
+                  <text x="480" y="162" text-anchor="middle" fill="#5B6472">Memoria</text>
+                </g>
+
+                <!-- Puertas de decisión humana destacadas -->
+                <rect x="216" y="68" width="52" height="24" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.2" />
+                <text x="242" y="83" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="8" font-weight="700">Puerta PO</text>
+
+                <rect x="399" y="198" width="52" height="24" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.2" />
+                <text x="425" y="213" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="8" font-weight="700">Puerta PR</text>
+
+                <rect x="455" y="244" width="45" height="24" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.2" />
+                <text x="477" y="259" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="8" font-weight="700">Deploy</text>
+
+                <!-- Flechas verticales de gobernanza -->
+                <path d="M242 92 V118" stroke="#B71C1C" stroke-width="1.2" stroke-dasharray="2,2" />
+                <path d="M425 170 V198" stroke="#B71C1C" stroke-width="1.2" stroke-dasharray="2,2" />
+                <path d="M480 170 V244" stroke="#B71C1C" stroke-width="1.2" stroke-dasharray="2,2" />
+
+                <!-- Banner inferior de contexto y gobierno -->
+                <rect x="15" y="285" width="490" height="28" rx="6" fill="#FFFFFF" stroke="#1E5631" stroke-width="1" />
+                <text x="260" y="303" text-anchor="middle" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">Contexto del proyecto: Reglas y negocio &middot; Arquitectura vinculante &middot; Memoria persistente Engram</text>
+
+                <rect x="15" y="318" width="490" height="28" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1" />
+                <text x="260" y="336" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">Gobierno transversal: /sw:status (seguimiento) &middot; /sw:change (cambios) &middot; /sw:bug (defectos)</text>
+              </svg>
+            </figure>
+          </article>
+
+          <!-- Slide 14: Intervención Agéntica por Etapa (Tabla 4.1) -->
+          <article class="slide" data-deck="e1-e4" data-module="e2">
+            <div class="slide-content">
+              <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+              <h2>Intervención agéntica por etapa: brechas, flujos y decisiones humanas</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Mapeo biunívoco de responsabilidades:</strong> Cada etapa actual de ATENEA tiene una fase equivalente en el flujo SDLC-IA que resuelve su falencia diagnóstica específica.
+                </li>
+                <li>
+                  <strong>Sustitución de ambigüedad por contratos:</strong> La etapa de traducción convierte historias Given/When/Then en contratos OpenSpec formalmente ejecutables.
+                </li>
+                <li>
+                  <strong>Control humano permanente:</strong> El flujo no avanza a la siguiente fase sin la aprobación explícita del responsable humano asignado en cada compuerta.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 4.1: Intervención agéntica por etapa: brecha, flujo, decisión y resultado (tab:e2-mapa)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:14%;">Etapa / Fase</th>
+                      <th style="width:20%;">Brecha que Atiende</th>
+                      <th>Qué Hace el Flujo Agéntico</th>
+                      <th style="width:22%;">Decisión Humana</th>
+                      <th style="width:18%;">Resultado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Entender</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">Levantamiento</span></td>
+                      <td>Requerimiento extenso sin estructura</td>
+                      <td>Convierte notas y diseño en especificación numerada con supuestos y dudas.</td>
+                      <td>Líder de producto fija intención y resuelve preguntas.</td>
+                      <td><span class="table-tag tag-green">Especificación formal</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Decidir</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">Especificación</span></td>
+                      <td>Decisiones técnicas sin registro</td>
+                      <td>Redacta arquitectura y restricciones a partir de la especificación aprobada.</td>
+                      <td>Líder técnico y BD aprueban arquitectura vinculante.</td>
+                      <td><span class="table-tag tag-green">Arquitectura vinculante</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Descomponer</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">No existe hoy</span></td>
+                      <td>Sin desglose ni criterios por unidad</td>
+                      <td>Propone épicas e historias estimables con criterios y plan de olas paralelas.</td>
+                      <td>Líder de producto aprueba historias y prioridades.</td>
+                      <td><span class="table-tag tag-green">Historias y plan de olas</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Traducir</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">No existe hoy</span></td>
+                      <td>Estándar dependiente de cada persona</td>
+                      <td>Genera contrato verificable por historia deterministamente con traza completa.</td>
+                      <td>Desarrollador revisa y valida el contrato formal.</td>
+                      <td><span class="table-tag tag-green">Contratos OpenSpec</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Construir</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">Desarrollo</span></td>
+                      <td>Código heterogéneo; calidad al final</td>
+                      <td>Carga reglas y memoria; construye historia a la vez: código + test por escenario.</td>
+                      <td>Líder técnico aprueba integración a ramas protegidas.</td>
+                      <td><span class="table-tag tag-green">Código verificado</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Cerrar</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">Compilados</span></td>
+                      <td>Sin trazabilidad ni línea base</td>
+                      <td>Valida contrato en modo estricto, archiva línea base y actualiza memoria.</td>
+                      <td>Subgerencia / Líder autoriza despliegue en ambiente.</td>
+                      <td><span class="table-tag tag-green">Línea base archivada</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide 15: Piezas de Contexto del Proyecto (Tabla 4.2) -->
+          <article class="slide" data-deck="e1-e4" data-module="e2">
+            <div class="slide-content">
+              <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+              <h2>Contexto institucional: las tres piezas que viven en el repositorio</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Soberanía de datos y código:</strong> Ninguna configuración ni memoria vive fuera del repositorio de ATENEA; se elimina la dependencia del equipo en máquinas individuales.
+                </li>
+                <li>
+                  <strong>Reglas y negocio:</strong> Documento base de arquitectura (`architecture-base.md`) que establece versiones oficiales (Angular 13, Java 17, WildFly 34) y reglas que mandan sobre el agente.
+                </li>
+                <li>
+                  <strong>Grafo AST del código real:</strong> Mapeo determinista de dependencias, clases y métodos para evitar alucinaciones durante la refactorización.
+                </li>
+                <li>
+                  <strong>Memoria persistente:</strong> Registro de decisiones, lecciones aprendidas y causas de defectos pasados (Engram).
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 4.2: Piezas de contexto, contenido, fases de uso y ubicación en el repositorio (tab:e2-contexto)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:22%;">Pieza de Contexto</th>
+                      <th>Contenido y Origen Fáctico</th>
+                      <th style="width:24%;">Fases donde Interviene</th>
+                      <th style="width:24%;">Dónde Vive en el Repo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Reglas y negocio</strong></td>
+                      <td>Reglas de negocio por sistema, glosario, convenciones del stack (Angular 13, Java 17, WildFly 34); obtenidas de actas y entrevistas.</td>
+                      <td><span class="table-tag tag-green">Entender, Decidir, Construir</span></td>
+                      <td><code>architecture-base.md</code> en la raíz del repositorio institucional.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Arquitectura de código</strong></td>
+                      <td>Módulos, integraciones, modelo de datos y decisiones técnicas registradas; ingeniería inversa asistida sobre código real.</td>
+                      <td><span class="table-tag tag-green">Decidir, Construir, Control de Cambios</span></td>
+                      <td>Documentos de arquitectura formal y grafo AST (Graphify).</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Memoria persistente</strong></td>
+                      <td>Qué se hizo, por qué, qué pruebas fallaron y qué decisiones se tomaron; generada automáticamente por el flujo agéntico.</td>
+                      <td><span class="table-tag tag-blue">Construir, Cerrar, Defectos</span></td>
+                      <td>Base de memoria local persistente dentro del repositorio (Engram).</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide 16: Gobernanza y Ruta de CI/CD hacia Azure -->
+          <article class="slide" data-deck="e1-e4" data-module="e2">
+            <div class="slide-content">
+              <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+              <h2>Gobernanza: cinco puertas humanas y evolución de CI/CD hacia Azure</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Cinco compuertas de decisión humana indelegables:</strong>
+                  <strong>P1 (PO):</strong> Aprobación de intención y preguntas del PRD.
+                  <strong>P2 (Líder Técnico &amp; BD):</strong> Aprobación de arquitectura y modelo de datos.
+                  <strong>P3 (PO):</strong> Aprobación de historias y olas de trabajo.
+                  <strong>P4 (Líder Técnico):</strong> Revisión de código y merge de PR.
+                  <strong>P5 (Subgerencia TIC):</strong> Aprobación de despliegue en ambiente.
+                </li>
+                <li>
+                  <strong>Ruta de evolución CI/CD en 3 etapas:</strong>
+                  <strong>Etapa A (Actual):</strong> Validación local de contratos y tests unitarios.
+                  <strong>Etapa B (Integración Continua):</strong> Pipelines automáticos en Azure Repos/Pipelines.
+                  <strong>Etapa C (Entrega Continua):</strong> Despliegue automático en QA y empaquetado reproducible.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estructura de las 5 compuertas humanas de gobernanza y las 3 etapas de CI/CD">
+                <!-- Bloque 5 Puertas -->
+                <rect x="25" y="15" width="470" height="155" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
+                <text x="40" y="36" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">LAS 5 COMPUERTAS HUMANAS INDELEGABLES (GOBERNANZA)</text>
+
+                <g font-family="Space Grotesk,sans-serif" font-size="9">
+                  <rect x="35" y="48" width="85" height="110" rx="6" fill="#FFFFFF" stroke="#B71C1C" stroke-width="1.2" />
+                  <text x="77" y="66" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta P1</text>
+                  <text x="77" y="80" text-anchor="middle" fill="#1B2029" font-weight="600">Intención y CU</text>
+                  <text x="77" y="98" text-anchor="middle" fill="#5B6472">Aprueba PRD</text>
+                  <text x="77" y="110" text-anchor="middle" fill="#5B6472">y resuelve</text>
+                  <text x="77" y="122" text-anchor="middle" fill="#5B6472">dudas de negocio</text>
+                  <rect x="42" y="132" width="71" height="18" rx="3" fill="#FFF2F2" />
+                  <text x="77" y="144" text-anchor="middle" fill="#B71C1C" font-weight="700">Rol: PO</text>
+
+                  <rect x="127" y="48" width="85" height="110" rx="6" fill="#FFFFFF" stroke="#B71C1C" stroke-width="1.2" />
+                  <text x="169" y="66" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta P2</text>
+                  <text x="169" y="80" text-anchor="middle" fill="#1B2029" font-weight="600">Arquitectura</text>
+                  <text x="169" y="98" text-anchor="middle" fill="#5B6472">Aprueba reglas,</text>
+                  <text x="169" y="110" text-anchor="middle" fill="#5B6472">servicios y</text>
+                  <text x="169" y="122" text-anchor="middle" fill="#5B6472">modelo de datos</text>
+                  <rect x="134" y="132" width="71" height="18" rx="3" fill="#FFF2F2" />
+                  <text x="169" y="144" text-anchor="middle" fill="#B71C1C" font-weight="700">Líder Tec / BD</text>
+
+                  <rect x="219" y="48" width="85" height="110" rx="6" fill="#FFFFFF" stroke="#B71C1C" stroke-width="1.2" />
+                  <text x="261" y="66" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta P3</text>
+                  <text x="261" y="80" text-anchor="middle" fill="#1B2029" font-weight="600">Historias &amp; Olas</text>
+                  <text x="261" y="98" text-anchor="middle" fill="#5B6472">Aprueba criterios</text>
+                  <text x="261" y="110" text-anchor="middle" fill="#5B6472">de aceptación y</text>
+                  <text x="261" y="122" text-anchor="middle" fill="#5B6472">plan de sprints</text>
+                  <rect x="226" y="132" width="71" height="18" rx="3" fill="#FFF2F2" />
+                  <text x="261" y="144" text-anchor="middle" fill="#B71C1C" font-weight="700">Rol: PO</text>
+
+                  <rect x="311" y="48" width="85" height="110" rx="6" fill="#FFFFFF" stroke="#B71C1C" stroke-width="1.2" />
+                  <text x="353" y="66" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta P4</text>
+                  <text x="353" y="80" text-anchor="middle" fill="#1B2029" font-weight="600">Revisión PR</text>
+                  <text x="353" y="98" text-anchor="middle" fill="#5B6472">Verifica código,</text>
+                  <text x="353" y="110" text-anchor="middle" fill="#5B6472">tests unitarios</text>
+                  <text x="353" y="122" text-anchor="middle" fill="#5B6472">y hace merge</text>
+                  <rect x="318" y="132" width="71" height="18" rx="3" fill="#FFF2F2" />
+                  <text x="353" y="144" text-anchor="middle" fill="#B71C1C" font-weight="700">Líder Técnica</text>
+
+                  <rect x="403" y="48" width="82" height="110" rx="6" fill="#FFFFFF" stroke="#B71C1C" stroke-width="1.2" />
+                  <text x="444" y="66" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta P5</text>
+                  <text x="444" y="80" text-anchor="middle" fill="#1B2029" font-weight="600">Despliegue</text>
+                  <text x="444" y="98" text-anchor="middle" fill="#5B6472">Autoriza pase</text>
+                  <text x="444" y="110" text-anchor="middle" fill="#5B6472">a QA, preprod</text>
+                  <text x="444" y="122" text-anchor="middle" fill="#5B6472">y producción</text>
+                  <rect x="410" y="132" width="68" height="18" rx="3" fill="#FFF2F2" />
+                  <text x="444" y="144" text-anchor="middle" fill="#B71C1C" font-weight="700">Subgerencia</text>
+                </g>
+
+                <!-- Bloque 3 Etapas de CI/CD -->
+                <rect x="25" y="185" width="470" height="155" rx="8" fill="#F8FAFC" stroke="#1E5631" stroke-width="1.3" />
+                <text x="40" y="206" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">RUTA DE EVOLUCIÓN CI/CD HACIA AZURE</text>
+
+                <g font-family="Space Grotesk,sans-serif" font-size="9">
+                  <rect x="35" y="218" width="145" height="110" rx="6" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="107" y="236" text-anchor="middle" fill="#2C6B87" font-weight="700">ETAPA A: LOCAL</text>
+                  <text x="107" y="252" text-anchor="middle" fill="#1B2029" font-weight="600">Validación de Contratos</text>
+                  <text x="107" y="272" text-anchor="middle" fill="#5B6472">• Ejecución en dev</text>
+                  <text x="107" y="288" text-anchor="middle" fill="#5B6472">• Tests antes de pedir merge</text>
+                  <text x="107" y="304" text-anchor="middle" fill="#5B6472">• Despliegue manual actual</text>
+                  <text x="107" y="320" text-anchor="middle" fill="#1E5631" font-weight="700">Estado: Inmediato</text>
+
+                  <rect x="187" y="218" width="145" height="110" rx="6" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.3" />
+                  <text x="260" y="236" text-anchor="middle" fill="#1E5631" font-weight="700">ETAPA B: CI</text>
+                  <text x="260" y="252" text-anchor="middle" fill="#1B2029" font-weight="600">Integración Continua</text>
+                  <text x="260" y="272" text-anchor="middle" fill="#5B6472">• Azure Repos + Pipelines</text>
+                  <text x="260" y="288" text-anchor="middle" fill="#5B6472">• Compilación automática</text>
+                  <text x="260" y="304" text-anchor="middle" fill="#5B6472">• Ejecución de pruebas en PR</text>
+                  <text x="260" y="320" text-anchor="middle" fill="#1E5631" font-weight="700">Meta: Hito 1 / Hito 2</text>
+
+                  <rect x="340" y="218" width="145" height="110" rx="6" fill="#FFFFFF" stroke="#DFBD76" />
+                  <text x="412" y="236" text-anchor="middle" fill="#8A5A00" font-weight="700">ETAPA C: CD</text>
+                  <text x="412" y="252" text-anchor="middle" fill="#1B2029" font-weight="600">Entrega Continua</text>
+                  <text x="412" y="272" text-anchor="middle" fill="#5B6472">• Empaquetado reproducible</text>
+                  <text x="412" y="288" text-anchor="middle" fill="#5B6472">• Deploy automático a QA</text>
+                  <text x="412" y="304" text-anchor="middle" fill="#5B6472">• Aprobación para producción</text>
+                  <text x="412" y="320" text-anchor="middle" fill="#8A5A00" font-weight="700">Sujeto a migración nube</text>
+                </g>
+              </svg>
+            </figure>
+          </article>
+
+          <!-- ========================================================================= -->
+          <!-- MÓDULO 4: E3 · Arquitectura y Arnés Institucional (Capítulo 5)             -->
+          <!-- ========================================================================= -->
+
+          <!-- Slide 17: Arquitectura End-to-End del Arnés Institucional (Diagrama / Figura 5.1) -->
+          <article class="slide" data-deck="e1-e4" data-module="e3">
+            <div class="slide-content">
+              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+              <h2>Composición de la propuesta: integración institucional sin reemplazo</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Principio rector de integración:</strong> El arnés se acopla a las herramientas que ya existen en ATENEA (SharePoint, Figma, Azure Boards, Azure Repos) sin pretender sustituirlas.
+                </li>
+                <li>
+                  <strong>Capa intermedia propia (Arnés LIA UNAL):</strong> Coordina las herramientas agénticas, mantiene las versiones de las piezas, entrega los comandos y garantiza la traza inmutable.
+                </li>
+                <li>
+                  <strong>Modelos por tarea:</strong> Inferencia seleccionada técnicamente según la especialidad de cada agente (especificar, descomponer, construir o auditar), validada con los accesos de la entidad.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de composición de la propuesta y arquitectura institucional del arnés agéntico">
+                <!-- Capa Superior: Herramientas ATENEA -->
+                <rect x="25" y="15" width="470" height="55" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
+                <text x="40" y="32" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">HERRAMIENTAS EXISTENTES DE ATENEA</text>
+
+                <rect x="35" y="38" width="140" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                <text x="105" y="54" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">SharePoint (Gestor Doc)</text>
+
+                <rect x="185" y="38" width="145" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                <text x="257" y="54" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">Figma (Diseño UI/UX)</text>
+
+                <rect x="340" y="38" width="145" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                <text x="412" y="54" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">Azure Boards (Tickets)</text>
+
+                <!-- Conexiones superiores hacia el arnés -->
+                <path d="M105 62 V85" stroke="#4E93B0" stroke-width="1.3" />
+                <path d="M257 62 V85" stroke="#4E93B0" stroke-width="1.3" />
+                <path d="M412 62 V85" stroke="#4E93B0" stroke-width="1.3" />
+
+                <!-- Capa Intermedia: Arnés LIA UNAL (Verde) -->
+                <rect x="25" y="85" width="470" height="190" rx="10" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.8" />
+                <rect x="35" y="93" width="220" height="18" rx="4" fill="#1E5631" />
+                <text x="145" y="106" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">ARNÉS PRINCIPAL SDLC-IA &middot; LIA UNAL</text>
+
+                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
+                  <!-- Entorno agéntico -->
+                  <rect x="35" y="118" width="135" height="42" rx="5" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="102" y="134" text-anchor="middle" fill="#1B2029" font-weight="700">Entorno Agéntico</text>
+                  <text x="102" y="148" text-anchor="middle" fill="#5B6472">Claude Code / OpenCode CLI</text>
+
+                  <!-- Modelos por tarea -->
+                  <rect x="180" y="118" width="150" height="42" rx="5" fill="#FFF7ED" stroke="#DFBD76" />
+                  <text x="255" y="134" text-anchor="middle" fill="#8A5A00" font-weight="700">Modelos por Tarea</text>
+                  <text x="255" y="148" text-anchor="middle" fill="#5B6472">Definidos por UNAL / ATENEA</text>
+
+                  <!-- Tablero de estado -->
+                  <rect x="340" y="118" width="145" height="42" rx="5" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="412" y="134" text-anchor="middle" fill="#1B2029" font-weight="700">Tablero de Estado</text>
+                  <text x="412" y="148" text-anchor="middle" fill="#5B6472">Avance en tiempo real</text>
+
+                  <!-- Gestor de specs -->
+                  <rect x="35" y="168" width="135" height="42" rx="5" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="102" y="184" text-anchor="middle" fill="#1B2029" font-weight="700">Gestor de Specs</text>
+                  <text x="102" y="198" text-anchor="middle" fill="#5B6472">BMAD: PRD, Arq y CU</text>
+
+                  <!-- Tejedor -->
+                  <rect x="180" y="168" width="150" height="42" rx="5" fill="#F8FAFC" stroke="#1E5631" stroke-width="1.3" />
+                  <text x="255" y="184" text-anchor="middle" fill="#1E5631" font-weight="700">Tejedor LIA UNAL</text>
+                  <text x="255" y="198" text-anchor="middle" fill="#5B6472">Historia → Contrato OpenSpec</text>
+
+                  <!-- Memoria -->
+                  <rect x="340" y="168" width="145" height="42" rx="5" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="412" y="184" text-anchor="middle" fill="#1B2029" font-weight="700">Memoria Persistente</text>
+                  <text x="412" y="198" text-anchor="middle" fill="#5B6472">Engram + Grafo de Código</text>
+
+                  <!-- Barra de comandos -->
+                  <rect x="35" y="218" width="450" height="45" rx="6" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="260" y="235" text-anchor="middle" fill="#1E5631" font-weight="700">Catálogo de Comandos por Etapa:</text>
+                  <text x="260" y="251" text-anchor="middle" fill="#5B6472">/sw:new (iniciar) &middot; /sw:adopt (adoptar) &middot; /sw:sprint (olas) &middot; /sw:build (construir) &middot; /sw:close (cerrar) &middot; /sw:status</text>
+                </g>
+
+                <!-- Conexiones inferiores hacia repositorios y despliegue -->
+                <path d="M102 275 V295" stroke="#4E93B0" stroke-width="1.3" />
+                <path d="M260 275 V295" stroke="#4E93B0" stroke-width="1.3" />
+                <path d="M412 275 V295" stroke="#4E93B0" stroke-width="1.3" />
+
+                <!-- Capa Inferior: Repositorios, CI/CD y Ambientes -->
+                <rect x="25" y="295" width="470" height="50" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
+                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
+                  <rect x="35" y="307" width="140" height="26" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="105" y="323" text-anchor="middle" fill="#1B2029">Azure Repos (Código)</text>
+
+                  <rect x="185" y="307" width="145" height="26" rx="4" fill="#FFFFFF" stroke="#DFBD76" />
+                  <text x="257" y="323" text-anchor="middle" fill="#8A5A00">Azure Pipelines (CI/CD)</text>
+
+                  <rect x="340" y="307" width="145" height="26" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="412" y="323" text-anchor="middle" fill="#1B2029">Ambientes QA / Pre / Prod</text>
+                </g>
+              </svg>
+            </figure>
+          </article>
+
+          <!-- Slide 18: Componentes de la Propuesta Técnica (Tabla 5.1) -->
+          <article class="slide" data-deck="e1-e4" data-module="e3">
+            <div class="slide-content">
+              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+              <h2>Matriz de componentes de la propuesta y estado de implementación</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Articulación modular:</strong> La solución integra desarrollos propios del LIA UNAL con piezas de terceros especializadas y herramientas preexistentes de ATENEA.
+                </li>
+                <li>
+                  <strong>Núcleo LIA probado:</strong> El arnés principal, el tejedor determinista de contratos y el tablero de estado se encuentran implementados y evaluados funcionalmente.
+                </li>
+                <li>
+                  <strong>Sujeto a decisiones de ATENEA:</strong> La forma de ejecución en terminal (Claude Code u OpenCode) y la habilitación de modelos e infraestructura se acuerdan con la Subgerencia de TIC.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 5.1: Componentes de la propuesta, herramientas y estado de avance (tab:e3-componentes)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:24%;">Componente</th>
+                      <th>Función en el Sistema</th>
+                      <th style="width:26%;">Herramienta</th>
+                      <th style="width:18%;">Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Arnés principal</strong></td>
+                      <td>Coordina herramientas, fija versiones, inyecta contexto y asegura traza.</td>
+                      <td>Desarrollo LIA UNAL</td>
+                      <td><span class="table-tag tag-green">Implementado</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Gestor de specs</strong></td>
+                      <td>Elabora PRD, arquitectura, épicas e historias con criterios formales.</td>
+                      <td>BMAD Integrado</td>
+                      <td><span class="table-tag tag-green">Integrado</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Tejedor</strong></td>
+                      <td>Convierte historia en contrato OpenSpec; calcula olas de trabajo.</td>
+                      <td>Pieza propia LIA UNAL</td>
+                      <td><span class="table-tag tag-green">Implementado</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Memoria persistente</strong></td>
+                      <td>Decisiones, aprendizajes pasados y mapa semántico del código.</td>
+                      <td>Engram + Graphify</td>
+                      <td><span class="table-tag tag-green">Integrados</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Tablero de estado</strong></td>
+                      <td>Visualización de avance por historia, contrato y cobertura.</td>
+                      <td>Pieza propia LIA UNAL</td>
+                      <td><span class="table-tag tag-green">Implementado</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Entorno agéntico</strong></td>
+                      <td>Ejecuta comandos CLI: lectura de contexto, edición y tests.</td>
+                      <td>Claude Code / OpenCode</td>
+                      <td><span class="table-tag tag-amber">Por habilitar</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Modelos de IA</strong></td>
+                      <td>Inferencia especializada por tarea (análisis, código, auditoría).</td>
+                      <td>APIs / Modelos ATENEA</td>
+                      <td><span class="table-tag tag-amber">Por definir</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Gestión documental</strong></td>
+                      <td>Archivo formal de actas y evidencia de cumplimiento.</td>
+                      <td>SharePoint ATENEA</td>
+                      <td><span class="table-tag tag-blue">Existente</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Gestor repositorios</strong></td>
+                      <td>Control de versiones, pull requests y ramas protegidas.</td>
+                      <td>Azure Repos ATENEA</td>
+                      <td><span class="table-tag tag-blue">Existente</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Integración/Entrega</strong></td>
+                      <td>Compilación, ejecución de tests y despliegue por ambiente.</td>
+                      <td>Azure Pipelines</td>
+                      <td><span class="table-tag tag-amber">Por definir</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide 19: Caso de Uso Institucional (C3): Candidatos y Criterios -->
+          <article class="slide" data-deck="e1-e4" data-module="e3">
+            <div class="slide-content">
+              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+              <h2>Caso de uso institucional (C3): candidatos y criterios de selección</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Decisión en cabeza de ATENEA:</strong> La minuta asigna la priorización al contratista; el 14 de octubre se acordó que ATENEA selecciona y formaliza el caso de uso misional.
+                </li>
+                <li>
+                  <strong>Tres proyectos candidatos evaluados:</strong>
+                  1. Servicio unificado de roles y permisos con Keycloak (candidato más firme);
+                  2. Módulo de creación de terceros en SICOR Posmedia;
+                  3. Módulos evolutivos de SICOR CTI / EMA o Academia.
+                </li>
+                <li>
+                  <strong>Siete criterios de selección rigurosos:</strong> Valor real para la entidad, factibilidad en plazo y equipo, existencia de especificación y Figma, pruebas automatizables, ausencia de datos sensibles reales, independencia de la migración y recorrido del ciclo completo.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 5.2: Comparación de proyectos candidatos para el Caso de Uso (C3) frente a los 7 criterios contractuales</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:28%;">Criterio de Evaluación</th>
+                      <th style="width:24%;">1. Keycloak (SSO)</th>
+                      <th style="width:24%;">2. Terceros Posmedia</th>
+                      <th>3. Módulos EMA</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>1. Valor para ATENEA</strong></td>
+                      <td><span class="table-tag tag-green">Muy Alto</span> (Transversal)</td>
+                      <td><span class="table-tag tag-green">Alto</span> (Misional Posmedia)</td>
+                      <td><span class="table-tag tag-blue">Medio</span> (Evolutivo puntual)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>2. Plazo y equipo</strong></td>
+                      <td><span class="table-tag tag-green">Factible</span> (4-6 semanas)</td>
+                      <td><span class="table-tag tag-green">Factible</span> (3-4 semanas)</td>
+                      <td><span class="table-tag tag-amber">Variable según módulo</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>3. Insumos (Spec y Figma)</strong></td>
+                      <td><span class="table-tag tag-green">En definición avanzada</span></td>
+                      <td><span class="table-tag tag-green">Acta y Figma existentes</span></td>
+                      <td><span class="table-tag tag-amber">Parcial</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>4. Pruebas y criterios</strong></td>
+                      <td><span class="table-tag tag-green">Alta automatización</span></td>
+                      <td><span class="table-tag tag-green">Validación de formularios</span></td>
+                      <td><span class="table-tag tag-blue">Reglas complejas</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>5. Datos sensibles</strong></td>
+                      <td><span class="table-tag tag-green">No requiere datos reales</span></td>
+                      <td><span class="table-tag tag-amber">Requiere datos simulados</span></td>
+                      <td><span class="table-tag tag-amber">Requiere anonimización</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>6. Independencia nube</strong></td>
+                      <td><span class="table-tag tag-green">Independiente de OCI</span></td>
+                      <td><span class="table-tag tag-blue">Requiere BD Posmedia</span></td>
+                      <td><span class="table-tag tag-blue">Requiere BD CTI</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>7. Ciclo E2E completo</strong></td>
+                      <td><span class="table-tag tag-green">Recorre de E1 a E5</span></td>
+                      <td><span class="table-tag tag-green">Recorre de E1 a E5</span></td>
+                      <td><span class="table-tag tag-green">Recorre de E1 a E5</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- ========================================================================= -->
+          <!-- MÓDULO 5: E4 · Banco de Agentes y Skills (Capítulo 6)                     -->
+          <!-- ========================================================================= -->
+
+          <!-- Slide 20: Flujo Integral de Artefactos de Aracne (Diagrama de Flujo / Figura 6.1) -->
+          <article class="slide" data-deck="e1-e4" data-module="e4">
+            <div class="slide-content">
+              <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
+              <h2>Flujo integral de artefactos de Aracne: de la idea a la línea base</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Tres fases metodológicas articuladas:</strong>
+                  1. Especificación formal con BMAD (PRD y arquitectura);
+                  2. Traducción determinista con OpenSpec y Tejedor LIA (Regla de frontera);
+                  3. Construcción estricta SDD/ODD con pruebas automatizadas y cierre en línea base.
+                </li>
+                <li>
+                  <strong>Regla de frontera:</strong> BMAD se detiene en la historia con criterios <em>Given/When/Then</em>; se podan deliberadamente las capacidades de escritura libre de código para obligar el paso por contratos verificables.
+                </li>
+                <li>
+                  <strong>Gobernanza transversal:</strong> Control de cambios (`/sw:change`), gestión de defectos guiada por tests (`/sw:bug`) y memoria persistente (Engram).
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de flujo integral de artefactos del arnés Aracne SDLC-AI">
+                <!-- Fase 1: Especificación y Contratos -->
+                <rect x="20" y="15" width="480" height="98" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
+                <rect x="30" y="22" width="260" height="18" rx="3" fill="#4E93B0" />
+                <text x="160" y="35" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">FASE 1: ESPECIFICACIÓN Y CONTRATOS (ENTENDER A TRADUCIR)</text>
+
+                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
+                  <rect x="30" y="46" width="100" height="56" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="80" y="64" text-anchor="middle" fill="#1B2029" font-weight="700">Gestor Specs</text>
+                  <text x="80" y="78" text-anchor="middle" fill="#5B6472">BMAD: PRD, Arq</text>
+                  <text x="80" y="90" text-anchor="middle" fill="#5B6472">y prototipo UX</text>
+
+                  <path d="M130 74 H145" stroke="#4E93B0" stroke-width="1.5" />
+
+                  <rect x="145" y="46" width="105" height="56" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="197" y="64" text-anchor="middle" fill="#1B2029" font-weight="700">Historias Usuario</text>
+                  <text x="197" y="78" text-anchor="middle" fill="#5B6472">Criterios formales</text>
+                  <text x="197" y="90" text-anchor="middle" fill="#5B6472">Given/When/Then</text>
+
+                  <path d="M250 74 H265" stroke="#1E5631" stroke-width="1.5" />
+
+                  <rect x="265" y="46" width="110" height="56" rx="5" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.3" />
+                  <text x="320" y="64" text-anchor="middle" fill="#1E5631" font-weight="700">Tejedor (LIA UNAL)</text>
+                  <text x="320" y="78" text-anchor="middle" fill="#5B6472">Historia → Contrato</text>
+                  <text x="320" y="90" text-anchor="middle" fill="#5B6472">Registro de traza</text>
+
+                  <path d="M375 74 H390" stroke="#4E93B0" stroke-width="1.5" />
+
+                  <rect x="390" y="46" width="100" height="56" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="440" y="64" text-anchor="middle" fill="#1B2029" font-weight="700">OpenSpec</text>
+                  <text x="440" y="78" text-anchor="middle" fill="#5B6472">Contrato ejecutable</text>
+                  <text x="440" y="90" text-anchor="middle" fill="#5B6472">por cada historia</text>
+                </g>
+
+                <!-- Flecha vertical F1 -> F2 -->
+                <path d="M440 102 V132" stroke="#1E5631" stroke-width="2" />
+                <text x="445" y="122" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="700">contrato formal</text>
+
+                <!-- Fase 2: Construcción y Cierre Verificable -->
+                <rect x="20" y="132" width="480" height="100" rx="8" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.5" />
+                <rect x="30" y="139" width="275" height="18" rx="3" fill="#1E5631" />
+                <text x="167" y="152" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">FASE 2: CONSTRUCCIÓN Y CIERRE VERIFICABLE (CONSTRUIR Y CERRAR)</text>
+
+                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
+                  <rect x="390" y="163" width="100" height="56" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.3" />
+                  <text x="440" y="181" text-anchor="middle" fill="#1B2029" font-weight="700">Construir (/build)</text>
+                  <text x="440" y="195" text-anchor="middle" fill="#1E5631" font-weight="600">Código + Tests</text>
+                  <text x="440" y="207" text-anchor="middle" fill="#5B6472">1 test por escenario</text>
+
+                  <path d="M390 191 H375" stroke="#1E5631" stroke-width="1.5" />
+
+                  <rect x="265" y="163" width="110" height="56" rx="5" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="320" y="181" text-anchor="middle" fill="#1E5631" font-weight="700">Cerrar (LIA UNAL)</text>
+                  <text x="320" y="195" text-anchor="middle" fill="#5B6472">Validación estricta</text>
+                  <text x="320" y="207" text-anchor="middle" fill="#5B6472">Archiva línea base</text>
+
+                  <path d="M265 191 H250" stroke="#1E5631" stroke-width="1.5" />
+
+                  <rect x="145" y="163" width="105" height="56" rx="5" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="197" y="181" text-anchor="middle" fill="#1E5631" font-weight="700">Tablero (/status)</text>
+                  <text x="197" y="195" text-anchor="middle" fill="#5B6472">Avance y cobertura</text>
+                  <text x="197" y="207" text-anchor="middle" fill="#5B6472">Métricas en vivo</text>
+
+                  <path d="M145 191 H130" stroke="#1E5631" stroke-width="1.5" stroke-dasharray="3,2" />
+
+                  <rect x="30" y="163" width="100" height="56" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="80" y="181" text-anchor="middle" fill="#2C6B87" font-weight="700">Memoria (Engram)</text>
+                  <text x="80" y="195" text-anchor="middle" fill="#5B6472">Registro decisiones</text>
+                  <text x="80" y="207" text-anchor="middle" fill="#5B6472">Lecciones repo</text>
+                </g>
+
+                <!-- Fase 3: Gobernanza Transversal y Contexto de Código -->
+                <rect x="20" y="250" width="480" height="95" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
+                <rect x="30" y="257" width="275" height="18" rx="3" fill="#4E93B0" />
+                <text x="167" y="270" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">FASE 3: GOBERNANZA TRANSVERSAL Y CONTEXTO CONTINUO</text>
+
+                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
+                  <rect x="30" y="281" width="320" height="52" rx="5" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="190" y="299" text-anchor="middle" fill="#1E5631" font-weight="700">Control de Cambios, Defectos e Incidencias (LIA UNAL)</text>
+                  <text x="190" y="315" text-anchor="middle" fill="#5B6472">/sw:change (filtro de alcance) &middot; /sw:bug (corrección con tests) &middot; /sw:ticket (clasificación)</text>
+
+                  <rect x="365" y="281" width="125" height="52" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="427" y="299" text-anchor="middle" fill="#2C6B87" font-weight="700">Mapa del Código</text>
+                  <text x="427" y="315" text-anchor="middle" fill="#5B6472">Grafo AST real</text>
+                  <text x="427" y="325" text-anchor="middle" fill="#5B6472">(Graphify)</text>
+                </g>
+
+                <!-- Bucle de cambio hacia atrás (rojo) -->
+                <path d="M30 307 H12 V64 H30" stroke="#DFBD76" stroke-width="1.5" stroke-dasharray="3,2" />
+                <text x="14" y="185" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="7.5" font-weight="700" transform="rotate(-90 14,185)">Cambio de alcance: regenera sólo lo afectado</text>
+              </svg>
+            </figure>
+          </article>
+
+          <!-- Slide 21: Sistema de Agentes Base de Aracne (Tabla 6.1) -->
+          <article class="slide" data-deck="e1-e4" data-module="e4">
+            <div class="slide-content">
+              <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
+              <h2>Sistema de agentes base de Aracne: roles, artefactos y control humano</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Roles hiper-especializados:</strong> Cada agente opera con un ámbito funcional acotado, herramientas específicas y contratos formales de entrada y salida.
+                </li>
+                <li>
+                  <strong>Control humano en cada compuerta:</strong> Ningún artefacto producido por un agente se integra sin la validación previa del responsable humano (PO, Diseñador, Líder Técnico o Subgerencia).
+                </li>
+                <li>
+                  <strong>Superficies de edición acotadas:</strong> El constructor tiene prohibido modificar archivos fuera del contrato asignado, previniendo regresiones colaterales.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 6.1: Agentes base de Aracne: rol, fase, insumos, salidas y control humano (tab:e4-agentes)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:20%;">Agente y Rol</th>
+                      <th style="width:12%;">Fase</th>
+                      <th>Insumos y Disparador</th>
+                      <th style="width:24%;">Artefacto de Salida</th>
+                      <th style="width:20%;">Control Humano</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Analista CU</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">BMAD Analyst</span></td>
+                      <td>Entender</td>
+                      <td>Actas, entrevistas, tickets o código existente en el repositorio.</td>
+                      <td>Brief de producto, contexto y preguntas de aclaración.</td>
+                      <td>Valida intención, casos de uso y alcance.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Product Manager</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">BMAD PM</span></td>
+                      <td>Entender &rarr; Decidir</td>
+                      <td>Brief validado, metas institucionales y restricciones técnicas.</td>
+                      <td>PRD formal con requisitos numerados (FR/NFR).</td>
+                      <td>Aprueba formalmente el PRD y priorización.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Arquitecto</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">BMAD Architect</span></td>
+                      <td>Decidir</td>
+                      <td>PRD aprobado y stack tecnológico institucional.</td>
+                      <td>Arquitectura vinculante (servicios, BD, integraciones).</td>
+                      <td>Líder técnico y BD aprueban arquitectura.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Diseñador Historias</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">BMAD Stories</span></td>
+                      <td>Descomponer</td>
+                      <td>PRD y arquitectura vinculante aprobados.</td>
+                      <td>Épicas e historias con criterios Given/When/Then.</td>
+                      <td>PO aprueba historias estimables y dependencias.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Tejedor LIA</strong><br /><span style="font-size:0.68rem; color:var(--accent); font-weight:700;">LIA UNAL</span></td>
+                      <td>Traducir</td>
+                      <td>Historias aprobadas; invocado automáticamente.</td>
+                      <td>Contratos OpenSpec verificables y plan de olas.</td>
+                      <td>Desarrollador valida correspondencia.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Constructor SDD</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">ODD Builder</span></td>
+                      <td>Construir</td>
+                      <td>Contrato OpenSpec asignado en una ola.</td>
+                      <td>Código fuente + prueba unitaria por escenario.</td>
+                      <td>Líder técnica revisa PR y aprueba merge.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Auditor Calidad</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">Reviewer</span></td>
+                      <td>Revisar</td>
+                      <td>Pull Request con diff de código y pruebas.</td>
+                      <td>Dictámenes multi-perspectiva (seguridad, calidad).</td>
+                      <td>Líder técnica decide merge con base en reporte.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide 22: Catálogo de Comandos CLI y Skills Operativas (Tabla 6.2) -->
+          <article class="slide" data-deck="e1-e4" data-module="e4">
+            <div class="slide-content">
+              <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
+              <h2>Catálogo de comandos CLI y skills operativas para el equipo técnico</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Interfaz de terminal estandarizada:</strong> Los comandos `/sw:*` unifican la experiencia del desarrollador sobre cualquier plataforma CLI (Claude Code u OpenCode).
+                </li>
+                <li>
+                  <strong>Doctrina y reglas procedimentales:</strong> Las skills inyectan al modelo las restricciones organizacionales, la paleta cromática, los estándares de código y las reglas de seguridad.
+                </li>
+                <li>
+                  <strong>Trazabilidad en tiempo real:</strong> El comando `/sw:status` genera el tablero interactivo de cobertura, estabilidad y tareas pendientes directamente en la terminal o navegador.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 6.2: Catálogo de comandos CLI y skills por etapa (tab:e4-catalogo)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:24%;">Comando / Skill</th>
+                      <th style="width:18%;">Fase SDLC-IA</th>
+                      <th>Disparador y Entrada</th>
+                      <th style="width:26%;">Salida Generada</th>
+                      <th style="width:18%;">Control Humano</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><code>/sw:new</code></td><td>Entender &rarr; Traducir</td><td>Idea o requerimiento de servicio nuevo</td><td>PRD, arquitectura, historias y contratos</td><td>Aprueba artefactos</td></tr>
+                    <tr><td><code>/sw:adopt</code></td><td>Entender &rarr; Traducir</td><td>Sistema existente; repo e insumos</td><td>Mapa del código, PRD acotado y base</td><td>Acuerda área a intervenir</td></tr>
+                    <tr><td><code>/sw:sprint</code></td><td>Descomponer</td><td>Contratos listos y grafo de dependencias</td><td>Olas de trabajo paralelo coordinadas</td><td>Asigna a desarrolladores</td></tr>
+                    <tr><td><code>/sw:build</code></td><td>Construir</td><td>Contrato OpenSpec de una historia</td><td>Código + pruebas unitarias por escenario</td><td>Aprueba pull request</td></tr>
+                    <tr><td><code>/sw:close</code></td><td>Cerrar</td><td>Historias con tareas verificadas</td><td>Línea base archivada y memoria actualizada</td><td>Decide historias a cerrar</td></tr>
+                    <tr><td><code>/sw:change</code></td><td>Transversal</td><td>Cambio solicitado en pleno desarrollo</td><td>Filtro de alcance y regeneración acotada</td><td>Acepta o rechaza alcance</td></tr>
+                    <tr><td><code>/sw:bug</code></td><td>Transversal</td><td>Defecto detectado frente al contrato</td><td>Corrección guiada por test unitario</td><td>Aprueba la corrección</td></tr>
+                    <tr><td><code>/sw:ticket</code></td><td>Transversal</td><td>Incidencia de Azure Boards / Mesa ayuda</td><td>Enrutamiento a cambio o a defecto</td><td>Confirma ruta</td></tr>
+                    <tr><td><code>/sw:status</code></td><td>Transversal</td><td>Consulta de estado del proyecto</td><td>Tablero interactivo de avance y calidad</td><td>Prioriza actividades</td></tr>
+                    <tr><td><code>/sw:doctor</code></td><td>Soporte</td><td>Verificación de salud del arnés</td><td>Preflight, versiones y coherencia de plan</td><td>Resuelve advertencias</td></tr>
+                    <tr><td><strong>Skills de Método</strong></td><td>Todas las fases</td><td>Invocación automática por comando</td><td>Reglas procedimentales institucionales</td><td>Gobernanza del flujo</td></tr>
+                    <tr><td><strong>Skill Grafo AST</strong></td><td>Entender / Construir</td><td>Consulta de estructura o impacto</td><td>Respuestas deterministas sobre código</td><td>Consulta analítica</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- ========================================================================= -->
+          <!-- MÓDULO 6: Decisiones, Compromisos y Cierre (Capítulo 7)                   -->
+          <!-- ========================================================================= -->
+
+          <!-- Slide 23: Tres Decisiones Prioritarias de ATENEA -->
+          <article class="slide" data-deck="e1-e4" data-module="e5">
+            <div class="slide-content">
+              <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
+              <h2>Tres decisiones prioritarias que corresponden a la Agencia ATENEA</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>1. Selección formal del Caso de Uso (C3):</strong> Definir el proceso, la aplicación misional (Keycloak SSO o Creación de Terceros SICOR Posmedia) y el equipo técnico asignado para el piloto.
+                </li>
+                <li>
+                  <strong>2. Habilitación de accesos institucionales:</strong> Gestionar permisos en el gestor documental, Figma, Azure Boards, Azure Repos y los modelos de IA autorizados por la política de la entidad.
+                </li>
+                <li>
+                  <strong>3. Validación del Diagnóstico Institucional (E1):</strong> Emitir la conformidad formal sobre los hallazgos de capacidades técnicas, stack y puntos de fricción presentados en el informe.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Las tres decisiones prioritarias a cargo de ATENEA">
+                <rect x="25" y="20" width="470" height="50" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
+                <text x="40" y="42" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">COMPROMISOS DECISIONALES DE LA AGENCIA ATENEA</text>
+                <text x="40" y="58" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Habilitadores críticos indispensables para iniciar la fase de construcción en Hito 2</text>
+
+                <!-- Decisión 1 -->
+                <rect x="25" y="85" width="470" height="74" rx="8" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.5" />
+                <rect x="35" y="97" width="28" height="24" rx="4" fill="#1E5631" />
+                <text x="49" y="113" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">D1</text>
+                <text x="75" y="108" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">Caso de Uso Misional Institucional (C3)</text>
+                <text x="75" y="126" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Formalizar la selección entre el servicio unificado Keycloak o Terceros Posmedia,</text>
+                <text x="75" y="142" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">definiendo el equipo de desarrollo contraparte y el proceso misional impactado.</text>
+
+                <!-- Decisión 2 -->
+                <rect x="25" y="172" width="470" height="74" rx="8" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.3" />
+                <rect x="35" y="184" width="28" height="24" rx="4" fill="#4E93B0" />
+                <text x="49" y="200" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">D2</text>
+                <text x="75" y="195" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">Accesos a Herramientas, Repositorios y Modelos de IA</text>
+                <text x="75" y="213" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Habilitar accesos del arnés a Azure Repos, Azure Boards, SharePoint y Figma,</text>
+                <text x="75" y="229" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">e indicar el proveedor/modelo autorizado (Claude Teams, OpenAI o Foundry).</text>
+
+                <!-- Decisión 3 -->
+                <rect x="25" y="259" width="470" height="74" rx="8" fill="#FFFFFF" stroke="#DFBD76" stroke-width="1.3" />
+                <rect x="35" y="271" width="28" height="24" rx="4" fill="#DFBD76" />
+                <text x="49" y="287" text-anchor="middle" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">D3</text>
+                <text x="75" y="282" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">Validación del Informe de Diagnóstico Institucional (E1)</text>
+                <text x="75" y="300" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Aprobación formal por parte de la supervisión técnica sobre los hallazgos de stack,</text>
+                <text x="75" y="316" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">roles, deuda técnica en Angular 13 y los 10 puntos de fricción identificados.</text>
+              </svg>
+            </figure>
+          </article>
+
+          <!-- Slide 24: Matriz de Compromisos Abiertos (Tabla 7.1) -->
+          <article class="slide" data-deck="e1-e4" data-module="e5">
+            <div class="slide-content">
+              <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
+              <h2>Matriz de compromisos abiertos de las sesiones técnicas (Tabla 7.1)</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Trazabilidad de actas técnicas:</strong> Compromisos derivados de las reuniones técnicas del 7, 14 y 16 de octubre de 2026 (Acta 01 y grabaciones).
+                </li>
+                <li>
+                  <strong>Habilitadores para el caso de uso:</strong> Se requiere recibir un requerimiento de ejemplo con su diseño validado y la estructura de carpetas de back-end y front-end de los proyectos.
+                </li>
+                <li>
+                  <strong>Seguridad y migración:</strong> La entrega del reporte de seguridad y la definición de la fase de migración a Azure determinan la arquitectura del pipeline CI/CD.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <caption>Tabla 7.1: Compromisos de las sesiones técnicas que condicionan E1 a E4 (tab:compromisos)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:8%;">N.º</th>
+                      <th>Compromiso Registrado</th>
+                      <th style="width:22%;">Responsable</th>
+                      <th style="width:14%;">Origen</th>
+                      <th style="width:18%;">Estado al Corte</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>1</strong></td>
+                      <td>Compartir un requerimiento de ejemplo real con su correspondiente diseño en Figma.</td>
+                      <td>ATENEA</td>
+                      <td>A4, R2</td>
+                      <td><span class="table-tag tag-amber">Abierto</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>2</strong></td>
+                      <td>Enviar el informe formal de la reciente revisión de seguridad de las aplicaciones.</td>
+                      <td>ATENEA</td>
+                      <td>R2</td>
+                      <td><span class="table-tag tag-amber">Abierto</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>3</strong></td>
+                      <td>Definir el estado y alcance de la migración de nube a Azure.</td>
+                      <td>Subgerencia TIC</td>
+                      <td>A4</td>
+                      <td><span class="table-tag tag-blue">Parcial en R4</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>4</strong></td>
+                      <td>Definir y comunicar oficialmente el caso de uso institucional (C3).</td>
+                      <td>ATENEA</td>
+                      <td>R3</td>
+                      <td><span class="table-tag tag-amber">Abierto</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>5</strong></td>
+                      <td>Enviar documento con información de proyectos y estructura de carpetas de front y back.</td>
+                      <td>ATENEA</td>
+                      <td>R3</td>
+                      <td><span class="table-tag tag-amber">Abierto</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide 25: Hoja de Ruta Contractual hacia el Hito 2 -->
+          <article class="slide" data-deck="e1-e4" data-module="e5">
+            <div class="slide-content">
+              <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
+              <h2>Hoja de ruta: culminación del Hito 1 y transición hacia el Hito 2</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Cierre exitoso del Hito 1 (Semanas 1 a 13):</strong> Diagnóstico institucional consolidado (E1), Metodología SDLC-IA formalizada (E2), Arquitectura End-to-End especificada (E3) y Sistema de Agentes y Skills estructurado (E4).
+                </li>
+                <li>
+                  <strong>Ruta operativa del Hito 2 (Semanas 14 a 22):</strong>
+                  <strong>E5:</strong> Construcción, despliegue y validación del caso de uso en ambiente objetivo.
+                  <strong>E6:</strong> Elaboración de manuales técnicos y operativos para independencia.
+                  <strong>E7:</strong> Talleres de capacitación, transferencia tecnológica y guías de replicabilidad.
+                  <strong>E8:</strong> Informe final, balance contractual y cierre de mutuo acuerdo.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hoja de ruta contractual y transición entre Hito 1 e Hito 2">
+                <rect x="25" y="20" width="470" height="54" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
+                <text x="40" y="42" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">TRANSICIÓN CONTRACTUAL: HITO 1 → HITO 2 (SEMANAS 1 A 22)</text>
+                <text x="40" y="58" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Contrato Interadministrativo ATENEA-464-2026 &middot; $300.000.000 COP</text>
+
+                <!-- Caja Hito 1 -->
+                <rect x="25" y="90" width="225" height="230" rx="10" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.8" />
+                <rect x="35" y="100" width="205" height="22" rx="4" fill="#1E5631" />
+                <text x="137" y="115" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">HITO 1: C1–C4 / E1–E4 (50%)</text>
+
+                <g font-family="Space Grotesk,sans-serif" font-size="9">
+                  <rect x="35" y="132" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="45" y="148" fill="#1E5631" font-weight="700">E1 · Diagnóstico Institucional</text>
+                  <text x="45" y="162" fill="#5B6472">Capacidades TI, roles y puntos fricción</text>
+
+                  <rect x="35" y="178" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="45" y="194" fill="#1E5631" font-weight="700">E2 · Metodología SDLC-IA</text>
+                  <text x="45" y="208" fill="#5B6472">6 fases y 5 compuertas humanas</text>
+
+                  <rect x="35" y="224" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="45" y="240" fill="#1E5631" font-weight="700">E3 · Arquitectura End-to-End</text>
+                  <text x="45" y="254" fill="#5B6472">Arnés LIA UNAL y caso de uso</text>
+
+                  <rect x="35" y="270" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#1E5631" />
+                  <text x="45" y="286" fill="#1E5631" font-weight="700">E4 · Agentes y Skills</text>
+                  <text x="45" y="300" fill="#5B6472">Comandos CLI y reglas OpenSpec</text>
+                </g>
+
+                <!-- Flecha de transición -->
+                <path d="M250 205 H270" stroke="#1E5631" stroke-width="2.5" marker-end="url(#arrow-green)" />
+
+                <!-- Caja Hito 2 -->
+                <rect x="270" y="90" width="225" height="230" rx="10" fill="#F8FAFC" stroke="#4E93B0" stroke-width="1.8" />
+                <rect x="280" y="100" width="205" height="22" rx="4" fill="#4E93B0" />
+                <text x="382" y="115" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">HITO 2: C5–C8 / E5–E8 (50%)</text>
+
+                <g font-family="Space Grotesk,sans-serif" font-size="9">
+                  <rect x="280" y="132" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="290" y="148" fill="#2C6B87" font-weight="700">E5 · Despliegue y Piloto</text>
+                  <text x="290" y="162" fill="#5B6472">Construcción y validación misional</text>
+
+                  <rect x="280" y="178" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="290" y="194" fill="#2C6B87" font-weight="700">E6 · Documentación Operativa</text>
+                  <text x="290" y="208" fill="#5B6472">Manuales de instalación y operación</text>
+
+                  <rect x="280" y="224" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="290" y="240" fill="#2C6B87" font-weight="700">E7 · Workshop Transferencia</text>
+                  <text x="290" y="254" fill="#5B6472">Capacitación y guías replicabilidad</text>
+
+                  <rect x="280" y="270" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="290" y="286" fill="#2C6B87" font-weight="700">E8 · Informe Final y Cierre</text>
+                  <text x="290" y="300" fill="#5B6472">Matriz de verificación y balance</text>
+                </g>
+
+                <defs>
+                  <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1E5631" />
+                  </marker>
+                </defs>
+                <text x="260" y="340" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Hito 1 vence Semana 13 ($150M) &middot; Hito 2 vence Semana 22 ($150M) &middot; Liquidación a 4 meses</text>
+              </svg>
+            </figure>
+          </article>
+        </section>
+      </main>
+
+      <footer class="controls">
+        <button class="btn" id="prev" aria-label="Diapositiva anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M15 18l-6-6 6-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <span class="counter" id="counter" aria-live="polite">1 / 26</span>
+        <button class="btn" id="next" aria-label="Diapositiva siguiente">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M9 18l6-6-6-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </footer>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
+'''
+    return html
+
+if __name__ == "__main__":
+    repo_root = Path(__file__).resolve().parent.parent
+    target = repo_root / "e1-e4.html"
+    content = generate_e1_e4_html()
+    with open(target, "w", encoding="utf-8") as f:
+        f.write(content)
+    print(f"✅ e1-e4.html generado exitosamente ({len(content)} bytes).")
