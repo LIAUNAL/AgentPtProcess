@@ -7,8 +7,8 @@ const { chromium } = require('playwright');
   await page.click('.hub-card[data-deck="e1-e4"]');
   await page.waitForTimeout(400);
 
-  const total = 26;
-  console.log('Auditing ALL 26 slides in E1-E4 for SVG & Table text overlaps...\n');
+  const total = await page.evaluate(() => document.querySelectorAll('.slide[data-deck="e1-e4"]').length);
+  console.log(`Auditing ALL ${total} slides in E1-E4 for SVG & Table text overlaps...\n`);
 
   for (let idx = 0; idx < total; idx++) {
     await page.evaluate((targetIdx) => {

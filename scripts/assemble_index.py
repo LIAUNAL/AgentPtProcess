@@ -129,7 +129,7 @@ def main():
           <div class="hub-card" data-deck="e1-e4">
             <div class="hub-card-header">
               <span class="hub-card-tag">HITO 1 CONTRACTUAL</span>
-              <span class="hub-card-meta">26 Diapositivas &middot; 6 Módulos</span>
+              <span class="hub-card-meta">27 Diapositivas &middot; 6 Módulos</span>
             </div>
             <div>
               <h2 class="hub-card-title">Informe Técnico E1–E4: Avance de Hito 1</h2>
