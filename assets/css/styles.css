@@ -1587,3 +1587,331 @@ cite {
     color: #8a5a00;
   }
 }
+
+/* ==========================================================================
+   Panel de Control · Selector de Presentaciones Multi-Deck (Kick-off & E1-E4)
+   ========================================================================== */
+
+.rail-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+}
+
+.deck-selector-btn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: var(--gray0);
+  color: var(--fg);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(30, 41, 59, 0.08);
+  transition: all 180ms ease;
+  white-space: nowrap;
+}
+
+.deck-selector-btn:hover {
+  background: var(--selection);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.deck-selector-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--mode-bg);
+  color: var(--mode-fg);
+}
+
+.deck-selector-name {
+  color: var(--fg);
+}
+
+.deck-selector-caret {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  opacity: 0.7;
+  transition: transform 180ms ease;
+}
+
+.deck-selector-btn[aria-expanded="true"] .deck-selector-caret {
+  transform: rotate(180deg);
+}
+
+/* Modal Overlay */
+.deck-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 240ms ease;
+}
+
+.deck-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.deck-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 8, 15, 0.48);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.deck-modal-dialog {
+  position: relative;
+  z-index: 10;
+  width: min(880px, 95vw);
+  max-height: min(720px, 90vh);
+  background: var(--gray0);
+  border: 1px solid var(--line-strong);
+  border-radius: 20px;
+  box-shadow:
+    0 28px 60px rgba(6, 8, 15, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  padding: clamp(18px, 2.8vw, 30px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  transform: scale(0.96);
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.deck-modal.is-open .deck-modal-dialog {
+  transform: scale(1);
+}
+
+.deck-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+}
+
+.deck-modal-kicker {
+  margin: 0 0 4px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.deck-modal-title {
+  margin: 0;
+  font-family: "Source Serif 4", serif;
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  color: var(--fg);
+  line-height: 1.2;
+}
+
+.deck-modal-close {
+  background: var(--gray1);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fg);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 160ms ease;
+  flex: 0 0 auto;
+}
+
+.deck-modal-close:hover {
+  background: var(--line);
+  transform: rotate(90deg);
+}
+
+.deck-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.deck-card {
+  border: 1.5px solid var(--line);
+  border-radius: 16px;
+  background: var(--gray1);
+  padding: clamp(14px, 1.8vw, 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  box-shadow: 0 8px 24px rgba(30, 41, 59, 0.05);
+  transition: all 200ms ease;
+  position: relative;
+}
+
+.deck-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 16px 36px rgba(30, 41, 59, 0.1);
+  transform: translateY(-2px);
+}
+
+.deck-card.is-active-deck {
+  border-color: var(--mode-bg);
+  background: rgba(127, 180, 202, 0.08);
+  box-shadow: 0 0 0 2px var(--mode-bg);
+}
+
+.deck-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.deck-card-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--gray2);
+  color: var(--subtext1);
+}
+
+.deck-card.is-active-deck .deck-card-tag {
+  background: var(--mode-bg);
+  color: var(--mode-fg);
+}
+
+.deck-card-head h3 {
+  margin: 6px 0 6px;
+  font-family: "Source Serif 4", serif;
+  font-size: 1.28rem;
+  color: var(--fg);
+  line-height: 1.25;
+}
+
+.deck-card-head p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--subtext1);
+  line-height: 1.45;
+}
+
+.deck-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.deck-pills li {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--gray0);
+  border: 1px solid var(--line);
+  color: var(--subtext1);
+}
+
+.deck-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 180ms ease;
+  border: 1px solid var(--line-strong);
+  background: var(--gray0);
+  color: var(--fg);
+}
+
+.deck-card-btn:hover {
+  background: var(--mode-bg);
+  color: var(--mode-fg);
+  border-color: var(--mode-bg);
+}
+
+.deck-card.is-active-deck .deck-card-btn {
+  background: var(--mode-bg);
+  color: var(--mode-fg);
+  border-color: var(--mode-bg);
+}
+
+.deck-modal-footer {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--subtext);
+}
+
+.deck-modal-shortcuts {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.deck-modal-shortcuts kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-family: inherit;
+  font-weight: 700;
+  background: var(--gray1);
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .rail-bar-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+  .deck-selector-btn {
+    align-self: flex-start;
+  }
+  .deck-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
