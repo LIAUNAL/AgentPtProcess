@@ -13,10 +13,88 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20261022_2" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261022_3" />
   </head>
   <body class="view-hub">
     <div class="ambient"></div>
+
+    <!-- ====================================================================== -->
+    <!-- Pantalla de Selección de Presentación (Landing Hub View)               -->
+    <!-- ====================================================================== -->
+    <div id="deck-hub-view" class="deck-hub-view">
+      <div class="hub-container">
+        <header class="hub-header">
+          <div class="hub-logos">
+            <img class="hub-logo" src="assets/images/escudo_unal.png" alt="Universidad Nacional de Colombia" />
+            <img class="hub-logo" src="assets/images/logo_labIA.png" alt="Laboratorio de Inteligencia Artificial" />
+            <img class="hub-logo" src="assets/images/logo-atenea.png" alt="Agencia Distrital ATENEA" />
+          </div>
+          <p class="hub-kicker">LABORATORIO DE INTELIGENCIA ARTIFICIAL &middot; UNAL MANIZALES &middot; CONTRATO ATENEA-464-2026</p>
+          <h1 class="hub-title">Sistema de Presentaciones Técnicas e Institucionales</h1>
+          <p class="hub-subtitle">Selecciona la presentación que deseas consultar o proyectar:</p>
+        </header>
+
+        <div class="hub-cards-grid">
+          <!-- Tarjeta 1: Kick-off -->
+          <div class="hub-card" data-deck="kickoff">
+            <div class="hub-card-header">
+              <span class="hub-card-tag tag-blue">PROPUESTA INICIAL</span>
+              <span class="hub-card-meta">45 Diapositivas &middot; 6 Módulos</span>
+            </div>
+            <div>
+              <h2 class="hub-card-title">Kick-off: Propuesta SDLC-IA</h2>
+              <p class="hub-card-desc">Adopción conceptual y técnica de agentes de IA en el ciclo de vida del software: motivación, evolución de roles, evidencia empírica industrial (SWE-bench), arnés metodológico y arquitectura SpecWeaver.</p>
+            </div>
+            <ul class="hub-card-pills">
+              <li>Minuta Contractual</li>
+              <li>Motivación &amp; Perfiles</li>
+              <li>Chat vs Agente</li>
+              <li>SWE-bench</li>
+              <li>SpecWeaver</li>
+            </ul>
+            <button class="hub-card-btn" type="button" data-deck="kickoff">
+              <span>Iniciar Presentación Kick-off</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+
+          <!-- Tarjeta 2: E1-E4 -->
+          <div class="hub-card" data-deck="e1-e4">
+            <div class="hub-card-header">
+              <span class="hub-card-tag">HITO 1 CONTRACTUAL</span>
+              <span class="hub-card-meta">26 Diapositivas &middot; 6 Módulos</span>
+            </div>
+            <div>
+              <h2 class="hub-card-title">Informe Técnico E1–E4: Avance de Hito 1</h2>
+              <p class="hub-card-desc">Resultados contractuales al 21 de octubre de 2026: Diagnóstico de capacidades y deuda técnica (E1), Metodología SDLC-IA y 5 puertas humanas (E2), Arquitectura End-to-End (E3) y Sistema de Agentes y Skills (E4), con diagramas de flujo y tablas técnicas completas.</p>
+            </div>
+            <ul class="hub-card-pills">
+              <li>Contrato &amp; Alcance</li>
+              <li>E1 · Diagnóstico SICOR</li>
+              <li>E2 · Metodología SDLC-IA</li>
+              <li>E3 · Arquitectura Arnés</li>
+              <li>E4 · Comandos &amp; Skills</li>
+              <li>Decisiones &amp; Cierre</li>
+            </ul>
+            <button class="hub-card-btn" type="button" data-deck="e1-e4">
+              <span>Iniciar Presentación E1–E4</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <footer class="hub-footer">
+          <div>
+            <span>Acceso directo por URL: <code>?deck=e1-e4</code> | <code>?deck=kickoff</code></span>
+          </div>
+          <div>
+            <span>Atajos en presentación: <kbd>→</kbd> <kbd>Espacio</kbd> avanzar &middot; <kbd>←</kbd> retroceder &middot; <kbd>P</kbd> / <kbd>M</kbd> selector &middot; <kbd>F</kbd> pantalla completa</span>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+
     <div class="deck-app">
       <div class="rail-bar-wrapper">
         <button class="deck-selector-btn" id="deck-selector-btn" aria-haspopup="dialog" aria-expanded="false" title="Cambiar presentación (Tecla P o M)">
@@ -6817,84 +6895,7 @@
           </div>
         </div>
       </div>
-
-    
-    <!-- ====================================================================== -->
-    <!-- Pantalla de Selección de Presentación (Landing Hub View)               -->
-    <!-- ====================================================================== -->
-    <div id="deck-hub-view" class="deck-hub-view">
-      <div class="hub-container">
-        <header class="hub-header">
-          <div class="hub-logos">
-            <img class="hub-logo" src="assets/images/escudo_unal.png" alt="Universidad Nacional de Colombia" />
-            <img class="hub-logo" src="assets/images/logo_labIA.png" alt="Laboratorio de Inteligencia Artificial" />
-            <img class="hub-logo" src="assets/images/logo-atenea.png" alt="Agencia Distrital ATENEA" />
-          </div>
-          <p class="hub-kicker">LABORATORIO DE INTELIGENCIA ARTIFICIAL &middot; UNAL MANIZALES &middot; CONTRATO ATENEA-464-2026</p>
-          <h1 class="hub-title">Sistema de Presentaciones Técnicas e Institucionales</h1>
-          <p class="hub-subtitle">Selecciona la presentación que deseas consultar o proyectar:</p>
-        </header>
-
-        <div class="hub-cards-grid">
-          <!-- Tarjeta 1: Kick-off -->
-          <div class="hub-card" data-deck="kickoff">
-            <div class="hub-card-header">
-              <span class="hub-card-tag tag-blue">PROPUESTA INICIAL</span>
-              <span class="hub-card-meta">45 Diapositivas &middot; 6 Módulos</span>
-            </div>
-            <div>
-              <h2 class="hub-card-title">Kick-off: Propuesta SDLC-IA</h2>
-              <p class="hub-card-desc">Adopción conceptual y técnica de agentes de IA en el ciclo de vida del software: motivación, evolución de roles, evidencia empírica industrial (SWE-bench), arnés metodológico y arquitectura SpecWeaver.</p>
-            </div>
-            <ul class="hub-card-pills">
-              <li>Minuta Contractual</li>
-              <li>Motivación &amp; Perfiles</li>
-              <li>Chat vs Agente</li>
-              <li>SWE-bench</li>
-              <li>SpecWeaver</li>
-            </ul>
-            <button class="hub-card-btn" type="button" data-deck="kickoff">
-              <span>Iniciar Presentación Kick-off</span>
-              <span>&rarr;</span>
-            </button>
-          </div>
-
-          <!-- Tarjeta 2: E1-E4 -->
-          <div class="hub-card" data-deck="e1-e4">
-            <div class="hub-card-header">
-              <span class="hub-card-tag">HITO 1 CONTRACTUAL</span>
-              <span class="hub-card-meta">26 Diapositivas &middot; 6 Módulos</span>
-            </div>
-            <div>
-              <h2 class="hub-card-title">Informe Técnico E1–E4: Avance de Hito 1</h2>
-              <p class="hub-card-desc">Resultados contractuales al 21 de octubre de 2026: Diagnóstico de capacidades y deuda técnica (E1), Metodología SDLC-IA y 5 puertas humanas (E2), Arquitectura End-to-End (E3) y Sistema de Agentes y Skills (E4), con diagramas de flujo y tablas técnicas completas.</p>
-            </div>
-            <ul class="hub-card-pills">
-              <li>Contrato &amp; Alcance</li>
-              <li>E1 · Diagnóstico SICOR</li>
-              <li>E2 · Metodología SDLC-IA</li>
-              <li>E3 · Arquitectura Arnés</li>
-              <li>E4 · Comandos &amp; Skills</li>
-              <li>Decisiones &amp; Cierre</li>
-            </ul>
-            <button class="hub-card-btn" type="button" data-deck="e1-e4">
-              <span>Iniciar Presentación E1–E4</span>
-              <span>&rarr;</span>
-            </button>
-          </div>
-        </div>
-
-        <footer class="hub-footer">
-          <div>
-            <span>Acceso directo por URL: <code>?deck=e1-e4</code> | <code>?deck=kickoff</code></span>
-          </div>
-          <div>
-            <span>Atajos en presentación: <kbd>→</kbd> <kbd>Espacio</kbd> avanzar &middot; <kbd>←</kbd> retroceder &middot; <kbd>P</kbd> / <kbd>M</kbd> selector &middot; <kbd>F</kbd> pantalla completa</span>
-          </div>
-        </footer>
-      </div>
     </div>
-
 
     <script src="assets/js/app.js"></script>
   </body>
