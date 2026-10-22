@@ -3861,54 +3861,48 @@
                   siguiente diapositiva verifica.
                 </li>
               </ul>
-              <div class="excerpt-row">
-                <div>
-                  <div class="doc-excerpt">
-                    <p class="doc-excerpt-heading">Requirement: Registro de solicitud de crédito con datos socioeconómicos</p>
-                    <p>El sistema SHALL soportar registro de solicitud de crédito con datos socioeconómicos.</p>
-                  </div>
-                  <div class="doc-excerpt">
-                    <p class="doc-excerpt-heading">Scenario: Completa el formulario con ingresos del hogar, dependientes y estrato</p>
-                    <dl class="gwt-list">
-                      <dt class="gwt-key">GIVEN</dt>
-                      <dd>un estudiante autenticado sin solicitud activa</dd>
+              <div class="doc-excerpt">
+                <p class="doc-excerpt-heading">Requirement: Registro de solicitud de crédito con datos socioeconómicos</p>
+                <p>El sistema SHALL soportar registro de solicitud de crédito con datos socioeconómicos.</p>
+              </div>
+              <div class="doc-excerpt">
+                <p class="doc-excerpt-heading">Scenario: Completa el formulario con ingresos del hogar, número de dependientes, estrato y ocupación</p>
+                <dl class="gwt-list">
+                  <dt class="gwt-key">GIVEN</dt>
+                  <dd>un estudiante autenticado sin solicitud activa</dd>
 
-                      <dt class="gwt-key">WHEN</dt>
-                      <dd>completa el formulario con ingresos, estrato y ocupación y lo envía</dd>
+                  <dt class="gwt-key">WHEN</dt>
+                  <dd>completa el formulario con ingresos del hogar, número de dependientes, estrato y ocupación del acudiente y lo envía</dd>
 
-                      <dt class="gwt-key">THEN</dt>
-                      <dd>el sistema crea la solicitud con estado <code>borrador</code> y le asigna un ID único</dd>
-                    </dl>
-                  </div>
-                </div>
-                <div>
-                  <div class="doc-excerpt">
-                    <p class="doc-excerpt-heading">Scenario: Intenta crear una segunda solicitud para el mismo periodo</p>
-                    <dl class="gwt-list">
-                      <dt class="gwt-key">GIVEN</dt>
-                      <dd>un estudiante que ya tiene una solicitud activa en curso</dd>
+                  <dt class="gwt-key">THEN</dt>
+                  <dd>el sistema crea la solicitud con estado <code>borrador</code>, le asigna un identificador único y la asocia al estudiante</dd>
+                </dl>
+              </div>
+              <div class="doc-excerpt">
+                <p class="doc-excerpt-heading">Scenario: Intenta crear una segunda solicitud para el mismo periodo académico</p>
+                <dl class="gwt-list">
+                  <dt class="gwt-key">GIVEN</dt>
+                  <dd>un estudiante que ya tiene una solicitud activa en curso</dd>
 
-                      <dt class="gwt-key">WHEN</dt>
-                      <dd>intenta crear una segunda solicitud para el mismo periodo académico</dd>
+                  <dt class="gwt-key">WHEN</dt>
+                  <dd>intenta crear una segunda solicitud para el mismo periodo académico</dd>
 
-                      <dt class="gwt-key">THEN</dt>
-                      <dd>el sistema rechaza la creación y muestra el estado de la solicitud existente</dd>
-                    </dl>
-                  </div>
-                  <div class="doc-excerpt">
-                    <p class="doc-excerpt-heading">Scenario: El estudiante intenta enviar la solicitud incompleta</p>
-                    <dl class="gwt-list">
-                      <dt class="gwt-key">GIVEN</dt>
-                      <dd>un formulario con campos socioeconómicos obligatorios vacíos</dd>
+                  <dt class="gwt-key">THEN</dt>
+                  <dd>el sistema rechaza la creación y muestra el estado de la solicitud existente</dd>
+                </dl>
+              </div>
+              <div class="doc-excerpt">
+                <p class="doc-excerpt-heading">Scenario: El estudiante intenta enviar la solicitud</p>
+                <dl class="gwt-list">
+                  <dt class="gwt-key">GIVEN</dt>
+                  <dd>un formulario con campos socioeconómicos obligatorios vacíos</dd>
 
-                      <dt class="gwt-key">WHEN</dt>
-                      <dd>el estudiante intenta enviar la solicitud</dd>
+                  <dt class="gwt-key">WHEN</dt>
+                  <dd>el estudiante intenta enviar la solicitud</dd>
 
-                      <dt class="gwt-key">THEN</dt>
-                      <dd>el sistema bloquea el envío y resalta los campos faltantes</dd>
-                    </dl>
-                  </div>
-                </div>
+                  <dt class="gwt-key">THEN</dt>
+                  <dd>el sistema bloquea el envío y resalta los campos faltantes</dd>
+                </dl>
               </div>
             </div>
           </article>
@@ -4786,7 +4780,7 @@
               <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estructura del Contrato ATENEA-464-2026 y los 4 resultados esperados">
                 <rect x="20" y="16" width="480" height="74" rx="10" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.5" />
                 <text x="35" y="42" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">CONTRATO INTERADMINISTRATIVO ATENEA-464-2026</text>
-                <text x="35" y="62" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="11">Agencia ATENEA (Bogotá D.C.) ↔ UNAL Sede Manizales (LIA) · $300.000.000 COP · 22 Semanas</text>
+                <text x="35" y="62" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Agencia ATENEA (Bogotá D.C.) ↔ UNAL Sede Manizales (LIA) · $300.000.000 COP · 22 Semanas</text>
                 <text x="35" y="78" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600">Objeto: Fortalecimiento de capacidades en ingeniería de software mediante IA</text>
 
                 <text x="260" y="114" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700" letter-spacing="1">4 RESULTADOS INSTITUCIONALES EXIGIDOS</text>
@@ -4837,10 +4831,12 @@
                 </li>
                 <li>
                   <strong>Cuatro cláusulas técnicas condicionantes:</strong>
-                  <strong>Confidencialidad (décima):</strong> pena del 15% por fuga de información; el código y actas requieren entornos protegidos.
-                  <strong>Seguridad (undécima):</strong> prohibición de divulgar datos clasificados.
-                  <strong>Propiedad intelectual (vigésima cuarta):</strong> derechos patrimoniales exclusivos de ATENEA; repositorios y modelos deben residir bajo control institucional.
-                  <strong>Recursos (vigésima novena):</strong> sistemas auditables.
+                  <ul style="margin: 4px 0 0; padding-left: 1.1em; font-size: 0.9em; list-style-type: circle; color: var(--subtext1);">
+                    <li><strong>Confidencialidad (10ª):</strong> Pena del 15% por fuga; exige entornos protegidos.</li>
+                    <li><strong>Seguridad (11ª):</strong> Prohibición estricta de divulgar datos clasificados.</li>
+                    <li><strong>Propiedad intelectual (24ª):</strong> Derechos patrimoniales exclusivos de ATENEA.</li>
+                    <li><strong>Recursos (29ª):</strong> Obligación de entregar sistemas auditables.</li>
+                  </ul>
                 </li>
                 <li>
                   <strong>Supervisión técnica:</strong> A cargo del Subgerente de Tecnologías de la Información y Comunicaciones de ATENEA.
@@ -5349,10 +5345,11 @@
                 <!-- Flecha vertical spec -> figma -->
                 <path d="M197 107 V125" stroke="#4E93B0" stroke-width="1.5" marker-end="url(#arrow)" />
 
-                <!-- Flecha verde: Inicio asumiendo aceptación -->
-                <path d="M250 149 H275 V81 H270" stroke="#1E5631" stroke-width="1.8" stroke-dasharray="4,2" />
-                <text x="262" y="138" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8" font-weight="700">Inicio asumiendo</text>
-                <text x="262" y="148" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8" font-weight="700">aceptación</text>
+                <!-- Flecha verde: Inicio asumiendo aceptación (entra por la base de Construcción) -->
+                <path d="M250 149 H295 V109" stroke="#1E5631" stroke-width="1.6" stroke-dasharray="4,2" marker-end="url(#arrow-green)" />
+                <rect x="254" y="137" width="98" height="24" rx="4" fill="#EBF5ED" stroke="#1E5631" stroke-width="0.9" />
+                <text x="303" y="148" text-anchor="middle" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="7.8" font-weight="700">Inicio asumiendo</text>
+                <text x="303" y="157" text-anchor="middle" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="7.5" font-weight="600">aceptación</text>
 
                 <!-- Nodo Construcción -->
                 <rect x="275" y="55" width="105" height="52" rx="6" fill="#F8FAFC" stroke="#1E5631" stroke-width="1.5" />
@@ -5369,9 +5366,11 @@
                 <!-- Flecha figma -> firma -->
                 <path d="M197 173 V195" stroke="#DFBD76" stroke-width="1.5" marker-end="url(#arrow)" />
 
-                <!-- Flecha roja: Reproceso por cambios tardíos -->
-                <path d="M250 221 H327 V107" stroke="#B71C1C" stroke-width="1.8" stroke-dasharray="4,2" />
-                <text x="258" y="213" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="700">Cambios tardíos (reproceso)</text>
+                <!-- Flecha roja: Reproceso por cambios tardíos (ruta independiente por la derecha) -->
+                <path d="M250 220 H355 V109" stroke="#B71C1C" stroke-width="1.6" stroke-dasharray="4,2" marker-end="url(#arrow-red)" />
+                <rect x="254" y="208" width="112" height="24" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="0.9" />
+                <text x="310" y="219" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="7.8" font-weight="700">Cambios tardíos</text>
+                <text x="310" y="228" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="7.5" font-weight="600">(reproceso crítico)</text>
 
                 <!-- Nodo SharePoint -->
                 <rect x="20" y="195" width="105" height="52" rx="6" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.2" />
@@ -5401,12 +5400,18 @@
                 <!-- Caja resumen de cuellos de botella -->
                 <rect x="20" y="275" width="480" height="68" rx="8" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.2" />
                 <text x="35" y="295" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">DIAGNÓSTICO DEL FLUJO ACTUAL: PUNTOS DE INESTABILIDAD</text>
-                <text x="35" y="312" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">• Requerimientos en actas-épicas sin desglose técnico impiden estimar con certeza.</text>
-                <text x="35" y="327" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">• La validación ocurre al final en preproducción, provocando defectos tardíos y estrés operativo.</text>
+                <text x="35" y="312" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9">• Actas extensas sin desglose técnico: épicas no estimables ni paralelizables.</text>
+                <text x="35" y="327" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9">• Validación tardía en preproducción: genera reprocesos y sobrecostos operativos.</text>
 
                 <defs>
                   <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                     <path d="M 0 1 L 10 5 L 0 9 z" fill="#4E93B0" />
+                  </marker>
+                  <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1E5631" />
+                  </marker>
+                  <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#B71C1C" />
                   </marker>
                 </defs>
               </svg>
@@ -5440,30 +5445,30 @@
                 <rect x="35" y="25" width="22" height="18" rx="3" fill="#DFBD76" />
                 <text x="46" y="38" text-anchor="middle" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">IA</text>
                 <text x="65" y="38" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">Asistentes de IA en Modo Chat (Claude Teams / Copilot)</text>
-                <text x="35" y="55" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Cuentas compartidas individuales &middot; Sin integración a repositorios &middot; Sin traza de cambios para auditoría</text>
+                <text x="35" y="54" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.8">Cuentas compartidas individuales &middot; Sin integración a repos &middot; Sin auditoría de cambios</text>
 
                 <!-- Bloque Herramientas de Soporte -->
                 <rect x="25" y="78" width="470" height="58" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
-                <text x="35" y="96" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="700">HERRAMIENTAS DE SOPORTE INSTITUCIONAL</text>
+                <text x="38" y="96" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="700">HERRAMIENTAS DE SOPORTE INSTITUCIONAL</text>
 
-                <rect x="35" y="104" width="135" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                <text x="102" y="120" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">SharePoint (Actas)</text>
+                <rect x="38" y="104" width="140" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                <text x="108" y="120" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">SharePoint (Actas)</text>
 
-                <rect x="180" y="104" width="150" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                <text x="255" y="120" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">Azure Boards (Gestión)</text>
+                <rect x="190" y="104" width="140" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                <text x="260" y="120" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">Azure Boards (Gestión)</text>
 
-                <rect x="340" y="104" width="145" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                <rect x="342" y="104" width="140" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
                 <text x="412" y="120" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">Azure Repos (Git)</text>
 
                 <!-- Clúster Azure (Recuadro agrupador) -->
                 <rect x="25" y="148" width="470" height="198" rx="10" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" stroke-dasharray="4,3" />
-                <text x="40" y="168" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">CLÚSTER DE SERVIDORES ATENEA (MIGRACIÓN AZURE)</text>
+                <text x="38" y="168" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">CLÚSTER DE SERVIDORES ATENEA (MIGRACIÓN AZURE)</text>
 
                 <!-- Frontend -->
-                <rect x="40" y="180" width="135" height="65" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.2" />
-                <text x="107" y="200" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Front-End Web</text>
-                <text x="107" y="218" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="600">Angular 13</text>
-                <text x="107" y="232" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">(Sin soporte técnico)</text>
+                <rect x="38" y="180" width="140" height="65" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.2" />
+                <text x="108" y="200" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Front-End Web</text>
+                <text x="108" y="218" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="600">Angular 13</text>
+                <text x="108" y="232" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">(Sin soporte técnico)</text>
 
                 <!-- Backend -->
                 <rect x="190" y="180" width="140" height="65" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.2" />
@@ -5472,22 +5477,22 @@
                 <text x="260" y="232" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Spring Boot 3</text>
 
                 <!-- Keycloak / Auth -->
-                <rect x="345" y="180" width="135" height="65" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.2" />
+                <rect x="342" y="180" width="140" height="65" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.2" />
                 <text x="412" y="200" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Autenticación</text>
                 <text x="412" y="218" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="600">Keycloak</text>
                 <text x="412" y="232" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">SSO &middot; Directorio Activo</text>
 
                 <!-- Bases de Datos -->
-                <rect x="40" y="260" width="210" height="68" rx="6" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.2" />
-                <text x="145" y="280" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Bases de Datos Relacionales</text>
-                <text x="145" y="298" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">PostgreSQL 15 (Servidores Azure)</text>
-                <text x="145" y="314" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Oracle Database (Esquemas por ambiente)</text>
+                <rect x="38" y="258" width="216" height="72" rx="6" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.2" />
+                <text x="146" y="278" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">Bases de Datos Relacionales</text>
+                <text x="146" y="296" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">PostgreSQL 15 (Servidores Azure)</text>
+                <text x="146" y="312" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Oracle DB (Esquemas por ambiente)</text>
 
                 <!-- Alerta CI/CD Ausente -->
-                <rect x="270" y="260" width="210" height="68" rx="6" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.2" />
-                <text x="375" y="280" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">BRECHA DE AUTOMATIZACIÓN</text>
-                <text x="375" y="298" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Sin pipelines de CI/CD automatizados</text>
-                <text x="375" y="314" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Compilados y despliegues manuales</text>
+                <rect x="266" y="258" width="216" height="72" rx="6" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.2" />
+                <text x="374" y="278" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">BRECHA DE AUTOMATIZACIÓN</text>
+                <text x="374" y="296" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Sin pipelines de CI/CD automatizados</text>
+                <text x="374" y="312" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="8.5">Compilados y despliegues manuales</text>
               </svg>
             </figure>
           </article>
@@ -5731,87 +5736,164 @@
               </ul>
             </div>
             <figure class="slide-figure">
-              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de carriles del flujo SDLC-IA propuesto para ATENEA">
+              <svg viewBox="0 0 650 372" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de carriles del flujo SDLC-IA propuesto para ATENEA">
                 <!-- Carriles de roles (Fondo) -->
-                <rect x="15" y="15" width="490" height="38" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="25" y="38" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">1. Negocio / Cliente</text>
+                <!-- Carril 1: Negocio / Cliente -->
+                <rect x="15" y="10" width="620" height="40" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="25" y="34" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">1. Negocio / Cliente</text>
 
-                <rect x="15" y="58" width="490" height="42" rx="4" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="25" y="82" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">2. PO y Diseño UI/UX</text>
+                <!-- Carril 2: PO y Diseño UI/UX -->
+                <rect x="15" y="54" width="620" height="42" rx="4" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="25" y="78" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">2. PO y Diseño UX</text>
 
-                <rect x="15" y="105" width="490" height="78" rx="6" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.2" />
-                <text x="25" y="125" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">3. Arnés de Agentes (LIA UNAL)</text>
+                <!-- Carril 3: Arnés de Agentes (LIA UNAL) -->
+                <rect x="15" y="100" width="620" height="74" rx="6" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.2" />
+                <text x="25" y="134" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">3. Arnés Agentes</text>
+                <text x="25" y="147" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="600">(LIA UNAL)</text>
 
-                <rect x="15" y="188" width="490" height="42" rx="4" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="25" y="212" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">4. Líder Técnico / Devs</text>
+                <!-- Carril 4: Líder Técnico / Devs -->
+                <rect x="15" y="178" width="620" height="42" rx="4" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="25" y="202" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">4. Líder Técnico / Dev</text>
 
-                <rect x="15" y="235" width="490" height="42" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="25" y="260" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">5. Infraestructura / QA</text>
+                <!-- Carril 5: Infraestructura / QA -->
+                <rect x="15" y="224" width="620" height="42" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="25" y="249" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">5. Infraestructura</text>
 
-                <!-- Nodos horizontales en Carril Agentes -->
-                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
-                  <rect x="155" y="118" width="52" height="52" rx="4" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="181" y="136" text-anchor="middle" font-weight="700" fill="#1E5631">Entender</text>
-                  <text x="181" y="150" text-anchor="middle" fill="#5B6472">/sw:new</text>
-                  <text x="181" y="162" text-anchor="middle" fill="#5B6472">PRD</text>
+                <!-- Separador vertical sutil entre etiquetas de carril y columnas de fases -->
+                <line x1="142" y1="10" x2="142" y2="266" stroke="#BAC7D5" stroke-width="0.8" stroke-dasharray="3,3" />
 
-                  <path d="M207 144 H216" stroke="#1E5631" stroke-width="1.3" />
+                <!-- Elementos Carril 1: Negocio -->
+                <g font-family="Space Grotesk,sans-serif" font-size="8">
+                  <rect x="152" y="16" width="72" height="28" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="188" y="28" text-anchor="middle" fill="#1B2029" font-weight="600">Plantea</text>
+                  <text x="188" y="38" text-anchor="middle" fill="#5B6472">necesidad</text>
 
-                  <rect x="216" y="118" width="52" height="52" rx="4" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="242" y="136" text-anchor="middle" font-weight="700" fill="#1E5631">Decidir</text>
-                  <text x="242" y="150" text-anchor="middle" fill="#5B6472">Arq. Base</text>
-                  <text x="242" y="162" text-anchor="middle" fill="#5B6472">Frontera</text>
+                  <rect x="232" y="16" width="72" height="28" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
+                  <text x="268" y="28" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta:</text>
+                  <text x="268" y="38" text-anchor="middle" fill="#B71C1C" font-weight="600">Firma Acta</text>
 
-                  <path d="M268 144 H277" stroke="#1E5631" stroke-width="1.3" />
-
-                  <rect x="277" y="118" width="52" height="52" rx="4" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="303" y="136" text-anchor="middle" font-weight="700" fill="#1E5631">Descomponer</text>
-                  <text x="303" y="150" text-anchor="middle" fill="#5B6472">/sprint</text>
-                  <text x="303" y="162" text-anchor="middle" fill="#5B6472">Olas</text>
-
-                  <path d="M329 144 H338" stroke="#1E5631" stroke-width="1.3" />
-
-                  <rect x="338" y="118" width="52" height="52" rx="4" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="364" y="136" text-anchor="middle" font-weight="700" fill="#1E5631">Traducir</text>
-                  <text x="364" y="150" text-anchor="middle" fill="#5B6472">OpenSpec</text>
-                  <text x="364" y="162" text-anchor="middle" fill="#5B6472">Contrato</text>
-
-                  <path d="M390 144 H399" stroke="#1E5631" stroke-width="1.3" />
-
-                  <rect x="399" y="118" width="52" height="52" rx="4" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="425" y="136" text-anchor="middle" font-weight="700" fill="#1E5631">Construir</text>
-                  <text x="425" y="150" text-anchor="middle" fill="#5B6472">/sw:build</text>
-                  <text x="425" y="162" text-anchor="middle" fill="#5B6472">TDD</text>
-
-                  <path d="M451 144 H460" stroke="#1E5631" stroke-width="1.3" />
-
-                  <rect x="460" y="118" width="40" height="52" rx="4" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="480" y="136" text-anchor="middle" font-weight="700" fill="#1E5631">Cerrar</text>
-                  <text x="480" y="150" text-anchor="middle" fill="#5B6472">Base</text>
-                  <text x="480" y="162" text-anchor="middle" fill="#5B6472">Memoria</text>
+                  <rect x="552" y="16" width="72" height="28" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="588" y="28" text-anchor="middle" fill="#1B2029" font-weight="600">Validación</text>
+                  <text x="588" y="38" text-anchor="middle" fill="#5B6472">Pre-prod</text>
                 </g>
 
-                <!-- Puertas de decisión humana destacadas -->
-                <rect x="216" y="68" width="52" height="24" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.2" />
-                <text x="242" y="83" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="8" font-weight="700">Puerta PO</text>
+                <!-- Elementos Carril 2: PO y Diseño UX -->
+                <g font-family="Space Grotesk,sans-serif" font-size="8">
+                  <rect x="152" y="60" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="188" y="73" text-anchor="middle" fill="#1B2029" font-weight="600">Notas reunión</text>
+                  <text x="188" y="83" text-anchor="middle" fill="#5B6472">+ Figma</text>
 
-                <rect x="399" y="198" width="52" height="24" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.2" />
-                <text x="425" y="213" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="8" font-weight="700">Puerta PR</text>
+                  <rect x="232" y="60" width="72" height="30" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
+                  <text x="268" y="73" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta PO:</text>
+                  <text x="268" y="83" text-anchor="middle" fill="#B71C1C" font-weight="600">Aprueba Spec</text>
 
-                <rect x="455" y="244" width="45" height="24" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.2" />
-                <text x="477" y="259" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="8" font-weight="700">Deploy</text>
+                  <rect x="312" y="60" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="348" y="73" text-anchor="middle" fill="#1B2029" font-weight="600">Ajusta</text>
+                  <text x="348" y="83" text-anchor="middle" fill="#5B6472">historias</text>
+                </g>
 
-                <!-- Flechas verticales de gobernanza -->
-                <path d="M242 92 V118" stroke="#B71C1C" stroke-width="1.2" stroke-dasharray="2,2" />
-                <path d="M425 170 V198" stroke="#B71C1C" stroke-width="1.2" stroke-dasharray="2,2" />
-                <path d="M480 170 V244" stroke="#B71C1C" stroke-width="1.2" stroke-dasharray="2,2" />
+                <!-- Elementos Carril 3: Arnés de Agentes (LIA UNAL) -->
+                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
+                  <!-- Fase 1: Entender -->
+                  <rect x="152" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
+                  <text x="188" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Entender</text>
+                  <text x="188" y="139" text-anchor="middle" fill="#5B6472">/sw:new</text>
+                  <text x="188" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">PRD &amp; dudas</text>
 
-                <!-- Banner inferior de contexto y gobierno -->
-                <rect x="15" y="285" width="490" height="28" rx="6" fill="#FFFFFF" stroke="#1E5631" stroke-width="1" />
-                <text x="260" y="303" text-anchor="middle" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">Contexto del proyecto: Reglas y negocio &middot; Arquitectura vinculante &middot; Memoria persistente Engram</text>
+                  <path d="M224 137 H232" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
 
-                <rect x="15" y="318" width="490" height="28" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1" />
-                <text x="260" y="336" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">Gobierno transversal: /sw:status (seguimiento) &middot; /sw:change (cambios) &middot; /sw:bug (defectos)</text>
+                  <!-- Fase 2: Decidir -->
+                  <rect x="232" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
+                  <text x="268" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Decidir</text>
+                  <text x="268" y="139" text-anchor="middle" fill="#5B6472">BMAD Arq.</text>
+                  <text x="268" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">Spec formal</text>
+
+                  <path d="M304 137 H312" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
+
+                  <!-- Fase 3: Descomponer -->
+                  <rect x="312" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
+                  <text x="348" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Descomponer</text>
+                  <text x="348" y="139" text-anchor="middle" fill="#5B6472">/sprint</text>
+                  <text x="348" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">Plan de olas</text>
+
+                  <path d="M384 137 H392" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
+
+                  <!-- Fase 4: Traducir -->
+                  <rect x="392" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
+                  <text x="428" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Traducir</text>
+                  <text x="428" y="139" text-anchor="middle" fill="#5B6472">OpenSpec</text>
+                  <text x="428" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">Contrato BDD</text>
+
+                  <path d="M464 137 H472" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
+
+                  <!-- Fase 5: Construir -->
+                  <rect x="472" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
+                  <text x="508" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Construir</text>
+                  <text x="508" y="139" text-anchor="middle" fill="#5B6472">/sw:build</text>
+                  <text x="508" y="151" text-anchor="middle" fill="#1E5631" font-size="8" font-weight="600">TDD 1 a 1</text>
+
+                  <path d="M544 137 H552" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
+
+                  <!-- Fase 6: Cerrar -->
+                  <rect x="552" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
+                  <text x="588" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Cerrar</text>
+                  <text x="588" y="139" text-anchor="middle" fill="#5B6472">/sw:close</text>
+                  <text x="588" y="151" text-anchor="middle" fill="#2C6B87" font-size="8">Base &amp; Mem</text>
+                </g>
+
+                <!-- Elementos Carril 4: Líder Técnico / Devs -->
+                <g font-family="Space Grotesk,sans-serif" font-size="8">
+                  <rect x="232" y="184" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="268" y="197" text-anchor="middle" fill="#1B2029" font-weight="600">Decisiones</text>
+                  <text x="268" y="207" text-anchor="middle" fill="#5B6472">técnicas &amp; BD</text>
+
+                  <rect x="392" y="184" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="428" y="197" text-anchor="middle" fill="#1B2029" font-weight="600">Revisa</text>
+                  <text x="428" y="207" text-anchor="middle" fill="#5B6472">contrato</text>
+
+                  <rect x="472" y="184" width="72" height="30" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
+                  <text x="508" y="197" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta PR:</text>
+                  <text x="508" y="207" text-anchor="middle" fill="#B71C1C" font-weight="600">Merge código</text>
+                </g>
+
+                <!-- Elementos Carril 5: Infraestructura / QA -->
+                <g font-family="Space Grotesk,sans-serif" font-size="8">
+                  <rect x="152" y="230" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="188" y="243" text-anchor="middle" fill="#1B2029" font-weight="600">Política uso IA</text>
+                  <text x="188" y="253" text-anchor="middle" fill="#5B6472">(Subgerencia)</text>
+
+                  <rect x="472" y="230" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="508" y="243" text-anchor="middle" fill="#1B2029" font-weight="600">CI/CD Azure</text>
+                  <text x="508" y="253" text-anchor="middle" fill="#5B6472">(Objetivo)</text>
+
+                  <rect x="552" y="230" width="72" height="30" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
+                  <text x="588" y="243" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta:</text>
+                  <text x="588" y="253" text-anchor="middle" fill="#B71C1C" font-weight="600">Deploy QA/Prod</text>
+                </g>
+
+                <!-- Flechas verticales de gobernanza humana -->
+                <path d="M268 90 V108" stroke="#B71C1C" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arrow-red-small)" />
+                <path d="M508 166 V184" stroke="#B71C1C" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arrow-red-small)" />
+                <path d="M588 166 V230" stroke="#B71C1C" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arrow-red-small)" />
+
+                <!-- Banners inferiores de contexto y gobierno -->
+                <rect x="15" y="278" width="620" height="26" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1" />
+                <text x="325" y="295" text-anchor="middle" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8.8" font-weight="700">Contexto del proyecto: Reglas y arquitectura vinculante &middot; Memoria persistente Engram &middot; Modelos BMAD</text>
+
+                <rect x="15" y="309" width="620" height="26" rx="5" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1" />
+                <text x="325" y="326" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="8.8" font-weight="700">Gobierno transversal: /sw:status (seguimiento) &middot; /sw:change (cambios) &middot; /sw:bug (defectos)</text>
+
+                <rect x="15" y="340" width="620" height="22" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="325" y="355" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="8.2" font-weight="600">Roles institucionales: LIA UNAL propone y acompaña el arnés &middot; Subgerencia TIC valida alcance, accesos y modelos</text>
+
+                <defs>
+                  <marker id="arrow-green-small" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1E5631" />
+                  </marker>
+                  <marker id="arrow-red-small" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#B71C1C" />
+                  </marker>
+                </defs>
               </svg>
             </figure>
           </article>
@@ -6565,29 +6647,29 @@
             </div>
             <figure class="slide-figure">
               <div class="data-table-wrapper">
-                <table class="data-table">
+                <table class="data-table dense">
                   <caption>Tabla 6.2: Catálogo de comandos CLI y skills por etapa (tab:e4-catalogo)</caption>
                   <thead>
                     <tr>
-                      <th style="width:24%;">Comando / Skill</th>
+                      <th style="width:22%;">Comando / Skill</th>
                       <th style="width:18%;">Fase SDLC-IA</th>
                       <th>Disparador y Entrada</th>
-                      <th style="width:26%;">Salida Generada</th>
-                      <th style="width:18%;">Control Humano</th>
+                      <th style="width:28%;">Salida Generada</th>
+                      <th style="width:17%;">Control Humano</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr><td><code>/sw:new</code></td><td>Entender &rarr; Traducir</td><td>Idea o requerimiento de servicio nuevo</td><td>PRD, arquitectura, historias y contratos</td><td>Aprueba artefactos</td></tr>
-                    <tr><td><code>/sw:adopt</code></td><td>Entender &rarr; Traducir</td><td>Sistema existente; repo e insumos</td><td>Mapa del código, PRD acotado y base</td><td>Acuerda área a intervenir</td></tr>
-                    <tr><td><code>/sw:sprint</code></td><td>Descomponer</td><td>Contratos listos y grafo de dependencias</td><td>Olas de trabajo paralelo coordinadas</td><td>Asigna a desarrolladores</td></tr>
+                    <tr><td><code>/sw:new</code></td><td>Entender &rarr; Traducir</td><td>Idea o servicio nuevo</td><td>PRD, arquitectura, historias y contratos</td><td>Aprueba artefactos</td></tr>
+                    <tr><td><code>/sw:adopt</code></td><td>Entender &rarr; Traducir</td><td>Sistema existente; repo e insumos</td><td>Mapa del código, PRD acotado y base</td><td>Acuerda intervención</td></tr>
+                    <tr><td><code>/sw:sprint</code></td><td>Descomponer</td><td>Contratos listos y dependencias</td><td>Olas de trabajo paralelo coordinadas</td><td>Asigna a desarrolladores</td></tr>
                     <tr><td><code>/sw:build</code></td><td>Construir</td><td>Contrato OpenSpec de una historia</td><td>Código + pruebas unitarias por escenario</td><td>Aprueba pull request</td></tr>
-                    <tr><td><code>/sw:close</code></td><td>Cerrar</td><td>Historias con tareas verificadas</td><td>Línea base archivada y memoria actualizada</td><td>Decide historias a cerrar</td></tr>
-                    <tr><td><code>/sw:change</code></td><td>Transversal</td><td>Cambio solicitado en pleno desarrollo</td><td>Filtro de alcance y regeneración acotada</td><td>Acepta o rechaza alcance</td></tr>
-                    <tr><td><code>/sw:bug</code></td><td>Transversal</td><td>Defecto detectado frente al contrato</td><td>Corrección guiada por test unitario</td><td>Aprueba la corrección</td></tr>
-                    <tr><td><code>/sw:ticket</code></td><td>Transversal</td><td>Incidencia de Azure Boards / Mesa ayuda</td><td>Enrutamiento a cambio o a defecto</td><td>Confirma ruta</td></tr>
+                    <tr><td><code>/sw:close</code></td><td>Cerrar</td><td>Historias con tareas verificadas</td><td>Línea base archivada y memoria Engram</td><td>Decide cierre historias</td></tr>
+                    <tr><td><code>/sw:change</code></td><td>Transversal</td><td>Cambio solicitado en desarrollo</td><td>Filtro de alcance y regeneración acotada</td><td>Acepta o rechaza</td></tr>
+                    <tr><td><code>/sw:bug</code></td><td>Transversal</td><td>Defecto detectado frente al contrato</td><td>Corrección guiada por test unitario</td><td>Aprueba corrección</td></tr>
+                    <tr><td><code>/sw:ticket</code></td><td>Transversal</td><td>Incidencia Azure Boards / Mesa ayuda</td><td>Enrutamiento a cambio o a defecto</td><td>Confirma ruta</td></tr>
                     <tr><td><code>/sw:status</code></td><td>Transversal</td><td>Consulta de estado del proyecto</td><td>Tablero interactivo de avance y calidad</td><td>Prioriza actividades</td></tr>
                     <tr><td><code>/sw:doctor</code></td><td>Soporte</td><td>Verificación de salud del arnés</td><td>Preflight, versiones y coherencia de plan</td><td>Resuelve advertencias</td></tr>
-                    <tr><td><strong>Skills de Método</strong></td><td>Todas las fases</td><td>Invocación automática por comando</td><td>Reglas procedimentales institucionales</td><td>Gobernanza del flujo</td></tr>
+                    <tr><td><strong>Skills Método</strong></td><td>Todas las fases</td><td>Invocación automática por comando</td><td>Reglas procedimentales institucionales</td><td>Gobernanza del flujo</td></tr>
                     <tr><td><strong>Skill Grafo AST</strong></td><td>Entender / Construir</td><td>Consulta de estructura o impacto</td><td>Respuestas deterministas sobre código</td><td>Consulta analítica</td></tr>
                   </tbody>
                 </table>

@@ -2035,6 +2035,18 @@ cite {
   border-bottom: none;
 }
 
+.data-table.dense td,
+.data-table.dense th {
+  padding: 2.5px 6px;
+  font-size: 0.67rem;
+  line-height: 1.2;
+}
+
+.data-table.dense code {
+  font-size: 0.8em;
+  padding: 1px 4px;
+}
+
 .table-tag {
   display: inline-block;
   font-size: 0.64rem;

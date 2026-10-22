@@ -10,4 +10,6 @@ node_modules/
 .well-known/
 scripts/*.png
 scripts/screenshots/
+scripts/audit_slides/
+scripts/detailed_audit/
 
