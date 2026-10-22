@@ -1100,186 +1100,6 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- Slide 13: Flujo SDLC-IA por Etapas y Carriles (Diagrama de Flujo / Figura 4.1) -->
-          <article class="slide" data-deck="e1-e4" data-module="e2">
-            <div class="slide-content">
-              <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
-              <h2>Flujo SDLC-IA por etapas y carriles de intervención técnica</h2>
-              <ul class="slide-list">
-                <li>
-                  <strong>Cinco carriles institucionales:</strong> Negocio, PO/UX, Arnés de Agentes (LIA UNAL), Desarrollo y Seguridad/Infraestructura.
-                </li>
-                <li>
-                  <strong>Interacción agéntica guiada:</strong> En cada etapa, el arnés toma las salidas de la anterior, produce el artefacto estructurado correspondiente y somete el resultado a la decisión del rol responsable.
-                </li>
-                <li>
-                  <strong>Trazabilidad integral:</strong> De la necesidad al PRD, del PRD a la historia, de la historia al contrato y del contrato al código con pruebas unitarias.
-                </li>
-              </ul>
-            </div>
-            <figure class="slide-figure">
-              <svg viewBox="0 0 650 372" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de carriles del flujo SDLC-IA propuesto para ATENEA">
-                <!-- Carriles de roles (Fondo) -->
-                <!-- Carril 1: Negocio / Cliente -->
-                <rect x="15" y="10" width="620" height="40" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="25" y="34" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">1. Negocio / Cliente</text>
-
-                <!-- Carril 2: PO y Diseño UI/UX -->
-                <rect x="15" y="54" width="620" height="42" rx="4" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="25" y="78" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">2. PO y Diseño UX</text>
-
-                <!-- Carril 3: Arnés de Agentes (LIA UNAL) -->
-                <rect x="15" y="100" width="620" height="74" rx="6" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.2" />
-                <text x="25" y="134" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">3. Arnés Agentes</text>
-                <text x="25" y="147" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="600">(LIA UNAL)</text>
-
-                <!-- Carril 4: Líder Técnico / Devs -->
-                <rect x="15" y="178" width="620" height="42" rx="4" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="25" y="202" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">4. Líder Técnico / Dev</text>
-
-                <!-- Carril 5: Infraestructura / QA -->
-                <rect x="15" y="224" width="620" height="42" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="25" y="249" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">5. Infraestructura</text>
-
-                <!-- Separador vertical sutil entre etiquetas de carril y columnas de fases -->
-                <line x1="142" y1="10" x2="142" y2="266" stroke="#BAC7D5" stroke-width="0.8" stroke-dasharray="3,3" />
-
-                <!-- Elementos Carril 1: Negocio -->
-                <g font-family="Space Grotesk,sans-serif" font-size="8">
-                  <rect x="152" y="16" width="72" height="28" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="188" y="28" text-anchor="middle" fill="#1B2029" font-weight="600">Plantea</text>
-                  <text x="188" y="38" text-anchor="middle" fill="#5B6472">necesidad</text>
-
-                  <rect x="232" y="16" width="72" height="28" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
-                  <text x="268" y="28" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta:</text>
-                  <text x="268" y="38" text-anchor="middle" fill="#B71C1C" font-weight="600">Firma Acta</text>
-
-                  <rect x="552" y="16" width="72" height="28" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="588" y="28" text-anchor="middle" fill="#1B2029" font-weight="600">Validación</text>
-                  <text x="588" y="38" text-anchor="middle" fill="#5B6472">Pre-prod</text>
-                </g>
-
-                <!-- Elementos Carril 2: PO y Diseño UX -->
-                <g font-family="Space Grotesk,sans-serif" font-size="8">
-                  <rect x="152" y="60" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="188" y="73" text-anchor="middle" fill="#1B2029" font-weight="600">Notas reunión</text>
-                  <text x="188" y="83" text-anchor="middle" fill="#5B6472">+ Figma</text>
-
-                  <rect x="232" y="60" width="72" height="30" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
-                  <text x="268" y="73" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta PO:</text>
-                  <text x="268" y="83" text-anchor="middle" fill="#B71C1C" font-weight="600">Aprueba Spec</text>
-
-                  <rect x="312" y="60" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="348" y="73" text-anchor="middle" fill="#1B2029" font-weight="600">Ajusta</text>
-                  <text x="348" y="83" text-anchor="middle" fill="#5B6472">historias</text>
-                </g>
-
-                <!-- Elementos Carril 3: Arnés de Agentes (LIA UNAL) -->
-                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
-                  <!-- Fase 1: Entender -->
-                  <rect x="152" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
-                  <text x="188" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Entender</text>
-                  <text x="188" y="139" text-anchor="middle" fill="#5B6472">/sw:new</text>
-                  <text x="188" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">PRD &amp; dudas</text>
-
-                  <path d="M224 137 H232" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
-
-                  <!-- Fase 2: Decidir -->
-                  <rect x="232" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
-                  <text x="268" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Decidir</text>
-                  <text x="268" y="139" text-anchor="middle" fill="#5B6472">BMAD Arq.</text>
-                  <text x="268" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">Spec formal</text>
-
-                  <path d="M304 137 H312" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
-
-                  <!-- Fase 3: Descomponer -->
-                  <rect x="312" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
-                  <text x="348" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Descomponer</text>
-                  <text x="348" y="139" text-anchor="middle" fill="#5B6472">/sprint</text>
-                  <text x="348" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">Plan de olas</text>
-
-                  <path d="M384 137 H392" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
-
-                  <!-- Fase 4: Traducir -->
-                  <rect x="392" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
-                  <text x="428" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Traducir</text>
-                  <text x="428" y="139" text-anchor="middle" fill="#5B6472">OpenSpec</text>
-                  <text x="428" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">Contrato BDD</text>
-
-                  <path d="M464 137 H472" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
-
-                  <!-- Fase 5: Construir -->
-                  <rect x="472" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
-                  <text x="508" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Construir</text>
-                  <text x="508" y="139" text-anchor="middle" fill="#5B6472">/sw:build</text>
-                  <text x="508" y="151" text-anchor="middle" fill="#1E5631" font-size="8" font-weight="600">TDD 1 a 1</text>
-
-                  <path d="M544 137 H552" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
-
-                  <!-- Fase 6: Cerrar -->
-                  <rect x="552" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
-                  <text x="588" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Cerrar</text>
-                  <text x="588" y="139" text-anchor="middle" fill="#5B6472">/sw:close</text>
-                  <text x="588" y="151" text-anchor="middle" fill="#2C6B87" font-size="8">Base &amp; Mem</text>
-                </g>
-
-                <!-- Elementos Carril 4: Líder Técnico / Devs -->
-                <g font-family="Space Grotesk,sans-serif" font-size="8">
-                  <rect x="232" y="184" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="268" y="197" text-anchor="middle" fill="#1B2029" font-weight="600">Decisiones</text>
-                  <text x="268" y="207" text-anchor="middle" fill="#5B6472">técnicas &amp; BD</text>
-
-                  <rect x="392" y="184" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="428" y="197" text-anchor="middle" fill="#1B2029" font-weight="600">Revisa</text>
-                  <text x="428" y="207" text-anchor="middle" fill="#5B6472">contrato</text>
-
-                  <rect x="472" y="184" width="72" height="30" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
-                  <text x="508" y="197" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta PR:</text>
-                  <text x="508" y="207" text-anchor="middle" fill="#B71C1C" font-weight="600">Merge código</text>
-                </g>
-
-                <!-- Elementos Carril 5: Infraestructura / QA -->
-                <g font-family="Space Grotesk,sans-serif" font-size="8">
-                  <rect x="152" y="230" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="188" y="243" text-anchor="middle" fill="#1B2029" font-weight="600">Política uso IA</text>
-                  <text x="188" y="253" text-anchor="middle" fill="#5B6472">(Subgerencia)</text>
-
-                  <rect x="472" y="230" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="508" y="243" text-anchor="middle" fill="#1B2029" font-weight="600">CI/CD Azure</text>
-                  <text x="508" y="253" text-anchor="middle" fill="#5B6472">(Objetivo)</text>
-
-                  <rect x="552" y="230" width="72" height="30" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
-                  <text x="588" y="243" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta:</text>
-                  <text x="588" y="253" text-anchor="middle" fill="#B71C1C" font-weight="600">Deploy QA/Prod</text>
-                </g>
-
-                <!-- Flechas verticales de gobernanza humana -->
-                <path d="M268 90 V108" stroke="#B71C1C" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arrow-red-small)" />
-                <path d="M508 166 V184" stroke="#B71C1C" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arrow-red-small)" />
-                <path d="M588 166 V230" stroke="#B71C1C" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arrow-red-small)" />
-
-                <!-- Banners inferiores de contexto y gobierno -->
-                <rect x="15" y="278" width="620" height="26" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1" />
-                <text x="325" y="295" text-anchor="middle" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8.8" font-weight="700">Contexto del proyecto: Reglas y arquitectura vinculante &middot; Memoria persistente Engram &middot; Modelos BMAD</text>
-
-                <rect x="15" y="309" width="620" height="26" rx="5" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1" />
-                <text x="325" y="326" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="8.8" font-weight="700">Gobierno transversal: /sw:status (seguimiento) &middot; /sw:change (cambios) &middot; /sw:bug (defectos)</text>
-
-                <rect x="15" y="340" width="620" height="22" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="325" y="355" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="8.2" font-weight="600">Roles institucionales: LIA UNAL propone y acompaña el arnés &middot; Subgerencia TIC valida alcance, accesos y modelos</text>
-
-                <defs>
-                  <marker id="arrow-green-small" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1E5631" />
-                  </marker>
-                  <marker id="arrow-red-small" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#B71C1C" />
-                  </marker>
-                </defs>
-              </svg>
-            </figure>
-          </article>
-
           <!-- Slide 15: Mapa Conceptual 1/2: Del Vibe Coding al Arnés de IA (ciclos y componentes) -->
           <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-tone="emerald">
             <figure class="slide-figure">
@@ -1509,6 +1329,186 @@ def generate_e1_e4_html():
                   <li><strong>Tesis:</strong> el arnés articula SDLC-IA, ADLC, AST y closed loop; el humano especifica y decide, la verificación es objetiva (TDD / ODD).</li>
                 </ul>
               </div>
+            </figure>
+          </article>
+
+          <!-- Slide 13: Flujo SDLC-IA por Etapas y Carriles (Diagrama de Flujo / Figura 4.1) -->
+          <article class="slide" data-deck="e1-e4" data-module="e2">
+            <div class="slide-content">
+              <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+              <h2>Flujo SDLC-IA por etapas y carriles de intervención técnica</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Cinco carriles institucionales:</strong> Negocio, PO/UX, Arnés de Agentes (LIA UNAL), Desarrollo y Seguridad/Infraestructura.
+                </li>
+                <li>
+                  <strong>Interacción agéntica guiada:</strong> En cada etapa, el arnés toma las salidas de la anterior, produce el artefacto estructurado correspondiente y somete el resultado a la decisión del rol responsable.
+                </li>
+                <li>
+                  <strong>Trazabilidad integral:</strong> De la necesidad al PRD, del PRD a la historia, de la historia al contrato y del contrato al código con pruebas unitarias.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg viewBox="0 0 650 372" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de carriles del flujo SDLC-IA propuesto para ATENEA">
+                <!-- Carriles de roles (Fondo) -->
+                <!-- Carril 1: Negocio / Cliente -->
+                <rect x="15" y="10" width="620" height="40" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="25" y="34" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">1. Negocio / Cliente</text>
+
+                <!-- Carril 2: PO y Diseño UI/UX -->
+                <rect x="15" y="54" width="620" height="42" rx="4" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="25" y="78" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">2. PO y Diseño UX</text>
+
+                <!-- Carril 3: Arnés de Agentes (LIA UNAL) -->
+                <rect x="15" y="100" width="620" height="74" rx="6" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.2" />
+                <text x="25" y="134" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">3. Arnés Agentes</text>
+                <text x="25" y="147" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="600">(LIA UNAL)</text>
+
+                <!-- Carril 4: Líder Técnico / Devs -->
+                <rect x="15" y="178" width="620" height="42" rx="4" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="25" y="202" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">4. Líder Técnico / Dev</text>
+
+                <!-- Carril 5: Infraestructura / QA -->
+                <rect x="15" y="224" width="620" height="42" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="25" y="249" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">5. Infraestructura</text>
+
+                <!-- Separador vertical sutil entre etiquetas de carril y columnas de fases -->
+                <line x1="142" y1="10" x2="142" y2="266" stroke="#BAC7D5" stroke-width="0.8" stroke-dasharray="3,3" />
+
+                <!-- Elementos Carril 1: Negocio -->
+                <g font-family="Space Grotesk,sans-serif" font-size="8">
+                  <rect x="152" y="16" width="72" height="28" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="188" y="28" text-anchor="middle" fill="#1B2029" font-weight="600">Plantea</text>
+                  <text x="188" y="38" text-anchor="middle" fill="#5B6472">necesidad</text>
+
+                  <rect x="232" y="16" width="72" height="28" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
+                  <text x="268" y="28" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta:</text>
+                  <text x="268" y="38" text-anchor="middle" fill="#B71C1C" font-weight="600">Firma Acta</text>
+
+                  <rect x="552" y="16" width="72" height="28" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="588" y="28" text-anchor="middle" fill="#1B2029" font-weight="600">Validación</text>
+                  <text x="588" y="38" text-anchor="middle" fill="#5B6472">Pre-prod</text>
+                </g>
+
+                <!-- Elementos Carril 2: PO y Diseño UX -->
+                <g font-family="Space Grotesk,sans-serif" font-size="8">
+                  <rect x="152" y="60" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="188" y="73" text-anchor="middle" fill="#1B2029" font-weight="600">Notas reunión</text>
+                  <text x="188" y="83" text-anchor="middle" fill="#5B6472">+ Figma</text>
+
+                  <rect x="232" y="60" width="72" height="30" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
+                  <text x="268" y="73" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta PO:</text>
+                  <text x="268" y="83" text-anchor="middle" fill="#B71C1C" font-weight="600">Aprueba Spec</text>
+
+                  <rect x="312" y="60" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="348" y="73" text-anchor="middle" fill="#1B2029" font-weight="600">Ajusta</text>
+                  <text x="348" y="83" text-anchor="middle" fill="#5B6472">historias</text>
+                </g>
+
+                <!-- Elementos Carril 3: Arnés de Agentes (LIA UNAL) -->
+                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
+                  <!-- Fase 1: Entender -->
+                  <rect x="152" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
+                  <text x="188" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Entender</text>
+                  <text x="188" y="139" text-anchor="middle" fill="#5B6472">/sw:new</text>
+                  <text x="188" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">PRD &amp; dudas</text>
+
+                  <path d="M224 137 H232" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
+
+                  <!-- Fase 2: Decidir -->
+                  <rect x="232" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
+                  <text x="268" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Decidir</text>
+                  <text x="268" y="139" text-anchor="middle" fill="#5B6472">BMAD Arq.</text>
+                  <text x="268" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">Spec formal</text>
+
+                  <path d="M304 137 H312" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
+
+                  <!-- Fase 3: Descomponer -->
+                  <rect x="312" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
+                  <text x="348" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Descomponer</text>
+                  <text x="348" y="139" text-anchor="middle" fill="#5B6472">/sprint</text>
+                  <text x="348" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">Plan de olas</text>
+
+                  <path d="M384 137 H392" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
+
+                  <!-- Fase 4: Traducir -->
+                  <rect x="392" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
+                  <text x="428" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Traducir</text>
+                  <text x="428" y="139" text-anchor="middle" fill="#5B6472">OpenSpec</text>
+                  <text x="428" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">Contrato BDD</text>
+
+                  <path d="M464 137 H472" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
+
+                  <!-- Fase 5: Construir -->
+                  <rect x="472" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
+                  <text x="508" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Construir</text>
+                  <text x="508" y="139" text-anchor="middle" fill="#5B6472">/sw:build</text>
+                  <text x="508" y="151" text-anchor="middle" fill="#1E5631" font-size="8" font-weight="600">TDD 1 a 1</text>
+
+                  <path d="M544 137 H552" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
+
+                  <!-- Fase 6: Cerrar -->
+                  <rect x="552" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
+                  <text x="588" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Cerrar</text>
+                  <text x="588" y="139" text-anchor="middle" fill="#5B6472">/sw:close</text>
+                  <text x="588" y="151" text-anchor="middle" fill="#2C6B87" font-size="8">Base &amp; Mem</text>
+                </g>
+
+                <!-- Elementos Carril 4: Líder Técnico / Devs -->
+                <g font-family="Space Grotesk,sans-serif" font-size="8">
+                  <rect x="232" y="184" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="268" y="197" text-anchor="middle" fill="#1B2029" font-weight="600">Decisiones</text>
+                  <text x="268" y="207" text-anchor="middle" fill="#5B6472">técnicas &amp; BD</text>
+
+                  <rect x="392" y="184" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="428" y="197" text-anchor="middle" fill="#1B2029" font-weight="600">Revisa</text>
+                  <text x="428" y="207" text-anchor="middle" fill="#5B6472">contrato</text>
+
+                  <rect x="472" y="184" width="72" height="30" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
+                  <text x="508" y="197" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta PR:</text>
+                  <text x="508" y="207" text-anchor="middle" fill="#B71C1C" font-weight="600">Merge código</text>
+                </g>
+
+                <!-- Elementos Carril 5: Infraestructura / QA -->
+                <g font-family="Space Grotesk,sans-serif" font-size="8">
+                  <rect x="152" y="230" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="188" y="243" text-anchor="middle" fill="#1B2029" font-weight="600">Política uso IA</text>
+                  <text x="188" y="253" text-anchor="middle" fill="#5B6472">(Subgerencia)</text>
+
+                  <rect x="472" y="230" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
+                  <text x="508" y="243" text-anchor="middle" fill="#1B2029" font-weight="600">CI/CD Azure</text>
+                  <text x="508" y="253" text-anchor="middle" fill="#5B6472">(Objetivo)</text>
+
+                  <rect x="552" y="230" width="72" height="30" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
+                  <text x="588" y="243" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta:</text>
+                  <text x="588" y="253" text-anchor="middle" fill="#B71C1C" font-weight="600">Deploy QA/Prod</text>
+                </g>
+
+                <!-- Flechas verticales de gobernanza humana -->
+                <path d="M268 90 V108" stroke="#B71C1C" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arrow-red-small)" />
+                <path d="M508 166 V184" stroke="#B71C1C" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arrow-red-small)" />
+                <path d="M588 166 V230" stroke="#B71C1C" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arrow-red-small)" />
+
+                <!-- Banners inferiores de contexto y gobierno -->
+                <rect x="15" y="278" width="620" height="26" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1" />
+                <text x="325" y="295" text-anchor="middle" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8.8" font-weight="700">Contexto del proyecto: Reglas y arquitectura vinculante &middot; Memoria persistente Engram &middot; Modelos BMAD</text>
+
+                <rect x="15" y="309" width="620" height="26" rx="5" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1" />
+                <text x="325" y="326" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="8.8" font-weight="700">Gobierno transversal: /sw:status (seguimiento) &middot; /sw:change (cambios) &middot; /sw:bug (defectos)</text>
+
+                <rect x="15" y="340" width="620" height="22" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
+                <text x="325" y="355" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="8.2" font-weight="600">Roles institucionales: LIA UNAL propone y acompaña el arnés &middot; Subgerencia TIC valida alcance, accesos y modelos</text>
+
+                <defs>
+                  <marker id="arrow-green-small" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1E5631" />
+                  </marker>
+                  <marker id="arrow-red-small" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#B71C1C" />
+                  </marker>
+                </defs>
+              </svg>
             </figure>
           </article>
 
