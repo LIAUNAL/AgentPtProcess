@@ -8,3 +8,6 @@ node_modules/
 .atl/
 .claude/
 .well-known/
+scripts/*.png
+scripts/screenshots/
+

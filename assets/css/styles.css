@@ -2034,7 +2034,7 @@ body.view-deck .deck-hub-view {
 }
 
 body.view-deck .deck-app {
-  display: flex !important;
+  display: grid !important;
 }
 
 .deck-hub-view {
