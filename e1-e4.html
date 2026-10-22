@@ -1271,268 +1271,233 @@
             </figure>
           </article>
 
-                              <!-- Slide 14: Mapa Conceptual: Del Vibe Coding al Arnés de IA (Figura Completa) -->
+          <!-- Slide 15: Mapa Conceptual 1/2: Del Vibe Coding al Arnés de IA (ciclos y componentes) -->
           <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-tone="emerald">
             <figure class="slide-figure">
-              <svg viewBox="0 0 1200 706" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa conceptual del nuevo paradigma: Vibe Coding vs Arnés de IA, articulando SDLC-IA, ADLC, Graph Engineering, SDD, TDD y ODD">
-                <!-- Defs para marcadores y gradientes -->
+              <svg viewBox="0 0 1200 726" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa conceptual 1 de 2: del vibe coding al SDLC-IA y al ADLC, y los cuatro componentes del arnés de IA: Graph Engineering, SDD, agente en closed loop y TDD más ODD">
                 <defs>
-                  <marker id="arr-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1E5631" />
-                  </marker>
-                  <marker id="arr-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <marker id="cm-arr-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                     <path d="M 0 1 L 10 5 L 0 9 z" fill="#B71C1C" />
                   </marker>
-                  <marker id="arr-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <marker id="cm-arr-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                     <path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" />
                   </marker>
-                  <marker id="arr-gold" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <marker id="cm-arr-gold" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                     <path d="M 0 1 L 10 5 L 0 9 z" fill="#8A5A00" />
                   </marker>
-                  <marker id="arr-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <marker id="cm-arr-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                     <path d="M 0 1 L 10 5 L 0 9 z" fill="#5E35B1" />
                   </marker>
                 </defs>
 
-                <!-- =================================================================== -->
-                <!-- ENCABEZADO SUPERIOR                                                 -->
-                <!-- =================================================================== -->
-                <rect x="30" y="14" width="490" height="22" rx="4" fill="#EDF1F7" />
-                <text x="40" y="29" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.8">3 · METODOLOGÍA SDLC-IA (E2) · MAPA CONCEPTUAL DEL PARADIGMA AGÉNTICO</text>
-                <text x="30" y="52" fill="#1B2029" font-family="Source Serif 4,serif" font-size="20" font-weight="700">Del Vibe Coding al Arnés de IA: especificación y verificación determinista</text>
-                <text x="1170" y="50" text-anchor="end" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12" font-style="italic">El humano especifica y audita; la IA construye y valida dentro del arnés.</text>
+                <!-- Encabezado -->
+                <text x="30" y="30" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">3 · METODOLOGÍA SDLC-IA (E2) · MAPA CONCEPTUAL 1/2</text>
+                <text x="30" y="66" fill="#1B2029" font-family="'Source Serif 4',serif" font-size="28" font-weight="700">Del Vibe Coding al Arnés de IA: ciclos y componentes</text>
+                <text x="30" y="94" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16" font-style="italic">El humano especifica y audita; la IA construye y valida dentro del arnés.</text>
 
-                <!-- =================================================================== -->
-                <!-- NIVEL SUPERIOR: VIBE CODING vs MACRO-CICLOS (SDLC-IA y ADLC)        -->
-                <!-- =================================================================== -->
+                <!-- Fila 1: Vibe Coding → SDLC-IA → ADLC -->
+                <rect x="30" y="114" width="340" height="214" rx="10" fill="#FFF5F5" stroke="#B71C1C" stroke-width="1.5" />
+                <rect x="44" y="126" width="312" height="32" rx="5" fill="#B71C1C" />
+                <text x="200" y="148" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">VIBE CODING (ANTIPATRÓN)</text>
+                <text x="48" y="190" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">• Prompts ad-hoc en chat</text>
+                <text x="48" y="218" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">• Iteración a ciegas</text>
+                <text x="48" y="246" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">• Alucinaciones y roturas</text>
+                <rect x="44" y="274" width="312" height="38" rx="5" fill="#FFEAEA" stroke="#B71C1C" stroke-width="0.8" />
+                <text x="200" y="299" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">⚠ Deuda técnica y reproceso</text>
 
-                <!-- 1. Vibe Coding (Antipatrón) -->
-                <rect x="30" y="66" width="310" height="118" rx="8" fill="#FFF5F5" stroke="#B71C1C" stroke-width="1.3" />
-                <rect x="40" y="74" width="200" height="20" rx="3" fill="#B71C1C" />
-                <text x="140" y="88" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">VIBE CODING (ANTIPATRÓN)</text>
-                
-                <text x="42" y="110" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12">• Prompting ad-hoc e iteración ciega en chat.</text>
-                <text x="42" y="128" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12">• Alucinaciones y rotura silenciosa del código.</text>
+                <path d="M372 221 H386" stroke="#B71C1C" stroke-width="2" stroke-dasharray="3,2" marker-end="url(#cm-arr-red)" />
 
-                <rect x="40" y="146" width="290" height="26" rx="4" fill="#FFEAEA" stroke="#B71C1C" stroke-width="0.8" />
-                <text x="185" y="163" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="11.5" font-weight="700">⚠ Falsa agilidad → Deuda técnica y reproceso</text>
+                <rect x="390" y="114" width="440" height="214" rx="10" fill="#F4F8FA" stroke="#2C6B87" stroke-width="1.5" />
+                <rect x="404" y="126" width="412" height="32" rx="5" fill="#2C6B87" />
+                <text x="610" y="148" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">SDLC TRADICIONAL → SDLC-IA</text>
+                <text x="408" y="188" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">• 6 etapas gobernadas con IA:</text>
+                <rect x="404" y="202" width="412" height="112" rx="6" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
+                <line x1="541" y1="210" x2="541" y2="306" stroke="#E2E8F0" stroke-width="1" />
+                <line x1="679" y1="210" x2="679" y2="306" stroke="#E2E8F0" stroke-width="1" />
+                <line x1="412" y1="258" x2="808" y2="258" stroke="#E2E8F0" stroke-width="1" />
+                <text x="472" y="227" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">1. Entender</text>
+                <text x="472" y="248" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13.5">PRD y dudas</text>
+                <text x="610" y="227" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">2. Decidir</text>
+                <text x="610" y="248" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13.5">Arquitectura</text>
+                <text x="748" y="227" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">3. Descomponer</text>
+                <text x="748" y="248" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13.5">Plan de olas</text>
+                <text x="472" y="280" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">4. Traducir</text>
+                <text x="472" y="301" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13.5">OpenSpec</text>
+                <text x="610" y="280" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">5. Construir</text>
+                <text x="610" y="301" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13.5">TDD 1 a 1</text>
+                <text x="748" y="280" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">6. Cerrar</text>
+                <text x="748" y="301" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13.5">Línea base</text>
 
-                <!-- Flecha Vibe Coding -> SDLC-IA -->
-                <path d="M340 125 H362" stroke="#B71C1C" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#arr-red)" />
-                <rect x="341" y="103" width="22" height="15" rx="2" fill="#FFFFFF" stroke="#B71C1C" stroke-width="0.8" />
-                <text x="352" y="114" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="700">Falla</text>
+                <path d="M832 221 H846" stroke="#5E35B1" stroke-width="2" marker-end="url(#cm-arr-purple)" />
 
-                <!-- 2. SDLC Tradicional vs SDLC-IA -->
-                <rect x="366" y="66" width="458" height="118" rx="8" fill="#F4F8FA" stroke="#2C6B87" stroke-width="1.3" />
-                <rect x="376" y="74" width="270" height="20" rx="3" fill="#2C6B87" />
-                <text x="511" y="88" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">SDLC TRADICIONAL → SDLC-IA</text>
+                <rect x="850" y="114" width="320" height="214" rx="10" fill="#FBF8FF" stroke="#5E35B1" stroke-width="1.5" />
+                <rect x="864" y="126" width="292" height="32" rx="5" fill="#5E35B1" />
+                <text x="1010" y="148" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">ADLC (CICLO DE AGENTES)</text>
+                <text x="868" y="190" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">• Roles y tools MCP</text>
+                <text x="868" y="218" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">• Presupuesto de contexto</text>
+                <text x="868" y="246" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">• Calibración en benchmarks</text>
+                <rect x="864" y="274" width="292" height="38" rx="5" fill="#EDE7F6" stroke="#5E35B1" stroke-width="0.8" />
+                <text x="1010" y="299" text-anchor="middle" fill="#5E35B1" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">◆ Calibra a los agentes</text>
 
-                <text x="378" y="110" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="11.5">• De fases manuales a 6 etapas gobernadas asistidas por IA:</text>
+                <!-- Fila 2: el arnés y sus 4 componentes -->
+                <rect x="30" y="346" width="1140" height="370" rx="12" fill="#FFFFFF" stroke="#1E5631" stroke-width="2" />
+                <path d="M 30 358 A 12 12 0 0 1 42 346 H 1158 A 12 12 0 0 1 1170 358 V 384 H 30 Z" fill="#1E5631" />
+                <text x="48" y="371" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="800" letter-spacing="0.8">EL ARNÉS DE IA: INTEGRA Y CONFINA</text>
+                <text x="1152" y="371" text-anchor="end" fill="#B7CC85" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="600">Contexto real · contratos inmutables · tests deterministas</text>
 
-                <!-- 6 fases del SDLC-IA -->
-                <rect x="376" y="124" width="438" height="48" rx="5" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
-                
-                <text x="412" y="142" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="700">1. Entender</text>
-                <text x="412" y="158" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">PRD / Dudas</text>
-                <line x1="449" y1="128" x2="449" y2="168" stroke="#E2E8F0" stroke-width="1" />
+                <!-- Bucle de autocorrección TDD+ODD → Closed Loop -->
+                <path d="M1028 426 V404 H744 V422" fill="none" stroke="#B71C1C" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#cm-arr-red)" />
+                <rect x="790" y="393" width="192" height="22" rx="4" fill="#FFFFFF" stroke="#B71C1C" stroke-width="0.8" />
+                <text x="886" y="409" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Si falla el test: auto-corrige</text>
 
-                <text x="485" y="142" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="700">2. Decidir</text>
-                <text x="485" y="158" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Arquitectura</text>
-                <line x1="522" y1="128" x2="522" y2="168" stroke="#E2E8F0" stroke-width="1" />
+                <!-- C1 Graph Engineering -->
+                <rect x="45" y="428" width="258" height="274" rx="9" fill="#F0F7FB" stroke="#2C6B87" stroke-width="1.5" />
+                <rect x="55" y="438" width="238" height="30" rx="5" fill="#2C6B87" />
+                <text x="174" y="458" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">GRAPH ENGINEERING</text>
+                <text x="59" y="496" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">• Grafo del código (AST)</text>
+                <text x="71" y="520" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">dependencias, tipos</text>
+                <text x="71" y="542" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">y llamadas (Graphify)</text>
+                <text x="59" y="576" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">• Contexto determinista</text>
+                <text x="71" y="600" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">no adivina archivos</text>
+                <text x="71" y="622" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">ni rutas</text>
+                <rect x="55" y="650" width="238" height="36" rx="5" fill="#E1EEF5" stroke="#2C6B87" stroke-width="0.8" />
+                <text x="174" y="674" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">✓ Cero alucinaciones</text>
 
-                <text x="558" y="142" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="700">3. Descomp.</text>
-                <text x="558" y="158" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Plan de Olas</text>
-                <line x1="595" y1="128" x2="595" y2="168" stroke="#E2E8F0" stroke-width="1" />
+                <path d="M305 565 H325" stroke="#2C6B87" stroke-width="2" marker-end="url(#cm-arr-blue)" />
 
-                <text x="631" y="142" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="700">4. Traducir</text>
-                <text x="631" y="158" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">OpenSpec</text>
-                <line x1="668" y1="128" x2="668" y2="168" stroke="#E2E8F0" stroke-width="1" />
+                <!-- C2 SDD -->
+                <rect x="329" y="428" width="258" height="274" rx="9" fill="#FFFDF5" stroke="#8A5A00" stroke-width="1.5" />
+                <rect x="339" y="438" width="238" height="30" rx="5" fill="#8A5A00" />
+                <text x="458" y="458" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">SDD (SPEC-DRIVEN)</text>
+                <text x="343" y="496" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">• Spec = única verdad</text>
+                <text x="355" y="520" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">PRD formal con</text>
+                <text x="355" y="542" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">requisitos FR / NFR</text>
+                <text x="343" y="576" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">• Contratos OpenSpec</text>
+                <text x="355" y="600" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">inmutables y verificables</text>
+                <text x="355" y="622" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">(Given / When / Then)</text>
+                <rect x="339" y="650" width="238" height="36" rx="5" fill="#FFF3CD" stroke="#8A5A00" stroke-width="0.8" />
+                <text x="458" y="674" text-anchor="middle" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">✓ Sin ambigüedad verbal</text>
 
-                <text x="704" y="142" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="700">5. Construir</text>
-                <text x="704" y="158" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">TDD 1 a 1</text>
-                <line x1="741" y1="128" x2="741" y2="168" stroke="#E2E8F0" stroke-width="1" />
+                <path d="M589 565 H609" stroke="#8A5A00" stroke-width="2" marker-end="url(#cm-arr-gold)" />
 
-                <text x="777" y="142" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="700">6. Cerrar</text>
-                <text x="777" y="158" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Base / Mem</text>
+                <!-- C3 Agente en Closed Loop -->
+                <rect x="613" y="428" width="258" height="274" rx="9" fill="#F8F5FF" stroke="#5E35B1" stroke-width="1.5" />
+                <rect x="623" y="438" width="238" height="30" rx="5" fill="#5E35B1" />
+                <text x="742" y="458" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">AGENTE EN CLOSED LOOP</text>
+                <text x="627" y="496" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">• Bucle ReAct cerrado</text>
+                <text x="639" y="520" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">pensar, actuar (MCP),</text>
+                <text x="639" y="542" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">observar y corregir</text>
+                <text x="627" y="576" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">• Memoria (Engram)</text>
+                <text x="639" y="600" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">lecciones, decisiones</text>
+                <text x="639" y="622" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">y estado persistentes</text>
+                <rect x="623" y="650" width="238" height="36" rx="5" fill="#EDE7F6" stroke="#5E35B1" stroke-width="0.8" />
+                <text x="742" y="674" text-anchor="middle" fill="#5E35B1" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">✓ Ejecución confinada</text>
 
-                <!-- Conexión SDLC-IA <-> ADLC -->
-                <path d="M824 125 H840" stroke="#5E35B1" stroke-width="1.5" marker-end="url(#arr-purple)" />
+                <path d="M873 565 H893" stroke="#5E35B1" stroke-width="2" marker-end="url(#cm-arr-purple)" />
 
-                <!-- 3. ADLC (Agent Development Life Cycle) -->
-                <rect x="844" y="66" width="326" height="118" rx="8" fill="#FBF8FF" stroke="#5E35B1" stroke-width="1.3" />
-                <rect x="854" y="74" width="280" height="20" rx="3" fill="#5E35B1" />
-                <text x="994" y="88" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">ADLC (AGENT DEV. LIFE CYCLE)</text>
-
-                <text x="856" y="110" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="11.5">• Ciclo de agentes: roles, tools MCP y context budget.</text>
-                <text x="856" y="128" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="11.5">• Calibración empírica en benchmarks (SWE-bench / BMAD).</text>
-
-                <rect x="854" y="146" width="306" height="26" rx="4" fill="#EDE7F6" stroke="#5E35B1" stroke-width="0.8" />
-                <text x="1007" y="163" text-anchor="middle" fill="#5E35B1" font-family="Space Grotesk,sans-serif" font-size="11.5" font-weight="700">◆ Calibra a los agentes que ejecutan SDLC-IA</text>
-
-                <!-- =================================================================== -->
-                <!-- CONTENEDOR PRINCIPAL: EL ARNÉS DE IA                                -->
-                <!-- =================================================================== -->
-                <rect x="30" y="196" width="1140" height="376" rx="10" fill="#FFFFFF" stroke="#1E5631" stroke-width="2" />
-                
-                <!-- Barra de título del Arnés -->
-                <path d="M 30 206 A 10 10 0 0 1 40 196 H 1160 A 10 10 0 0 1 1170 206 V 226 H 30 Z" fill="#1E5631" />
-                <text x="46" y="217" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="800" letter-spacing="0.8">EL ARNÉS DE IA: SISTEMA INTEGRADOR Y DE CONFINAMIENTO TÉCNICO</text>
-                <text x="1155" y="217" text-anchor="end" fill="#B7CC85" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">Andamiaje formal: inyecta contexto real, contratos inmutables, closed loops y tests deterministas</text>
-
-                <!-- ------------------------------------------------------------------- -->
-                <!-- FILA A: LOS 4 COMPONENTES TÉCNICOS DEL ARNÉS                        -->
-                <!-- ------------------------------------------------------------------- -->
-
-                <!-- A1. Graph Engineering (AST) -->
-                <rect x="45" y="246" width="265" height="136" rx="8" fill="#F0F7FB" stroke="#2C6B87" stroke-width="1.3" />
-                <rect x="53" y="252" width="249" height="20" rx="4" fill="#2C6B87" />
-                <text x="177" y="266" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">GRAPH ENGINEERING (AST)</text>
-
-                <text x="55" y="284" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">• Grafo del código real (Graphify):</text>
-                <text x="63" y="300" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11">  extrae dependencias, tipos y llamadas.</text>
-                
-                <text x="55" y="320" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">• Contexto determinista:</text>
-                <text x="63" y="336" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11">  el agente no "adivina" archivos ni rutas.</text>
-
-                <rect x="53" y="350" width="249" height="22" rx="4" fill="#E1EEF5" stroke="#2C6B87" stroke-width="0.8" />
-                <text x="177" y="365" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">✓ Cero alucinaciones de repo</text>
-
-                <!-- Flecha A1 -> A2 -->
-                <path d="M310 314 H328" stroke="#2C6B87" stroke-width="1.5" marker-end="url(#arr-blue)" />
-
-                <!-- A2. SDD (Spec-Driven Development) -->
-                <rect x="330" y="246" width="265" height="136" rx="8" fill="#FFFDF5" stroke="#8A5A00" stroke-width="1.3" />
-                <rect x="338" y="252" width="249" height="20" rx="4" fill="#8A5A00" />
-                <text x="462" y="266" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">SDD (SPEC-DRIVEN DEV)</text>
-
-                <text x="340" y="284" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">• La spec es la única verdad:</text>
-                <text x="348" y="300" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11">  PRD formal con requisitos FR/NFR.</text>
-
-                <text x="340" y="320" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">• Contratos OpenSpec inmutables:</text>
-                <text x="348" y="336" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11">  criterios Given/When/Then verificables.</text>
-
-                <rect x="338" y="350" width="249" height="22" rx="4" fill="#FFF3CD" stroke="#8A5A00" stroke-width="0.8" />
-                <text x="462" y="365" text-anchor="middle" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">✓ Sustituye ambigüedad verbal</text>
-
-                <!-- Flecha A2 -> A3 -->
-                <path d="M595 314 H613" stroke="#8A5A00" stroke-width="1.5" marker-end="url(#arr-gold)" />
-
-                <!-- A3. Agente en Closed Loop -->
-                <rect x="615" y="246" width="265" height="136" rx="8" fill="#F8F5FF" stroke="#5E35B1" stroke-width="1.3" />
-                <rect x="623" y="252" width="249" height="20" rx="4" fill="#5E35B1" />
-                <text x="747" y="266" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">AGENTE EN CLOSED LOOP</text>
-
-                <text x="625" y="284" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">• Bucle ReAct cerrado:</text>
-                <text x="633" y="300" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11">  Pensar → Tool MCP → Observar → Corregir.</text>
-
-                <text x="625" y="320" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">• Memoria persistente (Engram):</text>
-                <text x="633" y="336" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11">  conserva lecciones, decisiones y estado.</text>
-
-                <rect x="623" y="350" width="249" height="22" rx="4" fill="#EDE7F6" stroke="#5E35B1" stroke-width="0.8" />
-                <text x="747" y="365" text-anchor="middle" fill="#5E35B1" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">✓ Ejecución confinada</text>
-
-                <!-- Flecha A3 -> A4 -->
-                <path d="M880 314 H898" stroke="#5E35B1" stroke-width="1.5" marker-end="url(#arr-purple)" />
-
-                <!-- A4. TDD + ODD (Verificación) -->
-                <rect x="900" y="246" width="265" height="136" rx="8" fill="#F4FAF5" stroke="#1E5631" stroke-width="1.3" />
-                <rect x="908" y="252" width="249" height="20" rx="4" fill="#1E5631" />
-                <text x="1032" y="266" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">TDD + ODD (VERIFICACIÓN)</text>
-
-                <text x="910" y="284" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">• Test previo inmutable (TDD):</text>
-                <text x="918" y="300" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11">  1 escenario = 1 test (función de parada).</text>
-
-                <text x="910" y="320" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">• Confinamiento ODD estricto:</text>
-                <text x="918" y="336" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11">  Allowed edit surfaces; cero colaterales.</text>
-
-                <rect x="908" y="350" width="249" height="22" rx="4" fill="#D6EAD8" stroke="#1E5631" stroke-width="0.8" />
-                <text x="1032" y="365" text-anchor="middle" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">✓ Criterio 100% verde</text>
-
-                <!-- Bucle de retroalimentación A4 -> A3 si falla test -->
-                <path d="M1032 246 V236 H747 V244" fill="none" stroke="#B71C1C" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arr-red)" />
-                <rect x="830" y="228" width="122" height="15" rx="3" fill="#FFFFFF" stroke="#B71C1C" stroke-width="0.8" />
-                <text x="891" y="239" text-anchor="middle" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="700">Si falla test: auto-corrige</text>
-
-                <!-- ------------------------------------------------------------------- -->
-                <!-- FILA B: EL NUEVO PIPELINE AGÉNTICO (CAMBIO DE ROL)                  -->
-                <!-- ------------------------------------------------------------------- -->
-
-                <!-- B1. Rol Humano: Especificador -->
-                <rect x="45" y="400" width="350" height="156" rx="8" fill="#FFFDF8" stroke="#DFBD76" stroke-width="1.5" />
-                <rect x="53" y="408" width="334" height="22" rx="4" fill="#8A5A00" />
-                <text x="220" y="423" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">1. ROL HUMANO: ESPECIFICADOR (SDD)</text>
-
-                <text x="55" y="448" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">• El humano ya no escribe código sintáctico:</text>
-                <text x="63" y="466" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11.5">  se enfoca en intención de negocio y arquitectura.</text>
-
-                <text x="55" y="488" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">• Especificación formal inmutable (SDD):</text>
-                <text x="63" y="506" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11.5">  casos de uso y criterios BDD (Given/When/Then).</text>
-
-                <rect x="53" y="524" width="334" height="22" rx="4" fill="#FFF8E7" stroke="#DFBD76" stroke-width="0.8" />
-                <text x="220" y="539" text-anchor="middle" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="11.5" font-weight="700">ACTIVO PERENNE: La especificación formal</text>
-
-                <!-- Flecha B1 -> B2 -->
-                <path d="M395 478 H413" stroke="#8A5A00" stroke-width="2" marker-end="url(#arr-gold)" />
-
-                <!-- B2. Arnés + Agentes: Código Derivado -->
-                <rect x="415" y="400" width="380" height="156" rx="8" fill="#F4FAF5" stroke="#1E5631" stroke-width="1.5" />
-                <rect x="423" y="408" width="364" height="22" rx="4" fill="#1E5631" />
-                <text x="605" y="423" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">2. ARNÉS + AGENTES: CÓDIGO DERIVADO</text>
-
-                <text x="425" y="448" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">• El código fuente deja de ser obra artesanal:</text>
-                <text x="433" y="466" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11.5">  es un artefacto efímero, descartable y regenerable.</text>
-
-                <text x="425" y="488" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">• Construcción determinista agéntica:</text>
-                <text x="433" y="506" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11.5">  el agente toma (Spec + Grafo) e itera hasta tests verdes.</text>
-
-                <rect x="423" y="524" width="364" height="22" rx="4" fill="#E3F4E5" stroke="#1E5631" stroke-width="0.8" />
-                <text x="605" y="539" text-anchor="middle" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="11.5" font-weight="700">PARADIGMA: Código = Subproducto de (Spec + Arnés + Tests)</text>
-
-                <!-- Flecha B2 -> B3 -->
-                <path d="M795 478 H813" stroke="#1E5631" stroke-width="2" marker-end="url(#arr-green)" />
-
-                <!-- B3. Rol Humano: Juez y Auditor -->
-                <rect x="815" y="400" width="350" height="156" rx="8" fill="#FFF8F8" stroke="#C62828" stroke-width="1.5" />
-                <rect x="823" y="408" width="334" height="22" rx="4" fill="#C62828" />
-                <text x="990" y="423" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">3. ROL HUMANO: JUEZ Y AUDITOR SOBERANO</text>
-
-                <text x="825" y="448" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">• Compuertas obligatorias (Quality Gates):</text>
-                <text x="833" y="466" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11.5">  inspección de diffs atómicos (Allowed surfaces).</text>
-
-                <text x="825" y="488" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">• Control y aprobación soberana:</text>
-                <text x="833" y="506" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="11.5">  validación de PRs y paso a producción.</text>
-
-                <rect x="823" y="524" width="334" height="22" rx="4" fill="#FFEBEE" stroke="#C62828" stroke-width="0.8" />
-                <text x="990" y="539" text-anchor="middle" fill="#C62828" font-family="Space Grotesk,sans-serif" font-size="11.5" font-weight="700">GOBERNANZA: Control soberano de la entidad</text>
-
-                <!-- =================================================================== -->
-                <!-- TESIS UNIFICADORA: EL ARNÉS COMO RESPUESTA DEFINITIVA               -->
-                <!-- =================================================================== -->
-                <rect x="30" y="586" width="1140" height="106" rx="8" fill="#1B2029" stroke="#1E5631" stroke-width="2" />
-                
-                <text x="48" y="608" fill="#B7CC85" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="800" letter-spacing="0.8">TESIS UNIFICADORA: ¿PUEDEN TODOS ESTOS CONCEPTOS ENGLOBARSE EN EL ARNÉS DE IA?</text>
-                
-                <text x="48" y="630" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="12.5">
-                  <tspan font-weight="800" fill="#DFBD76">SÍ, CATEGÓRICAMENTE.</tspan> El <tspan font-weight="700" fill="#FFFFFF">Arnés de IA</tspan> es el andamiaje metodológico y técnico que erradica el <tspan font-weight="700" fill="#EF9A9A">vibe coding</tspan>:
-                </text>
-                
-                <text x="48" y="652" fill="#EDF1F7" font-family="Space Grotesk,sans-serif" font-size="12">
-                  articula el <tspan font-weight="700" fill="#7FB4CA">SDLC-IA</tspan> gobernado con agentes calibrados por <tspan font-weight="700" fill="#CE93D8">ADLC</tspan>, confinados mediante <tspan font-weight="700" fill="#7FB4CA">Graph Engineering (AST)</tspan> y bucles <tspan font-weight="700" fill="#CE93D8">Closed Loop</tspan>.
-                </text>
-                
-                <text x="48" y="674" fill="#BAC7D5" font-family="Space Grotesk,sans-serif" font-size="12">
-                  El esfuerzo humano se traslada a la <tspan font-weight="700" fill="#DFBD76">especificación formal (SDD)</tspan> y el <tspan font-weight="700" fill="#EF9A9A">control en compuertas</tspan>, delegando la construcción sintáctica a la verificación matemática <tspan font-weight="700" fill="#B7CC85">(TDD / ODD)</tspan>.
-                </text>
+                <!-- C4 TDD + ODD -->
+                <rect x="897" y="428" width="258" height="274" rx="9" fill="#F4FAF5" stroke="#1E5631" stroke-width="1.5" />
+                <rect x="907" y="438" width="238" height="30" rx="5" fill="#1E5631" />
+                <text x="1026" y="458" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">TDD + ODD (VERIFICA)</text>
+                <text x="911" y="496" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">• Test previo (TDD)</text>
+                <text x="923" y="520" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">1 escenario = 1 test,</text>
+                <text x="923" y="542" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">función de parada</text>
+                <text x="911" y="576" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">• Confinamiento ODD</text>
+                <text x="923" y="600" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">edición acotada,</text>
+                <text x="923" y="622" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="15">cero colaterales</text>
+                <rect x="907" y="650" width="238" height="36" rx="5" fill="#D6EAD8" stroke="#1E5631" stroke-width="0.8" />
+                <text x="1026" y="674" text-anchor="middle" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">✓ Criterio: 100 % verde</text>
               </svg>
 
               <div class="schedule-mobile">
-                <p class="sched-title">Mapa Conceptual: Del Vibe Coding al Arnés de IA</p>
-                <p class="sched-sub">El arnés de IA como sistema unificador de la nueva ingeniería de software</p>
+                <p class="sched-title">Mapa conceptual 1/2: del Vibe Coding al Arnés de IA</p>
+                <p class="sched-sub">Ciclos de desarrollo y componentes del arnés</p>
                 <ul class="slide-list" style="padding-left:1.2em; font-size:0.82rem; margin:8px 0;">
-                  <li><strong>Vibe Coding (Riesgo):</strong> Prompting ciego y ad-hoc sin contratos genera deuda técnica crítica.</li>
-                  <li><strong>SDLC-IA y ADLC:</strong> El ciclo de desarrollo de software (SDLC-IA) se articula con el ciclo de los propios agentes (ADLC).</li>
-                  <li><strong>El Arnés de IA (Núcleo):</strong> Concatena Graph Engineering (AST del código), SDD (especificación formal como única verdad), Agentes en Closed Loop y TDD/ODD (tests como función de parada objetiva).</li>
-                  <li><strong>Tesis Central:</strong> El humano ya no escribe código artesanal; redacta especificaciones (SDD) y audita compuertas, mientras el código se convierte en un artefacto derivado y regenerable.</li>
+                  <li><strong>Vibe Coding (antipatrón):</strong> prompts ad-hoc e iteración a ciegas generan deuda técnica y reproceso.</li>
+                  <li><strong>SDLC-IA y ADLC:</strong> 6 etapas gobernadas con IA, ejecutadas por agentes calibrados en su propio ciclo (ADLC).</li>
+                  <li><strong>Arnés de IA:</strong> Graph Engineering (contexto real), SDD (spec como única verdad), agente en closed loop y TDD + ODD (tests como función de parada).</li>
+                </ul>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide 16: Mapa Conceptual 2/2: Del Vibe Coding al Arnés de IA (roles y tesis) -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-tone="emerald">
+            <figure class="slide-figure">
+              <svg viewBox="0 0 1200 726" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa conceptual 2 de 2: el humano especifica, el arnés con agentes deriva el código y el humano audita en compuertas; tesis unificadora del arnés de IA">
+                <defs>
+                  <marker id="cm2-arr-gold" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#8A5A00" />
+                  </marker>
+                  <marker id="cm2-arr-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1E5631" />
+                  </marker>
+                </defs>
+
+                <!-- Encabezado -->
+                <text x="30" y="30" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">3 · METODOLOGÍA SDLC-IA (E2) · MAPA CONCEPTUAL 2/2</text>
+                <text x="30" y="66" fill="#1B2029" font-family="'Source Serif 4',serif" font-size="28" font-weight="700">Del Vibe Coding al Arnés de IA: nuevo reparto de roles</text>
+                <text x="30" y="94" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16" font-style="italic">El código pasa a ser un subproducto de la especificación, el arnés y los tests.</text>
+
+                <!-- R1 Humano especificador -->
+                <rect x="30" y="114" width="366" height="350" rx="10" fill="#FFFDF8" stroke="#DFBD76" stroke-width="1.8" />
+                <rect x="44" y="126" width="338" height="36" rx="5" fill="#8A5A00" />
+                <text x="213" y="150" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">1. HUMANO: ESPECIFICADOR</text>
+                <text x="48" y="200" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700">• Ya no escribe sintaxis</text>
+                <text x="62" y="228" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">se enfoca en negocio</text>
+                <text x="62" y="254" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">y arquitectura</text>
+                <text x="48" y="296" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700">• Especificación formal</text>
+                <text x="62" y="324" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">casos de uso y BDD</text>
+                <text x="62" y="350" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">(Given / When / Then)</text>
+                <rect x="44" y="402" width="338" height="44" rx="5" fill="#FFF8E7" stroke="#DFBD76" stroke-width="0.8" />
+                <text x="213" y="430" text-anchor="middle" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="15.5" font-weight="700">ACTIVO PERENNE: la spec</text>
+
+                <path d="M398 289 H412" stroke="#8A5A00" stroke-width="2.5" marker-end="url(#cm2-arr-gold)" />
+
+                <!-- R2 Arnés + agentes -->
+                <rect x="416" y="114" width="368" height="350" rx="10" fill="#F4FAF5" stroke="#1E5631" stroke-width="1.8" />
+                <rect x="430" y="126" width="340" height="36" rx="5" fill="#1E5631" />
+                <text x="600" y="150" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">2. ARNÉS + AGENTES: CÓDIGO</text>
+                <text x="434" y="200" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700">• Código derivado</text>
+                <text x="448" y="228" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">efímero, descartable</text>
+                <text x="448" y="254" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">y regenerable</text>
+                <text x="434" y="296" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700">• Construcción agéntica</text>
+                <text x="448" y="324" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">toma spec + grafo e itera</text>
+                <text x="448" y="350" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">hasta tests en verde</text>
+                <rect x="430" y="402" width="340" height="44" rx="5" fill="#E3F4E5" stroke="#1E5631" stroke-width="0.8" />
+                <text x="600" y="430" text-anchor="middle" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15.5" font-weight="700">Código = Spec + Arnés + Tests</text>
+
+                <path d="M786 289 H800" stroke="#1E5631" stroke-width="2.5" marker-end="url(#cm2-arr-green)" />
+
+                <!-- R3 Humano juez -->
+                <rect x="804" y="114" width="366" height="350" rx="10" fill="#FFF8F8" stroke="#C62828" stroke-width="1.8" />
+                <rect x="818" y="126" width="338" height="36" rx="5" fill="#C62828" />
+                <text x="987" y="150" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">3. HUMANO: JUEZ Y AUDITOR</text>
+                <text x="822" y="200" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700">• Compuertas de calidad</text>
+                <text x="836" y="228" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">revisa diffs atómicos</text>
+                <text x="836" y="254" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">y superficies permitidas</text>
+                <text x="822" y="296" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700">• Aprobación soberana</text>
+                <text x="836" y="324" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">valida PRs y el paso</text>
+                <text x="836" y="350" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">a producción</text>
+                <rect x="818" y="402" width="338" height="44" rx="5" fill="#FFEBEE" stroke="#C62828" stroke-width="0.8" />
+                <text x="987" y="430" text-anchor="middle" fill="#C62828" font-family="Space Grotesk,sans-serif" font-size="15.5" font-weight="700">GOBERNANZA: control de la entidad</text>
+
+                <!-- Tesis unificadora -->
+                <rect x="30" y="486" width="1140" height="230" rx="12" fill="#1B2029" stroke="#1E5631" stroke-width="2" />
+                <text x="56" y="526" fill="#B7CC85" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="800" letter-spacing="0.8">TESIS: ¿PUEDE EL ARNÉS DE IA ENGLOBAR ESTOS CONCEPTOS?</text>
+                <text x="56" y="574" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="19"><tspan font-weight="800" fill="#DFBD76">SÍ.</tspan> El <tspan font-weight="700">Arnés de IA</tspan> es el andamiaje que erradica el <tspan font-weight="700" fill="#EF9A9A">vibe coding</tspan>.</text>
+                <text x="56" y="618" fill="#EDF1F7" font-family="Space Grotesk,sans-serif" font-size="19">Articula el <tspan font-weight="700" fill="#7FB4CA">SDLC-IA</tspan> con agentes calibrados (<tspan font-weight="700" fill="#CE93D8">ADLC</tspan>), grafo de código (<tspan font-weight="700" fill="#7FB4CA">AST</tspan>) y <tspan font-weight="700" fill="#CE93D8">closed loop</tspan>.</text>
+                <text x="56" y="662" fill="#EDF1F7" font-family="Space Grotesk,sans-serif" font-size="19">El humano especifica (<tspan font-weight="700" fill="#DFBD76">SDD</tspan>) y decide en <tspan font-weight="700" fill="#EF9A9A">compuertas</tspan>; la verificación es objetiva (<tspan font-weight="700" fill="#B7CC85">TDD / ODD</tspan>).</text>
+              </svg>
+
+              <div class="schedule-mobile">
+                <p class="sched-title">Mapa conceptual 2/2: nuevo reparto de roles</p>
+                <p class="sched-sub">El arnés de IA como sistema unificador</p>
+                <ul class="slide-list" style="padding-left:1.2em; font-size:0.82rem; margin:8px 0;">
+                  <li><strong>Humano especificador:</strong> deja la sintaxis y redacta la especificación formal (casos de uso y BDD), el activo perenne.</li>
+                  <li><strong>Arnés + agentes:</strong> el código es derivado y regenerable; el agente itera sobre spec + grafo hasta tests en verde.</li>
+                  <li><strong>Humano juez y auditor:</strong> compuertas de calidad sobre diffs atómicos y aprobación soberana de PRs y producción.</li>
+                  <li><strong>Tesis:</strong> el arnés articula SDLC-IA, ADLC, AST y closed loop; el humano especifica y decide, la verificación es objetiva (TDD / ODD).</li>
                 </ul>
               </div>
             </figure>
