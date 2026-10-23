@@ -172,8 +172,8 @@ def main():
         mod_kickoff = mod_kickoff[:script_idx] + hub_view_html + "\n\n    " + mod_kickoff[script_idx:]
 
     # 9. Actualizar versión en CSS link
-    mod_kickoff = re.sub(r'src="assets/js/app.js[^"]*"', 'src="assets/js/app.js?v=20261023_3"', mod_kickoff)
-    mod_kickoff = re.sub(r'href="assets/css/styles.css\?v=[^"]*"', 'href="assets/css/styles.css?v=20261023_3"', mod_kickoff)
+    mod_kickoff = re.sub(r'src="assets/js/app.js[^"]*"', 'src="assets/js/app.js?v=20261023_4"', mod_kickoff)
+    mod_kickoff = re.sub(r'href="assets/css/styles.css\?v=[^"]*"', 'href="assets/css/styles.css?v=20261023_4"', mod_kickoff)
 
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(mod_kickoff)

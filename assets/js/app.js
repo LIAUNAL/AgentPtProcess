@@ -173,7 +173,8 @@ function tableOverflows(table) {
 }
 
 function fitSlide(slide) {
-  if (!slide) return;
+  // Solo el deck E1-E4 usa el ajuste; el Kick-off conserva su maquetación.
+  if (!slide || slide.dataset.deck !== "e1-e4") return;
   // Columna de texto: si desborda con las tablas ya ajustadas, usa la lista compacta.
   slide.querySelectorAll(".slide-content").forEach((el) => el.classList.remove("is-compact"));
   slide.querySelectorAll(".data-table").forEach((table) => {
