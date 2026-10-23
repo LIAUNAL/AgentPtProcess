@@ -2037,99 +2037,82 @@ def generate_e1_e4_html():
           <!-- MÓDULO 3: E2 · Metodología SDLC-IA para ATENEA (Capítulo 4)               -->
           <!-- ========================================================================= -->
 
-          <!-- Slide 12: Principios del Rediseño SDLC-IA -->
-          <article class="slide" data-deck="e1-e4" data-module="e2">
-            <div class="slide-content">
-              <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
-              <h2>Rediseño del ciclo de desarrollo: la IA ejecuta, las personas deciden</h2>
-              <ul class="slide-list">
-                <li>
-                  <strong>Continuidad sin ruptura:</strong> El flujo parte de los artefactos que ATENEA ya utiliza (notas de levantamiento, diseño en Figma y requerimientos) y los dota de estructura determinista.
-                </li>
-                <li>
-                  <strong>Cierre de las tres brechas críticas:</strong>
-                  1. Desglose en historias estimables con criterios de aceptación;
-                  2. Arquitectura decidida previamente y vinculante para todos;
-                  3. Verificación continua por contrato y evidencia inmutable.
-                </li>
-                <li>
-                  <strong>Seis fases secuenciales:</strong> Entender &rarr; Decidir &rarr; Descomponer &rarr; Traducir &rarr; Construir &rarr; Cerrar.
-                </li>
-                <li>
-                  <strong>La verificación ocurre al construir:</strong> Cada historia se entrega con sus pruebas automatizadas y pasa por compuertas de aprobación humana obligatorias.
-                </li>
-              </ul>
-            </div>
+          <!-- Slide E2-1: Rediseño del ciclo (principio y seis fases, §4.1) -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-tone="emerald">
             <figure class="slide-figure">
-              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Principios metodológicos del flujo SDLC-IA y sus 6 fases">
-                <rect x="25" y="18" width="470" height="58" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
-                <text x="40" y="42" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">PRINCIPIO FUNDAMENTAL DEL REDISEÑO METODOLÓGICO</text>
-                <text x="40" y="60" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">«La inteligencia artificial ejecuta; los profesionales humanos deciden»</text>
-
-                <!-- 6 Cajas de Fases -->
-                <g font-family="Space Grotesk,sans-serif">
-                  <!-- Fase 1 -->
-                  <rect x="25" y="95" width="145" height="105" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.3" />
-                  <rect x="35" y="105" width="22" height="18" rx="3" fill="#7FB4CA" />
-                  <text x="46" y="118" text-anchor="middle" fill="#06080F" font-size="9" font-weight="700">1</text>
-                  <text x="65" y="118" fill="#1B2029" font-size="11" font-weight="700">Entender</text>
-                  <text x="35" y="140" fill="#5B6472" font-size="9">• Notas de levantamiento</text>
-                  <text x="35" y="156" fill="#5B6472" font-size="9">• Brief de producto</text>
-                  <text x="35" y="172" fill="#5B6472" font-size="9">• Preguntas de aclaración</text>
-                  <text x="35" y="188" fill="#2C6B87" font-size="8.5" font-weight="600">Comando: /sw:new</text>
-
-                  <!-- Fase 2 -->
-                  <rect x="187" y="95" width="145" height="105" rx="8" fill="#F8FAFC" stroke="#7AA89F" stroke-width="1.3" />
-                  <rect x="197" y="105" width="22" height="18" rx="3" fill="#7AA89F" />
-                  <text x="208" y="118" text-anchor="middle" fill="#06080F" font-size="9" font-weight="700">2</text>
-                  <text x="227" y="118" fill="#1B2029" font-size="11" font-weight="700">Decidir</text>
-                  <text x="197" y="140" fill="#5B6472" font-size="9">• Arquitectura vinculante</text>
-                  <text x="197" y="156" fill="#5B6472" font-size="9">• Reglas del repositorio</text>
-                  <text x="197" y="172" fill="#5B6472" font-size="9">• Puerta PO y Líder Tec.</text>
-                  <text x="197" y="188" fill="#2C6B87" font-size="8.5" font-weight="600">Doc: architecture-base</text>
-
-                  <!-- Fase 3 -->
-                  <rect x="350" y="95" width="145" height="105" rx="8" fill="#F8FAFC" stroke="#B7CC85" stroke-width="1.3" />
-                  <rect x="360" y="105" width="22" height="18" rx="3" fill="#B7CC85" />
-                  <text x="371" y="118" text-anchor="middle" fill="#06080F" font-size="9" font-weight="700">3</text>
-                  <text x="390" y="118" fill="#1B2029" font-size="11" font-weight="700">Descomponer</text>
-                  <text x="360" y="140" fill="#5B6472" font-size="9">• Épicas e historias</text>
-                  <text x="360" y="156" fill="#5B6472" font-size="9">• Criterios Given/When/Then</text>
-                  <text x="360" y="172" fill="#5B6472" font-size="9">• Plan de olas paralelas</text>
-                  <text x="360" y="188" fill="#2C6B87" font-size="8.5" font-weight="600">Comando: /sw:sprint</text>
-
-                  <!-- Fase 4 -->
-                  <rect x="25" y="215" width="145" height="105" rx="8" fill="#F8FAFC" stroke="#DFBD76" stroke-width="1.3" />
-                  <rect x="35" y="225" width="22" height="18" rx="3" fill="#DFBD76" />
-                  <text x="46" y="238" text-anchor="middle" fill="#06080F" font-size="9" font-weight="700">4</text>
-                  <text x="65" y="238" fill="#1B2029" font-size="11" font-weight="700">Traducir</text>
-                  <text x="35" y="260" fill="#5B6472" font-size="9">• Contratos OpenSpec</text>
-                  <text x="35" y="276" fill="#5B6472" font-size="9">• Traducción determinista</text>
-                  <text x="35" y="292" fill="#5B6472" font-size="9">• Traza requisito-código</text>
-                  <text x="35" y="308" fill="#2C6B87" font-size="8.5" font-weight="600">Tejedor LIA UNAL</text>
-
-                  <!-- Fase 5 -->
-                  <rect x="187" y="215" width="145" height="105" rx="8" fill="#F8FAFC" stroke="#7AA89F" stroke-width="1.3" />
-                  <rect x="197" y="225" width="22" height="18" rx="3" fill="#7AA89F" />
-                  <text x="208" y="238" text-anchor="middle" fill="#06080F" font-size="9" font-weight="700">5</text>
-                  <text x="227" y="238" fill="#1B2029" font-size="11" font-weight="700">Construir</text>
-                  <text x="197" y="260" fill="#5B6472" font-size="9">• Construcción SDD/ODD</text>
-                  <text x="197" y="276" fill="#5B6472" font-size="9">• Test por cada escenario</text>
-                  <text x="197" y="292" fill="#5B6472" font-size="9">• Superficie acotada</text>
-                  <text x="197" y="308" fill="#2C6B87" font-size="8.5" font-weight="600">Comando: /sw:build</text>
-
-                  <!-- Fase 6 -->
-                  <rect x="350" y="215" width="145" height="105" rx="8" fill="#F8FAFC" stroke="#4E93B0" stroke-width="1.3" />
-                  <rect x="360" y="225" width="22" height="18" rx="3" fill="#4E93B0" />
-                  <text x="371" y="238" text-anchor="middle" fill="#06080F" font-size="9" font-weight="700">6</text>
-                  <text x="390" y="238" fill="#1B2029" font-size="11" font-weight="700">Cerrar</text>
-                  <text x="360" y="260" fill="#5B6472" font-size="9">• Validación estricta</text>
-                  <text x="360" y="276" fill="#5B6472" font-size="9">• Fijación de línea base</text>
-                  <text x="360" y="292" fill="#5B6472" font-size="9">• Memoria y lecciones</text>
-                  <text x="360" y="308" fill="#2C6B87" font-size="8.5" font-weight="600">Comando: /sw:close</text>
-                </g>
-                <text x="260" y="340" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="10">Control transversal: /sw:change (cambios) &middot; /sw:bug (defectos) &middot; /sw:status (tablero)</text>
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+                <h2 style="margin-bottom:4px;">Rediseño del ciclo de desarrollo: la IA ejecuta, las personas deciden</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">La especificación aprobada con el cliente es la entrada de un ciclo guiado por especificaciones; la verificación ocurre al construir y al cerrar, y el seguimiento y el control de cambios atraviesan todo el ciclo.</p>
+              </div>
+              <svg viewBox="0 0 1200 466" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Principio del rediseño del ciclo de desarrollo y las seis fases del flujo SDLC-IA">
+              <rect x="0" y="0" width="1200" height="88" rx="8" fill="#EDF1F7" stroke="#2C6B87" stroke-width="1.3" />
+              <text x="18" y="28" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">PRINCIPIO DEL REDISEÑO: LA IA EJECUTA Y LAS PERSONAS DECIDEN</text>
+              <text x="18" y="56" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Cierra tres brechas del diagnóstico: el desglose en unidades estimables y trazables, la arquitectura decidida una vez y aplicada por todos,</text>
+              <text x="18" y="76" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">y la estandarización del flujo de desarrollo y de su evidencia.</text>
+              <rect x="0" y="104" width="388" height="156" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+              <rect x="12" y="116" width="30" height="28" rx="5" fill="#7FB4CA" stroke="#7FB4CA" stroke-width="0" />
+              <text x="27" y="136" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">1</text>
+              <text x="54" y="137" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Entender</text>
+              <text x="14" y="170" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Notas y diseño validado</text>
+              <text x="14" y="193" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Requisitos numerados</text>
+              <text x="14" y="216" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Preguntas de aclaración</text>
+              <text x="14" y="246" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">/sw:new · /sw:adopt</text>
+              <rect x="406" y="104" width="388" height="156" rx="8" fill="#F8FAFC" stroke="#7AA89F" stroke-width="1.5" />
+              <rect x="418" y="116" width="30" height="28" rx="5" fill="#7AA89F" stroke="#7AA89F" stroke-width="0" />
+              <text x="433" y="136" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">2</text>
+              <text x="460" y="137" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Decidir</text>
+              <text x="420" y="170" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Arquitectura y experiencia</text>
+              <text x="420" y="193" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Servicios, datos, integraciones</text>
+              <text x="420" y="216" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Aprueban PO, LT y BD</text>
+              <text x="420" y="246" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Arquitectura vinculante</text>
+              <rect x="812" y="104" width="388" height="156" rx="8" fill="#F8FAFC" stroke="#B7CC85" stroke-width="1.5" />
+              <rect x="824" y="116" width="30" height="28" rx="5" fill="#B7CC85" stroke="#B7CC85" stroke-width="0" />
+              <text x="839" y="136" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">3</text>
+              <text x="866" y="137" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Descomponer</text>
+              <text x="826" y="170" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Épicas e historias</text>
+              <text x="826" y="193" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Criterios de aceptación</text>
+              <text x="826" y="216" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Plan de olas en paralelo</text>
+              <text x="826" y="246" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">/sw:sprint</text>
+              <rect x="0" y="272" width="388" height="156" rx="8" fill="#F8FAFC" stroke="#DFBD76" stroke-width="1.5" />
+              <rect x="12" y="284" width="30" height="28" rx="5" fill="#DFBD76" stroke="#DFBD76" stroke-width="0" />
+              <text x="27" y="304" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">4</text>
+              <text x="54" y="305" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Traducir</text>
+              <text x="14" y="338" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Contrato por historia</text>
+              <text x="14" y="361" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Traducción determinista</text>
+              <text x="14" y="384" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Traza requisito a contrato</text>
+              <text x="14" y="414" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Puente OpenSpec</text>
+              <rect x="406" y="272" width="388" height="156" rx="8" fill="#F8FAFC" stroke="#7AA89F" stroke-width="1.5" />
+              <rect x="418" y="284" width="30" height="28" rx="5" fill="#7AA89F" stroke="#7AA89F" stroke-width="0" />
+              <text x="433" y="304" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">5</text>
+              <text x="460" y="305" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Construir</text>
+              <text x="420" y="338" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Una historia a la vez</text>
+              <text x="420" y="361" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Código y prueba por escenario</text>
+              <text x="420" y="384" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Cambios: control de cambios</text>
+              <text x="420" y="414" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">/sw:build</text>
+              <rect x="812" y="272" width="388" height="156" rx="8" fill="#F8FAFC" stroke="#2C6B87" stroke-width="1.5" />
+              <rect x="824" y="284" width="30" height="28" rx="5" fill="#2C6B87" stroke="#2C6B87" stroke-width="0" />
+              <text x="839" y="304" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">6</text>
+              <text x="866" y="305" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Cerrar</text>
+              <text x="826" y="338" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Contrato validado en modo estricto</text>
+              <text x="826" y="361" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Línea base y memoria</text>
+              <text x="826" y="384" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="16">Despliega infraestructura</text>
+              <text x="826" y="414" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">/sw:close</text>
+              <text x="0" y="458" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15">Transversal a todo el ciclo: /sw:status (seguimiento) · /sw:change (cambios) · /sw:bug (defectos)</text>
               </svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Las seis fases del flujo SDLC-IA</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>1. Entender:</strong> Notas y diseño validado; Requisitos numerados; Preguntas de aclaración. <em>/sw:new · /sw:adopt</em></li>
+                  <li><strong>2. Decidir:</strong> Arquitectura y experiencia; Servicios, datos, integraciones; Aprueban PO, LT y BD. <em>Arquitectura vinculante</em></li>
+                  <li><strong>3. Descomponer:</strong> Épicas e historias; Criterios de aceptación; Plan de olas en paralelo. <em>/sw:sprint</em></li>
+                  <li><strong>4. Traducir:</strong> Contrato por historia; Traducción determinista; Traza requisito a contrato. <em>Puente OpenSpec</em></li>
+                  <li><strong>5. Construir:</strong> Una historia a la vez; Código y prueba por escenario; Cambios: control de cambios. <em>/sw:build</em></li>
+                  <li><strong>6. Cerrar:</strong> Contrato validado en modo estricto; Línea base y memoria; Despliega infraestructura. <em>/sw:close</em></li>
+                </ul>
+                <p style="margin:6px 0 0;">Transversal: /sw:status, /sw:change y /sw:bug.</p>
+              </div>
+              <figcaption class="fig-caption">Fuente: §4.1 — Las seis fases del flujo SDLC-IA y la herramienta agéntica de cada una (sin figura ni tabla numerada en el informe)</figcaption>
             </figure>
           </article>
 
@@ -2365,261 +2348,249 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- Slide 13: Flujo SDLC-IA por Etapas y Carriles (Diagrama de Flujo / Figura 4.1) -->
-          <article class="slide" data-deck="e1-e4" data-module="e2">
-            <div class="slide-content">
-              <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
-              <h2>Flujo SDLC-IA por etapas y carriles de intervención técnica</h2>
-              <ul class="slide-list">
-                <li>
-                  <strong>Aracne-SDLC-AI:</strong> arnés metodológico del LIA UNAL para ATENEA. Coordina agentes especializados y skills que reciben el contexto del proyecto, las restricciones de la organización y las reglas de cada etapa del SDLC-IA.
-                </li>
-                <li>
-                  <strong>Cinco carriles institucionales:</strong> Negocio, PO/UX, Arnés Aracne (LIA UNAL), Desarrollo y Seguridad/Infraestructura.
-                </li>
-                <li>
-                  <strong>Interacción agéntica guiada:</strong> En cada etapa, el arnés toma las salidas de la anterior, produce el artefacto estructurado correspondiente y somete el resultado a la decisión del rol responsable.
-                </li>
-                <li>
-                  <strong>Trazabilidad integral:</strong> De la necesidad al PRD, del PRD a la historia, de la historia al contrato y del contrato al código con pruebas unitarias.
-                </li>
-              </ul>
-            </div>
+          <!-- Slide E2-4: Flujo SDLC-IA por fases y carriles (Figura 4.1) [c2-fases] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-item="c2-fases" data-tone="emerald">
             <figure class="slide-figure">
-              <svg viewBox="0 0 650 372" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de carriles del flujo SDLC-IA propuesto para ATENEA">
-                <!-- Carriles de roles (Fondo) -->
-                <!-- Carril 1: Negocio / Cliente -->
-                <rect x="15" y="10" width="620" height="40" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="25" y="34" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">1. Negocio / Cliente</text>
-
-                <!-- Carril 2: PO y Diseño UI/UX -->
-                <rect x="15" y="54" width="620" height="42" rx="4" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="25" y="78" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">2. PO y Diseño UX</text>
-
-                <!-- Carril 3: Arnés de Agentes (LIA UNAL) -->
-                <rect x="15" y="100" width="620" height="74" rx="6" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.2" />
-                <text x="25" y="134" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">3. Arnés Aracne</text>
-                <text x="25" y="147" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="600">(LIA UNAL)</text>
-
-                <!-- Carril 4: Líder Técnico / Devs -->
-                <rect x="15" y="178" width="620" height="42" rx="4" fill="#FFFFFF" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="25" y="202" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">4. Líder Técnico / Dev</text>
-
-                <!-- Carril 5: Infraestructura / QA -->
-                <rect x="15" y="224" width="620" height="42" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="25" y="249" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="9.5" font-weight="700">5. Infraestructura</text>
-
-                <!-- Separador vertical sutil entre etiquetas de carril y columnas de fases -->
-                <line x1="142" y1="10" x2="142" y2="266" stroke="#BAC7D5" stroke-width="0.8" stroke-dasharray="3,3" />
-
-                <!-- Elementos Carril 1: Negocio -->
-                <g font-family="Space Grotesk,sans-serif" font-size="8">
-                  <rect x="152" y="16" width="72" height="28" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="188" y="28" text-anchor="middle" fill="#1B2029" font-weight="600">Plantea</text>
-                  <text x="188" y="38" text-anchor="middle" fill="#5B6472">necesidad</text>
-
-                  <rect x="232" y="16" width="72" height="28" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
-                  <text x="268" y="28" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta:</text>
-                  <text x="268" y="38" text-anchor="middle" fill="#B71C1C" font-weight="600">Firma Acta</text>
-
-                  <rect x="552" y="16" width="72" height="28" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="588" y="28" text-anchor="middle" fill="#1B2029" font-weight="600">Validación</text>
-                  <text x="588" y="38" text-anchor="middle" fill="#5B6472">Pre-prod</text>
-                </g>
-
-                <!-- Elementos Carril 2: PO y Diseño UX -->
-                <g font-family="Space Grotesk,sans-serif" font-size="8">
-                  <rect x="152" y="60" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="188" y="73" text-anchor="middle" fill="#1B2029" font-weight="600">Notas reunión</text>
-                  <text x="188" y="83" text-anchor="middle" fill="#5B6472">+ Figma</text>
-
-                  <rect x="232" y="60" width="72" height="30" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
-                  <text x="268" y="73" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta PO:</text>
-                  <text x="268" y="83" text-anchor="middle" fill="#B71C1C" font-weight="600">Aprueba Spec</text>
-
-                  <rect x="312" y="60" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="348" y="73" text-anchor="middle" fill="#1B2029" font-weight="600">Ajusta</text>
-                  <text x="348" y="83" text-anchor="middle" fill="#5B6472">historias</text>
-                </g>
-
-                <!-- Elementos Carril 3: Arnés de Agentes (LIA UNAL) -->
-                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
-                  <!-- Fase 1: Entender -->
-                  <rect x="152" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
-                  <text x="188" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Entender</text>
-                  <text x="188" y="139" text-anchor="middle" fill="#5B6472">/sw:new</text>
-                  <text x="188" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">PRD &amp; dudas</text>
-
-                  <path d="M224 137 H232" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
-
-                  <!-- Fase 2: Decidir -->
-                  <rect x="232" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
-                  <text x="268" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Decidir</text>
-                  <text x="268" y="139" text-anchor="middle" fill="#5B6472">BMAD Arq.</text>
-                  <text x="268" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">Spec formal</text>
-
-                  <path d="M304 137 H312" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
-
-                  <!-- Fase 3: Descomponer -->
-                  <rect x="312" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
-                  <text x="348" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Descomponer</text>
-                  <text x="348" y="139" text-anchor="middle" fill="#5B6472">/sprint</text>
-                  <text x="348" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">Plan de olas</text>
-
-                  <path d="M384 137 H392" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
-
-                  <!-- Fase 4: Traducir -->
-                  <rect x="392" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
-                  <text x="428" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Traducir</text>
-                  <text x="428" y="139" text-anchor="middle" fill="#5B6472">OpenSpec</text>
-                  <text x="428" y="151" text-anchor="middle" fill="#8A5A00" font-size="8">Contrato BDD</text>
-
-                  <path d="M464 137 H472" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
-
-                  <!-- Fase 5: Construir -->
-                  <rect x="472" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
-                  <text x="508" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Construir</text>
-                  <text x="508" y="139" text-anchor="middle" fill="#5B6472">/sw:build</text>
-                  <text x="508" y="151" text-anchor="middle" fill="#1E5631" font-size="8" font-weight="600">TDD 1 a 1</text>
-
-                  <path d="M544 137 H552" stroke="#1E5631" stroke-width="1.5" marker-end="url(#arrow-green-small)" />
-
-                  <!-- Fase 6: Cerrar -->
-                  <rect x="552" y="108" width="72" height="58" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.2" />
-                  <text x="588" y="125" text-anchor="middle" font-weight="700" fill="#1E5631">Cerrar</text>
-                  <text x="588" y="139" text-anchor="middle" fill="#5B6472">/sw:close</text>
-                  <text x="588" y="151" text-anchor="middle" fill="#2C6B87" font-size="8">Base &amp; Mem</text>
-                </g>
-
-                <!-- Elementos Carril 4: Líder Técnico / Devs -->
-                <g font-family="Space Grotesk,sans-serif" font-size="8">
-                  <rect x="232" y="184" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="268" y="197" text-anchor="middle" fill="#1B2029" font-weight="600">Decisiones</text>
-                  <text x="268" y="207" text-anchor="middle" fill="#5B6472">técnicas &amp; BD</text>
-
-                  <rect x="392" y="184" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="428" y="197" text-anchor="middle" fill="#1B2029" font-weight="600">Revisa</text>
-                  <text x="428" y="207" text-anchor="middle" fill="#5B6472">contrato</text>
-
-                  <rect x="472" y="184" width="72" height="30" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
-                  <text x="508" y="197" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta PR:</text>
-                  <text x="508" y="207" text-anchor="middle" fill="#B71C1C" font-weight="600">Merge código</text>
-                </g>
-
-                <!-- Elementos Carril 5: Infraestructura / QA -->
-                <g font-family="Space Grotesk,sans-serif" font-size="8">
-                  <rect x="152" y="230" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="188" y="243" text-anchor="middle" fill="#1B2029" font-weight="600">Política uso IA</text>
-                  <text x="188" y="253" text-anchor="middle" fill="#5B6472">(Subgerencia)</text>
-
-                  <rect x="472" y="230" width="72" height="30" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="508" y="243" text-anchor="middle" fill="#1B2029" font-weight="600">CI/CD Azure</text>
-                  <text x="508" y="253" text-anchor="middle" fill="#5B6472">(Objetivo)</text>
-
-                  <rect x="552" y="230" width="72" height="30" rx="4" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.1" />
-                  <text x="588" y="243" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta:</text>
-                  <text x="588" y="253" text-anchor="middle" fill="#B71C1C" font-weight="600">Deploy QA/Prod</text>
-                </g>
-
-                <!-- Flechas verticales de gobernanza humana -->
-                <path d="M268 90 V108" stroke="#B71C1C" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arrow-red-small)" />
-                <path d="M508 166 V184" stroke="#B71C1C" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arrow-red-small)" />
-                <path d="M588 166 V230" stroke="#B71C1C" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arrow-red-small)" />
-
-                <!-- Banners inferiores de contexto y gobierno -->
-                <rect x="15" y="278" width="620" height="26" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1" />
-                <text x="325" y="295" text-anchor="middle" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8.8" font-weight="700">Contexto del proyecto: Reglas y arquitectura vinculante &middot; Memoria persistente Engram &middot; Modelos BMAD</text>
-
-                <rect x="15" y="309" width="620" height="26" rx="5" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1" />
-                <text x="325" y="326" text-anchor="middle" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="8.8" font-weight="700">Gobierno transversal: /sw:status (seguimiento) &middot; /sw:change (cambios) &middot; /sw:bug (defectos)</text>
-
-                <rect x="15" y="340" width="620" height="22" rx="4" fill="#EDF1F7" stroke="#BAC7D5" stroke-width="0.8" />
-                <text x="325" y="355" text-anchor="middle" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="8.2" font-weight="600">Roles institucionales: LIA UNAL propone y acompaña el arnés &middot; Subgerencia TIC valida alcance, accesos y modelos</text>
-
-                <defs>
-                  <marker id="arrow-green-small" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1E5631" />
-                  </marker>
-                  <marker id="arrow-red-small" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#B71C1C" />
-                  </marker>
-                </defs>
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+                <h2 style="margin-bottom:4px;">Flujo SDLC-IA por fases y carriles: quién interviene en cada etapa</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">El arnés Aracne-SDLC-AI del LIA UNAL produce el artefacto de cada fase y una persona decide en las puertas en rojo.</p>
+              </div>
+              <svg viewBox="0 0 1200 592" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Figura 4.1: flujo SDLC-IA por fases y carriles, con las puertas humanas en rojo">
+              <defs>
+              <marker id="f41-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker>
+              <marker id="f41-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#B71C1C" /></marker>
+              <marker id="f41-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#1E5631" /></marker>
+              </defs>
+              <rect x="0" y="58" width="1200" height="78" fill="#EDF1F7" />
+              <path d="M0 58 H1200" stroke="#D6DEE8" stroke-width="1" />
+              <text x="78" y="93.4" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" text-anchor="middle">Negocio o</text>
+              <text x="78" y="110.4" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" text-anchor="middle">área cliente</text>
+              <rect x="0" y="136" width="1200" height="78" fill="#FFFFFF" />
+              <path d="M0 136 H1200" stroke="#D6DEE8" stroke-width="1" />
+              <text x="78" y="171.4" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" text-anchor="middle">Líder de producto</text>
+              <text x="78" y="188.4" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" text-anchor="middle">y diseño UI/UX</text>
+              <rect x="0" y="214" width="1200" height="78" fill="#EDF1F7" />
+              <path d="M0 214 H1200" stroke="#D6DEE8" stroke-width="1" />
+              <text x="78" y="249.4" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" text-anchor="middle">Arnés de agentes</text>
+              <text x="78" y="266.4" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" text-anchor="middle">(LIA UNAL)</text>
+              <rect x="0" y="292" width="1200" height="78" fill="#FFFFFF" />
+              <path d="M0 292 H1200" stroke="#D6DEE8" stroke-width="1" />
+              <text x="78" y="327.4" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" text-anchor="middle">Líder técnico, BD</text>
+              <text x="78" y="344.4" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" text-anchor="middle">y desarrollo</text>
+              <rect x="0" y="370" width="1200" height="78" fill="#EDF1F7" />
+              <path d="M0 370 H1200" stroke="#D6DEE8" stroke-width="1" />
+              <text x="78" y="405.4" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" text-anchor="middle">Infraestructura</text>
+              <text x="78" y="422.4" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" text-anchor="middle">y seguridad</text>
+              <path d="M0 448 H1200" stroke="#D6DEE8" stroke-width="1" />
+              <text x="246.0" y="24" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Entender</text>
+              <text x="246.0" y="45" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">hoy: levantamiento</text>
+              <text x="418.0" y="24" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Decidir</text>
+              <text x="418.0" y="45" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">hoy: acta + Figma</text>
+              <path d="M332 10 V448" stroke="#D6DEE8" stroke-width="1" stroke-dasharray="4,4" />
+              <text x="590.0" y="24" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Descomponer</text>
+              <text x="590.0" y="45" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">hoy: no existe</text>
+              <path d="M504 10 V448" stroke="#D6DEE8" stroke-width="1" stroke-dasharray="4,4" />
+              <text x="762.0" y="24" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Traducir</text>
+              <text x="762.0" y="45" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">hoy: no existe</text>
+              <path d="M676 10 V448" stroke="#D6DEE8" stroke-width="1" stroke-dasharray="4,4" />
+              <text x="934.0" y="24" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Construir</text>
+              <text x="934.0" y="45" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">hoy: desarrollo</text>
+              <path d="M848 10 V448" stroke="#D6DEE8" stroke-width="1" stroke-dasharray="4,4" />
+              <text x="1106.0" y="24" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Cerrar</text>
+              <text x="1106.0" y="45" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">hoy: compilados</text>
+              <path d="M1020 10 V448" stroke="#D6DEE8" stroke-width="1" stroke-dasharray="4,4" />
+              <rect x="164" y="68.0" width="160" height="58" rx="6" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="244.0" y="85.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Plantea necesidad</text>
+              <text x="244.0" y="101.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">en mesas de</text>
+              <text x="244.0" y="117.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">trabajo</text>
+              <rect x="336" y="68.0" width="160" height="58" rx="6" fill="#FFF2F2" stroke="#B71C1C" stroke-width="2.0" />
+              <text x="416.0" y="93.5" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Puerta:</text>
+              <text x="416.0" y="109.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">firma del acta</text>
+              <rect x="1024" y="68.0" width="160" height="58" rx="6" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="1104.0" y="93.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Validación final</text>
+              <text x="1104.0" y="109.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">en preproducción</text>
+              <rect x="164" y="146.0" width="160" height="58" rx="6" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="244.0" y="163.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Conversa con</text>
+              <text x="244.0" y="179.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">cliente; notas</text>
+              <text x="244.0" y="195.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">y Figma</text>
+              <rect x="336" y="146.0" width="160" height="58" rx="6" fill="#FFF2F2" stroke="#B71C1C" stroke-width="2.0" />
+              <text x="416.0" y="171.5" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Puerta: aprueba</text>
+              <text x="416.0" y="187.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">spec y criterios</text>
+              <rect x="508" y="146.0" width="160" height="58" rx="6" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="588.0" y="171.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Ajusta historias</text>
+              <text x="588.0" y="187.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">y prioridades</text>
+              <rect x="164" y="224.0" width="160" height="58" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.4" />
+              <text x="244.0" y="249.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">/sw:new / adopt:</text>
+              <text x="244.0" y="265.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">PRD y preguntas</text>
+              <rect x="336" y="224.0" width="160" height="58" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.4" />
+              <text x="416.0" y="249.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Arquitectura y UX</text>
+              <text x="416.0" y="265.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">(BMAD); spec formal</text>
+              <rect x="508" y="224.0" width="160" height="58" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.4" />
+              <text x="588.0" y="249.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Épicas e historias;</text>
+              <text x="588.0" y="265.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">plan de olas /sprint</text>
+              <rect x="680" y="224.0" width="160" height="58" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.4" />
+              <text x="760.0" y="241.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Puente OpenSpec:</text>
+              <text x="760.0" y="257.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">contrato por</text>
+              <text x="760.0" y="273.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">historia</text>
+              <rect x="852" y="224.0" width="160" height="58" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.4" />
+              <text x="932.0" y="241.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">/sw:build: código</text>
+              <text x="932.0" y="257.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">y prueba por</text>
+              <text x="932.0" y="273.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">escenario</text>
+              <rect x="1024" y="224.0" width="160" height="58" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.4" />
+              <text x="1104.0" y="249.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">/sw:close: valida,</text>
+              <text x="1104.0" y="265.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">archiva y memoria</text>
+              <rect x="336" y="302.0" width="160" height="58" rx="6" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="416.0" y="327.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Decisiones técnicas:</text>
+              <text x="416.0" y="343.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">líder técnico y BD</text>
+              <rect x="508" y="302.0" width="160" height="58" rx="6" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="588.0" y="327.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Estiman esfuerzo</text>
+              <text x="588.0" y="343.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">por historia</text>
+              <rect x="680" y="302.0" width="160" height="58" rx="6" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="760.0" y="327.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Revisan el contrato</text>
+              <text x="760.0" y="343.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">verificable</text>
+              <rect x="852" y="302.0" width="160" height="58" rx="6" fill="#FFF2F2" stroke="#B71C1C" stroke-width="2.0" />
+              <text x="932.0" y="327.5" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Puerta:</text>
+              <text x="932.0" y="343.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">revisión y merge</text>
+              <rect x="164" y="380.0" width="160" height="58" rx="6" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="244.0" y="405.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Política de uso IA</text>
+              <text x="244.0" y="421.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">(con Subgerencia)</text>
+              <rect x="852" y="380.0" width="160" height="58" rx="6" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="932.0" y="405.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Pipeline CI/CD</text>
+              <text x="932.0" y="421.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Azure (objetivo)</text>
+              <rect x="1024" y="380.0" width="160" height="58" rx="6" fill="#FFF2F2" stroke="#B71C1C" stroke-width="2.0" />
+              <text x="1104.0" y="405.5" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Puerta: despliegue</text>
+              <text x="1104.0" y="421.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">en ambiente</text>
+              <path d="M324 253.0 L336 253.0" stroke="#1E5631" stroke-width="1.6" marker-end="url(#f41-g)" />
+              <path d="M496 253.0 L508 253.0" stroke="#1E5631" stroke-width="1.6" marker-end="url(#f41-g)" />
+              <path d="M668 253.0 L680 253.0" stroke="#1E5631" stroke-width="1.6" marker-end="url(#f41-g)" />
+              <path d="M840 253.0 L852 253.0" stroke="#1E5631" stroke-width="1.6" marker-end="url(#f41-g)" />
+              <path d="M1012 253.0 L1024 253.0" stroke="#1E5631" stroke-width="1.6" marker-end="url(#f41-g)" />
+              <path d="M244.0 126.0 L244.0 146.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#f41-b)" />
+              <path d="M244.0 204.0 L244.0 224.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#f41-b)" />
+              <path d="M416.0 224.0 L416.0 204.0" stroke="#B71C1C" stroke-width="1.6" marker-end="url(#f41-r)" />
+              <path d="M416.0 146.0 L416.0 126.0" stroke="#B71C1C" stroke-width="1.6" marker-end="url(#f41-r)" />
+              <path d="M416.0 282.0 L416.0 302.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#f41-b)" />
+              <path d="M588.0 224.0 L588.0 204.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#f41-b)" />
+              <path d="M588.0 282.0 L588.0 302.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#f41-b)" />
+              <path d="M760.0 282.0 L760.0 302.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#f41-b)" />
+              <path d="M932.0 282.0 L932.0 302.0" stroke="#B71C1C" stroke-width="1.6" marker-end="url(#f41-r)" />
+              <path d="M932.0 360.0 L932.0 380.0" stroke="#B71C1C" stroke-width="1.6" marker-end="url(#f41-r)" />
+              <path d="M1012 409.0 L1024 409.0" stroke="#B71C1C" stroke-width="1.6" marker-end="url(#f41-r)" />
+              <path d="M1104.0 282.0 L1104.0 380.0" stroke="#2C6B87" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#f41-b)" />
+              <path d="M1184 409.0 H1194 V97.0 H1185" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#f41-b)" />
+              <rect x="0" y="458" width="1200" height="30" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.2" />
+              <text x="14" y="478" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14"><tspan font-weight="700" fill="#1E5631">Contexto del proyecto:</tspan> reglas y negocio (architecture-base.md) · arquitectura (BMAD y graphify) · memoria persistente (Engram)</text>
+              <rect x="0" y="494" width="1200" height="30" rx="6" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.2" />
+              <text x="14" y="514" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14"><tspan font-weight="700" fill="#2C6B87">Gobierno transversal:</tspan> seguimiento con /sw:status · control de cambios con /sw:change · gestión de defectos con /sw:bug</text>
+              <rect x="0" y="530" width="1200" height="30" rx="6" fill="#EDF1F7" stroke="#454F61" stroke-width="1.2" />
+              <text x="14" y="550" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14"><tspan font-weight="700" fill="#454F61">Roles institucionales:</tspan> LIA UNAL propone y acompaña · Subgerencia de TIC valida caso de uso, accesos y modelos</text>
               </svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Fases y carriles del flujo SDLC-IA</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>1. Entender</strong> (hoy: levantamiento)<br><em>Negocio:</em> Plantea necesidad en mesas de trabajo<br><em>Líder de producto y UX:</em> Conversa con cliente; notas y Figma<br><em>Arnés de agentes (LIA UNAL):</em> /sw:new / adopt: PRD y preguntas<br><em>Infraestructura y seguridad:</em> Política de uso IA (con Subgerencia)</li>
+                  <li><strong>2. Decidir</strong> (hoy: acta + Figma)<br><em>Negocio:</em> <span class="pill pill--risk">firma del acta</span> (puerta humana)<br><em>Líder de producto y UX:</em> <span class="pill pill--risk">aprueba spec y criterios</span> (puerta humana)<br><em>Arnés de agentes (LIA UNAL):</em> Arquitectura y UX (BMAD); spec formal<br><em>Líder técnico, BD y desarrollo:</em> Decisiones técnicas: líder técnico y BD</li>
+                  <li><strong>3. Descomponer</strong> (hoy: no existe)<br><em>Líder de producto y UX:</em> Ajusta historias y prioridades<br><em>Arnés de agentes (LIA UNAL):</em> Épicas e historias; plan de olas /sprint<br><em>Líder técnico, BD y desarrollo:</em> Estiman esfuerzo por historia</li>
+                  <li><strong>4. Traducir</strong> (hoy: no existe)<br><em>Arnés de agentes (LIA UNAL):</em> Puente OpenSpec: contrato por historia<br><em>Líder técnico, BD y desarrollo:</em> Revisan el contrato verificable</li>
+                  <li><strong>5. Construir</strong> (hoy: desarrollo)<br><em>Arnés de agentes (LIA UNAL):</em> /sw:build: código y prueba por escenario<br><em>Líder técnico, BD y desarrollo:</em> <span class="pill pill--risk">revisión y merge</span> (puerta humana)<br><em>Infraestructura y seguridad:</em> Pipeline CI/CD Azure (objetivo)</li>
+                  <li><strong>6. Cerrar</strong> (hoy: compilados)<br><em>Negocio:</em> Validación final en preproducción<br><em>Arnés de agentes (LIA UNAL):</em> /sw:close: valida, archiva y memoria<br><em>Infraestructura y seguridad:</em> <span class="pill pill--risk">despliegue en ambiente</span> (puerta humana)</li>
+                </ul>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>Contexto del proyecto:</strong> reglas y negocio (architecture-base.md) · arquitectura (BMAD y graphify) · memoria persistente (Engram)</li>
+                  <li><strong>Gobierno transversal:</strong> seguimiento con /sw:status · control de cambios con /sw:change · gestión de defectos con /sw:bug</li>
+                  <li><strong>Roles institucionales:</strong> LIA UNAL propone y acompaña · Subgerencia de TIC valida caso de uso, accesos y modelos</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Figura 4.1 — Flujo SDLC-IA por etapas: cada carril representa a quien interviene y cada columna, una fase; el flujo agéntico (arnés) produce los artefactos de cada etapa y el contexto del proyecto los alimenta. En rojo, las puertas humanas, que no se delegan</figcaption>
             </figure>
           </article>
 
-          <!-- Slide 15: Intervención Agéntica por Etapa (Tabla 4.1) -->
-          <article class="slide" data-deck="e1-e4" data-module="e2">
-            <div class="slide-content">
-              <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
-              <h2>Intervención agéntica por etapa: brechas, flujos y decisiones humanas</h2>
-              <ul class="slide-list">
-                <li>
-                  <strong>Mapeo biunívoco de responsabilidades:</strong> Cada etapa actual de ATENEA tiene una fase equivalente en el flujo SDLC-IA que resuelve su falencia diagnóstica específica.
-                </li>
-                <li>
-                  <strong>Sustitución de ambigüedad por contratos:</strong> La etapa de traducción convierte historias Given/When/Then en contratos OpenSpec formalmente ejecutables.
-                </li>
-                <li>
-                  <strong>Control humano permanente:</strong> El flujo no avanza a la siguiente fase sin la aprobación explícita del responsable humano asignado en cada compuerta.
-                </li>
-              </ul>
-            </div>
+          <!-- Slide E2-5: Fases y artefactos (Tabla 4.1) [c2-fases] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-item="c2-fases">
             <figure class="slide-figure">
-              <div class="data-table-wrapper">
-                <table class="data-table">
-                  <caption>Tabla 4.1: Intervención agéntica por etapa: brecha, flujo, decisión y resultado (tab:e2-mapa)</caption>
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+                <h2 style="margin-bottom:4px;">Fases y artefactos: qué hace el flujo agéntico y qué decide la persona</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Cada etapa de ATENEA tiene un comando conectado al flujo; Descomponer y Traducir no existen hoy y dos filas atraviesan todo el ciclo.</p>
+              </div>
+              <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
+                <table class="data-table" style="font-size:clamp(0.62rem,min(0.95vw,1.55vh),1.5rem);">
+                  <caption>Tabla 4.1 — Intervención agéntica por etapa: brecha que atiende, función del flujo, decisión humana y resultado (texto condensado)</caption>
                   <thead>
                     <tr>
-                      <th style="width:14%;">Etapa / Fase</th>
-                      <th style="width:20%;">Brecha que Atiende</th>
-                      <th>Qué Hace el Flujo Agéntico</th>
-                      <th style="width:22%;">Decisión Humana</th>
-                      <th style="width:18%;">Resultado</th>
+                      <th style="width:10%;font-size:0.82em;">Etapa actual</th>
+                      <th style="width:9%;font-size:0.82em;">Fase</th>
+                      <th style="width:12%;font-size:0.82em;">Brecha que atiende</th>
+                      <th style="width:30%;font-size:0.82em;">Qué hace el flujo agéntico</th>
+                      <th style="width:21%;font-size:0.82em;">Decisión humana</th>
+                      <th style="font-size:0.82em;">Resultado</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td><strong>Entender</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">Levantamiento</span></td>
-                      <td>Requerimiento extenso sin estructura</td>
-                      <td>Convierte notas y diseño en especificación numerada con supuestos y dudas.</td>
-                      <td>Líder de producto fija intención y resuelve preguntas.</td>
-                      <td><span class="table-tag tag-green">Especificación formal</span></td>
+                      <td data-label="Etapa actual">Levantamiento con el cliente</td>
+                      <td data-label="Fase"><strong>Entender</strong></td>
+                      <td data-label="Brecha que atiende">Requerimiento extenso sin estructura</td>
+                      <td data-label="Qué hace el flujo agéntico">Propone una especificación con requisitos numerados, supuestos marcados y preguntas de aclaración a partir de las notas y el diseño validado; en un sistema existente, acota el área de código</td>
+                      <td data-label="Decisión humana">El líder de producto fija intención y alcance y resuelve las preguntas</td>
+                      <td data-label="Resultado">Especificación de requisitos, para aprobación</td>
                     </tr>
                     <tr>
-                      <td><strong>Decidir</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">Especificación</span></td>
-                      <td>Decisiones técnicas sin registro</td>
-                      <td>Redacta arquitectura y restricciones a partir de la especificación aprobada.</td>
-                      <td>Líder técnico y BD aprueban arquitectura vinculante.</td>
-                      <td><span class="table-tag tag-green">Arquitectura vinculante</span></td>
+                      <td data-label="Etapa actual">Especificación y validación de diseño</td>
+                      <td data-label="Fase"><strong>Decidir</strong></td>
+                      <td data-label="Brecha que atiende">Decisiones técnicas sin registro</td>
+                      <td data-label="Qué hace el flujo agéntico">Redacta la arquitectura y la experiencia: servicios a reutilizar, modelo de datos, integraciones y restricciones; contrasta la arquitectura declarada con la real</td>
+                      <td data-label="Decisión humana">El líder de producto aprueba la especificación y sus criterios; la líder técnica y base de datos aprueban las decisiones técnicas</td>
+                      <td data-label="Resultado">Especificación aprobada y arquitectura vinculante, en el repositorio</td>
                     </tr>
                     <tr>
-                      <td><strong>Descomponer</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">No existe hoy</span></td>
-                      <td>Sin desglose ni criterios por unidad</td>
-                      <td>Propone épicas e historias estimables con criterios y plan de olas paralelas.</td>
-                      <td>Líder de producto aprueba historias y prioridades.</td>
-                      <td><span class="table-tag tag-green">Historias y plan de olas</span></td>
+                      <td data-label="Etapa actual">No existe</td>
+                      <td data-label="Fase"><strong>Descomponer</strong></td>
+                      <td data-label="Brecha que atiende">Sin desglose ni criterios por unidad</td>
+                      <td data-label="Qué hace el flujo agéntico">Propone épicas e historias que una persona puede terminar, con criterios de aceptación y los requisitos que cubren; calcula olas de trabajo paralelo según las dependencias</td>
+                      <td data-label="Decisión humana">El líder de producto aprueba las historias; lo de bajo riesgo puede iniciarse con aprobación parcial explícita</td>
+                      <td data-label="Resultado">Historias estimables y plan de olas; estimación por historia, no por requerimiento completo</td>
                     </tr>
                     <tr>
-                      <td><strong>Traducir</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">No existe hoy</span></td>
-                      <td>Estándar dependiente de cada persona</td>
-                      <td>Genera contrato verificable por historia deterministamente con traza completa.</td>
-                      <td>Desarrollador revisa y valida el contrato formal.</td>
-                      <td><span class="table-tag tag-green">Contratos OpenSpec</span></td>
+                      <td data-label="Etapa actual">No existe</td>
+                      <td data-label="Fase"><strong>Traducir</strong></td>
+                      <td data-label="Brecha que atiende">Estándar dependiente de cada persona</td>
+                      <td data-label="Qué hace el flujo agéntico">Genera, de forma determinista, un contrato verificable por historia con las reglas del proyecto y registra la traza requisito, historia y contrato</td>
+                      <td data-label="Decisión humana">El desarrollador revisa el contrato; si está mal, se corrige la historia y se regenera</td>
+                      <td data-label="Resultado">Contratos verificables; los escenarios son los casos de prueba</td>
                     </tr>
                     <tr>
-                      <td><strong>Construir</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">Desarrollo</span></td>
-                      <td>Código heterogéneo; calidad al final</td>
-                      <td>Carga reglas y memoria; construye historia a la vez: código + test por escenario.</td>
-                      <td>Líder técnico aprueba integración a ramas protegidas.</td>
-                      <td><span class="table-tag tag-green">Código verificado</span></td>
+                      <td data-label="Etapa actual">Desarrollo</td>
+                      <td data-label="Fase"><strong>Construir</strong></td>
+                      <td data-label="Brecha que atiende">Código heterogéneo; calidad validada al final</td>
+                      <td data-label="Qué hace el flujo agéntico">Carga reglas, arquitectura, memoria y grafo del código y construye una historia a la vez: código y una prueba por escenario; lo que sale de la historia pasa por control de cambios</td>
+                      <td data-label="Decisión humana">El desarrollador revisa y ajusta; la líder técnica aprueba la integración a ramas protegidas</td>
+                      <td data-label="Resultado">Rama con código y pruebas verificadas antes de integrar</td>
                     </tr>
                     <tr>
-                      <td><strong>Cerrar</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">Compilados</span></td>
-                      <td>Sin trazabilidad ni línea base</td>
-                      <td>Valida contrato en modo estricto, archiva línea base y actualiza memoria.</td>
-                      <td>Subgerencia / Líder autoriza despliegue en ambiente.</td>
-                      <td><span class="table-tag tag-green">Línea base archivada</span></td>
+                      <td data-label="Etapa actual">Compilados a infraestructura</td>
+                      <td data-label="Fase"><strong>Cerrar</strong></td>
+                      <td data-label="Brecha que atiende">Sin traza ni línea base</td>
+                      <td data-label="Qué hace el flujo agéntico">Valida el contrato en modo estricto, lo archiva como línea base y actualiza la memoria del proyecto y el tablero</td>
+                      <td data-label="Decisión humana">Infraestructura despliega en cada ambiente; negocio valida en preproducción</td>
+                      <td data-label="Resultado">Traza especificación, código y pruebas; línea base para medir cambios</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Etapa actual">Transversal · hoy: no existe</td>
+                      <td data-label="Fase"><strong>Seguimiento</strong></td>
+                      <td data-label="Brecha que atiende">Plazos sin sustento</td>
+                      <td data-label="Qué hace el flujo agéntico">Interpreta el tablero: requisitos, historias, contratos, tareas y esfuerzo por etapa; enruta incidencias</td>
+                      <td data-label="Decisión humana">Prioridades y compromisos del líder de producto y la dirección</td>
+                      <td data-label="Resultado">Avance real por historia</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Etapa actual">Transversal</td>
+                      <td data-label="Fase"><strong>Incidentes y cambios</strong></td>
+                      <td data-label="Brecha que atiende">Cambios tardíos absorbidos por desarrollo</td>
+                      <td data-label="Qué hace el flujo agéntico">Clasifica el alcance de un cambio antes de tocar archivos y regenera solo lo afectado; corrige defectos sin abrir el alcance</td>
+                      <td data-label="Decisión humana">El líder de producto decide si el cambio cabe en lo acordado, lo amplía o abre otra épica</td>
+                      <td data-label="Resultado">Decisión registrada; regeneración acotada</td>
                     </tr>
                   </tbody>
                 </table>
@@ -2627,56 +2598,238 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- Slide 16: Piezas de Contexto del Proyecto (Tabla 4.2) -->
-          <article class="slide" data-deck="e1-e4" data-module="e2">
+          <!-- Slide E2-6: Organización del equipo (§4.3) [c2-organizacion] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-item="c2-organizacion" data-caption-source="§4.3" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+                <h2 style="margin-bottom:4px;">Organización del equipo: una célula por caso de uso, sin perfiles nuevos</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">El método reparte responsabilidades entre los roles que ATENEA ya tiene; ATENEA debe definir la dedicación de cada rol al designar su equipo (obligación 5 de la Agencia).</p>
+              </div>
+              <svg viewBox="0 0 1200 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Célula de trabajo por caso de uso, tres responsabilidades que se formalizan y regla de trabajo entre la Universidad y ATENEA">
+              <defs>
+              <marker id="org-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker>
+              </defs>
+              <rect x="0" y="0" width="570" height="262" rx="10" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.5" stroke-dasharray="6,4" />
+              <text x="16" y="28" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700">Célula por caso de uso</text>
+              <rect x="16" y="48" width="258" height="80" rx="8" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="145" y="95" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Líder de producto</text>
+              <rect x="288" y="48" width="258" height="80" rx="8" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="417" y="95" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Diseñadora</text>
+              <rect x="16" y="144" width="258" height="80" rx="8" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="145" y="191" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Desarrollador de front-end</text>
+              <rect x="288" y="144" width="258" height="80" rx="8" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="417" y="191" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Desarrollador de back-end</text>
+              <path d="M285 262 L285 306" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#org-b)" />
+              <rect x="0" y="310" width="570" height="62" rx="8" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.4" />
+              <text x="16" y="336" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Revisión de la líder del equipo</text>
+              <text x="16" y="360" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">y despliegue de infraestructura</text>
+              <text x="556" y="336" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="end">Conformación actual</text>
+              <text x="556" y="358" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="end">por módulo</text>
+              <text x="610" y="22" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Tres responsabilidades que hoy recaen en las personas sin estar escritas</text>
+              <rect x="610" y="36" width="590" height="102" rx="8" fill="#F8FAFC" stroke="#B7CC85" stroke-width="1.4" />
+              <rect x="610" y="36" width="8" height="102" rx="3" fill="#B7CC85" stroke="#B7CC85" stroke-width="0" />
+              <text x="632" y="64" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">1. Custodia de la arquitectura base</text>
+              <text x="632" y="88" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15">La líder del equipo y la persona de base de datos mantienen el</text>
+              <text x="632" y="107" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15">documento de arquitectura base y las reglas que aplican los agentes</text>
+              <text x="632" y="126" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15">(respuesta a F-04).</text>
+              <rect x="610" y="148" width="590" height="102" rx="8" fill="#F8FAFC" stroke="#B7CC85" stroke-width="1.4" />
+              <rect x="610" y="148" width="8" height="102" rx="3" fill="#B7CC85" stroke="#B7CC85" stroke-width="0" />
+              <text x="632" y="176" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">2. Referente del arnés</text>
+              <text x="632" y="200" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15">Un desarrollador por equipo instala y actualiza el arnés, atiende sus</text>
+              <text x="632" y="219" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15">diagnósticos y es el punto de contacto con la Universidad.</text>
+              <rect x="610" y="260" width="590" height="102" rx="8" fill="#F8FAFC" stroke="#B7CC85" stroke-width="1.4" />
+              <rect x="610" y="260" width="8" height="102" rx="3" fill="#B7CC85" stroke="#B7CC85" stroke-width="0" />
+              <text x="632" y="288" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">3. Aprobación de historias</text>
+              <text x="632" y="312" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15">El líder de producto aprueba las historias y sus criterios antes de</text>
+              <text x="632" y="331" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15">traducirlas a contratos; la firma del acta deja de llegar después de</text>
+              <text x="632" y="350" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15">iniciada la construcción (RT-06).</text>
+              <rect x="0" y="392" width="1200" height="100" rx="8" fill="#EDF1F7" stroke="#2C6B87" stroke-width="1.3" />
+              <text x="18" y="420" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Regla de trabajo acordada el 14 de octubre</text>
+              <text x="18" y="446" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">La Universidad propone la metodología y las herramientas y ATENEA valida. Durante el contrato la Universidad opera el arnés junto al</text>
+              <text x="18" y="466" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">equipo; al cierre, la operación queda en ATENEA (componente C8).</text>
+              </svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Célula por caso de uso y responsabilidades</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>Célula por caso de uso:</strong> líder de producto, diseñadora, desarrollador de front-end y desarrollador de back-end, con la revisión de la líder del equipo y el despliegue de infraestructura (conformación actual por módulo).</li>
+                  <li><strong>Custodia de la arquitectura base:</strong> La líder del equipo y la persona de base de datos mantienen el documento de arquitectura base y las reglas que aplican los agentes (respuesta a F-04).</li>
+                  <li><strong>Referente del arnés:</strong> Un desarrollador por equipo instala y actualiza el arnés, atiende sus diagnósticos y es el punto de contacto con la Universidad.</li>
+                  <li><strong>Aprobación de historias:</strong> El líder de producto aprueba las historias y sus criterios antes de traducirlas a contratos; la firma del acta deja de llegar después de iniciada la construcción (RT-06).</li>
+                  <li><strong>Regla de trabajo (14 de octubre):</strong> la Universidad propone la metodología y las herramientas y ATENEA valida. Durante el contrato la Universidad opera el arnés junto al equipo; al cierre, la operación queda en ATENEA (componente C8).</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Fuente: §4.3 — Célula de trabajo por caso de uso y tres responsabilidades que se formalizan (sin figura ni tabla numerada en el informe)</figcaption>
+            </figure>
+          </article>
+
+          <!-- Slide E2-7: Roles RACI (Tabla 4.2) [c2-roles] -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e2" data-item="c2-roles">
             <div class="slide-content">
               <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
-              <h2>Contexto institucional: las tres piezas que viven en el repositorio</h2>
+              <h2>Roles y responsabilidades por fase: matriz RACI</h2>
               <ul class="slide-list">
                 <li>
-                  <strong>Soberanía de datos y código:</strong> Ninguna configuración ni memoria vive fuera del repositorio de ATENEA; se elimina la dependencia del equipo en máquinas individuales.
+                  <strong>R ejecuta, A aprueba y responde, C es consultado, I es informado.</strong> Cada actividad tiene una sola A.
                 </li>
                 <li>
-                  <strong>Reglas y negocio:</strong> Documento base de arquitectura (`architecture-base.md`) que establece versiones oficiales (Angular 13, Java 17, WildFly 34) y reglas que mandan sobre el agente.
+                  <strong>Roles:</strong> PO líder de producto; UX diseño; LT líder del equipo; BD base de datos; Dev desarrolladores; Inf infraestructura; Seg seguridad; TIC Subgerencia de TIC; UN Universidad durante el contrato.
                 </li>
                 <li>
-                  <strong>Grafo AST del código real:</strong> Mapeo determinista de dependencias, clases y métodos para evitar alucinaciones durante la refactorización.
-                </li>
-                <li>
-                  <strong>Memoria persistente:</strong> Registro de decisiones, lecciones aprendidas y causas de defectos pasados (Engram).
+                  <strong>La Universidad participa</strong> en la operación del arnés y su transferencia, y en el apoyo a cada fase.
                 </li>
               </ul>
             </div>
             <figure class="slide-figure">
-              <div class="data-table-wrapper">
-                <table class="data-table">
-                  <caption>Tabla 4.2: Piezas de contexto, contenido, fases de uso y ubicación en el repositorio (tab:e2-contexto)</caption>
+              <div class="data-table-wrapper is-scroll-x">
+                <table class="data-table is-scroll-x" style="font-size:clamp(0.72rem,min(1.12vw,2.1vh),1.5rem);">
+                  <caption>Tabla 4.2 — Matriz RACI del SDLC-IA: R ejecuta; A aprueba y responde por el resultado; C es consultado; I es informado</caption>
                   <thead>
                     <tr>
-                      <th style="width:22%;">Pieza de Contexto</th>
-                      <th>Contenido y Origen Fáctico</th>
-                      <th style="width:24%;">Fases donde Interviene</th>
-                      <th style="width:24%;">Dónde Vive en el Repo</th>
+                      <th style="width:25%;font-size:0.82em;">Fase o actividad</th>
+                      <th style="width:8.3%;font-size:0.82em;text-align:center;"><abbr title="Líder de producto">PO</abbr></th>
+                      <th style="width:8.3%;font-size:0.82em;text-align:center;"><abbr title="Diseño">UX</abbr></th>
+                      <th style="width:8.3%;font-size:0.82em;text-align:center;"><abbr title="Líder del equipo">LT</abbr></th>
+                      <th style="width:8.3%;font-size:0.82em;text-align:center;"><abbr title="Base de datos">BD</abbr></th>
+                      <th style="width:8.3%;font-size:0.82em;text-align:center;"><abbr title="Desarrolladores">Dev</abbr></th>
+                      <th style="width:8.3%;font-size:0.82em;text-align:center;"><abbr title="Infraestructura">Inf</abbr></th>
+                      <th style="width:8.3%;font-size:0.82em;text-align:center;"><abbr title="Seguridad">Seg</abbr></th>
+                      <th style="width:8.3%;font-size:0.82em;text-align:center;"><abbr title="Subgerencia de TIC">TIC</abbr></th>
+                      <th style="width:8.3%;font-size:0.82em;text-align:center;"><abbr title="Universidad durante el contrato">UN</abbr></th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td><strong>Reglas y negocio</strong></td>
-                      <td>Reglas de negocio por sistema, glosario, convenciones del stack (Angular 13, Java 17, WildFly 34); obtenidas de actas y entrevistas.</td>
-                      <td><span class="table-tag tag-green">Entender, Decidir, Construir</span></td>
-                      <td><code>architecture-base.md</code> en la raíz del repositorio institucional.</td>
+                      <td data-label="Fase o actividad"><strong>Entender: especificación de requisitos</strong></td>
+                      <td data-label="PO"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#B8DCC4;color:#14401F;font-weight:700;">A/R</span></td>
+                      <td data-label="UX"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="LT"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="BD"></td>
+                      <td data-label="Dev"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#EEF1F5;color:#4A5468;">I</span></td>
+                      <td data-label="Inf"></td>
+                      <td data-label="Seg"></td>
+                      <td data-label="TIC"></td>
+                      <td data-label="UN"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
                     </tr>
                     <tr>
-                      <td><strong>Arquitectura de código</strong></td>
-                      <td>Módulos, integraciones, modelo de datos y decisiones técnicas registradas; ingeniería inversa asistida sobre código real.</td>
-                      <td><span class="table-tag tag-green">Decidir, Construir, Control de Cambios</span></td>
-                      <td>Documentos de arquitectura formal y grafo AST (Graphify).</td>
+                      <td data-label="Fase o actividad"><strong>Decidir: diseño de la experiencia</strong></td>
+                      <td data-label="PO"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D6EBDD;color:#1E5631;font-weight:700;">A</span></td>
+                      <td data-label="UX"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D4E6F2;color:#1F536C;font-weight:700;">R</span></td>
+                      <td data-label="LT"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="BD"></td>
+                      <td data-label="Dev"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#EEF1F5;color:#4A5468;">I</span></td>
+                      <td data-label="Inf"></td>
+                      <td data-label="Seg"></td>
+                      <td data-label="TIC"></td>
+                      <td data-label="UN"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
                     </tr>
                     <tr>
-                      <td><strong>Memoria persistente</strong></td>
-                      <td>Qué se hizo, por qué, qué pruebas fallaron y qué decisiones se tomaron; generada automáticamente por el flujo agéntico.</td>
-                      <td><span class="table-tag tag-blue">Construir, Cerrar, Defectos</span></td>
-                      <td>Base de memoria local persistente dentro del repositorio (Engram).</td>
+                      <td data-label="Fase o actividad"><strong>Decidir: arquitectura y decisiones técnicas</strong></td>
+                      <td data-label="PO"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="UX"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="LT"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#B8DCC4;color:#14401F;font-weight:700;">A/R</span></td>
+                      <td data-label="BD"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D4E6F2;color:#1F536C;font-weight:700;">R</span></td>
+                      <td data-label="Dev"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="Inf"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="Seg"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="TIC"></td>
+                      <td data-label="UN"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Fase o actividad"><strong>Descomponer: épicas, historias y estimación</strong></td>
+                      <td data-label="PO"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D6EBDD;color:#1E5631;font-weight:700;">A</span></td>
+                      <td data-label="UX"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="LT"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="BD"></td>
+                      <td data-label="Dev"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D4E6F2;color:#1F536C;font-weight:700;">R</span></td>
+                      <td data-label="Inf"></td>
+                      <td data-label="Seg"></td>
+                      <td data-label="TIC"></td>
+                      <td data-label="UN"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Fase o actividad"><strong>Traducir: contratos verificables</strong></td>
+                      <td data-label="PO"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#EEF1F5;color:#4A5468;">I</span></td>
+                      <td data-label="UX"></td>
+                      <td data-label="LT"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D6EBDD;color:#1E5631;font-weight:700;">A</span></td>
+                      <td data-label="BD"></td>
+                      <td data-label="Dev"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D4E6F2;color:#1F536C;font-weight:700;">R</span></td>
+                      <td data-label="Inf"></td>
+                      <td data-label="Seg"></td>
+                      <td data-label="TIC"></td>
+                      <td data-label="UN"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Fase o actividad"><strong>Construir: código y pruebas por escenario</strong></td>
+                      <td data-label="PO"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#EEF1F5;color:#4A5468;">I</span></td>
+                      <td data-label="UX"></td>
+                      <td data-label="LT"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D6EBDD;color:#1E5631;font-weight:700;">A</span></td>
+                      <td data-label="BD"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="Dev"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D4E6F2;color:#1F536C;font-weight:700;">R</span></td>
+                      <td data-label="Inf"></td>
+                      <td data-label="Seg"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="TIC"></td>
+                      <td data-label="UN"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Fase o actividad"><strong>Cerrar: validación en preproducción</strong></td>
+                      <td data-label="PO"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D6EBDD;color:#1E5631;font-weight:700;">A</span></td>
+                      <td data-label="UX"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="LT"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="BD"></td>
+                      <td data-label="Dev"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="Inf"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D4E6F2;color:#1F536C;font-weight:700;">R</span></td>
+                      <td data-label="Seg"></td>
+                      <td data-label="TIC"></td>
+                      <td data-label="UN"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#EEF1F5;color:#4A5468;">I</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Fase o actividad"><strong>Cerrar: despliegue a producción</strong></td>
+                      <td data-label="PO"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#EEF1F5;color:#4A5468;">I</span></td>
+                      <td data-label="UX"></td>
+                      <td data-label="LT"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="BD"></td>
+                      <td data-label="Dev"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="Inf"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D4E6F2;color:#1F536C;font-weight:700;">R</span></td>
+                      <td data-label="Seg"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="TIC"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D6EBDD;color:#1E5631;font-weight:700;">A</span></td>
+                      <td data-label="UN"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#EEF1F5;color:#4A5468;">I</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Fase o actividad"><strong>Control de cambios y defectos</strong></td>
+                      <td data-label="PO"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D6EBDD;color:#1E5631;font-weight:700;">A</span></td>
+                      <td data-label="UX"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="LT"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="BD"></td>
+                      <td data-label="Dev"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D4E6F2;color:#1F536C;font-weight:700;">R</span></td>
+                      <td data-label="Inf"></td>
+                      <td data-label="Seg"></td>
+                      <td data-label="TIC"></td>
+                      <td data-label="UN"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#EEF1F5;color:#4A5468;">I</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Fase o actividad"><strong>Política de uso de IA y accesos</strong></td>
+                      <td data-label="PO"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#EEF1F5;color:#4A5468;">I</span></td>
+                      <td data-label="UX"></td>
+                      <td data-label="LT"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="BD"></td>
+                      <td data-label="Dev"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#EEF1F5;color:#4A5468;">I</span></td>
+                      <td data-label="Inf"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                      <td data-label="Seg"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D4E6F2;color:#1F536C;font-weight:700;">R</span></td>
+                      <td data-label="TIC"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D6EBDD;color:#1E5631;font-weight:700;">A</span></td>
+                      <td data-label="UN"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#FBF0D2;color:#7A4E00;">C</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Fase o actividad"><strong>Operación del arnés y transferencia</strong></td>
+                      <td data-label="PO"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#EEF1F5;color:#4A5468;">I</span></td>
+                      <td data-label="UX"></td>
+                      <td data-label="LT"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D6EBDD;color:#1E5631;font-weight:700;">A</span></td>
+                      <td data-label="BD"></td>
+                      <td data-label="Dev"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D4E6F2;color:#1F536C;font-weight:700;">R</span></td>
+                      <td data-label="Inf"></td>
+                      <td data-label="Seg"></td>
+                      <td data-label="TIC"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#EEF1F5;color:#4A5468;">I</span></td>
+                      <td data-label="UN"><span style="display:block;border-radius:6px;padding:2px 0;text-align:center;background:#D4E6F2;color:#1F536C;font-weight:700;">R</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -2684,111 +2837,719 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- Slide 16: Gobernanza y Ruta de CI/CD hacia Azure -->
-          <article class="slide" data-deck="e1-e4" data-module="e2">
+          <!-- Slide E2-8: Puntos de control humano (§4.4) [c2-control-humano] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-item="c2-control-humano" data-caption-source="§4.4" data-tone="rose">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+                <h2 style="margin-bottom:4px;">Puntos de control humano: siete decisiones que no se delegan</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">En el flujo, el agente propone y la persona decide: seis puertas por fase y una para los cambios tardíos.</p>
+              </div>
+              <svg viewBox="0 0 1200 596" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Siete puntos de control humano: uno por cada una de las seis fases y uno para los cambios tardíos">
+              <path d="M0.0 0 H178.0 L192.0 24 L178.0 48 H0.0 L14.0 24 Z" fill="#7FB4CA" />
+              <text x="100.0" y="31" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Entender</text>
+              <path d="M96.0 48 V74" stroke="#B71C1C" stroke-width="2" />
+              <circle cx="96.0" cy="88" r="16" fill="#B71C1C" />
+              <text x="96.0" y="94" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">1</text>
+              <rect x="0.0" y="112" width="192" height="276" rx="8" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.4" />
+              <text x="10.0" y="138" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">DECIDE</text>
+              <text x="10.0" y="160" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Líder de producto</text>
+              <text x="10.0" y="189" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">Fija la intención y</text>
+              <text x="10.0" y="209" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">el alcance, resuelve</text>
+              <text x="10.0" y="229" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">las preguntas de</text>
+              <text x="10.0" y="249" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">aclaración y aprueba</text>
+              <text x="10.0" y="269" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">la especificación.</text>
+              <path d="M201.6 0 H379.6 L393.6 24 L379.6 48 H201.6 L215.6 24 Z" fill="#7AA89F" />
+              <text x="301.6" y="31" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Decidir</text>
+              <path d="M297.6 48 V74" stroke="#B71C1C" stroke-width="2" />
+              <circle cx="297.6" cy="88" r="16" fill="#B71C1C" />
+              <text x="297.6" y="94" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">2</text>
+              <rect x="201.6" y="112" width="192" height="276" rx="8" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.4" />
+              <text x="211.6" y="138" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">DECIDE</text>
+              <text x="211.6" y="160" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Líder técnica y</text>
+              <text x="211.6" y="181" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">base de datos</text>
+              <text x="211.6" y="210" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">Aprueban las</text>
+              <text x="211.6" y="230" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">decisiones técnicas</text>
+              <text x="211.6" y="250" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">que quedan como</text>
+              <text x="211.6" y="270" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">arquitectura</text>
+              <text x="211.6" y="290" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">vinculante.</text>
+              <path d="M403.2 0 H581.2 L595.2 24 L581.2 48 H403.2 L417.2 24 Z" fill="#B7CC85" />
+              <text x="503.2" y="31" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Descomponer</text>
+              <path d="M499.2 48 V74" stroke="#B71C1C" stroke-width="2" />
+              <circle cx="499.2" cy="88" r="16" fill="#B71C1C" />
+              <text x="499.2" y="94" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">3</text>
+              <rect x="403.2" y="112" width="192" height="276" rx="8" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.4" />
+              <text x="413.2" y="138" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">DECIDE</text>
+              <text x="413.2" y="160" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Líder de producto</text>
+              <text x="413.2" y="189" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">Aprueba las historias</text>
+              <text x="413.2" y="209" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">y sus criterios de</text>
+              <text x="413.2" y="229" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">aceptación antes de</text>
+              <text x="413.2" y="249" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">que se traduzcan a</text>
+              <text x="413.2" y="269" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">contratos.</text>
+              <path d="M604.8 0 H782.8 L796.8 24 L782.8 48 H604.8 L618.8 24 Z" fill="#DFBD76" />
+              <text x="704.8" y="31" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Traducir</text>
+              <path d="M700.8 48 V74" stroke="#B71C1C" stroke-width="2" />
+              <circle cx="700.8" cy="88" r="16" fill="#B71C1C" />
+              <text x="700.8" y="94" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">4</text>
+              <rect x="604.8" y="112" width="192" height="276" rx="8" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.4" />
+              <text x="614.8" y="138" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">DECIDE</text>
+              <text x="614.8" y="160" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Desarrollador</text>
+              <text x="614.8" y="189" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">Revisa el contrato;</text>
+              <text x="614.8" y="209" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">si está mal, se</text>
+              <text x="614.8" y="229" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">corrige la historia y</text>
+              <text x="614.8" y="249" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">se regenera.</text>
+              <path d="M806.4 0 H984.4 L998.4 24 L984.4 48 H806.4 L820.4 24 Z" fill="#7AA89F" />
+              <text x="906.4" y="31" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Construir</text>
+              <path d="M902.4 48 V74" stroke="#B71C1C" stroke-width="2" />
+              <circle cx="902.4" cy="88" r="16" fill="#B71C1C" />
+              <text x="902.4" y="94" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">5</text>
+              <rect x="806.4" y="112" width="192" height="276" rx="8" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.4" />
+              <text x="816.4" y="138" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">DECIDE</text>
+              <text x="816.4" y="160" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Desarrollador y</text>
+              <text x="816.4" y="181" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">líder técnica</text>
+              <text x="816.4" y="210" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">El desarrollador</text>
+              <text x="816.4" y="230" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">revisa y ajusta; la</text>
+              <text x="816.4" y="250" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">líder técnica aprueba</text>
+              <text x="816.4" y="270" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">la integración a las</text>
+              <text x="816.4" y="290" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">ramas protegidas.</text>
+              <path d="M1008.0 0 H1186.0 L1200.0 24 L1186.0 48 H1008.0 L1022.0 24 Z" fill="#2C6B87" />
+              <text x="1108.0" y="31" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Cerrar</text>
+              <path d="M1104.0 48 V74" stroke="#B71C1C" stroke-width="2" />
+              <circle cx="1104.0" cy="88" r="16" fill="#B71C1C" />
+              <text x="1104.0" y="94" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">6</text>
+              <rect x="1008.0" y="112" width="192" height="276" rx="8" fill="#FFF2F2" stroke="#B71C1C" stroke-width="1.4" />
+              <text x="1018.0" y="138" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">DECIDE</text>
+              <text x="1018.0" y="160" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Infraestructura y</text>
+              <text x="1018.0" y="181" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">negocio</text>
+              <text x="1018.0" y="210" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">Infraestructura</text>
+              <text x="1018.0" y="230" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">despliega en cada</text>
+              <text x="1018.0" y="250" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">ambiente y negocio</text>
+              <text x="1018.0" y="270" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">valida en</text>
+              <text x="1018.0" y="290" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">preproducción; la</text>
+              <text x="1018.0" y="310" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">aprobación para</text>
+              <text x="1018.0" y="330" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">preproducción y</text>
+              <text x="1018.0" y="350" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">producción sigue</text>
+              <text x="1018.0" y="370" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15.5">siendo humana.</text>
+              <path d="M0 408 H1200" stroke="#D6DEE8" stroke-width="1" />
+              <rect x="0" y="422" width="1200" height="98" rx="8" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.4" />
+              <circle cx="38" cy="464" r="16" fill="#B71C1C" />
+              <text x="38" y="470" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">7</text>
+              <text x="70" y="452" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Cambios tardíos: transversal a todo el ciclo</text>
+              <text x="70" y="476" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Decide: Líder de producto. Decide si el cambio cabe en lo acordado, lo amplía o abre otra épica.</text>
+              <text x="70" y="498" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Un defecto no pasa por esta clasificación, porque lo acordado no cambió.</text>
+              <text x="0" y="544" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">El agente propone y la persona decide: ninguna de estas siete decisiones se delega.</text>
+              <text x="0" y="566" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Cómo el sistema de agentes hace cumplir estas puertas se describe en el capítulo 6 (E4).</text>
+              </svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Siete puntos de control humano</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>1. Entender:</strong> <span class="pill pill--risk">Líder de producto</span> Fija la intención y el alcance, resuelve las preguntas de aclaración y aprueba la especificación.</li>
+                  <li><strong>2. Decidir:</strong> <span class="pill pill--risk">Líder técnica y base de datos</span> Aprueban las decisiones técnicas que quedan como arquitectura vinculante.</li>
+                  <li><strong>3. Descomponer:</strong> <span class="pill pill--risk">Líder de producto</span> Aprueba las historias y sus criterios de aceptación antes de que se traduzcan a contratos.</li>
+                  <li><strong>4. Traducir:</strong> <span class="pill pill--risk">Desarrollador</span> Revisa el contrato; si está mal, se corrige la historia y se regenera.</li>
+                  <li><strong>5. Construir:</strong> <span class="pill pill--risk">Desarrollador y líder técnica</span> El desarrollador revisa y ajusta; la líder técnica aprueba la integración a las ramas protegidas.</li>
+                  <li><strong>6. Cerrar:</strong> <span class="pill pill--risk">Infraestructura y negocio</span> Infraestructura despliega en cada ambiente y negocio valida en preproducción; la aprobación para preproducción y producción sigue siendo humana.</li>
+                  <li><strong>7. Cambios tardíos:</strong> <span class="pill pill--risk">Líder de producto</span> Decide si el cambio cabe en lo acordado, lo amplía o abre otra épica.</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Fuente: §4.4 — Siete puntos de control humano: una puerta por fase y una para los cambios tardíos, sin cambiar a quién corresponde cada una (sin tabla numerada en el informe)</figcaption>
+            </figure>
+          </article>
+
+          <!-- Slide E2-9: Contexto del proyecto (Tabla 4.3) -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-item="c2-contexto" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+                <h2 style="margin-bottom:4px;">Contexto del proyecto: tres piezas que alimentan el flujo</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">El contexto vive en el repositorio y entra en las fases en las que las reglas, la arquitectura o la memoria cambian lo que el agente propone.</p>
+              </div>
+              <svg viewBox="0 0 1200 470" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabla 4.3 como tres tarjetas: reglas y negocio, arquitectura y memoria, con su contenido, fases y dónde viven">
+              <rect x="0" y="0" width="388" height="466" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.6" />
+              <rect x="0" y="0" width="388" height="46" rx="10" fill="#7FB4CA" stroke="#7FB4CA" stroke-width="0" />
+              <text x="16" y="31" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="20" font-weight="700">Reglas y negocio</text>
+              <text x="16" y="74" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1">CONTENIDO Y ORIGEN</text>
+              <text x="16" y="98" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">Reglas de cada sistema, glosario,</text>
+              <text x="16" y="120" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">normativa, convenciones y versiones del</text>
+              <text x="16" y="142" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">stack (Angular 13, Java 17, WildFly 34);</text>
+              <text x="16" y="164" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">salen de la documentación de</text>
+              <text x="16" y="186" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">requerimientos existente y de</text>
+              <text x="16" y="208" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">entrevistas con el equipo.</text>
+              <text x="16" y="240" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1">FASES DONDE ENTRA</text>
+              <rect x="16" y="252" width="92" height="28" rx="14" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="62.0" y="272" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="600" text-anchor="middle">Entender</text>
+              <rect x="116" y="252" width="83" height="28" rx="14" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="157.5" y="272" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="600" text-anchor="middle">Decidir</text>
+              <rect x="207" y="252" width="101" height="28" rx="14" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="1.4" />
+              <text x="257.5" y="272" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="600" text-anchor="middle">Construir</text>
+              <text x="16" y="310" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1">DÓNDE VIVE</text>
+              <text x="16" y="334" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">Documento de arquitectura base del</text>
+              <text x="16" y="356" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">repositorio, que manda sobre los valores</text>
+              <text x="16" y="378" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">por defecto del agente.</text>
+              <rect x="406" y="0" width="388" height="466" rx="8" fill="#F8FAFC" stroke="#7AA89F" stroke-width="1.6" />
+              <rect x="406" y="0" width="388" height="46" rx="10" fill="#7AA89F" stroke="#7AA89F" stroke-width="0" />
+              <text x="422" y="31" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="20" font-weight="700">Arquitectura</text>
+              <text x="422" y="74" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1">CONTENIDO Y ORIGEN</text>
+              <text x="422" y="98" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">Módulos, integraciones, modelo de datos</text>
+              <text x="422" y="120" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">de Oracle y decisiones registradas;</text>
+              <text x="422" y="142" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">ingeniería inversa asistida y validada</text>
+              <text x="422" y="164" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">por el equipo.</text>
+              <text x="422" y="240" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1">FASES DONDE ENTRA</text>
+              <rect x="422" y="252" width="83" height="28" rx="14" fill="#FFFFFF" stroke="#7AA89F" stroke-width="1.4" />
+              <text x="463.5" y="272" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="600" text-anchor="middle">Decidir</text>
+              <rect x="513" y="252" width="101" height="28" rx="14" fill="#FFFFFF" stroke="#7AA89F" stroke-width="1.4" />
+              <text x="563.5" y="272" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="600" text-anchor="middle">Construir</text>
+              <rect x="622" y="252" width="83" height="28" rx="14" fill="#FFFFFF" stroke="#7AA89F" stroke-width="1.4" />
+              <text x="663.5" y="272" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="600" text-anchor="middle">cambios</text>
+              <text x="422" y="310" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1">DÓNDE VIVE</text>
+              <text x="422" y="334" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">Arquitectura del proyecto y grafo del</text>
+              <text x="422" y="356" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">código, solo de código.</text>
+              <rect x="812" y="0" width="388" height="466" rx="8" fill="#F8FAFC" stroke="#DFBD76" stroke-width="1.6" />
+              <rect x="812" y="0" width="388" height="46" rx="10" fill="#DFBD76" stroke="#DFBD76" stroke-width="0" />
+              <text x="828" y="31" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="20" font-weight="700">Memoria</text>
+              <text x="828" y="74" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1">CONTENIDO Y ORIGEN</text>
+              <text x="828" y="98" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">Qué se hizo, por qué, qué falló y qué</text>
+              <text x="828" y="120" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">falta; la genera el flujo desde el</text>
+              <text x="828" y="142" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">primer caso de uso.</text>
+              <text x="828" y="240" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1">FASES DONDE ENTRA</text>
+              <rect x="828" y="252" width="101" height="28" rx="14" fill="#FFFFFF" stroke="#DFBD76" stroke-width="1.4" />
+              <text x="878.5" y="272" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="600" text-anchor="middle">Construir</text>
+              <rect x="937" y="252" width="74" height="28" rx="14" fill="#FFFFFF" stroke="#DFBD76" stroke-width="1.4" />
+              <text x="974.0" y="272" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="600" text-anchor="middle">Cerrar</text>
+              <rect x="1019" y="252" width="83" height="28" rx="14" fill="#FFFFFF" stroke="#DFBD76" stroke-width="1.4" />
+              <text x="1060.5" y="272" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="600" text-anchor="middle">cambios</text>
+              <text x="828" y="310" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1">DÓNDE VIVE</text>
+              <text x="828" y="334" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">Memoria por proyecto dentro del</text>
+              <text x="828" y="356" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">repositorio.</text>
+              </svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Tres piezas de contexto</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>Reglas y negocio.</strong> Reglas de cada sistema, glosario, normativa, convenciones y versiones del stack (Angular 13, Java 17, WildFly 34); salen de la documentación de requerimientos existente y de entrevistas con el equipo. <em>Fases:</em> Entender, Decidir, Construir. <em>Dónde vive:</em> Documento de arquitectura base del repositorio, que manda sobre los valores por defecto del agente.</li>
+                  <li><strong>Arquitectura.</strong> Módulos, integraciones, modelo de datos de Oracle y decisiones registradas; ingeniería inversa asistida y validada por el equipo. <em>Fases:</em> Decidir, Construir, cambios. <em>Dónde vive:</em> Arquitectura del proyecto y grafo del código, solo de código.</li>
+                  <li><strong>Memoria.</strong> Qué se hizo, por qué, qué falló y qué falta; la genera el flujo desde el primer caso de uso. <em>Fases:</em> Construir, Cerrar, cambios. <em>Dónde vive:</em> Memoria por proyecto dentro del repositorio.</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Tabla 4.3 — Piezas de contexto, contenido, fases donde entran y dónde viven</figcaption>
+            </figure>
+          </article>
+
+          <!-- Slide E2-10: Verificación y CI/CD (§4.6) -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-item="c2-cicd" data-caption-source="§4.6" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+                <h2 style="margin-bottom:4px;">Verificación, integración y despliegue: de la validación de contratos a la entrega continua</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">La revisión humana sigue siendo la aprobación: en la etapa B al integrar y en la etapa C para preproducción y producción.</p>
+              </div>
+              <svg viewBox="0 0 1200 430" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tres etapas de verificación, integración y despliegue: A con el proceso actual, B integración continua y C entrega continua">
+              <defs>
+              <marker id="ci-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker>
+              </defs>
+              <rect x="0" y="0" width="372" height="292" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.6" />
+              <rect x="16" y="16" width="52" height="52" rx="9" fill="#7FB4CA" stroke="#7FB4CA" stroke-width="0" />
+              <text x="42" y="53" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="28" font-weight="700" text-anchor="middle">A</text>
+              <text x="82" y="36" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" letter-spacing="1">Etapa A</text>
+              <text x="82" y="60" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Con el proceso actual</text>
+              <text x="16" y="100" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">Validación de contratos y pruebas</text>
+              <text x="16" y="125" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">de la historia en el entorno de</text>
+              <text x="16" y="150" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">desarrollo antes de pedir la</text>
+              <text x="16" y="175" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">integración; el despliegue sigue</text>
+              <text x="16" y="200" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">siendo manual.</text>
+              <path d="M374 146 L410 146" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#ci-b)" />
+              <rect x="414" y="0" width="372" height="292" rx="8" fill="#F8FAFC" stroke="#7AA89F" stroke-width="1.6" />
+              <rect x="430" y="16" width="52" height="52" rx="9" fill="#7AA89F" stroke="#7AA89F" stroke-width="0" />
+              <text x="456" y="53" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="28" font-weight="700" text-anchor="middle">B</text>
+              <text x="496" y="36" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" letter-spacing="1">Etapa B</text>
+              <text x="496" y="60" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Integración continua</text>
+              <text x="430" y="100" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">Con el código en Azure Repos, cada</text>
+              <text x="430" y="125" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">solicitud de integración compila</text>
+              <text x="430" y="150" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">front-end y back-end, ejecuta</text>
+              <text x="430" y="175" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">pruebas y revisa dependencias en</text>
+              <text x="430" y="200" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">Azure Pipelines; la revisión humana</text>
+              <text x="430" y="225" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">sigue siendo la aprobación.</text>
+              <path d="M788 146 L824 146" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#ci-b)" />
+              <rect x="828" y="0" width="372" height="292" rx="8" fill="#F8FAFC" stroke="#DFBD76" stroke-width="1.6" />
+              <rect x="844" y="16" width="52" height="52" rx="9" fill="#DFBD76" stroke="#DFBD76" stroke-width="0" />
+              <text x="870" y="53" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="28" font-weight="700" text-anchor="middle">C</text>
+              <text x="910" y="36" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" letter-spacing="1">Etapa C</text>
+              <text x="910" y="60" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Entrega continua</text>
+              <text x="844" y="100" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">Empaquetado reproducible,</text>
+              <text x="844" y="125" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">despliegue automático a QA y</text>
+              <text x="844" y="150" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">aprobación humana para</text>
+              <text x="844" y="175" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="18.5">preproducción y producción.</text>
+              <rect x="0" y="312" width="1200" height="104" rx="8" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.4" />
+              <text x="16" y="338" fill="#7A4E00" font-family="Space Grotesk,sans-serif" font-size="17">Punto de partida: hoy no hay pipeline y la primera fase de la migración no refactoriza aplicaciones. La etapa C depende de la</text>
+              <text x="16" y="361" fill="#7A4E00" font-family="Space Grotesk,sans-serif" font-size="17">segunda fase de la migración (contenedores, registro de imágenes y versionado), sobre la cual aún no hay decisión.</text>
+              <text x="16" y="394" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">El alcance de las etapas B y C dentro del contrato se acuerda con infraestructura.</text>
+              </svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Tres etapas de CI/CD</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>Etapa A, con el proceso actual:</strong> Validación de contratos y pruebas de la historia en el entorno de desarrollo antes de pedir la integración; el despliegue sigue siendo manual.</li>
+                  <li><strong>Etapa B, integración continua:</strong> Con el código en Azure Repos, cada solicitud de integración compila front-end y back-end, ejecuta pruebas y revisa dependencias en Azure Pipelines; la revisión humana sigue siendo la aprobación.</li>
+                  <li><strong>Etapa C, entrega continua:</strong> Empaquetado reproducible, despliegue automático a QA y aprobación humana para preproducción y producción.</li>
+                  <li><strong>Punto de partida:</strong> hoy no hay pipeline y la primera fase de la migración no refactoriza aplicaciones.</li>
+                  <li><strong>Dependencia:</strong> la etapa C depende de la segunda fase de la migración (contenedores, registro de imágenes y versionado), sobre la cual aún no hay decisión.</li>
+                  <li><strong>Por acordar:</strong> el alcance de las etapas B y C dentro del contrato se acuerda con infraestructura.</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Fuente: §4.6 — Verificación, integración y despliegue en tres etapas (sin tabla ni figura numerada en el informe)</figcaption>
+            </figure>
+          </article>
+
+          <!-- Slide E2-11: Criterios de calidad (Tabla 4.4, 1/2) [c2-criterios] -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e2" data-item="c2-criterios">
             <div class="slide-content">
               <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
-              <h2>Gobernanza: cinco puertas humanas y evolución de CI/CD hacia Azure</h2>
+              <h2>Criterios de calidad: definición de terminado de una historia (1/2)</h2>
               <ul class="slide-list">
                 <li>
-                  <strong>Cinco compuertas de decisión humana indelegables:</strong>
-                  <strong>P1 (PO):</strong> Aprobación de intención y preguntas del PRD.
-                  <strong>P2 (Líder Técnico &amp; BD):</strong> Aprobación de arquitectura y modelo de datos.
-                  <strong>P3 (PO):</strong> Aprobación de historias y olas de trabajo.
-                  <strong>P4 (Líder Técnico):</strong> Revisión de código y merge de PR.
-                  <strong>P5 (Subgerencia TIC):</strong> Aprobación de despliegue en ambiente.
+                  <strong>La calidad se verifica por historia, no al final:</strong> una historia está terminada solo si cumple los diez criterios.
                 </li>
                 <li>
-                  <strong>Ruta de evolución CI/CD en 3 etapas:</strong>
-                  <strong>Etapa A (Actual):</strong> Validación local de contratos y tests unitarios.
-                  <strong>Etapa B (Integración Continua):</strong> Pipelines automáticos en Azure Repos/Pipelines.
-                  <strong>Etapa C (Entrega Continua):</strong> Despliegue automático en QA y empaquetado reproducible.
+                  <strong>Los umbrales son una propuesta de la Universidad</strong> que ATENEA debe validar.
+                </li>
+                <li>
+                  <strong>Cinco criterios de calidad:</strong> contrato válido, una prueba por escenario, sin cambios fuera del contrato, traza completa y aprobación de la líder del equipo.
                 </li>
               </ul>
             </div>
             <figure class="slide-figure">
-              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estructura de las 5 compuertas humanas de gobernanza y las 3 etapas de CI/CD">
-                <!-- Bloque 5 Puertas -->
-                <rect x="25" y="15" width="470" height="155" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
-                <text x="40" y="36" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">LAS 5 COMPUERTAS HUMANAS INDELEGABLES (GOBERNANZA)</text>
+              <div class="data-table-wrapper">
+                <table class="data-table" style="font-size:clamp(0.72rem,min(1.4vw,2.6vh),1.5rem);">
+                  <caption>Tabla 4.4 — Definición de terminado de una historia (1/2): criterios de calidad, umbral propuesto, evidencia y quién los verifica</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:6%;font-size:0.82em;">N.º</th>
+                      <th style="width:37%;font-size:0.82em;">Criterio</th>
+                      <th style="width:18%;font-size:0.82em;">Umbral propuesto</th>
+                      <th style="width:20%;font-size:0.82em;">Evidencia</th>
+                      <th style="font-size:0.82em;">Verifica</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td colspan="5" data-label="Grupo" style="background:#EAF3F8;color:#1F536C;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Calidad</td></tr>
+                    <tr>
+                      <td data-label="N.º"><strong>1</strong></td>
+                      <td data-label="Criterio">El contrato de la historia es válido en modo estricto</td>
+                      <td data-label="Umbral propuesto">0 errores</td>
+                      <td data-label="Evidencia">Salida de la validación</td>
+                      <td data-label="Verifica">Desarrollador</td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>2</strong></td>
+                      <td data-label="Criterio">Cada escenario <em>Given/When/Then</em> tiene una prueba automatizada que pasa</td>
+                      <td data-label="Umbral propuesto">100 % de los escenarios</td>
+                      <td data-label="Evidencia">Reporte de pruebas</td>
+                      <td data-label="Verifica">Desarrollador</td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>3</strong></td>
+                      <td data-label="Criterio">No hay cambios fuera del contrato; lo que aparece pasa por control de cambios</td>
+                      <td data-label="Umbral propuesto">0 archivos fuera de lo autorizado</td>
+                      <td data-label="Evidencia">Diferencias de la rama y decisión registrada</td>
+                      <td data-label="Verifica">Líder del equipo</td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>4</strong></td>
+                      <td data-label="Criterio">La traza requisito, historia, contrato, código y prueba está completa</td>
+                      <td data-label="Umbral propuesto">100 % de los requisitos de la historia</td>
+                      <td data-label="Evidencia">Archivo de traza del repositorio</td>
+                      <td data-label="Verifica">Arnés</td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>5</strong></td>
+                      <td data-label="Criterio">La líder del equipo aprueba la integración a la rama protegida</td>
+                      <td data-label="Umbral propuesto">1 aprobación registrada</td>
+                      <td data-label="Evidencia">Solicitud de integración</td>
+                      <td data-label="Verifica">Líder del equipo</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
 
-                <g font-family="Space Grotesk,sans-serif" font-size="9">
-                  <rect x="35" y="48" width="85" height="110" rx="6" fill="#FFFFFF" stroke="#B71C1C" stroke-width="1.2" />
-                  <text x="77" y="66" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta P1</text>
-                  <text x="77" y="80" text-anchor="middle" fill="#1B2029" font-weight="600">Intención y CU</text>
-                  <text x="77" y="98" text-anchor="middle" fill="#5B6472">Aprueba PRD</text>
-                  <text x="77" y="110" text-anchor="middle" fill="#5B6472">y resuelve</text>
-                  <text x="77" y="122" text-anchor="middle" fill="#5B6472">dudas de negocio</text>
-                  <rect x="42" y="132" width="71" height="18" rx="3" fill="#FFF2F2" />
-                  <text x="77" y="144" text-anchor="middle" fill="#B71C1C" font-weight="700">Rol: PO</text>
+          <!-- Slide E2-12: Criterios de seguridad y aceptación (Tabla 4.4, 2/2) [c2-criterios] -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e2" data-item="c2-criterios">
+            <div class="slide-content">
+              <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+              <h2>Criterios de seguridad y de aceptación: definición de terminado (2/2)</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Marco de seguridad:</strong> el flujo opera dentro de la Política de Seguridad y Privacidad y el Manual de Políticas de Seguridad de la Agencia, y no envía a ningún modelo información confidencial ni datos personales (cláusulas décima y décima primera).
+                </li>
+                <li>
+                  <strong>Accesos y modelos:</strong> las autorizaciones de acceso y la habilitación de modelos y servicios las gestiona la Agencia (obligaciones 7 y 8).
+                </li>
+                <li>
+                  <strong>Sin respuesta aún:</strong> las preguntas sobre análisis de vulnerabilidades del código y de las dependencias.
+                </li>
+                <li>
+                  <strong>Sin restricciones específicas hoy</strong> para herramientas de IA: riesgo extremo RT-01; la Subgerencia de TIC debe adoptar la política.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table" style="font-size:clamp(0.72rem,min(1.4vw,2.6vh),1.5rem);">
+                  <caption>Tabla 4.4 — Definición de terminado de una historia (2/2): criterios de seguridad y de aceptación</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:6%;font-size:0.82em;">N.º</th>
+                      <th style="width:37%;font-size:0.82em;">Criterio</th>
+                      <th style="width:18%;font-size:0.82em;">Umbral propuesto</th>
+                      <th style="width:20%;font-size:0.82em;">Evidencia</th>
+                      <th style="font-size:0.82em;">Verifica</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td colspan="5" data-label="Grupo" style="background:#FFF2F2;color:#8E1B1B;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Seguridad</td></tr>
+                    <tr>
+                      <td data-label="N.º"><strong>6</strong></td>
+                      <td data-label="Criterio">La revisión de riesgo no deja hallazgos bloqueantes</td>
+                      <td data-label="Umbral propuesto">0 bloqueantes</td>
+                      <td data-label="Evidencia">Dictamen de revisión</td>
+                      <td data-label="Verifica">Líder del equipo y seguridad</td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>7</strong></td>
+                      <td data-label="Criterio">Las dependencias no tienen vulnerabilidades críticas ni altas conocidas</td>
+                      <td data-label="Umbral propuesto">0 críticas y 0 altas</td>
+                      <td data-label="Evidencia">Análisis de dependencias (etapa B)</td>
+                      <td data-label="Verifica">Seguridad</td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>8</strong></td>
+                      <td data-label="Criterio">No hay secretos ni credenciales en el código ni en el contexto enviado al modelo</td>
+                      <td data-label="Umbral propuesto">0</td>
+                      <td data-label="Evidencia">Revisión de la rama</td>
+                      <td data-label="Verifica">Seguridad</td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>9</strong></td>
+                      <td data-label="Criterio">Las pruebas y el contexto del modelo usan datos sintéticos, nunca datos personales reales</td>
+                      <td data-label="Umbral propuesto">0 registros reales</td>
+                      <td data-label="Evidencia">Revisión de datos de prueba</td>
+                      <td data-label="Verifica">Líder del equipo</td>
+                    </tr>
+                    <tr><td colspan="5" data-label="Grupo" style="background:#EBF5ED;color:#1E5631;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Aceptación</td></tr>
+                    <tr>
+                      <td data-label="N.º"><strong>10</strong></td>
+                      <td data-label="Criterio">Negocio valida en preproducción y el acta queda firmada en el formato institucional, que hoy lleva seis firmas</td>
+                      <td data-label="Umbral propuesto">Antes de producción</td>
+                      <td data-label="Evidencia">Acta firmada</td>
+                      <td data-label="Verifica">Líder de producto</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
 
-                  <rect x="127" y="48" width="85" height="110" rx="6" fill="#FFFFFF" stroke="#B71C1C" stroke-width="1.2" />
-                  <text x="169" y="66" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta P2</text>
-                  <text x="169" y="80" text-anchor="middle" fill="#1B2029" font-weight="600">Arquitectura</text>
-                  <text x="169" y="98" text-anchor="middle" fill="#5B6472">Aprueba reglas,</text>
-                  <text x="169" y="110" text-anchor="middle" fill="#5B6472">servicios y</text>
-                  <text x="169" y="122" text-anchor="middle" fill="#5B6472">modelo de datos</text>
-                  <rect x="134" y="132" width="71" height="18" rx="3" fill="#FFF2F2" />
-                  <text x="169" y="144" text-anchor="middle" fill="#B71C1C" font-weight="700">Líder Tec / BD</text>
-
-                  <rect x="219" y="48" width="85" height="110" rx="6" fill="#FFFFFF" stroke="#B71C1C" stroke-width="1.2" />
-                  <text x="261" y="66" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta P3</text>
-                  <text x="261" y="80" text-anchor="middle" fill="#1B2029" font-weight="600">Historias &amp; Olas</text>
-                  <text x="261" y="98" text-anchor="middle" fill="#5B6472">Aprueba criterios</text>
-                  <text x="261" y="110" text-anchor="middle" fill="#5B6472">de aceptación y</text>
-                  <text x="261" y="122" text-anchor="middle" fill="#5B6472">plan de sprints</text>
-                  <rect x="226" y="132" width="71" height="18" rx="3" fill="#FFF2F2" />
-                  <text x="261" y="144" text-anchor="middle" fill="#B71C1C" font-weight="700">Rol: PO</text>
-
-                  <rect x="311" y="48" width="85" height="110" rx="6" fill="#FFFFFF" stroke="#B71C1C" stroke-width="1.2" />
-                  <text x="353" y="66" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta P4</text>
-                  <text x="353" y="80" text-anchor="middle" fill="#1B2029" font-weight="600">Revisión PR</text>
-                  <text x="353" y="98" text-anchor="middle" fill="#5B6472">Verifica código,</text>
-                  <text x="353" y="110" text-anchor="middle" fill="#5B6472">tests unitarios</text>
-                  <text x="353" y="122" text-anchor="middle" fill="#5B6472">y hace merge</text>
-                  <rect x="318" y="132" width="71" height="18" rx="3" fill="#FFF2F2" />
-                  <text x="353" y="144" text-anchor="middle" fill="#B71C1C" font-weight="700">Líder Técnica</text>
-
-                  <rect x="403" y="48" width="82" height="110" rx="6" fill="#FFFFFF" stroke="#B71C1C" stroke-width="1.2" />
-                  <text x="444" y="66" text-anchor="middle" fill="#B71C1C" font-weight="700">Puerta P5</text>
-                  <text x="444" y="80" text-anchor="middle" fill="#1B2029" font-weight="600">Despliegue</text>
-                  <text x="444" y="98" text-anchor="middle" fill="#5B6472">Autoriza pase</text>
-                  <text x="444" y="110" text-anchor="middle" fill="#5B6472">a QA, preprod</text>
-                  <text x="444" y="122" text-anchor="middle" fill="#5B6472">y producción</text>
-                  <rect x="410" y="132" width="68" height="18" rx="3" fill="#FFF2F2" />
-                  <text x="444" y="144" text-anchor="middle" fill="#B71C1C" font-weight="700">Subgerencia</text>
-                </g>
-
-                <!-- Bloque 3 Etapas de CI/CD -->
-                <rect x="25" y="185" width="470" height="155" rx="8" fill="#F8FAFC" stroke="#1E5631" stroke-width="1.3" />
-                <text x="40" y="206" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">RUTA DE EVOLUCIÓN CI/CD HACIA AZURE</text>
-
-                <g font-family="Space Grotesk,sans-serif" font-size="9">
-                  <rect x="35" y="218" width="145" height="110" rx="6" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="107" y="236" text-anchor="middle" fill="#2C6B87" font-weight="700">ETAPA A: LOCAL</text>
-                  <text x="107" y="252" text-anchor="middle" fill="#1B2029" font-weight="600">Validación de Contratos</text>
-                  <text x="107" y="272" text-anchor="middle" fill="#5B6472">• Ejecución en dev</text>
-                  <text x="107" y="288" text-anchor="middle" fill="#5B6472">• Tests antes de pedir merge</text>
-                  <text x="107" y="304" text-anchor="middle" fill="#5B6472">• Despliegue manual actual</text>
-                  <text x="107" y="320" text-anchor="middle" fill="#1E5631" font-weight="700">Estado: Inmediato</text>
-
-                  <rect x="187" y="218" width="145" height="110" rx="6" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.3" />
-                  <text x="260" y="236" text-anchor="middle" fill="#1E5631" font-weight="700">ETAPA B: CI</text>
-                  <text x="260" y="252" text-anchor="middle" fill="#1B2029" font-weight="600">Integración Continua</text>
-                  <text x="260" y="272" text-anchor="middle" fill="#5B6472">• Azure Repos + Pipelines</text>
-                  <text x="260" y="288" text-anchor="middle" fill="#5B6472">• Compilación automática</text>
-                  <text x="260" y="304" text-anchor="middle" fill="#5B6472">• Ejecución de pruebas en PR</text>
-                  <text x="260" y="320" text-anchor="middle" fill="#1E5631" font-weight="700">Meta: Hito 1 / Hito 2</text>
-
-                  <rect x="340" y="218" width="145" height="110" rx="6" fill="#FFFFFF" stroke="#DFBD76" />
-                  <text x="412" y="236" text-anchor="middle" fill="#8A5A00" font-weight="700">ETAPA C: CD</text>
-                  <text x="412" y="252" text-anchor="middle" fill="#1B2029" font-weight="600">Entrega Continua</text>
-                  <text x="412" y="272" text-anchor="middle" fill="#5B6472">• Empaquetado reproducible</text>
-                  <text x="412" y="288" text-anchor="middle" fill="#5B6472">• Deploy automático a QA</text>
-                  <text x="412" y="304" text-anchor="middle" fill="#5B6472">• Aprobación para producción</text>
-                  <text x="412" y="320" text-anchor="middle" fill="#8A5A00" font-weight="700">Sujeto a migración nube</text>
-                </g>
+          <!-- Slide E2-13: Brechas que cierra la metodología (Figura 4.2) [c2-brechas-cierra] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-item="c2-brechas-cierra" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+                <h2 style="margin-bottom:4px;">Del diagnóstico al cierre de brechas: cuatro conclusiones, cuatro resultados comprobables</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">De cada cierre resulta algo que se puede comprobar: historias con traza, código con una sola base, decisiones que siguen en las personas y documentación al día.</p>
+              </div>
+              <svg viewBox="0 0 1200 536" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Figura 4.2: cuatro brechas del diagnóstico, las fases de la metodología que las cierran y el resultado de cada cierre">
+              <defs>
+              <marker id="br-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker>
+              </defs>
+              <text x="160.0" y="22" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">1. Diagnóstico (E1): brechas actuales</text>
+              <text x="616.0" y="22" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">2. Metodología SDLC-IA con Aracne (E2)</text>
+              <text x="1056.0" y="22" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Brecha cerrada</text>
+              <rect x="356" y="38" width="79" height="26" rx="13" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.2" />
+              <text x="395.5" y="56" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Entender</text>
+              <rect x="441" y="38" width="71" height="26" rx="13" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.2" />
+              <text x="476.5" y="56" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Decidir</text>
+              <rect x="518" y="38" width="102" height="26" rx="13" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.2" />
+              <text x="569.0" y="56" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Descomponer</text>
+              <rect x="626" y="38" width="79" height="26" rx="13" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.2" />
+              <text x="665.5" y="56" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Traducir</text>
+              <rect x="711" y="38" width="86" height="26" rx="13" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.2" />
+              <text x="754.0" y="56" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Construir</text>
+              <rect x="803" y="38" width="64" height="26" rx="13" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.2" />
+              <text x="835.0" y="56" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Cerrar</text>
+              <rect x="0" y="80" width="320" height="100" rx="8" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.5" />
+              <text x="14" y="107" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Requerimientos sin desglose.</text>
+              <text x="14" y="130" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Actas extensas que no se</text>
+              <text x="14" y="150" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">descomponen en historias ni</text>
+              <text x="14" y="170" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">criterios, sin vínculo con el</text>
+              <text x="14" y="190" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">código.</text>
+              <rect x="356" y="80" width="520" height="100" rx="8" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.5" />
+              <text x="370" y="107" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Descomponer y Traducir.</text>
+              <text x="370" y="130" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Épicas e historias con criterios de aceptación; un contrato</text>
+              <text x="370" y="150" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">verificable por historia; traza requisito, historia,</text>
+              <text x="370" y="170" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">contrato.</text>
+              <rect x="912" y="80" width="288" height="100" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.5" />
+              <text x="926" y="110" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="600">Historias estimables y traza</text>
+              <text x="926" y="131" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="600">hasta el código; evidencia</text>
+              <text x="926" y="152" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="600">para auditoría.</text>
+              <path d="M320 130.0 L354 130.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#br-b)" />
+              <path d="M876 130.0 L910 130.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#br-b)" />
+              <rect x="0" y="194" width="320" height="100" rx="8" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.5" />
+              <text x="14" y="221" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Arquitectura sin estándar.</text>
+              <text x="14" y="244" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Sin arquitecto ni documento; cada</text>
+              <text x="14" y="264" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">desarrollador decide.</text>
+              <rect x="356" y="194" width="520" height="100" rx="8" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.5" />
+              <text x="370" y="221" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Decidir y Construir.</text>
+              <text x="370" y="244" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Arquitectura vinculante en el repositorio; Construir carga</text>
+              <text x="370" y="264" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">las reglas y la arquitectura.</text>
+              <rect x="912" y="194" width="288" height="100" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.5" />
+              <text x="926" y="224" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="600">Código homogéneo bajo una sola</text>
+              <text x="926" y="245" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="600">base.</text>
+              <path d="M320 244.0 L354 244.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#br-b)" />
+              <path d="M876 244.0 L910 244.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#br-b)" />
+              <rect x="0" y="308" width="320" height="100" rx="8" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.5" />
+              <text x="14" y="335" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">IA usada como chat.</text>
+              <text x="14" y="358" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Sin método ni política.</text>
+              <rect x="356" y="308" width="520" height="100" rx="8" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.5" />
+              <text x="370" y="335" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Construir y Cerrar con agentes.</text>
+              <text x="370" y="358" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Prueba por escenario, verificación contra el contrato y</text>
+              <text x="370" y="378" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">puertas humanas.</text>
+              <rect x="912" y="308" width="288" height="100" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.5" />
+              <text x="926" y="338" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="600">Capacidad ampliada; las</text>
+              <text x="926" y="359" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="600">decisiones siguen en las</text>
+              <text x="926" y="380" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="600">personas.</text>
+              <path d="M320 358.0 L354 358.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#br-b)" />
+              <path d="M876 358.0 L910 358.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#br-b)" />
+              <rect x="0" y="422" width="320" height="100" rx="8" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.5" />
+              <text x="14" y="449" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Documentación dispersa.</text>
+              <text x="14" y="472" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">SharePoint, Figma, correo y memoria</text>
+              <text x="14" y="492" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">de las personas.</text>
+              <rect x="356" y="422" width="520" height="100" rx="8" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.5" />
+              <text x="370" y="449" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Contexto, memoria y tablero.</text>
+              <text x="370" y="472" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Contexto del proyecto, memoria y tablero en el repositorio;</text>
+              <text x="370" y="492" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">épicas e historias en Azure Boards.</text>
+              <rect x="912" y="422" width="288" height="100" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.5" />
+              <text x="926" y="452" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="600">Documentación que se actualiza</text>
+              <text x="926" y="473" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="600">con el trabajo.</text>
+              <path d="M320 472.0 L354 472.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#br-b)" />
+              <path d="M876 472.0 L910 472.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#br-b)" />
               </svg>
+              <div class="mobile-alt">
+                <p class="sched-title">De cada brecha al resultado</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><span class="pill pill--partial">Brecha</span> <strong>Requerimientos sin desglose.</strong> Actas extensas que no se descomponen en historias ni criterios, sin vínculo con el código.<br><span class="pill pill--ok">Metodología</span> <strong>Descomponer y Traducir.</strong> Épicas e historias con criterios de aceptación; un contrato verificable por historia; traza requisito, historia, contrato.<br><span class="pill pill--ok">Resultado</span> Historias estimables y traza hasta el código; evidencia para auditoría.</li>
+                  <li><span class="pill pill--partial">Brecha</span> <strong>Arquitectura sin estándar.</strong> Sin arquitecto ni documento; cada desarrollador decide.<br><span class="pill pill--ok">Metodología</span> <strong>Decidir y Construir.</strong> Arquitectura vinculante en el repositorio; Construir carga las reglas y la arquitectura.<br><span class="pill pill--ok">Resultado</span> Código homogéneo bajo una sola base.</li>
+                  <li><span class="pill pill--partial">Brecha</span> <strong>IA usada como chat.</strong> Sin método ni política.<br><span class="pill pill--ok">Metodología</span> <strong>Construir y Cerrar con agentes.</strong> Prueba por escenario, verificación contra el contrato y puertas humanas.<br><span class="pill pill--ok">Resultado</span> Capacidad ampliada; las decisiones siguen en las personas.</li>
+                  <li><span class="pill pill--partial">Brecha</span> <strong>Documentación dispersa.</strong> SharePoint, Figma, correo y memoria de las personas.<br><span class="pill pill--ok">Metodología</span> <strong>Contexto, memoria y tablero.</strong> Contexto del proyecto, memoria y tablero en el repositorio; épicas e historias en Azure Boards.<br><span class="pill pill--ok">Resultado</span> Documentación que se actualiza con el trabajo.</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Figura 4.2 — Brechas del diagnóstico de E1, fases de la metodología SDLC-IA que las cierran y resultado de cada cierre (ámbar: brecha; azul: metodología; verde: resultado)</figcaption>
+            </figure>
+          </article>
+
+          <!-- Slide E2-14: Instalación y distribución (Figura 4.3 y Tabla 4.5) [c2-instalacion] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-item="c2-instalacion" data-tone="amber">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+                <h2 style="margin-bottom:4px;">Instalación y distribución de la metodología: repositorio privado o sandbox</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Por la cláusula vigésima cuarta la metodología pertenece a ATENEA y la Agencia decide quién la usa; cada opción la protege en un momento distinto.</p>
+              </div>
+              <svg viewBox="0 0 1200 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Figura 4.3: dos opciones para distribuir la metodología, instalación local desde un repositorio privado o sandbox de ATENEA, con sus ventajas y desventajas">
+              <defs>
+              <marker id="ds-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker>
+              <marker id="ds-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#B07A12" /></marker>
+              </defs>
+              <rect x="0" y="0" width="588" height="556" rx="10" fill="#FBFCFE" stroke="#2C6B87" stroke-width="1.6" stroke-dasharray="6,4" />
+              <text x="16" y="28" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Opción 1. Instalación local desde un repositorio privado</text>
+              <rect x="14" y="48.0" width="232" height="80" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.5" />
+              <text x="130" y="67.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">Repositorio privado de</text>
+              <text x="130" y="85.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">ATENEA</text>
+              <text x="130" y="102.5" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">acceso solo para quien la</text>
+              <text x="130" y="118.0" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Agencia autorice</text>
+              <path d="M130 128.0 L130 153.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#ds-b)" />
+              <text x="138" y="144.5" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">descarga</text>
+              <rect x="14" y="153.0" width="232" height="80" rx="6" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.5" />
+              <text x="130" y="181.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">Script de instalación</text>
+              <text x="130" y="198.5" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">.sh en Linux y macOS, .ps1 en</text>
+              <text x="130" y="214.0" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Windows</text>
+              <path d="M130 233.0 L130 258.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#ds-b)" />
+              <text x="138" y="249.5" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">instala</text>
+              <rect x="14" y="258.0" width="232" height="80" rx="6" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.5" />
+              <text x="130" y="294.2" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">Equipo del desarrollador</text>
+              <text x="130" y="311.2" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">metodología instalada</text>
+              <path d="M130 338.0 L130 363.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#ds-b)" />
+              <rect x="14" y="363.0" width="232" height="80" rx="6" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.5" />
+              <text x="130" y="391.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">Validación periódica</text>
+              <text x="130" y="408.5" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">¿la persona sigue en la</text>
+              <text x="130" y="424.0" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">organización?</text>
+              <path d="M130 443.0 L130 468.0" stroke="#B07A12" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ds-a)" />
+              <text x="138" y="459.5" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">no</text>
+              <rect x="14" y="468.0" width="232" height="80" rx="6" fill="#FFF7ED" stroke="#B07A12" stroke-width="1.5" />
+              <text x="130" y="487.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">Aviso a los</text>
+              <text x="130" y="505.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">administradores de ATENEA</text>
+              <text x="130" y="522.5" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">si alguien ajeno a la</text>
+              <text x="130" y="538.0" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">organización la usa</text>
+              <text x="266" y="60" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Ventajas</text>
+              <text x="266" y="84" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">+</text>
+              <text x="282" y="84" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">El desarrollador trabaja en su propio</text>
+              <text x="282" y="101" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">entorno, sin latencia de red.</text>
+              <text x="266" y="134" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">+</text>
+              <text x="282" y="134" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">La instalación es repetible en Linux,</text>
+              <text x="282" y="151" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">macOS y Windows.</text>
+              <text x="266" y="184" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">+</text>
+              <text x="282" y="184" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">ATENEA controla las versiones y decide</text>
+              <text x="282" y="201" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">quién accede al repositorio.</text>
+              <text x="266" y="234" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">+</text>
+              <text x="282" y="234" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">No requiere infraestructura de cómputo</text>
+              <text x="282" y="251" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">adicional.</text>
+              <text x="266" y="294" fill="#B07A12" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Desventajas</text>
+              <text x="266" y="318" fill="#B07A12" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">−</text>
+              <text x="282" y="318" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Los archivos instalados quedan en el</text>
+              <text x="282" y="335" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">equipo y pueden copiarse.</text>
+              <text x="266" y="368" fill="#B07A12" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">−</text>
+              <text x="282" y="368" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">La validación detecta el uso indebido,</text>
+              <text x="282" y="385" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">pero no lo impide.</text>
+              <text x="266" y="418" fill="#B07A12" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">−</text>
+              <text x="282" y="418" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">La validación necesita conexión y el</text>
+              <text x="282" y="435" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">script local puede modificarse.</text>
+              <text x="266" y="468" fill="#B07A12" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">−</text>
+              <text x="282" y="468" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Hay que mantener dos scripts, uno por</text>
+              <text x="282" y="485" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">sistema operativo.</text>
+              <rect x="612" y="0" width="588" height="556" rx="10" fill="#FBFCFE" stroke="#1E5631" stroke-width="1.6" stroke-dasharray="6,4" />
+              <text x="628" y="28" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Opción 2. Sandbox de ATENEA</text>
+              <rect x="626" y="48.0" width="232" height="92" rx="6" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.5" />
+              <text x="742" y="98.0" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">Desarrollador</text>
+              <path d="M742 140.0 L742 184.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#ds-b)" />
+              <rect x="626" y="184.0" width="232" height="92" rx="6" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.5" />
+              <text x="742" y="217.2" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">Credenciales</text>
+              <text x="742" y="235.2" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">institucionales de ATENEA</text>
+              <text x="742" y="252.2" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">inicia sesión</text>
+              <path d="M742 276.0 L742 320.0" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#ds-b)" />
+              <text x="750" y="302.0" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">da acceso</text>
+              <rect x="626" y="320.0" width="232" height="92" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.5" />
+              <text x="742" y="346.8" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">Sandbox de ATENEA</text>
+              <text x="742" y="363.8" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">la metodología se usa dentro;</text>
+              <text x="742" y="379.2" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">el código y los archivos no</text>
+              <text x="742" y="394.8" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">salen de él</text>
+              <path d="M742 412.0 L742 456.0" stroke="#B07A12" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ds-a)" />
+              <text x="750" y="438.0" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">revoca</text>
+              <rect x="626" y="456.0" width="232" height="92" rx="6" fill="#FFF7ED" stroke="#B07A12" stroke-width="1.5" />
+              <text x="742" y="490.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">Retiro del equipo</text>
+              <text x="742" y="507.5" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">se desactivan las credenciales</text>
+              <text x="742" y="523.0" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">y se pierde el acceso</text>
+              <text x="878" y="60" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Ventajas</text>
+              <text x="878" y="84" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">+</text>
+              <text x="894" y="84" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">La metodología y el código no salen de la</text>
+              <text x="894" y="101" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">infraestructura de ATENEA.</text>
+              <text x="878" y="134" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">+</text>
+              <text x="894" y="134" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Al desactivar las credenciales, el acceso</text>
+              <text x="894" y="151" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">se pierde de inmediato.</text>
+              <text x="878" y="184" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">+</text>
+              <text x="894" y="184" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Todo el equipo usa el mismo entorno y la</text>
+              <text x="894" y="201" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">misma versión.</text>
+              <text x="878" y="234" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">+</text>
+              <text x="894" y="234" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">El uso queda registrado y puede auditarse</text>
+              <text x="894" y="251" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">(cláusula vigésima novena).</text>
+              <text x="878" y="294" fill="#B07A12" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Desventajas</text>
+              <text x="878" y="318" fill="#B07A12" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">−</text>
+              <text x="894" y="318" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">ATENEA debe aprovisionar y operar el</text>
+              <text x="894" y="335" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">sandbox, con un costo recurrente.</text>
+              <text x="878" y="368" fill="#B07A12" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">−</text>
+              <text x="894" y="368" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Sin conexión no se puede trabajar y la</text>
+              <text x="894" y="385" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">red añade latencia.</text>
+              <text x="878" y="418" fill="#B07A12" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">−</text>
+              <text x="894" y="418" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">El desarrollador adapta su flujo de</text>
+              <text x="894" y="435" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">trabajo a un entorno remoto.</text>
+              <text x="878" y="468" fill="#B07A12" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">−</text>
+              <text x="894" y="468" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Una falla del sandbox detiene a todo el</text>
+              <text x="894" y="485" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">equipo.</text>
+              </svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Dos opciones de distribución</p>
+                <p style="margin:8px 0 2px;"><strong>Opción 1. Repositorio privado y script de instalación</strong></p><p style="margin:0 0 4px;">Repositorio privado de ATENEA → Script de instalación → Equipo del desarrollador → Validación periódica → Aviso a los administradores de ATENEA.</p><ul class="slide-list" style="margin:8px 0;">
+                  <li><span class="pill pill--ok">Ventaja</span> El desarrollador trabaja en su propio entorno, sin latencia de red.</li>
+                  <li><span class="pill pill--ok">Ventaja</span> La instalación es repetible en Linux, macOS y Windows.</li>
+                  <li><span class="pill pill--ok">Ventaja</span> ATENEA controla las versiones y decide quién accede al repositorio.</li>
+                  <li><span class="pill pill--ok">Ventaja</span> No requiere infraestructura de cómputo adicional.</li>
+                  <li><span class="pill pill--partial">Desventaja</span> Los archivos instalados quedan en el equipo y pueden copiarse.</li>
+                  <li><span class="pill pill--partial">Desventaja</span> La validación detecta el uso indebido, pero no lo impide.</li>
+                  <li><span class="pill pill--partial">Desventaja</span> La validación necesita conexión y el script local puede modificarse.</li>
+                  <li><span class="pill pill--partial">Desventaja</span> Hay que mantener dos scripts, uno por sistema operativo.</li>
+                </ul><p style="margin:8px 0 2px;"><strong>Opción 2. Sandbox de ATENEA</strong></p><p style="margin:0 0 4px;">Desarrollador → Credenciales institucionales de ATENEA → Sandbox de ATENEA → Retiro del equipo.</p><ul class="slide-list" style="margin:8px 0;">
+                  <li><span class="pill pill--ok">Ventaja</span> La metodología y el código no salen de la infraestructura de ATENEA.</li>
+                  <li><span class="pill pill--ok">Ventaja</span> Al desactivar las credenciales, el acceso se pierde de inmediato.</li>
+                  <li><span class="pill pill--ok">Ventaja</span> Todo el equipo usa el mismo entorno y la misma versión.</li>
+                  <li><span class="pill pill--ok">Ventaja</span> El uso queda registrado y puede auditarse (cláusula vigésima novena).</li>
+                  <li><span class="pill pill--partial">Desventaja</span> ATENEA debe aprovisionar y operar el sandbox, con un costo recurrente.</li>
+                  <li><span class="pill pill--partial">Desventaja</span> Sin conexión no se puede trabajar y la red añade latencia.</li>
+                  <li><span class="pill pill--partial">Desventaja</span> El desarrollador adapta su flujo de trabajo a un entorno remoto.</li>
+                  <li><span class="pill pill--partial">Desventaja</span> Una falla del sandbox detiene a todo el equipo.</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Figura 4.3 — Opciones para distribuir la metodología al equipo de desarrollo: instalación local desde un repositorio privado de ATENEA, con validación periódica de la pertenencia a la organización, o uso dentro de un sandbox de la Agencia (ventajas y desventajas: Tabla 4.5)</figcaption>
+            </figure>
+          </article>
+
+          <!-- Slide E2-15: Ruta de adopción (§4.8) -->
+          <article class="slide" data-deck="e1-e4" data-module="e2" data-item="c2-ruta" data-caption-source="§4.8">
+            <div class="slide-content">
+              <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+              <h2>Ruta de adopción: cuatro pasos desde una demostración hasta otros módulos</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Se empieza con una demostración:</strong> un requerimiento real de ATENEA descompuesto con el flujo.
+                </li>
+                <li>
+                  <strong>Luego se escribe el contexto</strong> del área del caso de uso con los documentos de arquitectura de la líder técnica.
+                </li>
+                <li>
+                  <strong>Se acuerdan los límites del agente:</strong> qué se envía a un modelo y con qué cuentas y permisos opera.
+                </li>
+                <li>
+                  <strong>Se extiende por porciones:</strong> primero una porción acotada del caso de uso y después otros módulos.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <svg viewBox="0 0 520 372" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ruta de adopción en cuatro pasos">
+              <defs>
+              <marker id="ru-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker>
+              </defs>
+              <rect x="4" y="4" width="512" height="80" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+              <circle cx="38" cy="44" r="20" fill="#7FB4CA" />
+              <text x="38" y="52" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="20" font-weight="700" text-anchor="middle">1</text>
+              <text x="70" y="34" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15.5">Con un requerimiento real de ATENEA, hacer un</text>
+              <text x="70" y="53" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15.5">ejercicio de descomposición como demostración.</text>
+              <path d="M38 84 L38 96" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#ru-b)" />
+              <rect x="4" y="96" width="512" height="80" rx="8" fill="#F8FAFC" stroke="#7AA89F" stroke-width="1.5" />
+              <circle cx="38" cy="136" r="20" fill="#7AA89F" />
+              <text x="38" y="144" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="20" font-weight="700" text-anchor="middle">2</text>
+              <text x="70" y="126" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15.5">Escribir el contexto del área del caso de uso con los</text>
+              <text x="70" y="145" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15.5">documentos de arquitectura que la líder técnica se</text>
+              <text x="70" y="164" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15.5">comprometió a preparar.</text>
+              <path d="M38 176 L38 188" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#ru-b)" />
+              <rect x="4" y="188" width="512" height="80" rx="8" fill="#F8FAFC" stroke="#B7CC85" stroke-width="1.5" />
+              <circle cx="38" cy="228" r="20" fill="#B7CC85" />
+              <text x="38" y="236" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="20" font-weight="700" text-anchor="middle">3</text>
+              <text x="70" y="218" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15.5">Acordar con ATENEA qué se envía a un modelo y con qué</text>
+              <text x="70" y="237" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15.5">cuentas y permisos opera el agente.</text>
+              <path d="M38 268 L38 280" stroke="#2C6B87" stroke-width="1.6" marker-end="url(#ru-b)" />
+              <rect x="4" y="280" width="512" height="80" rx="8" fill="#F8FAFC" stroke="#DFBD76" stroke-width="1.5" />
+              <circle cx="38" cy="320" r="20" fill="#DFBD76" />
+              <text x="38" y="328" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="20" font-weight="700" text-anchor="middle">4</text>
+              <text x="70" y="310" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15.5">Recorrer el ciclo completo en una porción acotada del</text>
+              <text x="70" y="329" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15.5">caso de uso y luego extender a otros módulos y</text>
+              <text x="70" y="348" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15.5">automatizar el despliegue.</text>
+              </svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Ruta de adopción</p>
+                <ol class="slide-list" style="margin:8px 0;">
+                  <li>Con un requerimiento real de ATENEA, hacer un ejercicio de descomposición como demostración.</li>
+                  <li>Escribir el contexto del área del caso de uso con los documentos de arquitectura que la líder técnica se comprometió a preparar.</li>
+                  <li>Acordar con ATENEA qué se envía a un modelo y con qué cuentas y permisos opera el agente.</li>
+                  <li>Recorrer el ciclo completo en una porción acotada del caso de uso y luego extender a otros módulos y automatizar el despliegue.</li>
+                </ol>
+              </div>
+              <figcaption class="fig-caption">Fuente: §4.8 — Ruta de adopción en cuatro pasos (sin tabla ni figura numerada en el informe)</figcaption>
             </figure>
           </article>
 
