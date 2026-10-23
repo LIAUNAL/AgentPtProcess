@@ -56,8 +56,8 @@
         </nav>
       </div>
 
-      <main class="deck-viewport">
-        <section class="stage">
+      <div class="stage-layout">
+        <main class="viewport" id="viewport">
           <!-- Slide 0: Portada E1-E4 -->
           <article
             class="slide is-cover is-active"
@@ -6002,33 +6002,32 @@
               <figcaption class="fig-caption">Fuente: Figura 2.1 y §4.8 — Hito 1 (S1 a S13) y Hito 2 (S14 a S22) con la ruta de adopción (el informe no tiene una sección de próximos pasos)</figcaption>
             </figure>
           </article>
-        </section>
-      </main>
+        </main>
+      </div>
 
-      <footer class="controls">
-        <button class="btn" id="prev" aria-label="Diapositiva anterior">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M15 18l-6-6 6-6"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+      <footer class="deck-controls">
+        <p class="running-title">
+          Informe Técnico E1–E4 · Contrato ATENEA-464-2026 · <abbr title="Universidad Nacional de Colombia">UNAL</abbr> Manizales / Agencia ATENEA.
+        </p>
+        <img
+          class="controls-logo controls-logo-unal"
+          src="assets/images/escudo_unal.png"
+          alt="Universidad Nacional de Colombia"
+        />
+        <img
+          class="controls-logo"
+          src="assets/images/logo_labIA.png"
+          alt="Laboratorio de Inteligencia Artificial UNAL"
+        />
+        <button type="button" id="prev" class="ghost" aria-label="Diapositiva anterior" title="Anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15 5 L8 12 L15 19" />
           </svg>
         </button>
-        <span class="counter" id="counter" aria-live="polite">1 / 26</span>
-        <button class="btn" id="next" aria-label="Diapositiva siguiente">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M9 18l6-6-6-6"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+        <span id="counter" aria-live="polite">01 / 63</span>
+        <button type="button" id="next" class="solid" aria-label="Diapositiva siguiente" title="Siguiente">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M9 5 L16 12 L9 19" />
           </svg>
         </button>
       </footer>
