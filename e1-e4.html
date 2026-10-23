@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20261023_1" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261023_2" />
   </head>
   <body class="view-deck">
     <div class="ambient"></div>
@@ -5636,121 +5636,120 @@
           <!-- MÓDULO 6: Decisiones, Compromisos y Cierre (Capítulo 7)                   -->
           <!-- ========================================================================= -->
 
-          <!-- Slide 24: Tres Decisiones Prioritarias de ATENEA -->
-          <article class="slide" data-deck="e1-e4" data-module="e5">
-            <div class="slide-content">
-              <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
-              <h2>Tres decisiones prioritarias que corresponden a la Agencia ATENEA</h2>
-              <ul class="slide-list">
-                <li>
-                  <strong>1. Selección formal del Caso de Uso (C3):</strong> Definir el proceso, la aplicación misional (Keycloak SSO o Creación de Terceros SICOR Posmedia) y el equipo técnico asignado para el piloto.
-                </li>
-                <li>
-                  <strong>2. Habilitación de accesos institucionales:</strong> Gestionar permisos en el gestor documental, Figma, Azure Boards, Azure Repos y los modelos de IA autorizados por la política de la entidad.
-                </li>
-                <li>
-                  <strong>3. Validación del Diagnóstico Institucional (E1):</strong> Emitir la conformidad formal sobre los hallazgos de capacidades técnicas, stack y puntos de fricción presentados en el informe.
-                </li>
-              </ul>
-            </div>
+          <!-- E5-1: Tres decisiones de ATENEA (§7.1) [c-cierre-decisiones] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e5" data-item="cierre-decisiones" data-caption-source="§7.1">
             <figure class="slide-figure">
-              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Las tres decisiones prioritarias a cargo de ATENEA">
-                <rect x="25" y="20" width="470" height="50" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
-                <text x="40" y="42" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">COMPROMISOS DECISIONALES DE LA AGENCIA ATENEA</text>
-                <text x="40" y="58" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Habilitadores críticos indispensables para iniciar la fase de construcción en Hito 2</text>
-
-                <!-- Decisión 1 -->
-                <rect x="25" y="85" width="470" height="74" rx="8" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.5" />
-                <rect x="35" y="97" width="28" height="24" rx="4" fill="#1E5631" />
-                <text x="49" y="113" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">D1</text>
-                <text x="75" y="108" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">Caso de Uso Misional Institucional (C3)</text>
-                <text x="75" y="126" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Formalizar la selección entre el servicio unificado Keycloak o Terceros Posmedia,</text>
-                <text x="75" y="142" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">definiendo el equipo de desarrollo contraparte y el proceso misional impactado.</text>
-
-                <!-- Decisión 2 -->
-                <rect x="25" y="172" width="470" height="74" rx="8" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.3" />
-                <rect x="35" y="184" width="28" height="24" rx="4" fill="#4E93B0" />
-                <text x="49" y="200" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">D2</text>
-                <text x="75" y="195" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">Accesos a Herramientas, Repositorios y Modelos de IA</text>
-                <text x="75" y="213" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Habilitar accesos del arnés a Azure Repos, Azure Boards, SharePoint y Figma,</text>
-                <text x="75" y="229" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">e indicar el proveedor/modelo autorizado (Claude Teams, OpenAI o Foundry).</text>
-
-                <!-- Decisión 3 -->
-                <rect x="25" y="259" width="470" height="74" rx="8" fill="#FFFFFF" stroke="#DFBD76" stroke-width="1.3" />
-                <rect x="35" y="271" width="28" height="24" rx="4" fill="#DFBD76" />
-                <text x="49" y="287" text-anchor="middle" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">D3</text>
-                <text x="75" y="282" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">Validación del Informe de Diagnóstico Institucional (E1)</text>
-                <text x="75" y="300" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Aprobación formal por parte de la supervisión técnica sobre los hallazgos de stack,</text>
-                <text x="75" y="316" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">roles, deuda técnica en Angular 13 y los 10 puntos de fricción identificados.</text>
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
+                <h2 style="margin-bottom:4px;">Tres decisiones que corresponden a ATENEA</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Sin estas decisiones el orquestador no se puede instalar ni probar con un caso real de la Agencia.</p>
+              </div>
+              <svg viewBox="-4 0 1208 350" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tres decisiones que corresponden a ATENEA: el caso de uso institucional, los accesos a las herramientas de su flujo y la validación del diagnóstico">
+<rect x="0" y="10" width="372" height="330" rx="12" fill="#FFFFFF" stroke="#1E5631" stroke-width="2" />
+<rect x="0" y="10" width="372" height="62" rx="12" fill="#1E5631" />
+<rect x="0" y="50" width="372" height="22" fill="#1E5631" />
+<text x="20" y="50" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="26" font-weight="700">Decisión 1</text>
+<text x="20" y="112" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Caso de uso institucional (C3)</text>
+<text x="20" y="148" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">Con su proceso, su aplicación</text>
+<text x="20" y="173" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">y sus responsables.</text>
+<text x="20" y="198" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17"></text>
+<text x="20" y="223" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">Cierra: la selección y el acta</text>
+<text x="20" y="248" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">del módulo elegido.</text>
+<line x1="20" y1="290" x2="352" y2="290" stroke="#BAC7D5" />
+<text x="20" y="312" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Habilita E3 · Tablas 5.2 a 5.9</text>
+<rect x="414" y="10" width="372" height="330" rx="12" fill="#FFFFFF" stroke="#4E93B0" stroke-width="2" />
+<rect x="414" y="10" width="372" height="62" rx="12" fill="#4E93B0" />
+<rect x="414" y="50" width="372" height="22" fill="#4E93B0" />
+<text x="434" y="50" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="26" font-weight="700">Decisión 2</text>
+<text x="434" y="112" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Accesos a las herramientas</text>
+<text x="434" y="138" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">de su flujo de trabajo</text>
+<text x="434" y="174" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">Gestor documental · diseño ·</text>
+<text x="434" y="199" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">requerimientos o tickets ·</text>
+<text x="434" y="224" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">repositorios · integración</text>
+<text x="434" y="249" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">y entrega.</text>
+<text x="434" y="274" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">Con ellos se instala y prueba.</text>
+<line x1="434" y1="290" x2="766" y2="290" stroke="#BAC7D5" />
+<text x="434" y="312" fill="#4E93B0" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Habilita E4 · orquestador</text>
+<rect x="828" y="10" width="372" height="330" rx="12" fill="#FFFFFF" stroke="#DFBD76" stroke-width="2" />
+<rect x="828" y="10" width="372" height="62" rx="12" fill="#DFBD76" />
+<rect x="828" y="50" width="372" height="22" fill="#DFBD76" />
+<text x="848" y="50" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="26" font-weight="700">Decisión 3</text>
+<text x="848" y="112" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Validación del diagnóstico</text>
+<text x="848" y="138" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">(capítulo 3)</text>
+<text x="848" y="174" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">Madurez, DORA, riesgos y</text>
+<text x="848" y="199" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">datos de E1: probabilidad,</text>
+<text x="848" y="224" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">impacto, responsables y</text>
+<text x="848" y="249" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="17">volumen de cada fuente.</text>
+<line x1="848" y1="290" x2="1180" y2="290" stroke="#BAC7D5" />
+<text x="848" y="312" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Cierra C1 · Tablas 3.3 a 3.10</text>
               </svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Decisiones de ATENEA</p>
+                <ol class="slide-list" style="margin:8px 0;">
+                  <li><strong>El caso de uso institucional (C3)</strong>, con su proceso, aplicación y responsables.</li>
+                  <li><strong>Los accesos a las herramientas de su flujo de trabajo</strong> (gestor documental, diseño, requerimientos o tickets, repositorios, integración y entrega), con los que se instalará y probará el orquestador.</li>
+                  <li><strong>La validación del diagnóstico</strong> del capítulo 3.</li>
+                </ol>
+              </div>
+              <figcaption class="fig-caption">Fuente: §7.1 — Decisiones que corresponden a ATENEA (sin figura ni tabla numerada en el informe)</figcaption>
             </figure>
           </article>
 
-          <!-- Slide 24: Matriz de Compromisos Abiertos (Tabla 7.1) -->
-          <article class="slide" data-deck="e1-e4" data-module="e5">
-            <div class="slide-content">
-              <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
-              <h2>Matriz de compromisos abiertos de las sesiones técnicas (Tabla 7.1)</h2>
-              <ul class="slide-list">
-                <li>
-                  <strong>Trazabilidad de actas técnicas:</strong> Compromisos derivados de las reuniones técnicas del 7, 14 y 16 de octubre de 2026 (Acta 01 y grabaciones).
-                </li>
-                <li>
-                  <strong>Habilitadores para el caso de uso:</strong> Se requiere recibir un requerimiento de ejemplo con su diseño validado y la estructura de carpetas de back-end y front-end de los proyectos.
-                </li>
-                <li>
-                  <strong>Seguridad y migración:</strong> La entrega del reporte de seguridad y la definición de la fase de migración a Azure determinan la arquitectura del pipeline CI/CD.
-                </li>
-              </ul>
-            </div>
+          <!-- E5-2: Información pendiente (1/2) [cierre-pendientes] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e5" data-item="cierre-pendientes">
             <figure class="slide-figure">
-              <div class="data-table-wrapper">
-                <table class="data-table">
-                  <caption>Tabla 7.1: Compromisos de las sesiones técnicas que condicionan E1 a E4 (tab:compromisos)</caption>
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
+                <h2 style="margin-bottom:4px;">Información pendiente para cerrar C1 a C4 (1/2)</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Lo que falta depende de información que solo tiene ATENEA; el informe marca cada dato como pendiente en lugar de suponerlo. Componentes C1 y C3.</p>
+              </div>
+              <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
+                <table class="data-table" style="font-size:clamp(0.7rem,min(1.2vw,2.25vh),1.55rem);">
+                  <caption>Tabla 7.1 — Información que debe aportar ATENEA para cerrar los componentes C1 a C4 (1/2)</caption>
                   <thead>
                     <tr>
-                      <th style="width:8%;">N.º</th>
-                      <th>Compromiso Registrado</th>
-                      <th style="width:22%;">Responsable</th>
-                      <th style="width:14%;">Origen</th>
-                      <th style="width:18%;">Estado al Corte</th>
+                      <th style="width:9%;font-size:0.82em;">Comp.</th>
+                      <th style="width:48%;font-size:0.82em;">Información</th>
+                      <th style="width:28%;font-size:0.82em;">Dónde se usa</th>
+                      <th style="font-size:0.82em;">Origen</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td><strong>1</strong></td>
-                      <td>Compartir un requerimiento de ejemplo real con su correspondiente diseño en Figma.</td>
-                      <td>ATENEA</td>
-                      <td>A4, R2</td>
-                      <td><span class="table-tag tag-amber">Abierto</span></td>
+                      <td data-label="Comp."><strong>C1</strong></td>
+                      <td data-label="Información"><span>Validación de la línea base de madurez y datos de despliegues, fallos y tiempos de recuperación</span></td>
+                      <td data-label="Dónde se usa"><span>Tablas 3.7 y 3.8</span></td>
+                      <td data-label="Origen"><span>R3, A4</span></td>
                     </tr>
                     <tr>
-                      <td><strong>2</strong></td>
-                      <td>Enviar el informe formal de la reciente revisión de seguridad de las aplicaciones.</td>
-                      <td>ATENEA</td>
-                      <td>R2</td>
-                      <td><span class="table-tag tag-amber">Abierto</span></td>
+                      <td data-label="Comp."><strong>C1</strong></td>
+                      <td data-label="Información"><span>Validación de la probabilidad, el impacto y los responsables de los riesgos técnicos</span></td>
+                      <td data-label="Dónde se usa"><span>Tabla 3.9</span></td>
+                      <td data-label="Origen"><span>A6</span></td>
                     </tr>
                     <tr>
-                      <td><strong>3</strong></td>
-                      <td>Definir el estado y alcance de la migración de nube a Azure.</td>
-                      <td>Subgerencia TIC</td>
-                      <td>A4</td>
-                      <td><span class="table-tag tag-blue">Parcial en R4</span></td>
+                      <td data-label="Comp."><strong>C1</strong></td>
+                      <td data-label="Información"><span>Responsable y volumen de cada fuente de datos, y si QA usa datos reales</span></td>
+                      <td data-label="Dónde se usa"><span>Tabla 3.10</span></td>
+                      <td data-label="Origen"><span>A1</span></td>
                     </tr>
                     <tr>
-                      <td><strong>4</strong></td>
-                      <td>Definir y comunicar oficialmente el caso de uso institucional (C3).</td>
-                      <td>ATENEA</td>
-                      <td>R3</td>
-                      <td><span class="table-tag tag-amber">Abierto</span></td>
+                      <td data-label="Comp."><strong>C1, C3</strong></td>
+                      <td data-label="Información"><span>Selección del caso de uso y acta y diseño del módulo elegido</span></td>
+                      <td data-label="Dónde se usa"><span>Secciones 5.4 a 5.12 y anexo E</span></td>
+                      <td data-label="Origen"><span>R2, R3</span></td>
                     </tr>
                     <tr>
-                      <td><strong>5</strong></td>
-                      <td>Enviar documento con información de proyectos y estructura de carpetas de front y back.</td>
-                      <td>ATENEA</td>
-                      <td>R3</td>
-                      <td><span class="table-tag tag-amber">Abierto</span></td>
+                      <td data-label="Comp."><strong>C3</strong></td>
+                      <td data-label="Información"><span>Proceso actual de la liquidación de apoyos económicos, con usuarios y volumen</span></td>
+                      <td data-label="Dónde se usa"><span>Sección 5.5 (Tabla 5.2)</span></td>
+                      <td data-label="Origen"><span>A6</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comp."><strong>C3</strong></td>
+                      <td data-label="Información"><span>Protocolo, autenticación y responsable de cada integración</span></td>
+                      <td data-label="Dónde se usa"><span>Tabla 5.7</span></td>
+                      <td data-label="Origen"><span>A6</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -5758,86 +5757,249 @@
             </figure>
           </article>
 
-          <!-- Slide 25: Hoja de Ruta Contractual hacia el Hito 2 -->
-          <article class="slide" data-deck="e1-e4" data-module="e5">
-            <div class="slide-content">
-              <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
-              <h2>Hoja de ruta: culminación del Hito 1 y transición hacia el Hito 2</h2>
-              <ul class="slide-list">
-                <li>
-                  <strong>Cierre exitoso del Hito 1 (Semanas 1 a 13):</strong> Diagnóstico institucional consolidado (E1), Metodología SDLC-IA formalizada (E2), Arquitectura End-to-End especificada (E3) y Sistema de Agentes y Skills estructurado (E4).
-                </li>
-                <li>
-                  <strong>Ruta operativa del Hito 2 (Semanas 14 a 22):</strong>
-                  <strong>E5:</strong> Construcción, despliegue y validación del caso de uso en ambiente objetivo.
-                  <strong>E6:</strong> Elaboración de manuales técnicos y operativos para independencia.
-                  <strong>E7:</strong> Talleres de capacitación, transferencia tecnológica y guías de replicabilidad.
-                  <strong>E8:</strong> Informe final, balance contractual y cierre de mutuo acuerdo.
-                </li>
-              </ul>
-            </div>
+          <!-- E5-3: Información pendiente (2/2) [cierre-pendientes] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e5" data-item="cierre-pendientes">
             <figure class="slide-figure">
-              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hoja de ruta contractual y transición entre Hito 1 e Hito 2">
-                <rect x="25" y="20" width="470" height="54" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
-                <text x="40" y="42" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">TRANSICIÓN CONTRACTUAL: HITO 1 → HITO 2 (SEMANAS 1 A 22)</text>
-                <text x="40" y="58" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Contrato Interadministrativo ATENEA-464-2026 &middot; $300.000.000 COP</text>
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
+                <h2 style="margin-bottom:4px;">Información pendiente para cerrar C1 a C4 (2/2)</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Lo que falta depende de información que solo tiene ATENEA; el informe marca cada dato como pendiente en lugar de suponerlo. Componentes C3, C2 y C4.</p>
+              </div>
+              <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
+                <table class="data-table" style="font-size:clamp(0.7rem,min(1.2vw,2.25vh),1.55rem);">
+                  <caption>Tabla 7.1 — Información que debe aportar ATENEA para cerrar los componentes C1 a C4 (2/2)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:9%;font-size:0.82em;">Comp.</th>
+                      <th style="width:48%;font-size:0.82em;">Información</th>
+                      <th style="width:28%;font-size:0.82em;">Dónde se usa</th>
+                      <th style="font-size:0.82em;">Origen</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Comp."><strong>C3</strong></td>
+                      <td data-label="Información"><span>Entidades y columnas del módulo para el juego de datos sintéticos</span></td>
+                      <td data-label="Dónde se usa"><span>Tabla 5.8</span></td>
+                      <td data-label="Origen"><span>A6</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comp."><strong>C2</strong></td>
+                      <td data-label="Información"><span>Designación del equipo y dedicación de cada rol</span></td>
+                      <td data-label="Dónde se usa"><span>Tabla 4.2</span></td>
+                      <td data-label="Origen"><span>A5</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comp."><strong>C2</strong></td>
+                      <td data-label="Información"><span>Validación de los umbrales de calidad y seguridad y adopción de la política de uso de IA</span></td>
+                      <td data-label="Dónde se usa"><span>Tabla 4.4 y anexo D</span></td>
+                      <td data-label="Origen"><span>R4</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comp."><strong>C2, C4</strong></td>
+                      <td data-label="Información"><span>Informe de la revisión de seguridad de las aplicaciones</span></td>
+                      <td data-label="Dónde se usa"><span>Tablas 3.9 y 6.4</span></td>
+                      <td data-label="Origen"><span>R2</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comp."><strong>C4</strong></td>
+                      <td data-label="Información"><span>Lista de servidores MCP y herramientas permitidas, y protección de ramas en Azure DevOps</span></td>
+                      <td data-label="Dónde se usa"><span>Tabla 6.4</span></td>
+                      <td data-label="Origen"><span>R4</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
 
-                <!-- Caja Hito 1 -->
-                <rect x="25" y="90" width="225" height="230" rx="10" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.8" />
-                <rect x="35" y="100" width="205" height="22" rx="4" fill="#1E5631" />
-                <text x="137" y="115" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">HITO 1: C1–C4 / E1–E4 (50%)</text>
+          <!-- E5-4: Compromisos registrados (Tabla 7.2) [cierre-compromisos] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e5" data-item="cierre-compromisos">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
+                <h2 style="margin-bottom:4px;">Compromisos registrados: cinco, todos con ATENEA o su Subgerencia de TIC</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Compromisos de las sesiones que afectan a E1 a E4, con su responsable y su estado al corte. <span class="pill pill--todo">Abierto</span> cuatro, <span class="pill pill--partial">Parcial en R4</span> uno.</p>
+              </div>
+              <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
+                <table class="data-table" style="font-size:clamp(0.78rem,min(1.3vw,2.5vh),1.65rem);">
+                  <caption>Tabla 7.2 — Compromisos de las sesiones que afectan a E1 a E4: responsable, origen y estado al corte</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:6%;font-size:0.82em;">N.º</th>
+                      <th style="width:46%;font-size:0.82em;">Compromiso</th>
+                      <th style="width:18%;font-size:0.82em;">Responsable</th>
+                      <th style="width:12%;font-size:0.82em;">Origen</th>
+                      <th style="font-size:0.82em;">Estado al corte</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="N.º"><strong>1</strong></td>
+                      <td data-label="Compromiso"><span>Compartir un requerimiento de ejemplo con su diseño</span></td>
+                      <td data-label="Responsable"><span>ATENEA</span></td>
+                      <td data-label="Origen"><span>A4, R2</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Abierto</span></span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>2</strong></td>
+                      <td data-label="Compromiso"><span>Enviar el informe de la revisión de seguridad</span></td>
+                      <td data-label="Responsable"><span>ATENEA</span></td>
+                      <td data-label="Origen"><span>R2</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Abierto</span></span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>3</strong></td>
+                      <td data-label="Compromiso"><span>Definir el estado de la migración</span></td>
+                      <td data-label="Responsable"><span>Subgerencia de TIC</span></td>
+                      <td data-label="Origen"><span>A4</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--partial" style="font-size:0.72em;">Parcial en R4</span></span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>4</strong></td>
+                      <td data-label="Compromiso"><span>Definir el caso de uso institucional (C3)</span></td>
+                      <td data-label="Responsable"><span>ATENEA</span></td>
+                      <td data-label="Origen"><span>R3</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Abierto</span></span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>5</strong></td>
+                      <td data-label="Compromiso"><span>Enviar un documento con la información actual de los proyectos y la estructura de carpetas de back-end y front-end, para entender la arquitectura de los desarrollos</span></td>
+                      <td data-label="Responsable"><span>ATENEA</span></td>
+                      <td data-label="Origen"><span>R3</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Abierto</span></span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
 
-                <g font-family="Space Grotesk,sans-serif" font-size="9">
-                  <rect x="35" y="132" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="45" y="148" fill="#1E5631" font-weight="700">E1 · Diagnóstico Institucional</text>
-                  <text x="45" y="162" fill="#5B6472">Capacidades TI, roles y puntos fricción</text>
-
-                  <rect x="35" y="178" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="45" y="194" fill="#1E5631" font-weight="700">E2 · Metodología SDLC-IA</text>
-                  <text x="45" y="208" fill="#5B6472">6 fases y 5 compuertas humanas</text>
-
-                  <rect x="35" y="224" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="45" y="240" fill="#1E5631" font-weight="700">E3 · Arquitectura End-to-End</text>
-                  <text x="45" y="254" fill="#5B6472">Arnés LIA UNAL y caso de uso</text>
-
-                  <rect x="35" y="270" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="45" y="286" fill="#1E5631" font-weight="700">E4 · Agentes y Skills</text>
-                  <text x="45" y="300" fill="#5B6472">Comandos CLI y reglas OpenSpec</text>
-                </g>
-
-                <!-- Flecha de transición -->
-                <path d="M250 205 H270" stroke="#1E5631" stroke-width="2.5" marker-end="url(#arrow-green)" />
-
-                <!-- Caja Hito 2 -->
-                <rect x="270" y="90" width="225" height="230" rx="10" fill="#F8FAFC" stroke="#4E93B0" stroke-width="1.8" />
-                <rect x="280" y="100" width="205" height="22" rx="4" fill="#4E93B0" />
-                <text x="382" y="115" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">HITO 2: C5–C8 / E5–E8 (50%)</text>
-
-                <g font-family="Space Grotesk,sans-serif" font-size="9">
-                  <rect x="280" y="132" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="290" y="148" fill="#2C6B87" font-weight="700">E5 · Despliegue y Piloto</text>
-                  <text x="290" y="162" fill="#5B6472">Construcción y validación misional</text>
-
-                  <rect x="280" y="178" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="290" y="194" fill="#2C6B87" font-weight="700">E6 · Documentación Operativa</text>
-                  <text x="290" y="208" fill="#5B6472">Manuales de instalación y operación</text>
-
-                  <rect x="280" y="224" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="290" y="240" fill="#2C6B87" font-weight="700">E7 · Workshop Transferencia</text>
-                  <text x="290" y="254" fill="#5B6472">Capacitación y guías replicabilidad</text>
-
-                  <rect x="280" y="270" width="205" height="38" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="290" y="286" fill="#2C6B87" font-weight="700">E8 · Informe Final y Cierre</text>
-                  <text x="290" y="300" fill="#5B6472">Matriz de verificación y balance</text>
-                </g>
-
-                <defs>
-                  <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1E5631" />
-                  </marker>
-                </defs>
-                <text x="260" y="340" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="9.5">Hito 1 vence Semana 13 ($150M) &middot; Hito 2 vence Semana 22 ($150M) &middot; Liquidación a 4 meses</text>
+          <!-- E5-5: Hoja de ruta Hito 1 a Hito 2 (Figura 2.1 y §4.8) [cierre-ruta] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e5" data-item="cierre-ruta" data-caption-source="Figura 2.1 y §4.8">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
+                <h2 style="margin-bottom:4px;">Hoja de ruta: del cierre del Hito 1 al Hito 2</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">El Hito 1 cierra C1 a C4 en la semana 13; el Hito 2 cubre C5 a C8 y vence en la semana 22. Cuatro pasos de adopción preparan el paso a otros módulos.</p>
+              </div>
+              <svg viewBox="-4 -4 1208 516" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hoja de ruta: el Hito 1 va de la semana 1 a la 13 y cierra C1 a C4; el Hito 2 va de la semana 14 a la 22 y cubre C5 a C8; debajo, los cuatro pasos de la ruta de adopción">
+<defs><marker id="rm-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker></defs>
+<text x="271.4" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S1</text>
+<text x="314.1" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S2</text>
+<text x="356.8" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S3</text>
+<text x="399.5" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S4</text>
+<text x="442.3" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S5</text>
+<text x="485.0" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S6</text>
+<text x="527.7" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S7</text>
+<text x="570.5" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S8</text>
+<text x="613.2" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S9</text>
+<text x="655.9" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S10</text>
+<text x="698.6" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S11</text>
+<text x="741.4" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S12</text>
+<text x="784.1" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S13</text>
+<text x="826.8" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S14</text>
+<text x="869.5" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S15</text>
+<text x="912.3" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S16</text>
+<text x="955.0" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S17</text>
+<text x="997.7" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S18</text>
+<text x="1040.5" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S19</text>
+<text x="1083.2" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S20</text>
+<text x="1125.9" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S21</text>
+<text x="1168.6" y="16" text-anchor="middle" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12">S22</text>
+<rect x="251.0" y="26" width="553.5" height="26" rx="4" fill="#1E5631" />
+<text x="260.0" y="45" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Hito 1 · C1 a C4 · semana 13</text>
+<rect x="806.5" y="26" width="382.5" height="26" rx="4" fill="#5B6472" />
+<text x="815.5" y="45" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Hito 2 · C5 a C8 · E5 a E8 · semana 22</text>
+<text x="8" y="76" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">E1 · Diagnóstico</text>
+<rect x="251.0" y="60" width="83.5" height="22" rx="4" fill="#9DB7C9" stroke="#2C6B87" stroke-opacity="0.6" />
+<text x="258.0" y="76" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">A2</text>
+<text x="8" y="105" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">E2 · Metodología SDLC-IA</text>
+<rect x="293.7" y="89" width="40.7" height="22" rx="4" fill="#7FB4CA" stroke="#2C6B87" stroke-opacity="0.6" />
+<text x="300.7" y="105" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">A3</text>
+<text x="8" y="134" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">E3 · Caso de uso y arquitectura</text>
+<rect x="293.7" y="118" width="83.5" height="22" rx="4" fill="#7FB4CA" stroke="#2C6B87" stroke-opacity="0.6" />
+<text x="300.7" y="134" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">A4</text>
+<text x="8" y="163" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">E4 · Agentes y arneses</text>
+<rect x="336.5" y="147" width="83.5" height="22" rx="4" fill="#B7CC85" stroke="#2C6B87" stroke-opacity="0.6" />
+<text x="343.5" y="163" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">A6 · A7</text>
+<text x="8" y="192" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">E4 · Integración en flujos</text>
+<rect x="421.9" y="176" width="126.2" height="22" rx="4" fill="#B7CC85" stroke="#2C6B87" stroke-opacity="0.6" />
+<text x="428.9" y="192" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">A9</text>
+<text x="8" y="221" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">E4 · Puesta en marcha</text>
+<rect x="507.4" y="205" width="126.2" height="22" rx="4" fill="#9DBB66" stroke="#2C6B87" stroke-opacity="0.6" />
+<text x="514.4" y="221" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">A10</text>
+<text x="8" y="250" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">E5 · Ingeniería de pruebas</text>
+<rect x="421.9" y="234" width="83.5" height="22" rx="4" fill="#7AA89F" stroke="#2C6B87" stroke-opacity="0.6" />
+<text x="428.9" y="250" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">A8</text>
+<text x="8" y="279" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">E5 · Despliegue piloto</text>
+<rect x="635.5" y="263" width="126.2" height="22" rx="4" fill="#7AA89F" stroke="#2C6B87" stroke-opacity="0.6" />
+<text x="642.5" y="279" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">A12</text>
+<text x="8" y="308" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">E5 · Validación y ajustes</text>
+<rect x="678.3" y="292" width="126.2" height="22" rx="4" fill="#5E9488" stroke="#2C6B87" stroke-opacity="0.6" />
+<text x="685.3" y="308" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">A13</text>
+<text x="8" y="337" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">E7 · Workshop 1</text>
+<rect x="550.1" y="321" width="40.7" height="22" rx="4" fill="#DFBD76" stroke="#2C6B87" stroke-opacity="0.6" />
+<text x="557.1" y="337" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">A11</text>
+<text x="8" y="366" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Hito 2 · A14 a A20</text>
+<rect x="806.5" y="350" width="382.5" height="22" rx="4" fill="#BAC7D5" stroke="#5B6472" stroke-opacity="0.6" />
+<text x="813.5" y="366" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">Ampliación, documentación, talleres y cierre</text>
+<line x1="805.5" y1="26" x2="805.5" y2="382" stroke="#1E5631" stroke-width="2.5" stroke-dasharray="5,4" />
+<line x1="1190.0" y1="26" x2="1190.0" y2="382" stroke="#8A5A00" stroke-width="2.5" stroke-dasharray="5,4" />
+<text x="799.5" y="398" text-anchor="end" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">H1c · hito 1 contractual</text>
+<text x="1184.0" y="398" text-anchor="end" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">H2 · hito 2 contractual</text>
+<text x="8" y="422" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Ruta de adopción (§4.8)</text>
+<rect x="0" y="434" width="282" height="68" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+<circle cx="26" cy="468" r="16" fill="#7FB4CA" />
+<text x="26" y="474" text-anchor="middle" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">1</text>
+<text x="52" y="460" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Demostración</text>
+<text x="52" y="479" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="13">con un requerimiento</text>
+<text x="52" y="494" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="13">real de ATENEA</text>
+<path d="M284 468 L304 468" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#rm-b)" />
+<rect x="306" y="434" width="282" height="68" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+<circle cx="332" cy="468" r="16" fill="#7FB4CA" />
+<text x="332" y="474" text-anchor="middle" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">2</text>
+<text x="358" y="460" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Contexto del área</text>
+<text x="358" y="479" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="13">con los documentos de</text>
+<text x="358" y="494" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="13">arquitectura</text>
+<path d="M590 468 L610 468" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#rm-b)" />
+<rect x="612" y="434" width="282" height="68" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+<circle cx="638" cy="468" r="16" fill="#7FB4CA" />
+<text x="638" y="474" text-anchor="middle" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">3</text>
+<text x="664" y="460" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Límites del agente</text>
+<text x="664" y="479" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="13">qué se envía a un modelo</text>
+<text x="664" y="494" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="13">y con qué permisos</text>
+<path d="M896 468 L916 468" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#rm-b)" />
+<rect x="918" y="434" width="282" height="68" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+<circle cx="944" cy="468" r="16" fill="#7FB4CA" />
+<text x="944" y="474" text-anchor="middle" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">4</text>
+<text x="970" y="460" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Porción acotada</text>
+<text x="970" y="479" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="13">del caso de uso y luego</text>
+<text x="970" y="494" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="13">otros módulos</text>
               </svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Hoja de ruta S1 a S22</p>
+                <p class="sched-h">Hito 1 · C1 a C4 · E1 a E4 · semana 13</p>
+                <ul class="slide-list" style="margin:6px 0;">
+                  <li><strong>E1</strong> Diagnóstico (A2) · S1-S2</li>
+                  <li><strong>E2</strong> Metodología SDLC-IA (A3) · S2</li>
+                  <li><strong>E3</strong> Caso de uso y arquitectura (A4) · S2-S3</li>
+                  <li><strong>E4</strong> Agentes, skills e integración (A6, A7, A9, A10) · S3-S9</li>
+                  <li>También corren en el Hito 1 las actividades de <strong>E5</strong> (A8, A12, A13) y <strong>E7</strong> (A11)</li>
+                </ul>
+                <p class="sched-h">Hito 2 · C5 a C8 · E5 a E8 · semana 22</p>
+                <ul class="slide-list" style="margin:6px 0;">
+                  <li><strong>A14 a A20</strong> Ampliación, documentación, talleres y cierre · S14-S22</li>
+                </ul>
+                <p class="sched-h">Ruta de adopción (§4.8)</p>
+                <ol class="slide-list" style="margin:6px 0;">
+                  <li>Demostración con un requerimiento real de ATENEA.</li>
+                  <li>Contexto del área con los documentos de arquitectura.</li>
+                  <li>Límites del agente: qué se envía a un modelo y con qué permisos.</li>
+                  <li>Porción acotada del caso de uso y luego otros módulos.</li>
+                </ol>
+              </div>
+              <figcaption class="fig-caption">Fuente: Figura 2.1 y §4.8 — Hito 1 (S1 a S13) y Hito 2 (S14 a S22) con la ruta de adopción (el informe no tiene una sección de próximos pasos)</figcaption>
             </figure>
           </article>
         </section>
@@ -5872,6 +6034,6 @@
       </footer>
     </div>
 
-    <script src="assets/js/app.js?v=20261023_1"></script>
+    <script src="assets/js/app.js?v=20261023_2"></script>
   </body>
 </html>
