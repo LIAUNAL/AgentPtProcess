@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Audit the E1-E4 deck (e1-e4.html) with Playwright.
 
-Checks: coverage manifest, rail navigation, projector layout, mobile rules.
+Checks: coverage manifest, rail navigation, projector layout (incl. table text >= 12px), mobile rules.
 
 Usage:
-    python3 scripts/audit_e1e4_deck.py [--only coverage|rail|layout|mobile] [--shots DIR]
+    python3 scripts/audit_e1e4_deck.py [--only coverage|rail|layout|mobile] [--shots DIR] [--target index|standalone]
 
 Exit code is non-zero when any check fails.
 """
@@ -42,6 +42,7 @@ MOBILE_PROFILES = {
 }
 
 MIN_SVG_TEXT_PX = 11
+MIN_TABLE_TEXT_PX = 12  # td computed size at projector viewports
 MIN_TAP_PX = 44
 MIN_DOT_PX = 32
 
@@ -92,6 +93,12 @@ def start_server():
             time.sleep(0.1)
     proc.kill()
     raise RuntimeError("http.server did not start")
+
+
+# Page under audit for layout and mobile checks; --target switches between the
+# standalone file and the live entry point (index.html with the deck selector).
+TARGETS = {"standalone": "e1-e4.html", "index": "index.html?deck=e1-e4"}
+TARGET = TARGETS["index"]
 
 
 def open_deck(browser, base, url, **ctx_kwargs):
@@ -187,7 +194,7 @@ def check_rail(browser, base, report):
         report.add(check, f"index.html?deck=e1-e4 has {n_index} slides, e1-e4.html has {n_std}")
 
 
-LAYOUT_JS = """() => {
+LAYOUT_JS = """(MIN_TD) => {
   const slide = slides[current];
   const out = [];
   const vw = innerWidth, vh = innerHeight;
@@ -209,6 +216,11 @@ LAYOUT_JS = """() => {
         out.push(`clipped-x ${label} (${el.scrollWidth}>${el.clientWidth})`);
     });
   });
+  // Table body text must stay legible when projected.
+  const minTd = Math.min(...Array.from(slide.querySelectorAll('.data-table td'))
+    .filter((td) => td.getBoundingClientRect().width > 0)
+    .map((td) => parseFloat(getComputedStyle(td).fontSize)));
+  if (minTd < MIN_TD) out.push(`table text ${minTd.toFixed(1)}px < ${MIN_TD}px`);
   // Captions must be visible inside the viewport.
   slide.querySelectorAll('figcaption, figure caption').forEach((c) => {
     const r = c.getBoundingClientRect();
@@ -244,10 +256,10 @@ def check_layout(browser, base, report, shots):
     check = "layout"
     report.touch(check)
     for w, h in DESKTOP_VIEWPORTS:
-        ctx, page = open_deck(browser, base, "e1-e4.html", viewport={"width": w, "height": h})
+        ctx, page = open_deck(browser, base, TARGET, viewport={"width": w, "height": h})
         for i in range(slide_count(page)):
             go_to(page, i)
-            for problem in page.evaluate(LAYOUT_JS):
+            for problem in page.evaluate(LAYOUT_JS, MIN_TABLE_TEXT_PX):
                 report.add(check, f"{w}x{h} {slide_label(page, i)}: {problem}")
             save_shot(page, shots, f"{w}x{h}", i)
         ctx.close()
@@ -320,7 +332,7 @@ def check_mobile(pw, browser, base, report, shots):
     for name, profile in MOBILE_PROFILES.items():
         kwargs = mobile_context_kwargs(pw, name, profile)
         kwargs["has_touch"] = True
-        ctx, page = open_deck(browser, base, "e1-e4.html", **kwargs)
+        ctx, page = open_deck(browser, base, TARGET, **kwargs)
         w = page.evaluate("innerWidth")
         tag = f"{name} {w}px"
         for problem in page.evaluate(CONTROLS_JS, [MIN_TAP_PX, MIN_DOT_PX]):
@@ -346,7 +358,11 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawTextHelpFormatter)
     ap.add_argument("--only", choices=["coverage", "rail", "layout", "mobile"])
     ap.add_argument("--shots", help="directory for per-slide PNG screenshots")
+    ap.add_argument("--target", choices=sorted(TARGETS), default="index",
+                    help="page used by the layout and mobile checks")
     args = ap.parse_args()
+    global TARGET
+    TARGET = TARGETS[args.target]
     wanted = lambda n: args.only in (None, n)
 
     report = Report()
