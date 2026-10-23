@@ -32,7 +32,7 @@ See `/home/carlos/.claude/plans/we-need-to-update-snuggly-summit.md` for:
 - [x] T1 Infrastructure:
   - [x] compute `data-first` at runtime in `app.js`
   - [x] add CSS for captions, status pills, mobile cards (`td[data-label]`), `.mobile-alt`, sticky first column and tap targets
-- [ ] T2 Contract module, then the E1 module (C1, plus the prioritized use case).
+- [x] T2 Contract module, then the E1 module (C1, plus the prioritized use case).
 - [ ] T3 E2 module (C2).
 - [ ] T4 E3 module (C3: 8 elements).
 - [ ] T5 E4 module (C4).
@@ -58,3 +58,9 @@ See `/home/carlos/.claude/plans/we-need-to-update-snuggly-summit.md` for:
 - Smoke: index.html?deck=kickoff (45 slides) and ?deck=e1-e4 (28) navigate with ArrowRight and rail click, no page errors.
 - CSS conventions for later tasks: `slide[data-item]`, `figcaption.fig-caption` ("Figura N.M — ..."), `table > caption`, `.mobile-alt` as direct child of `figure.slide-figure` next to the `svg`, `td[data-label]`, `.is-scroll-x` on wrapper for wide tables, `.pill` variants.
 
+
+### T2 (done)
+- Route: delegated direct (one writer; generated e0+e1 block into `scripts/build_e1_e4.py`, regenerated `e1-e4.html` and `index.html`).
+- Result: e0 = 6 slides, e1 = 14 slides (Tabla 3.3 split in two, Tabla 3.4 on its own slide for legibility); e3 use-case slide moved to e1 as SVG matrix without invented scores. Tables use inline `font-size:clamp(...)` tuned per table (no `dense`).
+- Checks: coverage -> c1-madurez/brechas/riesgos/datos PASS; c1-caso-uso FAIL only because the caption is "Fuente: §5.4 - ..." (no numbered table in the informe; slide carries `data-caption-source="§5.4"`, audit regex needs an exception). rail PASS. layout PASS (all viewports). mobile: zero failures on e0/e1; 35 remaining are e2-e5 slides (expected). presentador_deck.py: 0 errors.
+- Informe ambiguities: Tabla 3.3 says code is in Oracle Visual Builder while Fig 3.2 shows Azure DevOps under developers and Tabla 3.10 says "Oracle Cloud Service"; hito 1 groups E1-E4 but E4 also covers C5 (pago 2); §5.4 lists 3 candidates and 7 criteria but gives no per-candidate scores.
