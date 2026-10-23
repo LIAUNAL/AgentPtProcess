@@ -13,3 +13,4 @@ scripts/screenshots/
 scripts/audit_slides/
 scripts/detailed_audit/
 
+__pycache__/

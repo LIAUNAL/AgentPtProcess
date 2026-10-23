@@ -2301,3 +2301,356 @@ body.view-deck .deck-app {
   font-size: 0.82rem;
   color: var(--subtext);
 }
+
+/* ==========================================================================
+   Informe E1-E4: leyendas, pills de estado, alternativas móviles y tarjetas
+   Convenciones para el build:
+   - Leyenda: <figcaption class="fig-caption">Figura N.M — texto</figcaption>
+     (dentro de figure.slide-figure) o <caption> de la tabla: "Tabla N.M — texto".
+   - Pills: <span class="pill pill--ok|partial|todo|risk">.
+   - Alternativa móvil: <div class="mobile-alt"> hijo directo de figure.slide-figure,
+     hermano del <svg>; reemplaza al SVG en una columna (<=560px o vertical <=1000px).
+   - Tablas simples: <td data-label="Columna"> -> tarjetas apiladas a <=560px.
+   - Tablas anchas: .is-scroll-x en el wrapper (scroll horizontal, 1ª columna fija).
+   ========================================================================== */
+
+/* Figura con leyenda: el SVG toma el espacio restante y la leyenda queda visible */
+.slide-figure:has(> figcaption) {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.slide-figure:has(> figcaption) > svg,
+.slide-figure:has(> figcaption) > .data-table-wrapper,
+.slide-figure:has(> figcaption) > img {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: auto;
+}
+
+figcaption.fig-caption,
+.data-table caption {
+  flex: 0 0 auto;
+  font-size: clamp(0.78rem, 0.95vw, 1rem);
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  color: var(--subtext1);
+  padding: 2px 4px 4px;
+  caption-side: bottom;
+}
+
+/* Pills de estado */
+.pill {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background: var(--gray2);
+  color: var(--subtext1);
+}
+
+.pill--ok {
+  background: rgba(46, 125, 50, 0.14);
+  border-color: rgba(46, 125, 50, 0.35);
+  color: #1f5f27;
+}
+
+.pill--partial {
+  background: rgba(223, 189, 118, 0.3);
+  border-color: rgba(138, 90, 0, 0.35);
+  color: #6b4a00;
+}
+
+.pill--todo {
+  background: var(--gray2);
+  border-color: var(--line-strong);
+  color: var(--subtext1);
+}
+
+.pill--risk {
+  background: rgba(203, 124, 148, 0.25);
+  border-color: rgba(138, 42, 69, 0.4);
+  color: #8a2a45;
+}
+
+/* Alternativa móvil (generaliza .schedule-mobile) */
+.mobile-alt {
+  display: none;
+  min-width: 0;
+  max-width: 100%;
+  padding: 6px 4px 2px;
+  background: var(--figure-bg);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-aspect-ratio: 1 / 1) and (max-width: 1000px), (max-width: 560px), (max-width: 1040px) {
+  .slide.is-figure-full .slide-figure:has(> .mobile-alt) {
+    height: auto;
+    overflow: visible;
+  }
+}
+
+@media (max-aspect-ratio: 1 / 1) and (max-width: 1000px), (max-width: 560px) {
+  .slide-figure > .mobile-alt {
+    display: block;
+  }
+
+  .slide-figure:has(> .mobile-alt) > svg {
+    display: none;
+  }
+}
+
+@media (max-width: 1040px) {
+  .slide.is-figure-full .slide-figure > .mobile-alt {
+    display: block;
+  }
+
+  .slide.is-figure-full .slide-figure:has(> .mobile-alt) > svg {
+    display: none;
+  }
+}
+
+/* Tablas anchas: scroll horizontal con primera columna fija y pista de scroll */
+.data-table-wrapper.is-scroll-x,
+.is-scroll-x > .data-table-wrapper {
+  overflow-x: auto;
+  background:
+    linear-gradient(to right, var(--figure-bg, #fff) 30%, rgba(255, 255, 255, 0)) left center / 28px 100% no-repeat local,
+    linear-gradient(to left, var(--figure-bg, #fff) 30%, rgba(255, 255, 255, 0)) right center / 28px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, rgba(30, 41, 59, 0.22), rgba(30, 41, 59, 0)) left center / 12px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, rgba(30, 41, 59, 0.22), rgba(30, 41, 59, 0)) right center / 12px 100% no-repeat scroll,
+    var(--figure-bg, #fff);
+}
+
+.is-scroll-x .data-table,
+.data-table.is-scroll-x {
+  min-width: 640px;
+}
+
+.is-scroll-x .data-table th:first-child,
+.is-scroll-x .data-table td:first-child,
+.data-table.is-scroll-x th:first-child,
+.data-table.is-scroll-x td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--figure-bg, #fff);
+  box-shadow: 1px 0 0 var(--line, #d4dce7);
+}
+
+.is-scroll-x .data-table th:first-child,
+.data-table.is-scroll-x th:first-child {
+  background: var(--gray2, #eaeff5);
+  z-index: 3;
+}
+
+/* Tablas simples como tarjetas apiladas (requieren td[data-label]) */
+@media (max-width: 560px) {
+  .data-table:not(.is-scroll-x):has(td[data-label]) {
+    display: block;
+    min-width: 0;
+  }
+
+  .data-table:not(.is-scroll-x):has(td[data-label]) thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .data-table:not(.is-scroll-x):has(td[data-label]) tbody,
+  .data-table:not(.is-scroll-x):has(td[data-label]) tr {
+    display: block;
+  }
+
+  .data-table:not(.is-scroll-x):has(td[data-label]) tr {
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    border: 1px solid var(--line, #d4dce7);
+    border-radius: 12px;
+    background: var(--gray0, #fff);
+  }
+
+  .data-table:not(.is-scroll-x):has(td[data-label]) td {
+    /* Bloque con la etiqueta posicionada: el texto, el código y las pills de la
+       celda fluyen en línea (una grilla los partiría en filas separadas). */
+    display: block;
+    position: relative;
+    padding: 5px 0 5px max(92px, calc(36% + 8px));
+    min-height: 1.4em;
+    font-size: 0.92rem;
+    line-height: 1.4;
+    border-bottom: 1px solid var(--line, #d4dce7);
+    overflow-wrap: anywhere;
+  }
+
+  .data-table:not(.is-scroll-x):has(td[data-label]) td:last-child {
+    border-bottom: none;
+  }
+
+  .data-table:not(.is-scroll-x):has(td[data-label]) td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: max(84px, 36%);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent, #8a5a00);
+  }
+
+  .data-table:not(.is-scroll-x) caption {
+    display: block;
+  }
+}
+
+/* Áreas táctiles: >=44px en títulos/botones, hit area ampliada en los puntos */
+@media (pointer: coarse), (max-width: 560px) {
+  .rail-title,
+  .deck-selector-btn,
+  .deck-controls button,
+  button.btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .rail-title {
+    display: inline-flex;
+    align-items: center;
+    padding-inline: 10px;
+  }
+
+  .rail-dots {
+    gap: 0;
+  }
+
+  /* Punto visible de 7px dentro de una caja de 32px (padding + background-clip) */
+  .rail-pip {
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    padding: 12px;
+    background-clip: content-box;
+    border: 0;
+    background-color: transparent;
+    position: relative;
+  }
+
+  .rail-pip::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border-radius: 999px;
+    border: 1px solid var(--line-strong);
+  }
+
+  .rail-pip.is-active {
+    background-color: transparent;
+  }
+
+  .rail-pip.is-active::before {
+    background: var(--mode-bg);
+    border-color: var(--mode-bg);
+  }
+
+  .rail {
+    max-height: none;
+  }
+}
+
+/* Márgenes seguros (notch) y sin scroll horizontal en móvil */
+@media (max-width: 560px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .deck-app {
+    padding-top: max(8px, env(safe-area-inset-top));
+    padding-right: max(8px, env(safe-area-inset-right));
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+    padding-left: max(8px, env(safe-area-inset-left));
+  }
+
+  .slide-figure,
+  .mobile-alt {
+    max-width: 100%;
+  }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  .deck-app {
+    padding-left: max(6px, env(safe-area-inset-left));
+    padding-right: max(6px, env(safe-area-inset-right));
+  }
+}
+
+/* Móvil horizontal (poca altura): el SVG quedaría con texto < 11px; se usa la alternativa HTML */
+@media (max-height: 520px) and (orientation: landscape) {
+  .slide-figure > .mobile-alt {
+    display: block;
+    overflow-y: auto;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .slide-figure:has(> .mobile-alt) > svg {
+    display: none;
+  }
+
+  .slide-figure:has(> .mobile-alt) {
+    overflow-y: auto;
+  }
+
+  .slide.is-figure-full .slide-figure:has(> .mobile-alt) {
+    height: 100%;
+  }
+}
+
+/* Ajuste en tiempo de ejecución (app.js, fitSlide): filas más compactas al llegar al mínimo de texto */
+.data-table.is-tight td,
+.data-table.is-tight th {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  line-height: 1.25;
+}
+
+.slide-content.is-compact .slide-list {
+  font-size: 0.88rem;
+  line-height: 1.36;
+}
+
+.slide-content.is-compact .slide-list li {
+  margin-bottom: 0.25em;
+}
+
+/* Proyector: la cuadrícula de dos figuras toma el alto restante y el SVG se reduce a ese alto */
+@media (min-width: 1041px) and (min-aspect-ratio: 1 / 1) {
+  .slide-figure:has(> .fit-grid) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slide-figure > .fit-grid {
+    grid-template-rows: minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .fit-grid > figure {
+    height: 100%;
+  }
+}

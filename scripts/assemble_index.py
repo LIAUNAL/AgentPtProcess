@@ -129,18 +129,18 @@ def main():
           <div class="hub-card" data-deck="e1-e4">
             <div class="hub-card-header">
               <span class="hub-card-tag">HITO 1 CONTRACTUAL</span>
-              <span class="hub-card-meta">27 Diapositivas &middot; 6 Módulos</span>
+              <span class="hub-card-meta">64 Diapositivas &middot; 6 Módulos</span>
             </div>
             <div>
               <h2 class="hub-card-title">Informe Técnico E1–E4: Avance de Hito 1</h2>
-              <p class="hub-card-desc">Resultados contractuales al 21 de octubre de 2026: Diagnóstico de capacidades y deuda técnica (E1), Metodología SDLC-IA y 5 puertas humanas (E2), Arquitectura End-to-End (E3) y Sistema de Agentes y Skills (E4), con diagramas de flujo y tablas técnicas completas.</p>
+              <p class="hub-card-desc">Avance del Hito 1 alineado con el informe técnico (corte al 21 de octubre de 2026): diagnóstico de E1 (madurez, DORA, riesgos y datos), metodología SDLC-IA con 7 puntos de control humano (E2), los ocho elementos del caso de uso y la arquitectura del arnés (E3), Aracne-SDLC-AI 0.9.0 con agentes, comandos, instalación, seguridad y trazabilidad (E4), y las decisiones, la información pendiente y los compromisos de ATENEA. Funciona también en el celular.</p>
             </div>
             <ul class="hub-card-pills">
               <li>Contrato &amp; Alcance</li>
-              <li>E1 · Diagnóstico SICOR</li>
-              <li>E2 · Metodología SDLC-IA</li>
-              <li>E3 · Arquitectura Arnés</li>
-              <li>E4 · Comandos &amp; Skills</li>
+              <li>C1 · E1 Diagnóstico</li>
+              <li>C2 · E2 Metodología SDLC-IA</li>
+              <li>C3 · E3 Arquitectura y caso de uso</li>
+              <li>C4 · E4 Aracne-SDLC-AI 0.9.0</li>
               <li>Decisiones &amp; Cierre</li>
             </ul>
             <button class="hub-card-btn" type="button" data-deck="e1-e4">
@@ -168,11 +168,12 @@ def main():
         insert_hub_idx = ambient_idx + len('<div class="ambient"></div>')
         mod_kickoff = mod_kickoff[:insert_hub_idx] + "\n" + hub_view_html + "\n" + mod_kickoff[insert_hub_idx:]
     else:
-        script_idx = mod_kickoff.find('<script src="assets/js/app.js">')
+        script_idx = mod_kickoff.find('<script src="assets/js/app.js"')
         mod_kickoff = mod_kickoff[:script_idx] + hub_view_html + "\n\n    " + mod_kickoff[script_idx:]
 
     # 9. Actualizar versión en CSS link
-    mod_kickoff = re.sub(r'href="assets/css/styles.css\?v=[^"]*"', 'href="assets/css/styles.css?v=20261022_3"', mod_kickoff)
+    mod_kickoff = re.sub(r'src="assets/js/app.js[^"]*"', 'src="assets/js/app.js?v=20261023_4"', mod_kickoff)
+    mod_kickoff = re.sub(r'href="assets/css/styles.css\?v=[^"]*"', 'href="assets/css/styles.css?v=20261023_4"', mod_kickoff)
 
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(mod_kickoff)

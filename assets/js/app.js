@@ -148,6 +148,66 @@ function updateChrome() {
   }
 }
 
+// --------------------------------------------------------------------------
+// Ajuste de tablas al alto disponible (proyector)
+// --------------------------------------------------------------------------
+// Cada tabla trae un tamaño de letra inline pensado para el viewport. Con el
+// riel y el pie reales ese tamaño puede no caber en 1366x768 o 1280x720, así
+// que para la diapositiva activa se reduce el texto en pasos de 0.5px hasta
+// que el wrapper (y su figura) dejen de desbordar. Piso: 12px; si aun así no
+// cabe se compactan los paddings (.is-tight). Solo aplica a tablas HTML (los
+// SVG ya escalan) y no en móvil: columna única (<=560px o vertical <=1000px)
+// y horizontal corto (<560px de alto), donde la diapositiva hace scroll.
+const FIT_MIN_PX = 12;
+const FIT_STEP_PX = 0.5;
+const fitSkipQuery = window.matchMedia(
+  "(max-width: 560px), (max-aspect-ratio: 1 / 1) and (max-width: 1000px), (max-height: 559px)"
+);
+
+function tableOverflows(table) {
+  const wrapper = table.closest(".data-table-wrapper");
+  const figure = table.closest(".slide-figure");
+  const content = table.closest(".slide-content");
+  const over = (el) => el && el.scrollHeight > el.clientHeight + 1;
+  return over(wrapper) || over(figure) || over(content);
+}
+
+function fitSlide(slide) {
+  // Solo el deck E1-E4 usa el ajuste; el Kick-off conserva su maquetación.
+  if (!slide || slide.dataset.deck !== "e1-e4") return;
+  // Columna de texto: si desborda con las tablas ya ajustadas, usa la lista compacta.
+  slide.querySelectorAll(".slide-content").forEach((el) => el.classList.remove("is-compact"));
+  slide.querySelectorAll(".data-table").forEach((table) => {
+    if (table.dataset.fitBase === undefined) table.dataset.fitBase = table.style.fontSize;
+    table.style.fontSize = table.dataset.fitBase;
+    table.classList.remove("is-tight");
+    if (fitSkipQuery.matches) return;
+    let px = Math.max(FIT_MIN_PX, parseFloat(getComputedStyle(table).fontSize));
+    table.style.fontSize = `${px}px`;
+    while (tableOverflows(table) && px > FIT_MIN_PX) {
+      px = Math.max(FIT_MIN_PX, px - FIT_STEP_PX);
+      table.style.fontSize = `${px}px`;
+    }
+    if (tableOverflows(table)) table.classList.add("is-tight");
+  });
+  if (fitSkipQuery.matches) return;
+  slide.querySelectorAll(".slide-content").forEach((el) => {
+    if (el.scrollHeight > el.clientHeight + 1) el.classList.add("is-compact");
+  });
+}
+
+let fitFrame = null;
+function scheduleFit() {
+  if (fitFrame) cancelAnimationFrame(fitFrame);
+  fitFrame = requestAnimationFrame(() => {
+    fitFrame = null;
+    fitSlide(slides[current]);
+  });
+}
+window.addEventListener("resize", scheduleFit);
+window.addEventListener("orientationchange", scheduleFit);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(scheduleFit);
+
 function render(index, options = {}) {
   if (slides.length === 0) return;
   const { animate = true } = options;
@@ -190,6 +250,7 @@ function render(index, options = {}) {
     if (previousSlide) previousSlide.classList.remove("is-active");
     if (currentSlide) currentSlide.classList.add("is-active");
     updateChrome();
+    fitSlide(currentSlide);
     return;
   }
 
@@ -213,6 +274,7 @@ function render(index, options = {}) {
   }, 440);
 
   updateChrome();
+  fitSlide(currentSlide);
 }
 
 function initDeck(deckId) {
@@ -255,8 +317,12 @@ function initDeck(deckId) {
 
   railTitles.forEach((title) => {
     title.onclick = () => {
-      const firstSlide = Number(title.dataset.first);
-      if (Number.isFinite(firstSlide)) render(firstSlide);
+      // El destino se calcula del primer slide del deck activo cuyo data-module
+      // coincide con el módulo del rail; data-first queda solo como respaldo.
+      const moduleId = title.closest(".rail-module")?.dataset.module;
+      let target = slides.findIndex((s) => s.dataset.module === moduleId);
+      if (target < 0) target = Number(title.dataset.first);
+      if (Number.isFinite(target) && target >= 0) render(target);
     };
   });
 
