@@ -2484,10 +2484,12 @@ figcaption.fig-caption,
   }
 
   .data-table:not(.is-scroll-x):has(td[data-label]) td {
-    display: grid;
-    grid-template-columns: minmax(84px, 36%) minmax(0, 1fr);
-    gap: 8px;
-    padding: 5px 0;
+    /* Bloque con la etiqueta posicionada: el texto, el código y las pills de la
+       celda fluyen en línea (una grilla los partiría en filas separadas). */
+    display: block;
+    position: relative;
+    padding: 5px 0 5px max(92px, calc(36% + 8px));
+    min-height: 1.4em;
     font-size: 0.92rem;
     line-height: 1.4;
     border-bottom: 1px solid var(--line, #d4dce7);
@@ -2500,6 +2502,10 @@ figcaption.fig-caption,
 
   .data-table:not(.is-scroll-x):has(td[data-label]) td::before {
     content: attr(data-label);
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: max(84px, 36%);
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.04em;
