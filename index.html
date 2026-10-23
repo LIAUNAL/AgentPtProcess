@@ -8175,201 +8175,969 @@
           <!-- MÓDULO 4: E3 · Arquitectura y Arnés Institucional (Capítulo 5)             -->
           <!-- ========================================================================= -->
 
-          <!-- Slide 18: Arquitectura End-to-End del Arnés Institucional (Diagrama / Figura 5.1) -->
-          <article class="slide" data-deck="e1-e4" data-module="e3">
-            <div class="slide-content">
-              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
-              <h2>Composición de la propuesta: integración institucional sin reemplazo</h2>
-              <ul class="slide-list">
-                <li>
-                  <strong>Principio rector de integración:</strong> El arnés se acopla a las herramientas que ya existen en ATENEA (SharePoint, Figma, Azure Boards, Azure Repos) sin pretender sustituirlas.
-                </li>
-                <li>
-                  <strong>Capa intermedia propia (Arnés LIA UNAL):</strong> Coordina las herramientas agénticas, mantiene las versiones de las piezas, entrega los comandos y garantiza la traza inmutable.
-                </li>
-                <li>
-                  <strong>Modelos por tarea:</strong> Inferencia seleccionada técnicamente según la especialidad de cada agente (especificar, descomponer, construir o auditar), validada con los accesos de la entidad.
-                </li>
-              </ul>
-            </div>
+          <!-- E3-1: Composición de la propuesta (Figura 5.1) -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-tone="emerald">
             <figure class="slide-figure">
-              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de composición de la propuesta y arquitectura institucional del arnés agéntico">
-                <!-- Capa Superior: Herramientas ATENEA -->
-                <rect x="25" y="15" width="470" height="55" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
-                <text x="40" y="32" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700">HERRAMIENTAS EXISTENTES DE ATENEA</text>
-
-                <rect x="35" y="38" width="140" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                <text x="105" y="54" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">SharePoint (Gestor Doc)</text>
-
-                <rect x="185" y="38" width="145" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                <text x="257" y="54" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">Figma (Diseño UI/UX)</text>
-
-                <rect x="340" y="38" width="145" height="24" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                <text x="412" y="54" text-anchor="middle" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="9">Azure Boards (Tickets)</text>
-
-                <!-- Conexiones superiores hacia el arnés -->
-                <path d="M105 62 V85" stroke="#4E93B0" stroke-width="1.3" />
-                <path d="M257 62 V85" stroke="#4E93B0" stroke-width="1.3" />
-                <path d="M412 62 V85" stroke="#4E93B0" stroke-width="1.3" />
-
-                <!-- Capa Intermedia: Arnés LIA UNAL (Verde) -->
-                <rect x="25" y="85" width="470" height="190" rx="10" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.8" />
-                <rect x="35" y="93" width="220" height="18" rx="4" fill="#1E5631" />
-                <text x="145" y="106" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">ARNÉS PRINCIPAL SDLC-IA &middot; LIA UNAL</text>
-
-                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
-                  <!-- Entorno agéntico -->
-                  <rect x="35" y="118" width="135" height="42" rx="5" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="102" y="134" text-anchor="middle" fill="#1B2029" font-weight="700">Entorno Agéntico</text>
-                  <text x="102" y="148" text-anchor="middle" fill="#5B6472">Claude Code / OpenCode CLI</text>
-
-                  <!-- Modelos por tarea -->
-                  <rect x="180" y="118" width="150" height="42" rx="5" fill="#FFF7ED" stroke="#DFBD76" />
-                  <text x="255" y="134" text-anchor="middle" fill="#8A5A00" font-weight="700">Modelos por Tarea</text>
-                  <text x="255" y="148" text-anchor="middle" fill="#5B6472">Definidos por UNAL / ATENEA</text>
-
-                  <!-- Tablero de estado -->
-                  <rect x="340" y="118" width="145" height="42" rx="5" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="412" y="134" text-anchor="middle" fill="#1B2029" font-weight="700">Tablero de Estado</text>
-                  <text x="412" y="148" text-anchor="middle" fill="#5B6472">Avance en tiempo real</text>
-
-                  <!-- Gestor de specs -->
-                  <rect x="35" y="168" width="135" height="42" rx="5" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="102" y="184" text-anchor="middle" fill="#1B2029" font-weight="700">Gestor de Specs</text>
-                  <text x="102" y="198" text-anchor="middle" fill="#5B6472">BMAD: PRD, Arq y CU</text>
-
-                  <!-- Tejedor -->
-                  <rect x="180" y="168" width="150" height="42" rx="5" fill="#F8FAFC" stroke="#1E5631" stroke-width="1.3" />
-                  <text x="255" y="184" text-anchor="middle" fill="#1E5631" font-weight="700">Tejedor LIA UNAL</text>
-                  <text x="255" y="198" text-anchor="middle" fill="#5B6472">Historia → Contrato OpenSpec</text>
-
-                  <!-- Memoria -->
-                  <rect x="340" y="168" width="145" height="42" rx="5" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="412" y="184" text-anchor="middle" fill="#1B2029" font-weight="700">Memoria Persistente</text>
-                  <text x="412" y="198" text-anchor="middle" fill="#5B6472">Engram + Grafo de Código</text>
-
-                  <!-- Barra de comandos -->
-                  <rect x="35" y="218" width="450" height="45" rx="6" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="260" y="235" text-anchor="middle" fill="#1E5631" font-weight="700">Catálogo de Comandos por Etapa:</text>
-                  <text x="260" y="251" text-anchor="middle" fill="#5B6472">/sw:new (iniciar) &middot; /sw:adopt (adoptar) &middot; /sw:sprint (olas) &middot; /sw:build (construir) &middot; /sw:close (cerrar) &middot; /sw:status</text>
-                </g>
-
-                <!-- Conexiones inferiores hacia repositorios y despliegue -->
-                <path d="M102 275 V295" stroke="#4E93B0" stroke-width="1.3" />
-                <path d="M260 275 V295" stroke="#4E93B0" stroke-width="1.3" />
-                <path d="M412 275 V295" stroke="#4E93B0" stroke-width="1.3" />
-
-                <!-- Capa Inferior: Repositorios, CI/CD y Ambientes -->
-                <rect x="25" y="295" width="470" height="50" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
-                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
-                  <rect x="35" y="307" width="140" height="26" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="105" y="323" text-anchor="middle" fill="#1B2029">Azure Repos (Código)</text>
-
-                  <rect x="185" y="307" width="145" height="26" rx="4" fill="#FFFFFF" stroke="#DFBD76" />
-                  <text x="257" y="323" text-anchor="middle" fill="#8A5A00">Azure Pipelines (CI/CD)</text>
-
-                  <rect x="340" y="307" width="145" height="26" rx="4" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="412" y="323" text-anchor="middle" fill="#1B2029">Ambientes QA / Pre / Prod</text>
-                </g>
-              </svg>
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+                <h2 style="margin-bottom:4px;">Composición de la propuesta: integrarse con las herramientas de ATENEA, no sustituirlas</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">El arnés de agentes de IA coordina las herramientas por etapa y entrega a cada una el artefacto que necesita; su forma de uso (línea de comandos, conexión a una plataforma existente o plataforma propia) se define con ATENEA durante el contrato.</p>
+              </div>
+              <svg viewBox="-6 -6 1212 572" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Figura 5.1: composición de la propuesta con herramientas de ATENEA arriba y abajo y el arnés principal en el centro">
+<defs><marker id="f51-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker><marker id="f51-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#B71C1C" /></marker><marker id="f51-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#1E5631" /></marker></defs>
+<rect x="20" y="0" width="360" height="62" rx="7" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.6" />
+<text x="200.0" y="25" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Gestor documental</text>
+<text x="200.0" y="46" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">de ATENEA</text>
+<rect x="420" y="0" width="360" height="62" rx="7" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.6" />
+<text x="600.0" y="25" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Herramienta de diseño</text>
+<text x="600.0" y="46" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">de ATENEA</text>
+<rect x="820" y="0" width="360" height="62" rx="7" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.6" />
+<text x="1000.0" y="25" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Requisitos y tickets</text>
+<text x="1000.0" y="46" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">sistema de ATENEA</text>
+<path d="M200.0 64 V106" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#f51-b)" />
+<text x="210.0" y="90" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14">especificaciones aprobadas</text>
+<path d="M600.0 64 V106" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#f51-b)" />
+<text x="610.0" y="90" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14">diseño validado</text>
+<path d="M1000.0 64 V106" stroke="#2C6B87" stroke-width="1.8" marker-start="url(#f51-b)" marker-end="url(#f51-b)" />
+<text x="1010.0" y="90" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14">integración</text>
+<rect x="0" y="108" width="1200" height="270" rx="10" fill="#F0F7F2" stroke="#1E5631" stroke-width="2" />
+<rect x="14" y="116" width="520" height="26" rx="5" fill="#1E5631" stroke="#1E5631" stroke-width="0" />
+<text x="26" y="135" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Arnés principal para el ciclo de desarrollo (LIA UNAL)</text>
+<rect x="20" y="150" width="360" height="76" rx="7" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.6" />
+<text x="200.0" y="175" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Entorno agéntico</text>
+<text x="200.0" y="196" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">integrable con CLI como Claude Code u</text>
+<text x="200.0" y="213" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">OpenCode</text>
+<rect x="420" y="150" width="360" height="76" rx="7" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.6" />
+<text x="600.0" y="175" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Modelos</text>
+<text x="600.0" y="196" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">definidos por tarea; validados con los</text>
+<text x="600.0" y="213" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">accesos de ATENEA</text>
+<rect x="820" y="150" width="360" height="76" rx="7" fill="#E3F0E7" stroke="#1E5631" stroke-width="1.6" />
+<text x="1000.0" y="175" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Tablero de estado</text>
+<text x="1000.0" y="196" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">avance por historia y etapa</text>
+<rect x="20" y="238" width="360" height="62" rx="7" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.6" />
+<text x="200.0" y="263" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Gestor de especificaciones</text>
+<text x="200.0" y="284" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">PRD, historias y contratos</text>
+<rect x="420" y="238" width="360" height="62" rx="7" fill="#E3F0E7" stroke="#1E5631" stroke-width="1.6" />
+<text x="600.0" y="263" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Tejedor</text>
+<text x="600.0" y="284" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">historia → contrato verificable; traza</text>
+<rect x="820" y="238" width="360" height="62" rx="7" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.6" />
+<text x="1000.0" y="263" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Memoria persistente</text>
+<text x="1000.0" y="284" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">decisiones y mapa del código</text>
+<rect x="20" y="316" width="1160" height="48" rx="7" fill="#E3F0E7" stroke="#1E5631" stroke-width="1.6" />
+<text x="600" y="346" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Comandos por etapa: entender, decidir, descomponer, traducir, construir, cerrar, cambios y estado</text>
+<path d="M380 184 H416" stroke="#1E5631" stroke-width="1.8" marker-end="url(#f51-g)" />
+<path d="M380 264 H416" stroke="#1E5631" stroke-width="1.8" marker-end="url(#f51-g)" />
+<path d="M780 264 H816" stroke="#1E5631" stroke-width="1.8" marker-end="url(#f51-g)" />
+<path d="M200.0 376 V438" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#f51-b)" />
+<text x="210.0" y="412" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14">código y pruebas por historia</text>
+<rect x="20" y="440" width="360" height="62" rx="7" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.6" />
+<text x="200.0" y="465" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Gestor de repositorios</text>
+<text x="200.0" y="486" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">de ATENEA</text>
+<rect x="420" y="440" width="360" height="62" rx="7" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.6" />
+<text x="600.0" y="465" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Integración y entrega</text>
+<text x="600.0" y="486" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">CI/CD de ATENEA (por definir)</text>
+<rect x="820" y="440" width="360" height="62" rx="7" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.6" />
+<text x="1000.0" y="465" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Ambientes de ATENEA</text>
+<text x="1000.0" y="486" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">QA, preproducción y producción</text>
+<path d="M380 471 H416" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#f51-b)" />
+<path d="M780 471 H816" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#f51-b)" />
+<path d="M200.0 504 V528 H1000.0 V506" stroke="#B71C1C" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#f51-r)" />
+<text x="600" y="550" fill="#B71C1C" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" text-anchor="middle">hoy: compilados entregados a mano a infraestructura</text>
+</svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Composición de la propuesta</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>Herramientas de ATENEA, por función:</strong> gestor documental, herramienta de diseño y sistema de requerimientos o tickets (arriba); gestor de repositorios, integración y entrega y ambientes (abajo).</li>
+                  <li><strong>Arnés principal (LIA UNAL):</strong> entorno agéntico, modelos, tablero de estado, gestor de especificaciones, tejedor, memoria persistente y los comandos por etapa.</li>
+                  <li><strong>Por decidir (ámbar):</strong> los modelos, definidos por tarea y validados con los accesos de ATENEA, y la integración y entrega (CI/CD).</li>
+                  <li><strong>Entrega:</strong> hoy los compilados se entregan a mano a infraestructura.</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Figura 5.1 — Composición de la propuesta: arnés de agentes de IA como marco institucional de ATENEA. Verde: arnés principal; azul: herramientas de ATENEA o de terceros integradas; ámbar: por decidir</figcaption>
             </figure>
           </article>
 
-          <!-- Slide 18: Componentes de la Propuesta Técnica (Tabla 5.1) -->
-          <article class="slide" data-deck="e1-e4" data-module="e3">
-            <div class="slide-content">
-              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
-              <h2>Matriz de componentes de la propuesta y estado de implementación</h2>
-              <ul class="slide-list">
-                <li>
-                  <strong>Articulación modular:</strong> La solución integra desarrollos propios del LIA UNAL con piezas de terceros especializadas y herramientas preexistentes de ATENEA.
-                </li>
-                <li>
-                  <strong>Núcleo LIA probado:</strong> El arnés principal, el tejedor determinista de contratos y el tablero de estado se encuentran implementados y evaluados funcionalmente.
-                </li>
-                <li>
-                  <strong>Sujeto a decisiones de ATENEA:</strong> La forma de ejecución en terminal (Claude Code u OpenCode) y la habilitación de modelos e infraestructura se acuerdan con la Subgerencia de TIC.
-                </li>
-              </ul>
-            </div>
+          <!-- E3-2: Matriz de componentes 1/2 (Tabla 5.1) -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-tone="emerald">
             <figure class="slide-figure">
-              <div class="data-table-wrapper">
-                <table class="data-table">
-                  <caption>Tabla 5.1: Componentes de la propuesta, herramientas y estado de avance (tab:e3-componentes)</caption>
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+                <h2 style="margin-bottom:4px;">Matriz de componentes (1/2): las siete piezas del arnés y su estado</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Verde: implementado o integrado; ámbar: por confirmar o en migración; gris: por definir o por construir. Las piezas propias del LIA UNAL están implementadas; entorno agéntico y modelos dependen de ATENEA.</p>
+              </div>
+              <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
+                <table class="data-table" style="font-size:clamp(0.66rem,min(1.2vw,2.0vh),1.5rem);">
+                  <caption>Tabla 5.1 — Componentes de la propuesta (1/2): función, herramienta que la cumple y estado</caption>
                   <thead>
                     <tr>
-                      <th style="width:24%;">Componente</th>
-                      <th>Función en el Sistema</th>
-                      <th style="width:26%;">Herramienta</th>
-                      <th style="width:18%;">Estado</th>
+                      <th style="width:17%;font-size:0.82em;">Componente</th>
+                      <th style="width:30%;font-size:0.82em;">Función</th>
+                      <th style="width:29%;font-size:0.82em;">Herramienta</th>
+                      <th style="font-size:0.82em;">Estado</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td><strong>Arnés principal</strong></td>
-                      <td>Coordina herramientas, fija versiones, inyecta contexto y asegura traza.</td>
-                      <td>Desarrollo LIA UNAL</td>
-                      <td><span class="table-tag tag-green">Implementado</span></td>
+                      <td data-label="Componente"><strong>Arnés principal</strong></td>
+                      <td data-label="Función">Coordina las herramientas agénticas por etapa, fija las versiones de sus piezas, entrega los comandos al entorno agéntico y mantiene la traza</td>
+                      <td data-label="Herramienta">Desarrollo del LIA UNAL</td>
+                      <td data-label="Estado"><span class="pill pill--ok">Implementado</span> y probado fuera de ATENEA (capítulo 6); forma de uso por definir</td>
                     </tr>
                     <tr>
-                      <td><strong>Gestor de specs</strong></td>
-                      <td>Elabora PRD, arquitectura, épicas e historias con criterios formales.</td>
-                      <td>BMAD Integrado</td>
-                      <td><span class="table-tag tag-green">Integrado</span></td>
+                      <td data-label="Componente"><strong>Gestor de especificaciones</strong></td>
+                      <td data-label="Función">PRD, arquitectura, épicas, historias, contratos y criterios de aceptación</td>
+                      <td data-label="Herramienta">Componente de planeación y especificación de terceros, integrado al arnés</td>
+                      <td data-label="Estado"><span class="pill pill--ok">Integrado</span> versión fijada por el arnés</td>
                     </tr>
                     <tr>
-                      <td><strong>Tejedor</strong></td>
-                      <td>Convierte historia en contrato OpenSpec; calcula olas de trabajo.</td>
-                      <td>Pieza propia LIA UNAL</td>
-                      <td><span class="table-tag tag-green">Implementado</span></td>
+                      <td data-label="Componente"><strong>Tejedor</strong></td>
+                      <td data-label="Función">Convierte cada historia en un contrato verificable y registra la traza requisito, historia y contrato; calcula olas de trabajo</td>
+                      <td data-label="Herramienta">Pieza propia del arnés</td>
+                      <td data-label="Estado"><span class="pill pill--ok">Implementado</span></td>
                     </tr>
                     <tr>
-                      <td><strong>Memoria persistente</strong></td>
-                      <td>Decisiones, aprendizajes pasados y mapa semántico del código.</td>
-                      <td>Engram + Graphify</td>
-                      <td><span class="table-tag tag-green">Integrados</span></td>
+                      <td data-label="Componente"><strong>Memoria persistente</strong></td>
+                      <td data-label="Función">Decisiones, aprendizajes y mapa del código, por proyecto y dentro del repositorio</td>
+                      <td data-label="Herramienta">Componentes de memoria y de grafo de código de terceros, integrados</td>
+                      <td data-label="Estado"><span class="pill pill--ok">Integrados</span> versiones fijadas</td>
                     </tr>
                     <tr>
-                      <td><strong>Tablero de estado</strong></td>
-                      <td>Visualización de avance por historia, contrato y cobertura.</td>
-                      <td>Pieza propia LIA UNAL</td>
-                      <td><span class="table-tag tag-green">Implementado</span></td>
+                      <td data-label="Componente"><strong>Tablero de estado</strong></td>
+                      <td data-label="Función">Avance por requisito, historia, contrato y etapa</td>
+                      <td data-label="Herramienta">Pieza propia del arnés</td>
+                      <td data-label="Estado"><span class="pill pill--ok">Implementado</span></td>
                     </tr>
                     <tr>
-                      <td><strong>Entorno agéntico</strong></td>
-                      <td>Ejecuta comandos CLI: lectura de contexto, edición y tests.</td>
-                      <td>Claude Code / OpenCode</td>
-                      <td><span class="table-tag tag-amber">Por habilitar</span></td>
+                      <td data-label="Componente"><strong>Entorno agéntico</strong></td>
+                      <td data-label="Función">Ejecuta los comandos: lee, edita, prueba</td>
+                      <td data-label="Herramienta">Integrable con entornos de línea de comandos como Claude Code u OpenCode</td>
+                      <td data-label="Estado"><span class="pill pill--partial">Por confirmar</span> habilitación en ATENEA</td>
                     </tr>
                     <tr>
-                      <td><strong>Modelos de IA</strong></td>
-                      <td>Inferencia especializada por tarea (análisis, código, auditoría).</td>
-                      <td>APIs / Modelos ATENEA</td>
-                      <td><span class="table-tag tag-amber">Por definir</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>Gestión documental</strong></td>
-                      <td>Archivo formal de actas y evidencia de cumplimiento.</td>
-                      <td>SharePoint ATENEA</td>
-                      <td><span class="table-tag tag-blue">Existente</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>Gestor repositorios</strong></td>
-                      <td>Control de versiones, pull requests y ramas protegidas.</td>
-                      <td>Azure Repos ATENEA</td>
-                      <td><span class="table-tag tag-blue">Existente</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>Integración/Entrega</strong></td>
-                      <td>Compilación, ejecución de tests y despliegue por ambiente.</td>
-                      <td>Azure Pipelines</td>
-                      <td><span class="table-tag tag-amber">Por definir</span></td>
+                      <td data-label="Componente"><strong>Modelos</strong></td>
+                      <td data-label="Función">Inferencia para el agente</td>
+                      <td data-label="Herramienta">Modelo definido por la Universidad para la tarea de cada agente y validado con los accesos actuales de ATENEA; licencias, APIs y modelos como servicio los habilita la Agencia</td>
+                      <td data-label="Estado"><span class="pill pill--todo">Por definir y habilitar</span></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </figure>
           </article>
+
+          <!-- E3-3: Matriz de componentes 2/2 (Tabla 5.1) -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+                <h2 style="margin-bottom:4px;">Matriz de componentes (2/2): las seis herramientas de ATENEA que el arnés integra</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">El principio es integrarse con la herramienta que ya cumple cada función en la entidad: tres existen, dos están en migración y la integración con requisitos y tickets está por construir.</p>
+              </div>
+              <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
+                <table class="data-table" style="font-size:clamp(0.66rem,min(1.2vw,2.0vh),1.5rem);">
+                  <caption>Tabla 5.1 — Componentes de la propuesta (2/2): función, herramienta que la cumple y estado</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:17%;font-size:0.82em;">Componente</th>
+                      <th style="width:30%;font-size:0.82em;">Función</th>
+                      <th style="width:29%;font-size:0.82em;">Herramienta</th>
+                      <th style="font-size:0.82em;">Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Componente"><strong>Gestión documental</strong></td>
+                      <td data-label="Función">Especificaciones aprobadas y evidencia</td>
+                      <td data-label="Herramienta">Gestor documental de ATENEA</td>
+                      <td data-label="Estado"><span class="pill pill--ok">Existente</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Componente"><strong>Diseño</strong></td>
+                      <td data-label="Función">Prototipos validados con el cliente</td>
+                      <td data-label="Herramienta">Herramienta de diseño de ATENEA</td>
+                      <td data-label="Estado"><span class="pill pill--ok">Existente</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Componente"><strong>Requisitos y tickets</strong></td>
+                      <td data-label="Función">Épicas, historias y tareas; estado del trabajo</td>
+                      <td data-label="Herramienta">Sistema de gestión de requerimientos o tickets de ATENEA</td>
+                      <td data-label="Estado"><span class="pill pill--todo">Por construir</span> integración</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Componente"><strong>Repositorio de código</strong></td>
+                      <td data-label="Función">Ramas, revisiones e integración</td>
+                      <td data-label="Herramienta">Gestor de repositorios de ATENEA</td>
+                      <td data-label="Estado"><span class="pill pill--partial">En migración</span> existente</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Componente"><strong>Integración y entrega</strong></td>
+                      <td data-label="Función">Compilación, pruebas y despliegue por ambiente</td>
+                      <td data-label="Herramienta">Orquestador de <abbr title="Integración y entrega continuas">CI/CD</abbr> de ATENEA</td>
+                      <td data-label="Estado"><span class="pill pill--todo">Por definir</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Componente"><strong>Ambientes</strong></td>
+                      <td data-label="Función">QA, preproducción y producción</td>
+                      <td data-label="Herramienta">Clúster de ATENEA</td>
+                      <td data-label="Estado"><span class="pill pill--partial">En migración de nube</span> existentes</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- E3-4: Levantamiento de los ocho elementos de C3 (Figura 5.2) -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+                <h2 style="margin-bottom:4px;">Levantamiento de C3: ocho elementos del caso de uso de punta a punta y su estado</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;"><strong>Síntesis (§5.13):</strong> la arquitectura de agentes está establecida; cinco elementos tienen contenido establecido y una parte por levantar; proceso misional e historias se levantan del acta FO_PL_TIC_06 y su prototipo. Siete elementos llevan la marca A: dependen de un insumo de ATENEA.</p>
+              </div>
+              <svg viewBox="-6 -6 1212 464" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Figura 5.2: levantamiento de los ocho elementos de C3, con insumos, estado de cada elemento y resultado">
+<defs><marker id="f52-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker></defs>
+<rect x="0" y="30" width="262" height="352" rx="10" fill="#FFFFFF" stroke="#D6DEE8" stroke-width="1.2" />
+<text x="0" y="22" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Insumos</text>
+<rect x="12" y="44" width="238" height="66" rx="6" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.4" />
+<text x="131" y="72.0" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">Acta FO_PL_TIC_06 del módulo</text>
+<text x="131" y="90.0" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">(HU050)</text>
+<rect x="12" y="130" width="238" height="66" rx="6" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.4" />
+<text x="131" y="167.0" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">Prototipo en Figma</text>
+<rect x="12" y="216" width="238" height="66" rx="6" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.4" />
+<text x="131" y="244.0" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">Sesiones R2 a R4 y análisis</text>
+<text x="131" y="262.0" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">de inconsistencias (A2)</text>
+<rect x="12" y="302" width="238" height="66" rx="6" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.4" />
+<text x="131" y="321.0" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">Diagnóstico (E1),</text>
+<text x="131" y="339.0" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">metodología (E2) y agentes</text>
+<text x="131" y="357.0" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">(E4)</text>
+<path d="M264 206 H306" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#f52-b)" />
+<rect x="308" y="30" width="590" height="352" rx="10" fill="#F8FAFC" stroke="#D6DEE8" stroke-width="1.2" />
+<text x="308" y="22" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Especificación del caso (secciones 5.5 a 5.12)</text>
+<rect x="324" y="44" width="268" height="66" rx="6" fill="#FFF7ED" stroke="#DFBD76" stroke-width="2" />
+<text x="338" y="71" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">5.5</text>
+<text x="338" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Proceso misional destino</text>
+<circle cx="580" cy="56" r="5.5" fill="#B71C1C" />
+<circle cx="574" cy="94" r="11" fill="#0B2A4A" />
+<text x="574" y="99" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">A</text>
+<rect x="324" y="130" width="268" height="66" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.5" />
+<text x="338" y="157" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">5.6</text>
+<text x="338" y="177" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Requisitos</text>
+<circle cx="580" cy="142" r="5.5" fill="#B71C1C" />
+<circle cx="574" cy="180" r="11" fill="#0B2A4A" />
+<text x="574" y="185" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">A</text>
+<rect x="324" y="216" width="268" height="66" rx="6" fill="#FFF7ED" stroke="#DFBD76" stroke-width="2" />
+<text x="338" y="243" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">5.7</text>
+<text x="338" y="263" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Historias de usuario</text>
+<circle cx="580" cy="228" r="5.5" fill="#B71C1C" />
+<circle cx="574" cy="266" r="11" fill="#0B2A4A" />
+<text x="574" y="271" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">A</text>
+<rect x="324" y="302" width="268" height="66" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.5" />
+<text x="338" y="329" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">5.12</text>
+<text x="338" y="349" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Criterios de aceptación</text>
+<circle cx="580" cy="314" r="5.5" fill="#B71C1C" />
+<circle cx="574" cy="352" r="11" fill="#0B2A4A" />
+<text x="574" y="357" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">A</text>
+<rect x="616" y="44" width="268" height="66" rx="6" fill="#E3F0E7" stroke="#1E5631" stroke-width="2" />
+<text x="630" y="71" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">5.8</text>
+<text x="630" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Arquitectura de agentes</text>
+<rect x="616" y="130" width="268" height="66" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.5" />
+<text x="630" y="157" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">5.9</text>
+<text x="630" y="177" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Flujos</text>
+<circle cx="866" cy="180" r="11" fill="#0B2A4A" />
+<text x="866" y="185" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">A</text>
+<rect x="616" y="216" width="268" height="66" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.5" />
+<text x="630" y="243" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">5.10</text>
+<text x="630" y="263" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Integraciones</text>
+<circle cx="866" cy="266" r="11" fill="#0B2A4A" />
+<text x="866" y="271" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">A</text>
+<rect x="616" y="302" width="268" height="66" rx="6" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.5" />
+<text x="630" y="329" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">5.11</text>
+<text x="630" y="349" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Datos</text>
+<circle cx="866" cy="352" r="11" fill="#0B2A4A" />
+<text x="866" y="357" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">A</text>
+<path d="M458 110 V128" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#f52-b)" />
+<path d="M458 196 V214" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#f52-b)" />
+<path d="M458 282 V300" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#f52-b)" />
+<path d="M900 140 H940" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#f52-b)" />
+<rect x="942" y="96" width="250" height="88" rx="8" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="1" />
+<text x="1067" y="130" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Especificación</text>
+<text x="1067" y="150" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">End-to-End (anexo E)</text>
+<path d="M1067 186 V258" stroke="#2C6B87" stroke-width="1.8" marker-end="url(#f52-b)" />
+<rect x="942" y="260" width="250" height="88" rx="8" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="1" />
+<text x="1067" y="294" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Contratos y</text>
+<text x="1067" y="314" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">construcción (C4,</text>
+<text x="1067" y="334" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">capítulo 6)</text>
+<rect x="0" y="424" width="30" height="20" rx="4" fill="#E3F0E7" stroke="#1E5631" stroke-width="1.5" />
+<text x="38" y="440" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Establecido</text>
+<rect x="160" y="424" width="30" height="20" rx="4" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.5" />
+<text x="198" y="440" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">En parte</text>
+<rect x="294" y="424" width="30" height="20" rx="4" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.5" />
+<text x="332" y="440" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Por levantar</text>
+<rect x="463" y="424" width="30" height="20" rx="4" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.5" />
+<text x="501" y="440" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Insumo</text>
+<circle cx="586" cy="434" r="5.5" fill="#B71C1C" />
+<text x="598" y="440" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Aprobación humana</text>
+<circle cx="783" cy="434" r="11" fill="#0B2A4A" />
+<text x="783" y="439" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" text-anchor="middle">A</text>
+<text x="802" y="440" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Insumo de ATENEA</text>
+</svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Ocho elementos de C3</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>Establecido:</strong> 5.8 Arquitectura de agentes.</li>
+                  <li><strong>En parte:</strong> 5.6 Requisitos, 5.9 Flujos, 5.10 Integraciones, 5.11 Datos y 5.12 Criterios de aceptación.</li>
+                  <li><strong>Por levantar:</strong> 5.5 Proceso misional destino y 5.7 Historias de usuario.</li>
+                  <li><strong>Marca A (insumo de ATENEA):</strong> 5.5, 5.6, 5.7, 5.9, 5.10, 5.11 y 5.12. Los puntos rojos (5.5, 5.6, 5.7 y 5.12) son aprobaciones humanas.</li>
+                  <li><strong>Resultado:</strong> la especificación End-to-End (anexo E), que alimenta los contratos y la construcción (C4, capítulo 6).</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Figura 5.2 — Levantamiento de los ocho elementos de C3: insumos, estado de cada elemento y resultado. Verde: establecido; blanco: en parte; ámbar: por levantar; azul: insumos</figcaption>
+            </figure>
+          </article>
+
+          <!-- E3-5: Proceso misional destino (Tabla 5.2) [c3-proceso] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-item="c3-proceso" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+                <h2 style="margin-bottom:4px;">Proceso misional destino: cuatro etapas del levantamiento (§5.5)</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;"><strong>Qué es:</strong> el proceso de liquidación de apoyos económicos de SICORE Posmedia en el que interviene el módulo de creación de terceros. <span class="pill pill--todo">Por levantar</span> <strong>ATENEA aporta</strong> el acta FO_PL_TIC_06, el prototipo y la operación vigente; el negocio lo valida.</p>
+              </div>
+              <svg viewBox="-6 -6 1212 496" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabla 5.2: cuatro etapas del levantamiento del proceso misional destino, con actor, insumo y resultado de cada una">
+<defs><marker id="f52p-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker></defs>
+<rect x="0" y="0" width="276" height="410" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.6" />
+<rect x="14" y="14" width="44" height="44" rx="9" fill="#7FB4CA" stroke="#7FB4CA" stroke-width="0" />
+<text x="36" y="46" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="26" font-weight="700" text-anchor="middle">1</text>
+<text x="70" y="44" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="20" font-weight="700">Alcance</text>
+<text x="14" y="84" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">ACTOR</text>
+<text x="14" y="106" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Líder de producto y área de</text>
+<text x="14" y="126" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">negocio</text>
+<text x="14" y="164" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">INSUMO</text>
+<text x="14" y="186" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Acta FO_PL_TIC_06 del módulo</text>
+<text x="14" y="206" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">y prototipo en Figma</text>
+<text x="14" y="244" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">RESULTADO</text>
+<text x="14" y="266" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Actores del proceso y punto</text>
+<text x="14" y="286" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">en el que interviene el</text>
+<text x="14" y="306" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">módulo</text>
+<path d="M278 205 H306" stroke="#2C6B87" stroke-width="2" marker-end="url(#f52p-b)" />
+<rect x="308" y="0" width="276" height="410" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.6" />
+<rect x="322" y="14" width="44" height="44" rx="9" fill="#7FB4CA" stroke="#7FB4CA" stroke-width="0" />
+<text x="344" y="46" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="26" font-weight="700" text-anchor="middle">2</text>
+<text x="378" y="44" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="20" font-weight="700">Proceso actual</text>
+<text x="322" y="84" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">ACTOR</text>
+<text x="322" y="106" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Área de negocio</text>
+<text x="322" y="144" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">INSUMO</text>
+<text x="322" y="166" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Operación vigente de la</text>
+<text x="322" y="186" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">liquidación de apoyos</text>
+<text x="322" y="206" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">económicos</text>
+<text x="322" y="244" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">RESULTADO</text>
+<text x="322" y="266" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Diagrama de carriles del</text>
+<text x="322" y="286" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">proceso actual, con usuarios</text>
+<text x="322" y="306" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">y volumen</text>
+<path d="M586 205 H614" stroke="#2C6B87" stroke-width="2" marker-end="url(#f52p-b)" />
+<rect x="616" y="0" width="276" height="410" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.6" />
+<rect x="630" y="14" width="44" height="44" rx="9" fill="#7FB4CA" stroke="#7FB4CA" stroke-width="0" />
+<text x="652" y="46" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="26" font-weight="700" text-anchor="middle">3</text>
+<text x="686" y="44" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="20" font-weight="700">Proceso destino</text>
+<text x="630" y="84" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">ACTOR</text>
+<text x="630" y="106" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Área de negocio, líder de</text>
+<text x="630" y="126" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">producto y Universidad</text>
+<text x="630" y="164" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">INSUMO</text>
+<text x="630" y="186" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Proceso actual y requisitos</text>
+<text x="630" y="206" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">(§5.6)</text>
+<text x="630" y="244" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">RESULTADO</text>
+<text x="630" y="266" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Diagrama de carriles con el</text>
+<text x="630" y="286" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">módulo en operación</text>
+<path d="M894 205 H922" stroke="#2C6B87" stroke-width="2" marker-end="url(#f52p-b)" />
+<rect x="924" y="0" width="276" height="410" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.6" />
+<rect x="938" y="14" width="44" height="44" rx="9" fill="#7FB4CA" stroke="#7FB4CA" stroke-width="0" />
+<text x="960" y="46" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="26" font-weight="700" text-anchor="middle">4</text>
+<text x="994" y="44" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="20" font-weight="700">Validación</text>
+<text x="938" y="84" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">ACTOR</text>
+<text x="938" y="106" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Las seis firmas del formato</text>
+<text x="938" y="126" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">institucional: líder de</text>
+<text x="938" y="146" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">producto, líder técnico,</text>
+<text x="938" y="166" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">operaciones, TIC, financiera</text>
+<text x="938" y="186" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">y negocio</text>
+<text x="938" y="224" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">INSUMO</text>
+<text x="938" y="246" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Diagramas de las etapas 2 y</text>
+<text x="938" y="266" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">3</text>
+<text x="938" y="304" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">RESULTADO</text>
+<text x="938" y="326" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Proceso aprobado, base de</text>
+<text x="938" y="346" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">los criterios de punta a</text>
+<text x="938" y="366" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">punta (§5.12)</text>
+<rect x="0" y="424" width="1200" height="50" rx="8" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.4" />
+<text x="16" y="455" fill="#7A4E00" font-family="Space Grotesk,sans-serif" font-size="16">El proceso se describe en dos estados, el actual y el que resulta con el módulo en operación, y se valida con el negocio.</text>
+</svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Proceso misional destino</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>1. Alcance</strong> (líder de producto y área de negocio): del acta FO_PL_TIC_06 y el prototipo en Figma salen los actores y el punto en que interviene el módulo.</li>
+                  <li><strong>2. Proceso actual</strong> (área de negocio): diagrama de carriles de la operación vigente, con usuarios y volumen.</li>
+                  <li><strong>3. Proceso destino</strong> (negocio, líder de producto y Universidad): diagrama de carriles con el módulo en operación, a partir del proceso actual y los requisitos (§5.6).</li>
+                  <li><strong>4. Validación</strong> (las seis firmas del formato institucional: líder de producto, líder técnico, operaciones, TIC, financiera y negocio): proceso aprobado, base de los criterios de punta a punta (§5.12).</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Tabla 5.2 — Levantamiento del proceso misional destino: etapa, actor, insumo y resultado</figcaption>
+            </figure>
+          </article>
+
+          <!-- E3-6: Requisitos (Tabla 5.3) [c3-requisitos] -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e3" data-item="c3-requisitos">
+            <div class="slide-content">
+              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+              <h2>Requisitos: los no funcionales ya están fijados</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Qué es:</strong> la especificación separa requisitos funcionales y no funcionales, numerados; los funcionales se convierten en un PRD que aprueba el líder de producto.
+                </li>
+                <li>
+                  <strong>Estado:</strong> <span class="pill pill--partial">En parte</span> los siete no funcionales se fijan desde el diagnóstico y la metodología; los funcionales (RF-01…) están por levantar.
+                </li>
+                <li>
+                  <strong>ATENEA aporta</strong> el acta FO_PL_TIC_06 del módulo (doce o más páginas) y su prototipo en Figma.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table" style="font-size:clamp(0.7rem,min(1.4vw,2.5vh),1.5rem);">
+                  <caption>Tabla 5.3 — Requisitos del caso de uso: identificador, requisito y origen</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:13%;font-size:0.82em;">ID</th>
+                      <th style="font-size:0.82em;">Requisito</th>
+                      <th style="width:24%;font-size:0.82em;">Origen</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="ID"><strong>RNF-01</strong></td>
+                      <td data-label="Requisito">El módulo se construye sobre la plataforma vigente: Angular 13, Java 17 con Spring Boot 3 sobre WildFly 34 y Oracle Autonomous</td>
+                      <td data-label="Origen">Tabla 3.3</td>
+                    </tr>
+                    <tr>
+                      <td data-label="ID"><strong>RNF-02</strong></td>
+                      <td data-label="Requisito">Ningún dato personal llega al modelo; del sistema solo se usa la estructura de la base de datos</td>
+                      <td data-label="Origen">Tabla 3.10</td>
+                    </tr>
+                    <tr>
+                      <td data-label="ID"><strong>RNF-03</strong></td>
+                      <td data-label="Requisito">Las pruebas y el contexto del modelo usan datos sintéticos</td>
+                      <td data-label="Origen">Criterio 9, Tabla 4.4</td>
+                    </tr>
+                    <tr>
+                      <td data-label="ID"><strong>RNF-04</strong></td>
+                      <td data-label="Requisito">No hay secretos ni credenciales en el código ni en el contexto enviado al modelo</td>
+                      <td data-label="Origen">Criterio 8, Tabla 4.4</td>
+                    </tr>
+                    <tr>
+                      <td data-label="ID"><strong>RNF-05</strong></td>
+                      <td data-label="Requisito">Las dependencias no tienen vulnerabilidades críticas ni altas conocidas</td>
+                      <td data-label="Origen">Criterio 7, Tabla 4.4</td>
+                    </tr>
+                    <tr>
+                      <td data-label="ID"><strong>RNF-06</strong></td>
+                      <td data-label="Requisito">La traza requisito, historia, contrato, código y prueba queda completa y sirve de soporte ante la Contraloría</td>
+                      <td data-label="Origen">Criterio 4, Tabla 4.4 y §6.9</td>
+                    </tr>
+                    <tr>
+                      <td data-label="ID"><strong>RNF-07</strong></td>
+                      <td data-label="Requisito">El acceso a la base de datos y a los ambientes se hace por la VPN institucional</td>
+                      <td data-label="Origen">Tabla 3.3</td>
+                    </tr>
+                    <tr>
+                      <td data-label="ID"><strong>RF-01…</strong></td>
+                      <td data-label="Requisito">Requisitos funcionales del módulo</td>
+                      <td data-label="Origen"><span class="pill pill--todo">Por levantar</span> del acta FO_PL_TIC_06</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- E3-7: Historias de usuario (Tabla 5.4) [c3-historias] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-item="c3-historias" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+                <h2 style="margin-bottom:4px;">Historias de usuario: cinco reglas que cumple cada historia del caso (§5.7)</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;"><strong>Qué es:</strong> hoy el requerimiento es un acta extensa que funciona como épica, sin historias ni criterios separados; el agente de historias la descompone. <span class="pill pill--todo">Por levantar</span> <strong>ATENEA aporta</strong> el acta (historia 20240904_HU050_Terceros_ATENEA).</p>
+              </div>
+              <svg viewBox="-6 -6 1212 456" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabla 5.4: anatomía de una historia de usuario del caso con cinco reglas, cómo se cumple cada una y quién la aprueba">
+<defs><marker id="f54-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker></defs>
+<rect x="0" y="40" width="280" height="130" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.6" />
+<text x="140" y="66" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Hoy: un acta extensa</text>
+<text x="140" y="92" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13.5" text-anchor="middle">Acta FO_PL_TIC_06 del módulo:</text>
+<text x="140" y="110" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13.5" text-anchor="middle">funciona como épica (historia</text>
+<text x="140" y="128" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13.5" text-anchor="middle">20240904_HU050_Terceros_ATENEA)</text>
+<path d="M140 172 V228" stroke="#2C6B87" stroke-width="2" marker-end="url(#f54-b)" />
+<text x="150" y="205" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14">se descompone</text>
+<rect x="0" y="230" width="280" height="90" rx="8" fill="#E3F0E7" stroke="#1E5631" stroke-width="1.8" />
+<text x="140" y="258" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Agente de historias</text>
+<text x="140" y="282" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">épicas e historias</text>
+<text x="140" y="302" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">que cumplen cinco reglas</text>
+<path d="M282 275 H326" stroke="#2C6B87" stroke-width="2" marker-end="url(#f54-b)" />
+<rect x="330" y="0" width="870" height="440" rx="10" fill="#F8FAFC" stroke="#7AA89F" stroke-width="1.8" />
+<rect x="330" y="0" width="870" height="44" rx="10" fill="#7AA89F" stroke="#7AA89F" stroke-width="0" />
+<text x="348" y="29" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Historia de usuario del caso: cinco reglas</text>
+<text x="1182" y="29" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="end">Aprueba</text>
+<rect x="342" y="56" width="846" height="68" rx="6" fill="#FFFFFF" stroke="#D6DEE8" stroke-width="1.2" />
+<rect x="342" y="56" width="130" height="68" rx="6" fill="#7FB4CA" stroke="#7FB4CA" stroke-width="0" />
+<text x="407" y="96" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Origen</text>
+<text x="488" y="84" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Cada historia nace del acta del módulo y declara los</text>
+<text x="488" y="105" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">requisitos que cubre</text>
+<text x="982" y="84" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Arnés (criterio 4,</text>
+<text x="982" y="104" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Tabla 4.4)</text>
+<rect x="342" y="132" width="846" height="68" rx="6" fill="#FFFFFF" stroke="#D6DEE8" stroke-width="1.2" />
+<rect x="342" y="132" width="130" height="68" rx="6" fill="#7AA89F" stroke="#7AA89F" stroke-width="0" />
+<text x="407" y="172" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Tamaño</text>
+<text x="488" y="160" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Una persona la termina; el plan de olas asigna un</text>
+<text x="488" y="181" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">contrato por persona</text>
+<text x="982" y="160" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Líder del equipo</text>
+<rect x="342" y="208" width="846" height="68" rx="6" fill="#FFFFFF" stroke="#D6DEE8" stroke-width="1.2" />
+<rect x="342" y="208" width="130" height="68" rx="6" fill="#DFBD76" stroke="#DFBD76" stroke-width="0" />
+<text x="407" y="248" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Criterios</text>
+<text x="488" y="236" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Escenarios Given/When/Then, incluidos los de rechazo,</text>
+<text x="488" y="257" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">cada uno con una prueba automatizada</text>
+<text x="982" y="236" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Desarrollador</text>
+<text x="982" y="256" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">(criterio 2)</text>
+<rect x="342" y="284" width="846" height="68" rx="6" fill="#FFFFFF" stroke="#D6DEE8" stroke-width="1.2" />
+<rect x="342" y="284" width="130" height="68" rx="6" fill="#A3B5D6" stroke="#A3B5D6" stroke-width="0" />
+<text x="407" y="324" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Aprobación</text>
+<text x="488" y="312" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">El desglose se aprueba antes de compilar los</text>
+<text x="488" y="333" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">contratos</text>
+<text x="982" y="312" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Líder de producto</text>
+<rect x="342" y="360" width="846" height="68" rx="6" fill="#FFFFFF" stroke="#D6DEE8" stroke-width="1.2" />
+<rect x="342" y="360" width="130" height="68" rx="6" fill="#B7CC85" stroke="#B7CC85" stroke-width="0" />
+<text x="407" y="400" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Contrato</text>
+<text x="488" y="388" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">Cada historia se convierte en un contrato válido en</text>
+<text x="488" y="409" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16">modo estricto</text>
+<text x="982" y="388" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Desarrollador</text>
+<text x="982" y="408" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">(criterio 1)</text>
+</svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Reglas de las historias</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>Origen:</strong> Cada historia nace del acta del módulo y declara los requisitos que cubre. <em>Aprueba:</em> Arnés (criterio 4, Tabla 4.4).</li>
+                  <li><strong>Tamaño:</strong> Una persona la termina; el plan de olas asigna un contrato por persona. <em>Aprueba:</em> Líder del equipo.</li>
+                  <li><strong>Criterios:</strong> Escenarios Given/When/Then, incluidos los de rechazo, cada uno con una prueba automatizada. <em>Aprueba:</em> Desarrollador (criterio 2).</li>
+                  <li><strong>Aprobación:</strong> El desglose se aprueba antes de compilar los contratos. <em>Aprueba:</em> Líder de producto.</li>
+                  <li><strong>Contrato:</strong> Cada historia se convierte en un contrato válido en modo estricto. <em>Aprueba:</em> Desarrollador (criterio 1).</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Tabla 5.4 — Reglas de las historias de usuario del caso: regla, cómo se cumple y quién la aprueba</figcaption>
+            </figure>
+          </article>
+
+          <!-- E3-8: Arquitectura de agentes del caso (Tabla 5.5) [c3-arquitectura-agentes] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-item="c3-arquitectura-agentes" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+                <h2 style="margin-bottom:4px;">Arquitectura de agentes del caso: seis fases, cada una con su decisión humana (§5.8)</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;"><span class="pill pill--ok">Establecido</span> El arnés no tiene identidad propia: actúa con los permisos de la cuenta de la persona en la herramienta agéntica y en el repositorio; los controles combinan las restricciones del comando con la cuenta institucional.</p>
+              </div>
+              <svg viewBox="-6 -6 1212 538" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabla 5.5: seis fases del caso, con agentes y comandos, controles y decisión humana de cada una">
+<defs><marker id="f55-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker></defs>
+<text x="46" y="20" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">FASE DEL CASO</text>
+<text x="250" y="20" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">AGENTES Y COMANDOS</text>
+<text x="590" y="20" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">CONTROLES</text>
+<text x="950" y="20" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">DECISIÓN HUMANA</text>
+<rect x="0" y="34" width="1200" height="74" rx="6" fill="#F8FAFC" stroke="#D6DEE8" stroke-width="1.2" />
+<circle cx="24" cy="71.0" r="15" fill="#7FB4CA" />
+<text x="24" y="77.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">1</text>
+<text x="48" y="64" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Adopción del área</text>
+<text x="250" y="58" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">/sw:adopt y analista de BMAD, con</text>
+<text x="250" y="77" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">graphify</text>
+<text x="590" y="58" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Lee el acta, el prototipo y el código;</text>
+<text x="590" y="77" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">produce el mapa del código</text>
+<text x="950" y="58" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">Acordar qué parte del sistema</text>
+<text x="950" y="77" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">entra al método</text>
+<rect x="0" y="116" width="1200" height="74" rx="6" fill="#FFFFFF" stroke="#D6DEE8" stroke-width="1.2" />
+<circle cx="24" cy="153.0" r="15" fill="#7FB4CA" />
+<text x="24" y="159.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">2</text>
+<text x="48" y="146" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Producto y</text>
+<text x="48" y="167" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">arquitectura</text>
+<text x="250" y="140" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Agentes de producto, experiencia y</text>
+<text x="250" y="159" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">arquitectura de BMAD</text>
+<text x="590" y="140" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">La arquitectura base del área manda</text>
+<text x="590" y="159" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">sobre los agentes</text>
+<text x="950" y="140" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">El líder de producto aprueba</text>
+<text x="950" y="159" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">el PRD; la líder del equipo,</text>
+<text x="950" y="178" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">la arquitectura</text>
+<rect x="0" y="198" width="1200" height="74" rx="6" fill="#F8FAFC" stroke="#D6DEE8" stroke-width="1.2" />
+<circle cx="24" cy="235.0" r="15" fill="#7FB4CA" />
+<text x="24" y="241.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">3</text>
+<text x="48" y="228" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Historias y</text>
+<text x="48" y="249" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">contratos</text>
+<text x="250" y="222" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Agente de historias y aracne-weaver</text>
+<text x="250" y="241" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">con el puente en modo estricto</text>
+<text x="590" y="222" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Contratos validados y traza en</text>
+<text x="590" y="241" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">trace.json</text>
+<text x="950" y="222" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">El líder de producto aprueba</text>
+<text x="950" y="241" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">las historias</text>
+<rect x="0" y="280" width="1200" height="74" rx="6" fill="#FFFFFF" stroke="#D6DEE8" stroke-width="1.2" />
+<circle cx="24" cy="317.0" r="15" fill="#7FB4CA" />
+<text x="24" y="323.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">4</text>
+<text x="48" y="310" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Olas</text>
+<text x="250" y="304" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">aracne-sprint-planner con /sw:sprint</text>
+<text x="590" y="304" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">El comando no escribe archivos (Tabla</text>
+<text x="590" y="323" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">6.4)</text>
+<text x="950" y="304" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">La líder del equipo aprueba</text>
+<text x="950" y="323" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">el reparto</text>
+<rect x="0" y="362" width="1200" height="74" rx="6" fill="#F8FAFC" stroke="#D6DEE8" stroke-width="1.2" />
+<circle cx="24" cy="399.0" r="15" fill="#7FB4CA" />
+<text x="24" y="405.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">5</text>
+<text x="48" y="392" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Construcción y</text>
+<text x="48" y="413" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">revisión</text>
+<text x="250" y="386" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">aracne-builder, aracne-validator,</text>
+<text x="250" y="405" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">revisores review-* y aracne-cicd</text>
+<text x="590" y="386" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Un contrato a la vez; la terminal de</text>
+<text x="590" y="405" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">/sw:build se acota a equipos y cuentas</text>
+<text x="590" y="424" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">institucionales (Tabla 6.4)</text>
+<text x="950" y="386" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">La líder del equipo aprueba</text>
+<text x="950" y="405" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">la integración a la rama</text>
+<text x="950" y="424" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">protegida</text>
+<rect x="0" y="444" width="1200" height="74" rx="6" fill="#FFFFFF" stroke="#D6DEE8" stroke-width="1.2" />
+<circle cx="24" cy="481.0" r="15" fill="#7FB4CA" />
+<text x="24" y="487.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">6</text>
+<text x="48" y="474" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Cierre y</text>
+<text x="48" y="495" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">operación</text>
+<text x="250" y="468" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">aracne-closer, aracne-status,</text>
+<text x="250" y="487" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">aracne-ticket y aracne-change</text>
+<text x="590" y="468" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">/sw:status solo lee; los cambios pasan</text>
+<text x="590" y="487" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">por control de alcance</text>
+<text x="950" y="468" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">Decidir qué historias se</text>
+<text x="950" y="487" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">cierran y qué vuelve al flujo</text>
+<path d="M24 88.0 V134.0" stroke="#2C6B87" stroke-width="2" marker-end="url(#f55-b)" />
+<path d="M24 170.0 V216.0" stroke="#2C6B87" stroke-width="2" marker-end="url(#f55-b)" />
+<path d="M24 252.0 V298.0" stroke="#2C6B87" stroke-width="2" marker-end="url(#f55-b)" />
+<path d="M24 334.0 V380.0" stroke="#2C6B87" stroke-width="2" marker-end="url(#f55-b)" />
+<path d="M24 416.0 V462.0" stroke="#2C6B87" stroke-width="2" marker-end="url(#f55-b)" />
+</svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Seis fases del caso</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>1. Adopción del área.</strong> <em>Agentes y comandos:</em> /sw:adopt y analista de BMAD, con graphify. <em>Controles:</em> Lee el acta, el prototipo y el código; produce el mapa del código. <em>Decisión humana:</em> Acordar qué parte del sistema entra al método.</li>
+                  <li><strong>2. Producto y arquitectura.</strong> <em>Agentes y comandos:</em> Agentes de producto, experiencia y arquitectura de BMAD. <em>Controles:</em> La arquitectura base del área manda sobre los agentes. <em>Decisión humana:</em> El líder de producto aprueba el PRD; la líder del equipo, la arquitectura.</li>
+                  <li><strong>3. Historias y contratos.</strong> <em>Agentes y comandos:</em> Agente de historias y aracne-weaver con el puente en modo estricto. <em>Controles:</em> Contratos validados y traza en trace.json. <em>Decisión humana:</em> El líder de producto aprueba las historias.</li>
+                  <li><strong>4. Olas.</strong> <em>Agentes y comandos:</em> aracne-sprint-planner con /sw:sprint. <em>Controles:</em> El comando no escribe archivos (Tabla 6.4). <em>Decisión humana:</em> La líder del equipo aprueba el reparto.</li>
+                  <li><strong>5. Construcción y revisión.</strong> <em>Agentes y comandos:</em> aracne-builder, aracne-validator, revisores review-* y aracne-cicd. <em>Controles:</em> Un contrato a la vez; la terminal de /sw:build se acota a equipos y cuentas institucionales (Tabla 6.4). <em>Decisión humana:</em> La líder del equipo aprueba la integración a la rama protegida.</li>
+                  <li><strong>6. Cierre y operación.</strong> <em>Agentes y comandos:</em> aracne-closer, aracne-status, aracne-ticket y aracne-change. <em>Controles:</em> /sw:status solo lee; los cambios pasan por control de alcance. <em>Decisión humana:</em> Decidir qué historias se cierran y qué vuelve al flujo.</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Tabla 5.5 — Arquitectura de agentes del caso: fase, agentes y comandos, controles y decisión humana</figcaption>
+            </figure>
+          </article>
+
+          <!-- E3-9: Flujos (Tabla 5.6) [c3-flujos] -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e3" data-item="c3-flujos">
+            <div class="slide-content">
+              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+              <h2>Flujos: cinco de la solución definidos, dos del módulo por levantar</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Qué es:</strong> la especificación tiene dos niveles de flujos: los de la solución, ya definidos en el informe, y los funcionales del módulo, principal y de excepción.
+                </li>
+                <li>
+                  <strong>Estado:</strong> <span class="pill pill--partial">En parte</span> el agente de arquitectura incorpora a la especificación los del módulo cuando se levanten.
+                </li>
+                <li>
+                  <strong>ATENEA aporta</strong> el acta y el prototipo del módulo, de donde salen el flujo principal y los de excepción.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table" style="font-size:clamp(0.7rem,min(1.4vw,2.5vh),1.5rem);">
+                  <caption>Tabla 5.6 — Flujos de la especificación: qué describen, dónde están y su estado</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:22%;font-size:0.82em;">Flujo</th>
+                      <th style="width:34%;font-size:0.82em;">Qué describe</th>
+                      <th style="width:20%;font-size:0.82em;">Dónde está</th>
+                      <th style="font-size:0.82em;">Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Flujo"><strong>Etapas del SDLC-IA</strong></td>
+                      <td data-label="Qué describe">Quién interviene en cada etapa y con qué herramienta</td>
+                      <td data-label="Dónde está">Figura 4.1</td>
+                      <td data-label="Estado"><span class="pill pill--ok">Definido</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Flujo"><strong>Datos de la solución</strong></td>
+                      <td data-label="Qué describe">De la gestión documental al repositorio y a los ambientes</td>
+                      <td data-label="Dónde está">§5.2</td>
+                      <td data-label="Estado"><span class="pill pill--ok">Definido</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Flujo"><strong>Artefactos del arnés</strong></td>
+                      <td data-label="Qué describe">Del requisito al contrato archivado</td>
+                      <td data-label="Dónde está">Figura 6.1</td>
+                      <td data-label="Estado"><span class="pill pill--ok">Definido</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Flujo"><strong>Interacción entre agentes</strong></td>
+                      <td data-label="Qué describe">Una historia, de la idea a la línea base</td>
+                      <td data-label="Dónde está">Figura 6.3</td>
+                      <td data-label="Estado"><span class="pill pill--ok">Definido</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Flujo"><strong>Recorrido del módulo</strong></td>
+                      <td data-label="Qué describe">De la instalación a la puesta en marcha</td>
+                      <td data-label="Dónde está">Tabla 6.3</td>
+                      <td data-label="Estado"><span class="pill pill--partial">Definido</span> en condiciones ideales</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Flujo"><strong>Flujo principal del módulo</strong></td>
+                      <td data-label="Qué describe">Pasos del usuario para crear un tercero</td>
+                      <td data-label="Dónde está">Acta y prototipo del módulo</td>
+                      <td data-label="Estado"><span class="pill pill--todo">Por levantar</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Flujo"><strong>Flujos de excepción</strong></td>
+                      <td data-label="Qué describe">Rechazos y validaciones del módulo</td>
+                      <td data-label="Dónde está">Acta y prototipo del módulo</td>
+                      <td data-label="Estado"><span class="pill pill--todo">Por levantar</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- E3-10: Integraciones (Tabla 5.7) [c3-integraciones] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-item="c3-integraciones" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+                <h2 style="margin-bottom:4px;">Integraciones: ocho sistemas conectados al arnés en el caso (§5.10)</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;"><strong>Qué es:</strong> lo que el diagnóstico y la composición establecieron sobre cada sistema del caso. <span class="pill pill--partial">En parte</span> <strong>ATENEA aporta</strong>, con la líder del equipo e infraestructura, el protocolo, la autenticación y el responsable de cada integración.</p>
+              </div>
+              <svg viewBox="-6 -6 1212 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabla 5.7: ocho integraciones del caso conectadas al arnés de agentes, con su función y estado">
+<path d="M370 58.0 L440 163.6" stroke="#7FB4CA" stroke-width="2" />
+<path d="M370 186.0 L440 221.2" stroke="#7FB4CA" stroke-width="2" />
+<path d="M370 314.0 L440 278.8" stroke="#7FB4CA" stroke-width="2" />
+<path d="M370 442.0 L440 336.4" stroke="#7FB4CA" stroke-width="2" />
+<path d="M830 58.0 L760 163.6" stroke="#7FB4CA" stroke-width="2" />
+<path d="M830 186.0 L760 221.2" stroke="#7FB4CA" stroke-width="2" />
+<path d="M830 314.0 L760 278.8" stroke="#7FB4CA" stroke-width="2" />
+<path d="M830 442.0 L760 336.4" stroke="#7FB4CA" stroke-width="2" />
+<rect x="440" y="130" width="320" height="240" rx="12" fill="#E3F0E7" stroke="#1E5631" stroke-width="2.2" />
+<text x="600" y="190" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="22" font-weight="700" text-anchor="middle">Arnés de agentes</text>
+<text x="600" y="216" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" text-anchor="middle">caso: creación de terceros</text>
+<text x="600" y="256" fill="#7A4E00" font-family="Space Grotesk,sans-serif" font-size="15" text-anchor="middle">Protocolo, autenticación y</text>
+<text x="600" y="276" fill="#7A4E00" font-family="Space Grotesk,sans-serif" font-size="15" text-anchor="middle">responsable de cada integración:</text>
+<text x="600" y="296" fill="#7A4E00" font-family="Space Grotesk,sans-serif" font-size="15" text-anchor="middle">se levantan con la líder del</text>
+<text x="600" y="316" fill="#7A4E00" font-family="Space Grotesk,sans-serif" font-size="15" text-anchor="middle">equipo e infraestructura</text>
+<rect x="0" y="0" width="370" height="116" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+<text x="14" y="22" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Oracle Autonomous (SICORE Posmedia)</text>
+<text x="14" y="43" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Datos del módulo, entre ellos la tabla</text>
+<text x="14" y="60" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">SE1_00_OFERTA_PROGRAMA_INSTITUCION</text>
+<circle cx="20" cy="96" r="6" fill="#2E7D32" />
+<text x="34" y="101" fill="#1f5f27" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Existente; acceso por VPN</text>
+<rect x="0" y="128" width="370" height="116" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+<text x="14" y="150" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Keycloak con PostgreSQL</text>
+<text x="14" y="171" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Inicio de sesión único de las dos</text>
+<text x="14" y="188" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">aplicaciones, con conexión al directorio</text>
+<text x="14" y="205" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">activo</text>
+<circle cx="20" cy="224" r="6" fill="#8A5A00" />
+<text x="34" y="229" fill="#6b4a00" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">En incorporación</text>
+<rect x="0" y="256" width="370" height="116" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+<text x="14" y="278" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Servidor de archivos</text>
+<text x="14" y="299" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Soportes cargados por los estudiantes</text>
+<circle cx="20" cy="352" r="6" fill="#2E7D32" />
+<text x="34" y="357" fill="#1f5f27" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Existente</text>
+<rect x="0" y="384" width="370" height="116" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+<text x="14" y="406" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Gestor documental (SharePoint)</text>
+<text x="14" y="427" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Acta del módulo y evidencia de aprobación</text>
+<circle cx="20" cy="480" r="6" fill="#2E7D32" />
+<text x="34" y="485" fill="#1f5f27" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Existente</text>
+<rect x="830" y="0" width="370" height="116" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+<text x="844" y="22" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Herramienta de diseño (Figma)</text>
+<text x="844" y="43" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Prototipo del módulo</text>
+<circle cx="850" cy="96" r="6" fill="#2E7D32" />
+<text x="864" y="101" fill="#1f5f27" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Existente</text>
+<rect x="830" y="128" width="370" height="116" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+<text x="844" y="150" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Requisitos y tickets</text>
+<text x="844" y="171" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Estado de épicas, historias y tareas</text>
+<circle cx="850" cy="224" r="6" fill="#8791A0" />
+<text x="864" y="229" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Integración por construir (Tabla 5.1)</text>
+<rect x="830" y="256" width="370" height="116" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+<text x="844" y="278" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Azure Repos</text>
+<text x="844" y="299" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Código, ramas y solicitudes de integración</text>
+<circle cx="850" cy="343" r="6" fill="#8A5A00" />
+<text x="864" y="340" fill="#6b4a00" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">En migración desde Oracle Visual</text>
+<text x="864" y="357" fill="#6b4a00" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Builder</text>
+<rect x="830" y="384" width="370" height="116" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
+<text x="844" y="406" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Azure Pipelines</text>
+<text x="844" y="427" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Compilación, pruebas y despliegue por</text>
+<text x="844" y="444" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">ambiente</text>
+<circle cx="850" cy="471" r="6" fill="#8791A0" />
+<text x="864" y="468" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Propuesto; alcance por acordar con</text>
+<text x="864" y="485" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">infraestructura (§4.6)</text>
+</svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Ocho sistemas integrados</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>Oracle Autonomous (SICORE Posmedia).</strong> Datos del módulo, entre ellos la tabla SE1_00_OFERTA_PROGRAMA_INSTITUCION. <em>Estado:</em> Existente; acceso por VPN.</li>
+                  <li><strong>Keycloak con PostgreSQL.</strong> Inicio de sesión único de las dos aplicaciones, con conexión al directorio activo. <em>Estado:</em> En incorporación.</li>
+                  <li><strong>Servidor de archivos.</strong> Soportes cargados por los estudiantes. <em>Estado:</em> Existente.</li>
+                  <li><strong>Gestor documental (SharePoint).</strong> Acta del módulo y evidencia de aprobación. <em>Estado:</em> Existente.</li>
+                  <li><strong>Herramienta de diseño (Figma).</strong> Prototipo del módulo. <em>Estado:</em> Existente.</li>
+                  <li><strong>Requisitos y tickets.</strong> Estado de épicas, historias y tareas. <em>Estado:</em> Integración por construir (Tabla 5.1).</li>
+                  <li><strong>Azure Repos.</strong> Código, ramas y solicitudes de integración. <em>Estado:</em> En migración desde Oracle Visual Builder.</li>
+                  <li><strong>Azure Pipelines.</strong> Compilación, pruebas y despliegue por ambiente. <em>Estado:</em> Propuesto; alcance por acordar con infraestructura (§4.6).</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Tabla 5.7 — Integraciones del caso: sistema, función en el caso y estado</figcaption>
+            </figure>
+          </article>
+
+          <!-- E3-11: Datos (Tabla 5.8) [c3-datos] -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e3" data-item="c3-datos">
+            <div class="slide-content">
+              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+              <h2>Datos: qué toca el módulo y qué puede llegar al modelo</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Qué es:</strong> las fuentes del inventario del diagnóstico (Tabla 3.10) que toca el módulo; conservan su clasificación y su regla de uso.
+                </li>
+                <li>
+                  <strong>Regla:</strong> los datos personales no llegan nunca al modelo.
+                </li>
+                <li>
+                  <strong>Estado:</strong> <span class="pill pill--partial">En parte</span> <strong>ATENEA aporta</strong> las entidades y columnas que el módulo lee y escribe; también falta el juego de datos sintéticos para las pruebas.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table" style="font-size:clamp(0.68rem,min(1.25vw,2.3vh),1.5rem);">
+                  <caption>Tabla 5.8 — Datos del caso: fuente, tecnología, clasificación y uso permitido por los agentes de IA</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:33%;font-size:0.82em;">Dato</th>
+                      <th style="width:16%;font-size:0.82em;">Tecnología</th>
+                      <th style="width:27%;font-size:0.82em;">Clasificación</th>
+                      <th style="font-size:0.82em;">¿Puede llegar al modelo?</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Dato">Tablas del módulo, entre ellas <span style="overflow-wrap:anywhere;font-size:0.78em;">SE1_00_OFERTA_PROGRAMA_INSTITUCION</span></td>
+                      <td data-label="Tecnología">Oracle Autonomous</td>
+                      <td data-label="Clasificación">Confidencial: datos personales e información académica</td>
+                      <td data-label="¿Puede llegar al modelo?"><span class="pill pill--risk">No</span> solo la estructura (tablas y columnas)</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Dato">Soportes de los estudiantes</td>
+                      <td data-label="Tecnología">Servidor de archivos</td>
+                      <td data-label="Clasificación">Confidencial: datos personales, posiblemente sensibles</td>
+                      <td data-label="¿Puede llegar al modelo?"><span class="pill pill--risk">No</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Dato">Usuarios y roles</td>
+                      <td data-label="Tecnología">Keycloak</td>
+                      <td data-label="Clasificación">Confidencial: credenciales</td>
+                      <td data-label="¿Puede llegar al modelo?"><span class="pill pill--risk">No</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Dato">Acta y prototipo del módulo</td>
+                      <td data-label="Tecnología">SharePoint y Figma</td>
+                      <td data-label="Clasificación">Interna; puede contener datos de ejemplo</td>
+                      <td data-label="¿Puede llegar al modelo?"><span class="pill pill--ok">Sí</span> con datos de ejemplo anonimizados</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Dato">Código del módulo</td>
+                      <td data-label="Tecnología">Azure Repos</td>
+                      <td data-label="Clasificación">Propiedad de ATENEA</td>
+                      <td data-label="¿Puede llegar al modelo?"><span class="pill pill--ok">Sí</span> con la licencia institucional</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Dato">Datos de prueba</td>
+                      <td data-label="Tecnología">Juego sintético</td>
+                      <td data-label="Clasificación">Sin datos personales</td>
+                      <td data-label="¿Puede llegar al modelo?"><span class="pill pill--ok">Sí</span> (criterio 9, Tabla 4.4)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- E3-12: Criterios de aceptación (Tabla 5.9) [c3-aceptacion] -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e3" data-item="c3-aceptacion">
+            <div class="slide-content">
+              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
+              <h2>Criterios de aceptación: por historia y de punta a punta</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Qué es:</strong> dos niveles: por historia, con la definición de terminado (Tabla 4.4), y de punta a punta, con la validación del negocio antes de producción.
+                </li>
+                <li>
+                  <strong>Estado:</strong> <span class="pill pill--partial">En parte</span> cinco criterios definidos; los escenarios de punta a punta se derivan del proceso destino (§5.5).
+                </li>
+                <li>
+                  <strong>ATENEA aporta</strong> la validación del negocio y de la Subgerencia de TIC. La ingeniería de pruebas del caso es el componente C6, del segundo pago.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table" style="font-size:clamp(0.7rem,min(1.4vw,2.5vh),1.5rem);">
+                  <caption>Tabla 5.9 — Criterios de aceptación del caso: nivel, criterio, evidencia y quién valida</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:46%;font-size:0.82em;">Criterio</th>
+                      <th style="width:30%;font-size:0.82em;">Evidencia</th>
+                      <th style="font-size:0.82em;">Valida</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td colspan="3" data-label="Nivel" style="background:#EAF3F8;color:#1F536C;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Por historia</td></tr>
+                    <tr>
+                      <td data-label="Criterio">Cada escenario <em>Given/When/Then</em> tiene una prueba automatizada que pasa</td>
+                      <td data-label="Evidencia">Reporte de pruebas</td>
+                      <td data-label="Valida">Desarrollador</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Criterio">Se cumplen los criterios de calidad y seguridad 1 a 9</td>
+                      <td data-label="Evidencia">Salidas de validación, revisión y análisis</td>
+                      <td data-label="Valida">Líder del equipo y seguridad</td>
+                    </tr>
+                    <tr><td colspan="3" data-label="Nivel" style="background:#EAF3F8;color:#1F536C;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">De punta a punta</td></tr>
+                    <tr>
+                      <td data-label="Criterio">El paquete se despliega de forma reproducible en QA</td>
+                      <td data-label="Evidencia">Despliegue registrado en el pipeline</td>
+                      <td data-label="Valida">Infraestructura</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Criterio">El negocio valida en preproducción y el acta queda firmada en el formato institucional</td>
+                      <td data-label="Evidencia">Acta firmada (criterio 10)</td>
+                      <td data-label="Valida">Líder de producto y negocio</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Criterio">La versión pasa a producción con autorización y posibilidad de revertir</td>
+                      <td data-label="Evidencia">Versión desplegada y registrada</td>
+                      <td data-label="Valida">Subgerencia de TIC</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Criterio">Escenarios del módulo con su resultado esperado <span class="pill pill--todo">Por levantar</span></td>
+                      <td data-label="Evidencia">Por levantar del proceso destino</td>
+                      <td data-label="Valida">Líder de producto y negocio</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
 
           <!-- Slide 20: Flujo Integral de Artefactos de Aracne (Diagrama de Flujo / Figura 6.1) -->
           <article class="slide" data-deck="e1-e4" data-module="e4">
