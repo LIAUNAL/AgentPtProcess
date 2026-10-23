@@ -224,7 +224,7 @@ def generate_e1_e4_html():
               </ul>
             </div>
             <figure class="slide-figure">
-              <svg viewBox="0 0 520 352" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estado de los entregables E1 a E4 al 21 de octubre de 2026: estado al corte y qué falta">
+              <svg viewBox="0 0 520 392" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estado de los entregables E1 a E4 al 21 de octubre de 2026: estado al corte y qué falta">
               <rect x="6" y="6" width="508" height="93" rx="9" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.5" />
               <rect x="6" y="6" width="112" height="93" rx="9" fill="#1E5631" />
               <rect x="100" y="6" width="18" height="93" fill="#1E5631" />
