@@ -230,6 +230,15 @@ LAYOUT_JS = """(MIN_TD) => {
     else if (r.bottom > vh + 1 || r.top < -1 || r.right > vw + 1 || r.left < -1)
       out.push(`caption outside viewport (${Math.round(r.top)}-${Math.round(r.bottom)} of ${vh})`);
   });
+  // SVG content drawn outside its viewBox is silently clipped.
+  slide.querySelectorAll('svg[viewBox]').forEach((svg) => {
+    if (svg.getBoundingClientRect().width === 0) return;
+    const vb = svg.viewBox.baseVal, bb = svg.getBBox();
+    const tol = 2;
+    if (bb.x < vb.x - tol || bb.y < vb.y - tol ||
+        bb.x + bb.width > vb.x + vb.width + tol || bb.y + bb.height > vb.y + vb.height + tol)
+      out.push(`svg content outside viewBox (${Math.round(bb.x)},${Math.round(bb.y)},${Math.round(bb.width)}x${Math.round(bb.height)} vs ${vb.width}x${vb.height}) "${(svg.getAttribute('aria-label') || '').slice(0, 30)}"`);
+  });
   // Overlapping SVG <text> boxes.
   slide.querySelectorAll('svg').forEach((svg) => {
     const sr = svg.getBoundingClientRect();
