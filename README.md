@@ -14,8 +14,9 @@ El proyecto cuenta con un **Panel de Control interactivo** que permite seleccion
    - 45 diapositivas estructuradas en 7 módulos (Minuta contractual, Motivación, Perfiles en evolución, Chat vs Agente, Evidencia empírica, La respuesta metodológica y UN-SpecWeaver).
    - Enfoque conceptual, pedagógico y de adopción institucional.
 2. **Informe Técnico E1–E4: Contrato ATENEA-464-2026** (`?deck=e1-e4` o [`e1-e4.html`](e1-e4.html)):
-   - 21 diapositivas ejecutivas y técnicas estructuradas en 6 módulos (Contrato & Alcance, E1 Diagnóstico de software, E2 Metodología SDLC-IA de 6 fases y 5 decisiones humanas, E3 Arquitectura del arnés institucional, E4 Banco de agentes y skills, y Decisiones y compromisos).
-   - Extraído con rigor técnico del informe de avance contractual (`informesAtenea/informe_atenea`).
+   - 63 diapositivas (portada y 62 de contenido) en 6 módulos: Contrato & Alcance, E1 Diagnóstico, E2 Metodología SDLC-IA, E3 Arquitectura y caso de uso, E4 Agentes y skills con Aracne-SDLC-AI 0.9.0, y Decisiones & Cierre.
+   - Alineado con el informe técnico vigente (`informe_atenea`, capítulos 1 a 7): cada figura y tabla lleva su leyenda con la numeración del informe (o "Fuente: §N.M" cuando no está numerada) y cada elemento de los componentes C1 a C4 (E1 a E4) tiene su diapositiva marcada con `data-item`.
+   - Funciona en móvil: tablas como tarjetas, alternativas `.mobile-alt` para los diagramas y áreas táctiles de 44 px.
 
 ---
 
@@ -33,8 +34,18 @@ El proyecto cuenta con un **Panel de Control interactivo** que permite seleccion
 | 6 | <abbr title="Stack de especificaciones del deck">UN-SpecWeaver</abbr> | El stack de herramientas, tutorial práctico en terminal con comandos CLI y capturas reales |
 
 ### B. Deck E1–E4 (Informe Técnico de Avance ATENEA-464-2026)
-| # | Módulo | Tema |
-|---|--------|------|
+Mapeo de componentes: C1 a C4 corresponden a los entregables E1 a E4. La portada y 62 diapositivas se reparten así:
+
+| # | Módulo | Diapositivas | Tema |
+|---|--------|--------------|------|
+| 1 | Contrato & Alcance | 6 | Estado de E1 a E4 (Tabla 1.1), minuta, obligaciones, entregables y pagos, y cronograma S1 a S22 (Figura 2.1) |
+| 2 | E1 · Diagnóstico ATENEA (C1) | 14 | Portafolio, roles, flujo actual, infraestructura, licencias, brechas, fricción, madurez, DORA, riesgos, datos y caso de uso priorizado |
+| 3 | E2 · Metodología SDLC-IA (C2) | 15 | Seis fases y flujo, intervención agéntica, RACI, siete puntos de control, contexto, CI/CD, definición de terminado, cierre de brechas, distribución y ruta de adopción |
+| 4 | E3 · Arquitectura y caso de uso (C3) | 12 | Composición del arnés, componentes y estado, y los ocho elementos del caso (proceso, requisitos, historias, agentes, flujos, integraciones, datos y aceptación) |
+| 5 | E4 · Agentes y Skills (C4) | 10 | Aracne-SDLC-AI 0.9.0: flujo, 16 agentes, comandos y skills, instalación, interacción entre agentes, control humano, seguridad y trazabilidad |
+| 6 | Decisiones & Cierre | 5 | Tres decisiones de ATENEA (§7.1), información pendiente (Tabla 7.1), compromisos (Tabla 7.2) y hoja de ruta Hito 1 a Hito 2 con la ruta de adopción |
+
+---|--------|------|
 | 1 | Contrato & Alcance | Objeto, partes UNAL/ATENEA, valor $300M, 22 semanas, 4 resultados y estado del Hito 1 |
 | 2 | E1 · Diagnóstico ATENEA | Portafolio (SICOR Posmedia, CTI/EMA, Keycloak), roles, cuello de botella en revisión y stack técnico |
 | 3 | E2 · Flujo SDLC-IA | Flujo de 6 fases (Entender, Decidir, Descomponer, Traducir, Construir, Cerrar) y 5 puertas humanas |
@@ -80,6 +91,12 @@ python3 -m http.server 8000
 
 # Auditar integridad de presentaciones y accesibilidad
 python3 scripts/presentador_deck.py
+
+# Auditar el deck E1-E4 (cobertura C1-C4, rail, viewports y móvil; requiere Playwright para Python)
+python3 scripts/audit_e1e4_deck.py [--only coverage|rail|layout|mobile] [--shots DIR]
+
+# Regenerar el deck E1-E4 y el index.html (nunca editar el HTML a mano)
+python3 scripts/build_e1_e4.py && python3 scripts/assemble_index.py
 ```
 
 Abre http://localhost:8000/ en tu navegador.
