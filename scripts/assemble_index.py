@@ -133,7 +133,7 @@ def main():
             </div>
             <div>
               <h2 class="hub-card-title">Informe Técnico E1–E4: Avance de Hito 1</h2>
-              <p class="hub-card-desc">Avance del Hito 1 alineado con el informe técnico (corte al 21 de octubre de 2026): diagnóstico de E1 (madurez, DORA, riesgos y datos), metodología SDLC-IA con 7 puntos de control humano (E2), los ocho elementos del caso de uso y la arquitectura del arnés (E3), Aracne-SDLC-AI 0.9.0 con agentes, comandos, instalación, seguridad y trazabilidad (E4), y las decisiones, la información pendiente y los compromisos de ATENEA. Funciona también en el celular.</p>
+              <p class="hub-card-desc">Avance del Hito 1 alineado con el informe técnico (corte al 23 de octubre de 2026): diagnóstico de E1 (madurez, DORA, riesgos y datos), metodología SDLC-IA con 7 puntos de control humano (E2), los ocho elementos del caso de uso y la arquitectura del arnés (E3), Aracne-SDLC-AI 0.9.0 con agentes, comandos, instalación, seguridad y trazabilidad (E4), y las decisiones, la información pendiente y los compromisos de ATENEA. Funciona también en el celular.</p>
             </div>
             <ul class="hub-card-pills">
               <li>Contrato &amp; Alcance</li>
