@@ -34,7 +34,7 @@ See `/home/carlos/.claude/plans/we-need-to-update-snuggly-summit.md` for:
   - [x] add CSS for captions, status pills, mobile cards (`td[data-label]`), `.mobile-alt`, sticky first column and tap targets
 - [x] T2 Contract module, then the E1 module (C1, plus the prioritized use case).
 - [x] T3 E2 module (C2).
-- [ ] T4 E3 module (C3: 8 elements).
+- [x] T4 E3 module (C3: 8 elements).
 - [ ] T5 E4 module (C4).
 - [ ] T6 Closing module (chapter 7), slide counts, README, hub card and `agent-presentador.md`; then reassemble `index.html`.
 - [ ] T7 Visual pass in Chrome (projector and mobile) and fixes; audit GREEN.
@@ -72,3 +72,10 @@ See `/home/carlos/.claude/plans/we-need-to-update-snuggly-summit.md` for:
 - Lessons: a full-width table slide needs `style="flex:1 1 auto;min-height:0;height:auto"` on the wrapper (the `figcaption` CSS rule does not apply to `<caption>`); the three two-column SVG slides failed the 844x390 landscape rule, so they became full slides with `.mobile-alt`; the table `clamp()` minimum of 0.72rem must be lowered for 8-row tables.
 - Checks: coverage -> all c1-* and c2-* PASS (only c3-*/c4-* fail, expected); rail PASS; layout PASS (1920x1080, 1366x768, 1280x720); mobile -> zero failures on e0-e2, 21 remaining on e3-e5 (expected); presentador_deck.py -> 0 errors.
 - Informe ambiguities: §4.4 intro points to a "decision" column in Tabla 4.1 and gate markers in Fig 4.1 (4 red gates: firma del acta, aprueba spec y criterios, revisión y merge, despliegue), while the section lists 7 gates (the deck uses 7); Fig 4.1 shows the gate "firma del acta" under Negocio but Tabla 4.1 puts the spec approval with the líder de producto; Tabla 4.1 says Seguimiento "no existe" today; Fig 4.3 gives no "sí" branch for the periodic validation; Tabla 4.1 is shown condensed (wording shortened, same six columns); the informe has no numbered figure/table for §4.3, §4.4, §4.6 and §4.8 (captions use "Fuente: §N.M").
+
+### T4 (done)
+- Route: delegated direct (one writer; e3 block replaced in `scripts/build_e1_e4.py`, regenerated `e1-e4.html` and `index.html`). Trigger: 2+ non-trivial files plus preparatory reading.
+- Commit: 57b0014 `feat(deck): agregar los ocho elementos de C3 y alinear la composición de E3 con el informe`.
+- Result: e3 = 12 slides (deck indices 36-47): Fig 5.1 composición (full SVG, tipos de herramienta sin marcas), Tabla 5.1 split 1/2 (7 piezas del arnés) and 2/2 (6 herramientas de ATENEA) with status pills, Fig 5.2 levantamiento C3, then one slide per C3 element: c3-proceso (Tabla 5.2, 4-stage cards SVG), c3-requisitos (Tabla 5.3 table), c3-historias (Tabla 5.4 story-card SVG), c3-arquitectura-agentes (Tabla 5.5 6-phase pipeline SVG), c3-flujos (Tabla 5.6 table), c3-integraciones (Tabla 5.7 hub-and-spoke SVG), c3-datos (Tabla 5.8 table with Sí/No pills), c3-aceptacion (Tabla 5.9 table grouped por historia / punta a punta). All SVG slides carry `.mobile-alt`. The old invented-score slide was already gone (T2).
+- Checks: coverage -> all c1-*, c2-*, c3-* PASS (only c4-* fail, expected); rail PASS; layout PASS; mobile -> zero failures on e0-e3, 16 remaining on e4-e5 slides; presentador_deck.py -> 0 errors. Screenshots reviewed at 1920x1080, 1366x768 and iPhone; fixed cramped SVG text, clipped borders (viewBox padding), table font size.
+- Informe ambiguities: Tabla 5.7 names products (Keycloak, SharePoint, Figma, Azure Repos, Azure Pipelines) although §5.1 keeps tool types, so the deck follows each table as written; Fig 5.2 labels the elements 5.5-5.12 as sections and Tabla 5.5 cites BMAD/graphify/aracne-* names; Tabla 5.3 origins cite Tabla 3.3/3.10/4.4 and §6.9 (deck shows them as written; the uente codes such as R2, R4 are omitted); Tabla 5.1 says the arnés is "implementado y probado fuera de ATENEA" yet "forma de uso por definir" (shown as ok pill plus qualifier); §5.4 caso de uso (candidates) is in E1 since T2.
