@@ -37,7 +37,7 @@ See `/home/carlos/.claude/plans/we-need-to-update-snuggly-summit.md` for:
 - [x] T4 E3 module (C3: 8 elements).
 - [x] T5 E4 module (C4).
 - [x] T6 Closing module (chapter 7), slide counts, README, hub card and `agent-presentador.md`; then reassemble `index.html`.
-- [ ] T7 Visual pass in Chrome (projector and mobile) and fixes; audit GREEN.
+- [x] T7 Visual pass in Chrome (projector and mobile) and fixes; audit GREEN.
 
 ## Known informe conflicts (to report)
 - The executive summary says "5 decisiones", section 4.4 lists 7 gates and section 6.6 lists 3. The deck uses 7 in E2 and 3 in E4.
@@ -105,3 +105,19 @@ See `/home/carlos/.claude/plans/we-need-to-update-snuggly-summit.md` for:
 - Checks: `python3 scripts/audit_e1e4_deck.py` (index) coverage/rail/layout/mobile PASS; `--target standalone` all PASS; `python3 scripts/presentador_deck.py` 0 errors; kickoff (45 slides) navigates at 1920x1080, 1366x768 and 1280x720 with no page errors. Screenshots in the scratchpad `t7fix` folder reviewed (#16, #25, #27, #32, #52, #18 at 1280x720/1366x768; #1, #2 landscape).
 - Pending: the parent's final visual pass.
 
+
+### T7 closing (parent)
+- Route: parent inline for the small fixes; one delegated writer for the fit work (recorded above).
+- The Chrome extension could not reach this machine's local servers (no request reached the server log), so the visual pass used Playwright screenshots (real Chromium) at 1920x1080, 1366x768, 1280x720, iPhone 13, Pixel 7, iPad and 844x390, read as contact sheets.
+- The user asked mid-task to remove WildFly (and its version), PostgreSQL and Moodle from the deck: 4ee81fd (14 edits, 0 mentions left in e1-e4.html).
+- 9c3a1ae: the table fit is scoped to the E1-E4 deck, so the Kick-off layout is unchanged; cache-buster 20261023_4.
+- 771ed2f: the audit now detects SVG content drawn outside its viewBox. It failed (RED) only on slide 3, "Estado E1–E4", where the E4 card was clipped at every size.
+- e3b872d: that viewBox was widened to 0 0 520 392 (GREEN).
+- Final checks:
+  - `python3 scripts/audit_e1e4_deck.py` (index): coverage, rail, layout and mobile all PASS.
+  - `--target standalone`: all four PASS.
+  - `presentador_deck.py`: 0 errors.
+- Known limits, outside E1–E4 scope and left as they were:
+  - In phone landscape, the index chrome (deck chips plus rail) takes about half of the 390px height.
+  - `kickoff.html` opened on its own shows 0 slides. In `initApp`, `[data-deck='e1-e4']` matches the hub card.
+  - The kickoff card still says "5 puertas humanas".
