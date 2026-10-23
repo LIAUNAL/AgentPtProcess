@@ -207,7 +207,7 @@ def generate_e1_e4_html():
           <article class="slide" data-deck="e1-e4" data-module="e0">
             <div class="slide-content">
               <p class="slide-kicker">1 &middot; Marco Contractual y Alcance</p>
-              <h2>Estado de E1 a E4 al corte: qué está listo y qué falta</h2>
+              <h2>Estado de los entregables E1 a E4 al corte</h2>
               <ul class="slide-list">
                 <li>
                   <strong>Corte al 21 de octubre de 2026:</strong> el informe se apoya en la minuta, el acta 01 del 7 de octubre y tres sesiones grabadas con ATENEA.
@@ -216,60 +216,52 @@ def generate_e1_e4_html():
                   <strong>Hito 1:</strong> E1 a E4 integran el hito 1 del cronograma contractual.
                 </li>
                 <li>
-                  <strong>E1:</strong> diagnóstico completo, a la espera de la validación de ATENEA.
+                  <strong>E1:</strong> diagnóstico completo, listo para la validación de ATENEA.
                 </li>
                 <li>
-                  <strong>E2 a E4:</strong> propuesta definida; falta la validación de ATENEA, el caso de uso y los accesos, y la instalación del arnés.
+                  <strong>E2 a E4:</strong> propuesta definida para el flujo, la arquitectura y el arnés de agentes.
                 </li>
               </ul>
             </div>
             <figure class="slide-figure">
-              <svg viewBox="0 0 520 392" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estado de los entregables E1 a E4 al 21 de octubre de 2026: estado al corte y qué falta">
-              <rect x="6" y="6" width="508" height="93" rx="9" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.5" />
-              <rect x="6" y="6" width="112" height="93" rx="9" fill="#1E5631" />
-              <rect x="100" y="6" width="18" height="93" fill="#1E5631" />
-              <text x="62" y="50.5" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E1</text>
-              <text x="62" y="70.5" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Diagnóstico</text>
-              <text x="130" y="28" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Diagnóstico completo para validación</text>
-              <text x="130" y="46" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13">Falta: Validación de ATENEA; documentos de</text>
-              <text x="130" y="62" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13">arquitectura de SICORE Posmedia y SICORE CTeI;</text>
-              <text x="130" y="78" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13">informe de seguridad</text>
-              <rect x="6" y="107" width="508" height="74" rx="9" fill="#FFF7ED" stroke="#8A5A00" stroke-width="1.5" />
-              <rect x="6" y="107" width="112" height="74" rx="9" fill="#8A5A00" />
-              <rect x="100" y="107" width="18" height="74" fill="#8A5A00" />
-              <text x="62" y="142.0" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E2</text>
-              <text x="62" y="162.0" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">SDLC-IA</text>
-              <text x="130" y="129" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Flujo propuesto por etapa</text>
-              <text x="130" y="147" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13">Falta: Validación de ATENEA; alcance de CI/CD</text>
-              <rect x="6" y="189" width="508" height="94" rx="9" fill="#FFF7ED" stroke="#8A5A00" stroke-width="1.5" />
-              <rect x="6" y="189" width="112" height="94" rx="9" fill="#8A5A00" />
-              <rect x="100" y="189" width="18" height="94" fill="#8A5A00" />
-              <text x="62" y="234.0" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E3</text>
-              <text x="62" y="254.0" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Arquitectura</text>
-              <text x="130" y="211" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Composición definida por tipo de</text>
-              <text x="130" y="228" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">componente</text>
-              <text x="130" y="246" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13">Falta: Caso de uso y accesos a las</text>
-              <text x="130" y="262" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13">herramientas de ATENEA</text>
-              <rect x="6" y="291" width="508" height="94" rx="9" fill="#FFF7ED" stroke="#8A5A00" stroke-width="1.5" />
-              <rect x="6" y="291" width="112" height="94" rx="9" fill="#8A5A00" />
-              <rect x="100" y="291" width="18" height="94" fill="#8A5A00" />
-              <text x="62" y="336.0" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E4</text>
-              <text x="62" y="356.0" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Agentes y skills</text>
-              <text x="130" y="313" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Arnés propuesto y probado fuera de</text>
-              <text x="130" y="330" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">ATENEA</text>
-              <text x="130" y="348" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13">Falta: Adaptación a las condiciones de ATENEA</text>
-              <text x="130" y="364" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13">e instalación</text>
+              <svg viewBox="0 0 520 348" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estado de los entregables E1 a E4 al 21 de octubre de 2026">
+              <rect x="6" y="6" width="508" height="78" rx="9" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.5" />
+              <rect x="6" y="6" width="112" height="78" rx="9" fill="#1E5631" />
+              <rect x="100" y="6" width="18" height="78" fill="#1E5631" />
+              <text x="62" y="44" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E1</text>
+              <text x="62" y="64" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Diagnóstico</text>
+              <text x="134" y="51" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Diagnóstico completo para validación</text>
+              <rect x="6" y="92" width="508" height="78" rx="9" fill="#FFF7ED" stroke="#8A5A00" stroke-width="1.5" />
+              <rect x="6" y="92" width="112" height="78" rx="9" fill="#8A5A00" />
+              <rect x="100" y="92" width="18" height="78" fill="#8A5A00" />
+              <text x="62" y="130" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E2</text>
+              <text x="62" y="150" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">SDLC-IA</text>
+              <text x="134" y="137" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Flujo propuesto por etapa</text>
+              <rect x="6" y="178" width="508" height="78" rx="9" fill="#FFF7ED" stroke="#8A5A00" stroke-width="1.5" />
+              <rect x="6" y="178" width="112" height="78" rx="9" fill="#8A5A00" />
+              <rect x="100" y="178" width="18" height="78" fill="#8A5A00" />
+              <text x="62" y="216" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E3</text>
+              <text x="62" y="236" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Arquitectura</text>
+              <text x="134" y="213" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Composición definida por tipo</text>
+              <text x="134" y="235" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">de componente</text>
+              <rect x="6" y="264" width="508" height="78" rx="9" fill="#FFF7ED" stroke="#8A5A00" stroke-width="1.5" />
+              <rect x="6" y="264" width="112" height="78" rx="9" fill="#8A5A00" />
+              <rect x="100" y="264" width="18" height="78" fill="#8A5A00" />
+              <text x="62" y="302" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E4</text>
+              <text x="62" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Agentes y skills</text>
+              <text x="134" y="299" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Arnés propuesto y probado</text>
+              <text x="134" y="321" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">fuera de ATENEA</text>
               </svg>
               <div class="mobile-alt">
                 <p class="sched-title">Estado de E1 a E4 al corte</p>
                 <ul class="slide-list" style="margin:8px 0;">
-                  <li><strong>E1 Diagnóstico:</strong> <span class="pill pill--ok">Diagnóstico completo para validación</span><br />Falta: Validación de ATENEA; documentos de arquitectura de SICORE Posmedia y SICORE CTeI; informe de seguridad.</li>
-                  <li><strong>E2 SDLC-IA:</strong> <span class="pill pill--partial">Flujo propuesto por etapa</span><br />Falta: Validación de ATENEA; alcance de CI/CD.</li>
-                  <li><strong>E3 Arquitectura:</strong> <span class="pill pill--partial">Composición definida por tipo de componente</span><br />Falta: Caso de uso y accesos a las herramientas de ATENEA.</li>
-                  <li><strong>E4 Agentes y skills:</strong> <span class="pill pill--partial">Arnés propuesto y probado fuera de ATENEA</span><br />Falta: Adaptación a las condiciones de ATENEA e instalación.</li>
+                  <li><strong>E1 Diagnóstico:</strong> <span class="pill pill--ok">Diagnóstico completo para validación</span></li>
+                  <li><strong>E2 SDLC-IA:</strong> <span class="pill pill--partial">Flujo propuesto por etapa</span></li>
+                  <li><strong>E3 Arquitectura:</strong> <span class="pill pill--partial">Composición definida por tipo de componente</span></li>
+                  <li><strong>E4 Agentes y skills:</strong> <span class="pill pill--partial">Arnés propuesto y probado fuera de ATENEA</span></li>
                 </ul>
               </div>
-              <figcaption class="fig-caption">Tabla 1.1 — Estado de E1 a E4 al 21 de octubre de 2026 y lo que falta para cerrar cada entregable</figcaption>
+              <figcaption class="fig-caption">Tabla 1.1 — Estado de E1 a E4 al 21 de octubre de 2026</figcaption>
             </figure>
           </article>
 
