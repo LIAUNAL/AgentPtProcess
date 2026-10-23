@@ -9139,200 +9139,467 @@
           </article>
 
 
-          <!-- Slide 20: Flujo Integral de Artefactos de Aracne (Diagrama de Flujo / Figura 6.1) -->
-          <article class="slide" data-deck="e1-e4" data-module="e4">
-            <div class="slide-content">
-              <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
-              <h2>Flujo integral de artefactos de Aracne: de la idea a la línea base</h2>
-              <ul class="slide-list">
-                <li>
-                  <strong>Tres fases metodológicas articuladas:</strong>
-                  1. Especificación formal con BMAD (PRD y arquitectura);
-                  2. Traducción determinista con OpenSpec y Tejedor LIA (Regla de frontera);
-                  3. Construcción estricta SDD/ODD con pruebas automatizadas y cierre en línea base.
-                </li>
-                <li>
-                  <strong>Regla de frontera:</strong> BMAD se detiene en la historia con criterios <em>Given/When/Then</em>; se podan deliberadamente las capacidades de escritura libre de código para obligar el paso por contratos verificables.
-                </li>
-                <li>
-                  <strong>Gobernanza transversal:</strong> Control de cambios (`/sw:change`), gestión de defectos guiada por tests (`/sw:bug`) y memoria persistente (Engram).
-                </li>
-              </ul>
-            </div>
+          <!-- E4-1: Flujo integral de artefactos (Figura 6.1) [c4-arquitectura] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e4" data-item="c4-arquitectura" data-tone="emerald">
             <figure class="slide-figure">
-              <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de flujo integral de artefactos del arnés Aracne SDLC-AI">
-                <!-- Fase 1: Especificación y Contratos -->
-                <rect x="20" y="15" width="480" height="98" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
-                <rect x="30" y="22" width="260" height="18" rx="3" fill="#4E93B0" />
-                <text x="160" y="35" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">FASE 1: ESPECIFICACIÓN Y CONTRATOS (ENTENDER A TRADUCIR)</text>
-
-                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
-                  <rect x="30" y="46" width="100" height="56" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="80" y="64" text-anchor="middle" fill="#1B2029" font-weight="700">Gestor Specs</text>
-                  <text x="80" y="78" text-anchor="middle" fill="#5B6472">BMAD: PRD, Arq</text>
-                  <text x="80" y="90" text-anchor="middle" fill="#5B6472">y prototipo UX</text>
-
-                  <path d="M130 74 H145" stroke="#4E93B0" stroke-width="1.5" />
-
-                  <rect x="145" y="46" width="105" height="56" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="197" y="64" text-anchor="middle" fill="#1B2029" font-weight="700">Historias Usuario</text>
-                  <text x="197" y="78" text-anchor="middle" fill="#5B6472">Criterios formales</text>
-                  <text x="197" y="90" text-anchor="middle" fill="#5B6472">Given/When/Then</text>
-
-                  <path d="M250 74 H265" stroke="#1E5631" stroke-width="1.5" />
-
-                  <rect x="265" y="46" width="110" height="56" rx="5" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.3" />
-                  <text x="320" y="64" text-anchor="middle" fill="#1E5631" font-weight="700">Tejedor (LIA UNAL)</text>
-                  <text x="320" y="78" text-anchor="middle" fill="#5B6472">Historia → Contrato</text>
-                  <text x="320" y="90" text-anchor="middle" fill="#5B6472">Registro de traza</text>
-
-                  <path d="M375 74 H390" stroke="#4E93B0" stroke-width="1.5" />
-
-                  <rect x="390" y="46" width="100" height="56" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="440" y="64" text-anchor="middle" fill="#1B2029" font-weight="700">OpenSpec</text>
-                  <text x="440" y="78" text-anchor="middle" fill="#5B6472">Contrato ejecutable</text>
-                  <text x="440" y="90" text-anchor="middle" fill="#5B6472">por cada historia</text>
-                </g>
-
-                <!-- Flecha vertical F1 -> F2 -->
-                <path d="M440 102 V132" stroke="#1E5631" stroke-width="2" />
-                <text x="445" y="122" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="700">contrato formal</text>
-
-                <!-- Fase 2: Construcción y Cierre Verificable -->
-                <rect x="20" y="132" width="480" height="100" rx="8" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.5" />
-                <rect x="30" y="139" width="275" height="18" rx="3" fill="#1E5631" />
-                <text x="167" y="152" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">FASE 2: CONSTRUCCIÓN Y CIERRE VERIFICABLE (CONSTRUIR Y CERRAR)</text>
-
-                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
-                  <rect x="390" y="163" width="100" height="56" rx="5" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.3" />
-                  <text x="440" y="181" text-anchor="middle" fill="#1B2029" font-weight="700">Construir (/build)</text>
-                  <text x="440" y="195" text-anchor="middle" fill="#1E5631" font-weight="600">Código + Tests</text>
-                  <text x="440" y="207" text-anchor="middle" fill="#5B6472">1 test por escenario</text>
-
-                  <path d="M390 191 H375" stroke="#1E5631" stroke-width="1.5" />
-
-                  <rect x="265" y="163" width="110" height="56" rx="5" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="320" y="181" text-anchor="middle" fill="#1E5631" font-weight="700">Cerrar (LIA UNAL)</text>
-                  <text x="320" y="195" text-anchor="middle" fill="#5B6472">Validación estricta</text>
-                  <text x="320" y="207" text-anchor="middle" fill="#5B6472">Archiva línea base</text>
-
-                  <path d="M265 191 H250" stroke="#1E5631" stroke-width="1.5" />
-
-                  <rect x="145" y="163" width="105" height="56" rx="5" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="197" y="181" text-anchor="middle" fill="#1E5631" font-weight="700">Tablero (/status)</text>
-                  <text x="197" y="195" text-anchor="middle" fill="#5B6472">Avance y cobertura</text>
-                  <text x="197" y="207" text-anchor="middle" fill="#5B6472">Métricas en vivo</text>
-
-                  <path d="M145 191 H130" stroke="#1E5631" stroke-width="1.5" stroke-dasharray="3,2" />
-
-                  <rect x="30" y="163" width="100" height="56" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="80" y="181" text-anchor="middle" fill="#2C6B87" font-weight="700">Memoria (Engram)</text>
-                  <text x="80" y="195" text-anchor="middle" fill="#5B6472">Registro decisiones</text>
-                  <text x="80" y="207" text-anchor="middle" fill="#5B6472">Lecciones repo</text>
-                </g>
-
-                <!-- Fase 3: Gobernanza Transversal y Contexto de Código -->
-                <rect x="20" y="250" width="480" height="95" rx="8" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.3" />
-                <rect x="30" y="257" width="275" height="18" rx="3" fill="#4E93B0" />
-                <text x="167" y="270" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="9" font-weight="700">FASE 3: GOBERNANZA TRANSVERSAL Y CONTEXTO CONTINUO</text>
-
-                <g font-family="Space Grotesk,sans-serif" font-size="8.5">
-                  <rect x="30" y="281" width="320" height="52" rx="5" fill="#FFFFFF" stroke="#1E5631" />
-                  <text x="190" y="299" text-anchor="middle" fill="#1E5631" font-weight="700">Control de Cambios, Defectos e Incidencias (LIA UNAL)</text>
-                  <text x="190" y="315" text-anchor="middle" fill="#5B6472">/sw:change (filtro de alcance) &middot; /sw:bug (corrección con tests) &middot; /sw:ticket (clasificación)</text>
-
-                  <rect x="365" y="281" width="125" height="52" rx="5" fill="#FFFFFF" stroke="#4E93B0" />
-                  <text x="427" y="299" text-anchor="middle" fill="#2C6B87" font-weight="700">Mapa del Código</text>
-                  <text x="427" y="315" text-anchor="middle" fill="#5B6472">Grafo AST real</text>
-                  <text x="427" y="325" text-anchor="middle" fill="#5B6472">(Graphify)</text>
-                </g>
-
-                <!-- Bucle de cambio hacia atrás (rojo) -->
-                <path d="M30 307 H12 V64 H30" stroke="#DFBD76" stroke-width="1.5" stroke-dasharray="3,2" />
-                <text x="14" y="185" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="7.5" font-weight="700" transform="rotate(-90 14,185)">Cambio de alcance: regenera sólo lo afectado</text>
-              </svg>
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
+                <h2 style="margin-bottom:4px;">Flujo integral de artefactos de Aracne: de la idea a la línea base</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Tres enfoques: <abbr title="Breakthrough Method for Agile AI-Driven Development">BMAD</abbr> (de la concepción a la historia), <abbr title="Desarrollo Dirigido por Especificación">SDD</abbr> con OpenSpec (de la historia al contrato) y <abbr title="Desarrollo Orgánico y Acotado">ODD</abbr> (construcción contra el contrato). <strong>Regla de frontera:</strong> <abbr title="Breakthrough Method for Agile AI-Driven Development">BMAD</abbr> se detiene en la historia con criterios <em>Given/When/Then</em>; desde ahí el control pasa al Tejedor LIA y al constructor.</p>
+              </div>
+              <svg viewBox="-12 -6 1218 590" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Figura 6.1: flujo integral de artefactos del arnés Aracne en tres fases, con el bucle de cambio de alcance">
+<defs>
+<marker id="a61b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker>
+<marker id="a61g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#1E5631" /></marker>
+<marker id="a61a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#B07A12" /></marker>
+<marker id="a61k" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#5B6472" /></marker>
+</defs>
+<rect x="40" y="0" width="1160" height="178" rx="10" fill="#EDF1F7" stroke="#2C6B87" stroke-width="1.4" stroke-dasharray="7,5" />
+<rect x="52" y="9" width="470" height="26" rx="4" fill="#2C6B87" />
+<text x="62" y="27" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Fase de especificación y contratos (Entender a Traducir)</text>
+<rect x="56" y="50" width="236" height="112" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<text x="174" y="83.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700" text-anchor="middle">Gestor de</text>
+<text x="174" y="104.7" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700" text-anchor="middle">especificaciones</text>
+<text x="174" y="123.3" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">BMAD: PRD, arquitectura y</text>
+<text x="174" y="141.3" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">prototipos de interfaz UX</text>
+<rect x="356" y="50" width="236" height="112" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<text x="474" y="85.2" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700" text-anchor="middle">Historias de usuario</text>
+<text x="474" y="103.8" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">épicas y criterios de</text>
+<text x="474" y="121.7" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">aceptación en formato</text>
+<text x="474" y="139.7" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">Given/When/Then</text>
+<rect x="656" y="50" width="236" height="112" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="774" y="85.2" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700" text-anchor="middle">Tejedor (Arnés LIA)</text>
+<text x="774" y="103.8" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">conversión historia a</text>
+<text x="774" y="121.7" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">contrato verificable y</text>
+<text x="774" y="139.7" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">registro de traza</text>
+<rect x="956" y="50" width="236" height="112" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<text x="1074" y="94.2" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700" text-anchor="middle">Contratos (OpenSpec)</text>
+<text x="1074" y="112.8" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">especificación ejecutable y</text>
+<text x="1074" y="130.7" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">formal por cada historia</text>
+<path d="M294 106 H353" stroke="#2C6B87" stroke-width="2.2" fill="none" marker-end="url(#a61b)" />
+<path d="M594 106 H653" stroke="#2C6B87" stroke-width="2.2" fill="none" marker-end="url(#a61b)" />
+<path d="M894 106 H953" stroke="#2C6B87" stroke-width="2.2" fill="none" marker-end="url(#a61b)" />
+<rect x="40" y="214" width="1160" height="178" rx="10" fill="#F0F7F2" stroke="#1E5631" stroke-width="1.4" stroke-dasharray="7,5" />
+<rect x="52" y="223" width="505" height="26" rx="4" fill="#1E5631" />
+<text x="62" y="241" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Fase de construcción y cierre verificable (Construir y Cerrar)</text>
+<rect x="56" y="264" width="236" height="112" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<text x="174" y="308.2" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700" text-anchor="middle">Memoria persistente</text>
+<text x="174" y="326.8" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">Engram: decisiones de diseño</text>
+<text x="174" y="344.7" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">y lecciones por proyecto</text>
+<rect x="356" y="264" width="236" height="112" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="474" y="299.2" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700" text-anchor="middle">Tablero de estado</text>
+<text x="474" y="317.8" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">avance, estabilidad y</text>
+<text x="474" y="335.7" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">métricas del proyecto en</text>
+<text x="474" y="353.7" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">tiempo real</text>
+<rect x="656" y="264" width="236" height="112" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="774" y="308.2" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700" text-anchor="middle">Cerrar (Arnés LIA)</text>
+<text x="774" y="326.8" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">validación, archivado y</text>
+<text x="774" y="344.7" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">fijación de línea base</text>
+<rect x="956" y="264" width="236" height="112" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<text x="1074" y="308.2" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700" text-anchor="middle">Construir (Entorno)</text>
+<text x="1074" y="326.8" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">código y pruebas unitarias</text>
+<text x="1074" y="344.7" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">automatizadas por escenario</text>
+<path d="M954 320 H895" stroke="#2C6B87" stroke-width="2.2" fill="none" marker-end="url(#a61b)" />
+<path d="M654 320 H595" stroke="#2C6B87" stroke-width="2.2" fill="none" marker-end="url(#a61b)" />
+<path d="M294 320 H353" stroke="#2C6B87" stroke-width="2.2" fill="none" stroke-dasharray="6,4" marker-end="url(#a61b)" />
+<text x="924" y="298" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">código</text>
+<text x="924" y="312" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">+ pruebas</text>
+<text x="624" y="298" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">línea</text>
+<text x="624" y="312" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">base</text>
+<text x="324" y="312" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="11.5" text-anchor="middle">decisiones</text>
+<rect x="40" y="428" width="1160" height="150" rx="10" fill="#EDF1F7" stroke="#2C6B87" stroke-width="1.4" stroke-dasharray="7,5" />
+<rect x="52" y="437" width="480" height="26" rx="4" fill="#2C6B87" />
+<text x="62" y="455" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Gobernanza transversal y contexto de código (Soporte continuo)</text>
+<rect x="56" y="468" width="836" height="96" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="474" y="513.1" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700" text-anchor="middle">Control de cambios, defectos e incidencias (Arnés LIA)</text>
+<text x="474" y="531.7" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">/sw:change (control de alcance) · /sw:bug (correcciones) · /sw:ticket (enrutamiento)</text>
+<rect x="956" y="468" width="236" height="96" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<text x="1074" y="495.2" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700" text-anchor="middle">Mapa del código</text>
+<text x="1074" y="513.8" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">graphify: análisis de</text>
+<text x="1074" y="531.7" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">impacto y dependencias en</text>
+<text x="1074" y="549.7" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">grafo AST</text>
+<path d="M1074 162 V262" stroke="#1E5631" stroke-width="2.2" fill="none" marker-end="url(#a61g)" />
+<text x="1084" y="202" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">contrato formal</text>
+<path d="M1074 466 V379" stroke="#2C6B87" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#a61b)" />
+<text x="1084" y="414" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13">grafo AST</text>
+<path d="M954 516 H895" stroke="#2C6B87" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#a61b)" />
+<path d="M562 378 V466" stroke="#2C6B87" stroke-width="2.2" fill="none" marker-end="url(#a61b)" marker-start="url(#a61b)" />
+<rect x="330" y="184" width="540" height="24" rx="5" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1" fill-opacity="1" />
+<text x="600" y="201" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">traza requisito–contrato · plan de olas de trabajo paralelo</text>
+<path d="M56 516 H14 V106 H53" stroke="#B07A12" stroke-width="2.2" fill="none" stroke-dasharray="7,5" marker-end="url(#a61a)" />
+<text x="8" y="316" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" transform="rotate(-90 8,316)">cambio de alcance: vuelve a planeación; regenera solo lo afectado</text>
+</svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Tres fases del flujo de artefactos</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>1. Especificación y contratos (Entender a Traducir).</strong> Gestor de especificaciones (BMAD: PRD, arquitectura y prototipos UX) &rarr; historias de usuario con criterios <em>Given/When/Then</em> &rarr; Tejedor (Arnés LIA): conversión historia a contrato verificable y registro de traza &rarr; contratos (OpenSpec), uno por historia. Anotación: traza requisito&ndash;contrato y plan de olas de trabajo paralelo.</li>
+                  <li><strong>2. Construcción y cierre verificable (Construir y Cerrar).</strong> Del contrato formal a construir (código y pruebas unitarias por escenario) &rarr; cerrar (validación, archivado y línea base) &rarr; tablero de estado (avance, estabilidad y métricas). La memoria persistente (Engram) aporta decisiones al tablero.</li>
+                  <li><strong>3. Gobernanza transversal y contexto de código (Soporte continuo).</strong> Control de cambios, defectos e incidencias (<code>/sw:change</code>, <code>/sw:bug</code>, <code>/sw:ticket</code>) y mapa del código con graphify (grafo AST) para el análisis de impacto. Un cambio de alcance vuelve a planeación y regenera solo lo afectado.</li>
+                </ul>
+                <p class="sched-note">Verde: componentes propios del LIA UNAL; azul: piezas y herramientas integradas.</p>
+              </div>
+              <figcaption class="fig-caption">Figura 6.1 — Flujo de artefactos del arnés de agentes de IA. Verde: componentes propios desarrollados por el LIA UNAL; azul: piezas y herramientas integradas</figcaption>
             </figure>
           </article>
 
-          <!-- Slide 22: Sistema de Agentes Base de Aracne (Tabla 6.1) -->
-          <article class="slide" data-deck="e1-e4" data-module="e4">
+          <!-- E4-2: Agentes base 1/2 (Tabla 6.1) [c4-arquitectura] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e4" data-item="c4-arquitectura" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
+                <h2 style="margin-bottom:4px;">Agentes base de Aracne (1/2): de entender el requerimiento a construirlo</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Dieciséis agentes base, cada uno con un rol delimitado y una supervisión humana obligatoria. Diez son subagentes <code>aracne-*</code> propios; los de planeación son agentes de <abbr title="Breakthrough Method for Agile AI-Driven Development">BMAD</abbr>.</p>
+              </div>
+              <svg viewBox="0 -2 1200 556" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabla 6.1 (1/2): ocho agentes base, de entender a construir, con su identificador, lo que producen y el control humano">
+<rect x="0" y="2" width="18" height="18" rx="3" fill="#EBF5ED" stroke="#1E5631" stroke-width="2" />
+<text x="26" y="17" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Subagente propio aracne-*</text>
+<rect x="255.8" y="2" width="18" height="18" rx="3" fill="#FFFFFF" stroke="#2C6B87" stroke-width="2" />
+<text x="281.8" y="17" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Agente o skill de BMAD</text>
+<rect x="0" y="36" width="285" height="248" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<rect x="0" y="36" width="285" height="28" rx="8" fill="#2C6B87" />
+<rect x="0" y="50" width="285" height="14" rx="0" fill="#2C6B87" />
+<text x="12" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Entender</text>
+<text x="273" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">1</text>
+<text x="12" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Analista de Requerimientos</text>
+<text x="12" y="112" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">y CU</text>
+<text x="12" y="133" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">bmad-agent-analyst</text>
+<text x="12" y="163" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="12" y="183" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Brief de producto o de adopción</text>
+<text x="12" y="201" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="12" y="221" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Valida casos de uso, intención y</text>
+<text x="12" y="239" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">alcance pactado</text>
+<rect x="305" y="36" width="285" height="248" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<rect x="305" y="36" width="285" height="28" rx="8" fill="#2C6B87" />
+<rect x="305" y="50" width="285" height="14" rx="0" fill="#2C6B87" />
+<text x="317" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Entender a Decidir</text>
+<text x="578" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">2</text>
+<text x="317" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Product Manager (PM)</text>
+<text x="317" y="112" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">bmad-agent-pm</text>
+<text x="317" y="142" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="317" y="162" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">PRD con FR y NFR numerados</text>
+<text x="317" y="180" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="317" y="200" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Aprueba el PRD y la priorización</text>
+<text x="317" y="218" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">de requisitos</text>
+<rect x="610" y="36" width="285" height="248" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<rect x="610" y="36" width="285" height="28" rx="8" fill="#2C6B87" />
+<rect x="610" y="50" width="285" height="14" rx="0" fill="#2C6B87" />
+<text x="622" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Decidir</text>
+<text x="883" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">3</text>
+<text x="622" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Diseñador UX/UI</text>
+<text x="622" y="112" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">bmad-agent-ux-designer</text>
+<text x="622" y="142" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="622" y="162" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">DESIGN.md y especificaciones</text>
+<text x="622" y="180" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">UX-DR</text>
+<text x="622" y="198" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="622" y="218" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Aprueba el diseño de interacción,</text>
+<text x="622" y="236" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">las pantallas y los contratos</text>
+<text x="622" y="254" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">visuales</text>
+<rect x="915" y="36" width="285" height="248" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<rect x="915" y="36" width="285" height="28" rx="8" fill="#2C6B87" />
+<rect x="915" y="50" width="285" height="14" rx="0" fill="#2C6B87" />
+<text x="927" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Decidir</text>
+<text x="1188" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">4</text>
+<text x="927" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Arquitecto de Software</text>
+<text x="927" y="112" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">bmad-agent-architect</text>
+<text x="927" y="142" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="927" y="162" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">ARCHITECTURE-SPINE.md y límites</text>
+<text x="927" y="180" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">modulares</text>
+<text x="927" y="198" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="927" y="218" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Aprueba componentes, patrones,</text>
+<text x="927" y="236" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">modelo de datos y contratos</text>
+<rect x="0" y="302" width="285" height="248" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<rect x="0" y="302" width="285" height="28" rx="8" fill="#2C6B87" />
+<rect x="0" y="316" width="285" height="14" rx="0" fill="#2C6B87" />
+<text x="12" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Descomponer</text>
+<text x="273" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">5</text>
+<text x="12" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Descompositor de Historias</text>
+<text x="12" y="378" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">skill de BMAD</text>
+<text x="12" y="408" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="12" y="428" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Épicas e historias</text>
+<text x="12" y="446" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Given/When/Then</text>
+<text x="12" y="464" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="12" y="484" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Aprueba el desglose de historias</text>
+<text x="12" y="502" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">antes de compilar contratos</text>
+<rect x="305" y="302" width="285" height="248" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<rect x="305" y="302" width="285" height="28" rx="8" fill="#1E5631" />
+<rect x="305" y="316" width="285" height="14" rx="0" fill="#1E5631" />
+<text x="317" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Traducir</text>
+<text x="578" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">6</text>
+<text x="317" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Tejedor de</text>
+<text x="317" y="378" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Especificaciones</text>
+<text x="317" y="399" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-weaver</text>
+<text x="317" y="429" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="317" y="449" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Contratos OpenSpec y trace.json</text>
+<text x="317" y="467" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="317" y="487" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Inspecciona los contratos; si hay</text>
+<text x="317" y="505" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">inconsistencias, ajusta la</text>
+<text x="317" y="523" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">historia</text>
+<rect x="610" y="302" width="285" height="248" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<rect x="610" y="302" width="285" height="28" rx="8" fill="#1E5631" />
+<rect x="610" y="316" width="285" height="14" rx="0" fill="#1E5631" />
+<text x="622" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Descomponer a Construir</text>
+<text x="883" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">7</text>
+<text x="622" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Planificador de Olas</text>
+<text x="622" y="378" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-sprint-planner</text>
+<text x="622" y="408" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="622" y="428" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">sprint-plan.md: olas de trabajo</text>
+<text x="622" y="446" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">paralelo</text>
+<text x="622" y="464" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="622" y="484" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Asigna historias (un change por</text>
+<text x="622" y="502" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">persona) y valida dependencias</text>
+<rect x="915" y="302" width="285" height="248" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<rect x="915" y="302" width="285" height="28" rx="8" fill="#1E5631" />
+<rect x="915" y="316" width="285" height="14" rx="0" fill="#1E5631" />
+<text x="927" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Construir</text>
+<text x="1188" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">8</text>
+<text x="927" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Constructor SDD-ODD</text>
+<text x="927" y="378" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-builder</text>
+<text x="927" y="408" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="927" y="428" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Código y una prueba por escenario</text>
+<text x="927" y="446" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="927" y="466" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Supervisa la codificación; valida</text>
+<text x="927" y="484" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">que no haya código fuera de la</text>
+<text x="927" y="502" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">spec</text>
+</svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Agentes base (1 a 8 de 16)</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>1. Analista de Requerimientos y CU</strong> (<code>bmad-agent-analyst</code>). <em>Fase:</em> Entender. <em>Produce:</em> Brief de producto o de adopción. <em>Control humano:</em> Valida casos de uso, intención y alcance pactado.</li>
+                  <li><strong>2. Product Manager (PM)</strong> (<code>bmad-agent-pm</code>). <em>Fase:</em> Entender a Decidir. <em>Produce:</em> PRD con FR y NFR numerados. <em>Control humano:</em> Aprueba el PRD y la priorización de requisitos.</li>
+                  <li><strong>3. Diseñador UX/UI</strong> (<code>bmad-agent-ux-designer</code>). <em>Fase:</em> Decidir. <em>Produce:</em> DESIGN.md y especificaciones UX-DR. <em>Control humano:</em> Aprueba el diseño de interacción, las pantallas y los contratos visuales.</li>
+                  <li><strong>4. Arquitecto de Software</strong> (<code>bmad-agent-architect</code>). <em>Fase:</em> Decidir. <em>Produce:</em> ARCHITECTURE-SPINE.md y límites modulares. <em>Control humano:</em> Aprueba componentes, patrones, modelo de datos y contratos.</li>
+                  <li><strong>5. Descompositor de Historias</strong> (skill de BMAD). <em>Fase:</em> Descomponer. <em>Produce:</em> Épicas e historias Given/When/Then. <em>Control humano:</em> Aprueba el desglose de historias antes de compilar contratos.</li>
+                  <li><strong>6. Tejedor de Especificaciones</strong> (<code>aracne-weaver</code>). <em>Fase:</em> Traducir. <em>Produce:</em> Contratos OpenSpec y trace.json. <em>Control humano:</em> Inspecciona los contratos; si hay inconsistencias, ajusta la historia.</li>
+                  <li><strong>7. Planificador de Olas</strong> (<code>aracne-sprint-planner</code>). <em>Fase:</em> Descomponer a Construir. <em>Produce:</em> sprint-plan.md: olas de trabajo paralelo. <em>Control humano:</em> Asigna historias (un change por persona) y valida dependencias.</li>
+                  <li><strong>8. Constructor SDD-ODD</strong> (<code>aracne-builder</code>). <em>Fase:</em> Construir. <em>Produce:</em> Código y una prueba por escenario. <em>Control humano:</em> Supervisa la codificación; valida que no haya código fuera de la spec.</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Tabla 6.1 — Agentes base del arnés (1/2): rol, fase, artefacto de salida y supervisión humana, de Entender a Construir</figcaption>
+            </figure>
+          </article>
+
+          <!-- E4-3: Agentes base 2/2 (Tabla 6.1) [c4-arquitectura] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e4" data-item="c4-arquitectura" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
+                <h2 style="margin-bottom:4px;">Agentes base de Aracne (2/2): verificar, revisar, integrar, cerrar y operar</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Los revisores vienen de Gentle-AI. En la versión 0.9.0 <code>aracne-cicd</code> abre la solicitud de integración con la CLI de GitHub; en Azure DevOps ese paso debe adaptarse.</p>
+              </div>
+              <svg viewBox="0 -2 1200 556" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabla 6.1 (2/2): ocho agentes base, de verificar a operar, con su identificador, lo que producen y el control humano">
+<rect x="0" y="2" width="18" height="18" rx="3" fill="#EBF5ED" stroke="#1E5631" stroke-width="2" />
+<text x="26" y="17" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Subagente propio aracne-*</text>
+<rect x="255.8" y="2" width="18" height="18" rx="3" fill="#FFF7ED" stroke="#B07A12" stroke-width="2" />
+<text x="281.8" y="17" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Revisores de Gentle-AI</text>
+<rect x="0" y="36" width="285" height="248" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<rect x="0" y="36" width="285" height="28" rx="8" fill="#1E5631" />
+<rect x="0" y="50" width="285" height="14" rx="0" fill="#1E5631" />
+<text x="12" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Verificar</text>
+<text x="273" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">9</text>
+<text x="12" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Verificador de Contratos y</text>
+<text x="12" y="112" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">QA</text>
+<text x="12" y="133" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-validator</text>
+<text x="12" y="163" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="12" y="183" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Validación estricta, pruebas E2E</text>
+<text x="12" y="201" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">e impacto en el grafo</text>
+<text x="12" y="219" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="12" y="239" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Exige el 100 % de pruebas en</text>
+<text x="12" y="257" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">verde antes de autorizar el</text>
+<text x="12" y="275" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">cierre</text>
+<rect x="305" y="36" width="285" height="248" rx="8" fill="#FFF7ED" stroke="#B07A12" stroke-width="1.8" />
+<rect x="305" y="36" width="285" height="28" rx="8" fill="#B07A12" />
+<rect x="305" y="50" width="285" height="14" rx="0" fill="#B07A12" />
+<text x="317" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Revisar</text>
+<text x="578" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">10</text>
+<text x="317" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Revisores</text>
+<text x="317" y="112" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Multi-Perspectiva</text>
+<text x="317" y="133" fill="#B07A12" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">review-* (Gentle-AI)</text>
+<text x="317" y="163" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="317" y="183" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Dictámenes de riesgo y</text>
+<text x="317" y="201" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">fiabilidad, y veredicto</text>
+<text x="317" y="219" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="317" y="239" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">La líder técnica aprueba la</text>
+<text x="317" y="257" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">calidad según los dictámenes</text>
+<rect x="610" y="36" width="285" height="248" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<rect x="610" y="36" width="285" height="28" rx="8" fill="#1E5631" />
+<rect x="610" y="50" width="285" height="14" rx="0" fill="#1E5631" />
+<text x="622" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Integrar y Entregar</text>
+<text x="883" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">11</text>
+<text x="622" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Operador CI/CD e</text>
+<text x="622" y="112" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Integración</text>
+<text x="622" y="133" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-cicd</text>
+<text x="622" y="163" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="622" y="183" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Commits atómicos y PR con traza</text>
+<text x="622" y="201" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="622" y="221" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Autoriza el merge a ramas</text>
+<text x="622" y="239" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">protegidas y el despliegue</text>
+<rect x="915" y="36" width="285" height="248" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<rect x="915" y="36" width="285" height="28" rx="8" fill="#1E5631" />
+<rect x="915" y="50" width="285" height="14" rx="0" fill="#1E5631" />
+<text x="927" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Cerrar</text>
+<text x="1188" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">12</text>
+<text x="927" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Cierre y Línea Base</text>
+<text x="927" y="112" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-closer</text>
+<text x="927" y="142" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="927" y="162" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Contrato archivado en archive/ y</text>
+<text x="927" y="180" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">specs/</text>
+<text x="927" y="198" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="927" y="218" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Ratifica el cierre de la historia</text>
+<text x="927" y="236" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">y su ingreso a la línea base</text>
+<rect x="0" y="302" width="285" height="248" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<rect x="0" y="302" width="285" height="28" rx="8" fill="#1E5631" />
+<rect x="0" y="316" width="285" height="14" rx="0" fill="#1E5631" />
+<text x="12" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Transversal</text>
+<text x="273" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">13</text>
+<text x="12" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Clasificador de</text>
+<text x="12" y="378" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Incidencias</text>
+<text x="12" y="399" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-ticket</text>
+<text x="12" y="429" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="12" y="449" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Enrutamiento: defecto a</text>
+<text x="12" y="467" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">corrección, requerimiento a</text>
+<text x="12" y="485" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">cambio</text>
+<text x="12" y="503" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="12" y="523" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Confirma la clasificación y</text>
+<text x="12" y="541" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">autoriza abrir el flujo</text>
+<rect x="305" y="302" width="285" height="248" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<rect x="305" y="302" width="285" height="28" rx="8" fill="#1E5631" />
+<rect x="305" y="316" width="285" height="14" rx="0" fill="#1E5631" />
+<text x="317" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Transversal</text>
+<text x="578" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">14</text>
+<text x="317" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Control de Cambios y</text>
+<text x="317" y="378" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Alcance</text>
+<text x="317" y="399" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-change</text>
+<text x="317" y="429" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="317" y="449" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Clasificación de alcance y</text>
+<text x="317" y="467" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">regeneración acotada</text>
+<text x="317" y="485" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="317" y="505" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Decide si amplía el alcance o</text>
+<text x="317" y="523" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">remite a una nueva épica</text>
+<rect x="610" y="302" width="285" height="248" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<rect x="610" y="302" width="285" height="28" rx="8" fill="#1E5631" />
+<rect x="610" y="316" width="285" height="14" rx="0" fill="#1E5631" />
+<text x="622" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Transversal</text>
+<text x="883" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">15</text>
+<text x="622" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Observabilidad y Estado</text>
+<text x="622" y="378" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-status</text>
+<text x="622" y="408" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="622" y="428" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Tablero web dashboard.html,</text>
+<text x="622" y="446" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">inestabilidad y cobertura</text>
+<text x="622" y="464" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="622" y="484" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Dirección y líderes monitorean</text>
+<text x="622" y="502" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">avance real y riesgos</text>
+<rect x="915" y="302" width="285" height="248" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<rect x="915" y="302" width="285" height="28" rx="8" fill="#1E5631" />
+<rect x="915" y="316" width="285" height="14" rx="0" fill="#1E5631" />
+<text x="927" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Soporte</text>
+<text x="1188" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">16</text>
+<text x="927" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Salud del Entorno y</text>
+<text x="927" y="378" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Diagnóstico</text>
+<text x="927" y="399" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-doctor</text>
+<text x="927" y="429" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="927" y="449" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Diagnóstico de preflight y</text>
+<text x="927" y="467" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">detección de deriva</text>
+<text x="927" y="485" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="927" y="505" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Ejecuta acciones correctivas ante</text>
+<text x="927" y="523" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">faltantes</text>
+</svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Agentes base (9 a 16 de 16)</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>9. Verificador de Contratos y QA</strong> (<code>aracne-validator</code>). <em>Fase:</em> Verificar. <em>Produce:</em> Validación estricta, pruebas E2E e impacto en el grafo. <em>Control humano:</em> Exige el 100 % de pruebas en verde antes de autorizar el cierre.</li>
+                  <li><strong>10. Revisores Multi-Perspectiva</strong> (review-* (Gentle-AI)). <em>Fase:</em> Revisar. <em>Produce:</em> Dictámenes de riesgo y fiabilidad, y veredicto. <em>Control humano:</em> La líder técnica aprueba la calidad según los dictámenes.</li>
+                  <li><strong>11. Operador CI/CD e Integración</strong> (<code>aracne-cicd</code>). <em>Fase:</em> Integrar y Entregar. <em>Produce:</em> Commits atómicos y PR con traza. <em>Control humano:</em> Autoriza el merge a ramas protegidas y el despliegue.</li>
+                  <li><strong>12. Cierre y Línea Base</strong> (<code>aracne-closer</code>). <em>Fase:</em> Cerrar. <em>Produce:</em> Contrato archivado en archive/ y specs/. <em>Control humano:</em> Ratifica el cierre de la historia y su ingreso a la línea base.</li>
+                  <li><strong>13. Clasificador de Incidencias</strong> (<code>aracne-ticket</code>). <em>Fase:</em> Transversal. <em>Produce:</em> Enrutamiento: defecto a corrección, requerimiento a cambio. <em>Control humano:</em> Confirma la clasificación y autoriza abrir el flujo.</li>
+                  <li><strong>14. Control de Cambios y Alcance</strong> (<code>aracne-change</code>). <em>Fase:</em> Transversal. <em>Produce:</em> Clasificación de alcance y regeneración acotada. <em>Control humano:</em> Decide si amplía el alcance o remite a una nueva épica.</li>
+                  <li><strong>15. Observabilidad y Estado</strong> (<code>aracne-status</code>). <em>Fase:</em> Transversal. <em>Produce:</em> Tablero web dashboard.html, inestabilidad y cobertura. <em>Control humano:</em> Dirección y líderes monitorean avance real y riesgos.</li>
+                  <li><strong>16. Salud del Entorno y Diagnóstico</strong> (<code>aracne-doctor</code>). <em>Fase:</em> Soporte. <em>Produce:</em> Diagnóstico de preflight y detección de deriva. <em>Control humano:</em> Ejecuta acciones correctivas ante faltantes.</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Tabla 6.1 — Agentes base del arnés (2/2): rol, fase, artefacto de salida y supervisión humana, de Verificar a Soporte</figcaption>
+            </figure>
+          </article>
+
+          <!-- E4-4: Catálogo 1/2 (Tabla 6.2) [c4-catalogo] -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e4" data-item="c4-catalogo">
             <div class="slide-content">
               <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
-              <h2>Sistema de agentes base de Aracne: roles, artefactos y control humano</h2>
+              <h2>Catálogo de comandos (1/2): del arranque al cierre y al control de cambios</h2>
               <ul class="slide-list">
                 <li>
-                  <strong>Roles hiper-especializados:</strong> Cada agente opera con un ámbito funcional acotado, herramientas específicas y contratos formales de entrada y salida.
+                  <strong>Once comandos <code>/sw:*</code>:</strong> el agente principal ejecuta cada uno como orquestador e invoca a los subagentes; en OpenCode se escriben <code>/sw-*</code>.
                 </li>
                 <li>
-                  <strong>Control humano en cada compuerta:</strong> Ningún artefacto producido por un agente se integra sin la validación previa del responsable humano (PO, Diseñador, Líder Técnico o Subgerencia).
+                  <strong>Cuatro familias de skills</strong> (método, planeación, mapa del código y revisión) completan el catálogo en la lámina siguiente.
                 </li>
                 <li>
-                  <strong>Superficies de edición acotadas:</strong> El constructor tiene prohibido modificar archivos fuera del contrato asignado, previniendo regresiones colaterales.
+                  <strong>Control humano en cada fila:</strong> el arnés propone; la persona aprueba, asigna o decide.
+                </li>
+                <li>
+                  <strong>Versión 0.9.0:</strong> el anexo C define cada comando, subagente y skill.
                 </li>
               </ul>
             </div>
             <figure class="slide-figure">
               <div class="data-table-wrapper">
-                <table class="data-table">
-                  <caption>Tabla 6.1: Agentes base de Aracne: rol, fase, insumos, salidas y control humano (tab:e4-agentes)</caption>
+                <table class="data-table" style="font-size:clamp(0.68rem,min(1.15vw,2.05vh),1.5rem);">
+                  <caption>Tabla 6.2 — Comandos y skills por etapa (1/2): disparador, fase, salida y control humano, del arranque al control de cambios (texto condensado)</caption>
                   <thead>
                     <tr>
-                      <th style="width:20%;">Agente y Rol</th>
-                      <th style="width:12%;">Fase</th>
-                      <th>Insumos y Disparador</th>
-                      <th style="width:24%;">Artefacto de Salida</th>
-                      <th style="width:20%;">Control Humano</th>
+                      <th style="width:30%;font-size:0.82em;">Comando o skill</th>
+                      <th style="width:14%;font-size:0.82em;">Fase</th>
+                      <th style="width:33%;font-size:0.82em;">Salida</th>
+                      <th style="font-size:0.82em;">Control humano</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td><strong>Analista CU</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">BMAD Analyst</span></td>
-                      <td>Entender</td>
-                      <td>Actas, entrevistas, tickets o código existente en el repositorio.</td>
-                      <td>Brief de producto, contexto y preguntas de aclaración.</td>
-                      <td>Valida intención, casos de uso y alcance.</td>
+                      <td data-label="Comando o skill"><span><code>/sw:new</code><br /><span style="font-size:0.84em;color:var(--subtext);">Proyecto o servicio nuevo; idea o requerimiento</span></span></td>
+                      <td data-label="Fase"><strong>Entender a Traducir</strong></td>
+                      <td data-label="Salida">Brief, PRD, arquitectura, UX, épicas, historias y contratos; no escribe código</td>
+                      <td data-label="Control humano">Aprueba PRD, arquitectura e historias</td>
                     </tr>
                     <tr>
-                      <td><strong>Product Manager</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">BMAD PM</span></td>
-                      <td>Entender &rarr; Decidir</td>
-                      <td>Brief validado, metas institucionales y restricciones técnicas.</td>
-                      <td>PRD formal con requisitos numerados (FR/NFR).</td>
-                      <td>Aprueba formalmente el PRD y priorización.</td>
+                      <td data-label="Comando o skill"><span><code>/sw:adopt</code><br /><span style="font-size:0.84em;color:var(--subtext);">Sistema en operación; repositorio e insumos</span></span></td>
+                      <td data-label="Fase"><strong>Entender a Traducir</strong></td>
+                      <td data-label="Salida">Alcance acordado, mapa del código, PRD del área y línea base acotada</td>
+                      <td data-label="Control humano">Acuerda el área; se detiene sin acuerdo</td>
                     </tr>
                     <tr>
-                      <td><strong>Arquitecto</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">BMAD Architect</span></td>
-                      <td>Decidir</td>
-                      <td>PRD aprobado y stack tecnológico institucional.</td>
-                      <td>Arquitectura vinculante (servicios, BD, integraciones).</td>
-                      <td>Líder técnico y BD aprueban arquitectura.</td>
+                      <td data-label="Comando o skill"><span><code>/sw:sprint</code><br /><span style="font-size:0.84em;color:var(--subtext);">Contratos listos y grafo de dependencias</span></span></td>
+                      <td data-label="Fase"><strong>Descomponer</strong></td>
+                      <td data-label="Salida">Olas de trabajo paralelo por dependencias técnicas reales</td>
+                      <td data-label="Control humano">Asigna historias a desarrolladores</td>
                     </tr>
                     <tr>
-                      <td><strong>Diseñador Historias</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">BMAD Stories</span></td>
-                      <td>Descomponer</td>
-                      <td>PRD y arquitectura vinculante aprobados.</td>
-                      <td>Épicas e historias con criterios Given/When/Then.</td>
-                      <td>PO aprueba historias estimables y dependencias.</td>
+                      <td data-label="Comando o skill"><span><code>/sw:build</code><br /><span style="font-size:0.84em;color:var(--subtext);">Un contrato OpenSpec asignado</span></span></td>
+                      <td data-label="Fase"><strong>Construir</strong></td>
+                      <td data-label="Salida">Código, una prueba por escenario y tareas marcadas en tasks.md</td>
+                      <td data-label="Control humano">Revisa y aprueba la integración</td>
                     </tr>
                     <tr>
-                      <td><strong>Tejedor LIA</strong><br /><span style="font-size:0.68rem; color:var(--accent); font-weight:700;">LIA UNAL</span></td>
-                      <td>Traducir</td>
-                      <td>Historias aprobadas; invocado automáticamente.</td>
-                      <td>Contratos OpenSpec verificables y plan de olas.</td>
-                      <td>Desarrollador valida correspondencia.</td>
+                      <td data-label="Comando o skill"><span><code>/sw:close</code><br /><span style="font-size:0.84em;color:var(--subtext);">Historias con tareas terminadas</span></span></td>
+                      <td data-label="Fase"><strong>Cerrar</strong></td>
+                      <td data-label="Salida">Contrato validado y archivado como línea base del sistema</td>
+                      <td data-label="Control humano">Decide qué historias se cierran</td>
                     </tr>
                     <tr>
-                      <td><strong>Constructor SDD</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">ODD Builder</span></td>
-                      <td>Construir</td>
-                      <td>Contrato OpenSpec asignado en una ola.</td>
-                      <td>Código fuente + prueba unitaria por escenario.</td>
-                      <td>Líder técnica revisa PR y aprueba merge.</td>
+                      <td data-label="Comando o skill"><span><code>/sw:change</code><br /><span style="font-size:0.84em;color:var(--subtext);">Requerimiento a mitad del desarrollo</span></span></td>
+                      <td data-label="Fase"><strong>Transversal</strong></td>
+                      <td data-label="Salida">Clasificación de alcance, documento fuente actualizado y regeneración acotada</td>
+                      <td data-label="Control humano">Acepta o rechaza el cambio de alcance</td>
                     </tr>
                     <tr>
-                      <td><strong>Auditor Calidad</strong><br /><span style="font-size:0.68rem; color:var(--subtext);">Reviewer</span></td>
-                      <td>Revisar</td>
-                      <td>Pull Request con diff de código y pruebas.</td>
-                      <td>Dictámenes multi-perspectiva (seguridad, calidad).</td>
-                      <td>Líder técnica decide merge con base en reporte.</td>
+                      <td data-label="Comando o skill"><span><code>/sw:bug</code><br /><span style="font-size:0.84em;color:var(--subtext);">Defecto frente a un contrato vigente</span></span></td>
+                      <td data-label="Fase"><strong>Transversal</strong></td>
+                      <td data-label="Salida">Corrección guiada por test, sin alterar el contrato ni el alcance</td>
+                      <td data-label="Control humano">Revisa y aprueba la corrección</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comando o skill"><span><code>/sw:ticket</code><br /><span style="font-size:0.84em;color:var(--subtext);">Incidencia del sistema de tickets de ATENEA</span></span></td>
+                      <td data-label="Fase"><strong>Transversal</strong></td>
+                      <td data-label="Salida">Clasificación formal y enrutamiento a cambio o defecto; no resuelve</td>
+                      <td data-label="Control humano">Confirma la ruta de resolución</td>
                     </tr>
                   </tbody>
                 </table>
@@ -9340,52 +9607,655 @@
             </figure>
           </article>
 
-          <!-- Slide 23: Catálogo de Comandos CLI y Skills Operativas (Tabla 6.2) -->
-          <article class="slide" data-deck="e1-e4" data-module="e4">
+          <!-- E4-5: Catálogo 2/2 (Tabla 6.2) [c4-catalogo] -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e4" data-item="c4-catalogo">
             <div class="slide-content">
               <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
-              <h2>Catálogo de comandos CLI y skills operativas para el equipo técnico</h2>
+              <h2>Catálogo de comandos y skills (2/2): estado, soporte y cuatro familias de skills</h2>
               <ul class="slide-list">
                 <li>
-                  <strong>Interfaz de terminal estandarizada:</strong> Los comandos `/sw:*` unifican la experiencia del desarrollador sobre cualquier plataforma CLI (Claude Code u OpenCode).
+                  <strong>Estado y soporte:</strong> <code>/sw:status</code> da el tablero; <code>/sw:sync</code> actualiza las herramientas fijadas y <code>/sw:doctor</code> revisa la salud del arnés.
                 </li>
                 <li>
-                  <strong>Doctrina y reglas procedimentales:</strong> Las skills inyectan al modelo las restricciones organizacionales, la paleta cromática, los estándares de código y las reglas de seguridad.
+                  <strong>Skills:</strong> son doctrina del flujo y consulta del código; solo las de planeación y revisión llevan una decisión humana.
                 </li>
                 <li>
-                  <strong>Trazabilidad en tiempo real:</strong> El comando `/sw:status` genera el tablero interactivo de cobertura, estabilidad y tareas pendientes directamente en la terminal o navegador.
+                  <strong>Pruebas:</strong> en el entorno aislado pasaron los 182 casos de la suite de la versión congelada.
                 </li>
               </ul>
             </div>
             <figure class="slide-figure">
               <div class="data-table-wrapper">
-                <table class="data-table dense">
-                  <caption>Tabla 6.2: Catálogo de comandos CLI y skills por etapa (tab:e4-catalogo)</caption>
+                <table class="data-table" style="font-size:clamp(0.68rem,min(1.2vw,2.2vh),1.5rem);">
+                  <caption>Tabla 6.2 — Comandos y skills por etapa (2/2): comandos de estado y soporte, y las cuatro familias de skills (texto condensado)</caption>
                   <thead>
                     <tr>
-                      <th style="width:22%;">Comando / Skill</th>
-                      <th style="width:18%;">Fase SDLC-IA</th>
-                      <th>Disparador y Entrada</th>
-                      <th style="width:28%;">Salida Generada</th>
-                      <th style="width:17%;">Control Humano</th>
+                      <th style="width:30%;font-size:0.82em;">Comando o skill</th>
+                      <th style="width:14%;font-size:0.82em;">Fase</th>
+                      <th style="width:33%;font-size:0.82em;">Salida</th>
+                      <th style="font-size:0.82em;">Control humano</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr><td><code>/sw:new</code></td><td>Entender &rarr; Traducir</td><td>Idea o servicio nuevo</td><td>PRD, arquitectura, historias y contratos</td><td>Aprueba artefactos</td></tr>
-                    <tr><td><code>/sw:adopt</code></td><td>Entender &rarr; Traducir</td><td>Sistema existente; repo e insumos</td><td>Mapa del código, PRD acotado y base</td><td>Acuerda intervención</td></tr>
-                    <tr><td><code>/sw:sprint</code></td><td>Descomponer</td><td>Contratos listos y dependencias</td><td>Olas de trabajo paralelo coordinadas</td><td>Asigna a desarrolladores</td></tr>
-                    <tr><td><code>/sw:build</code></td><td>Construir</td><td>Contrato OpenSpec de una historia</td><td>Código + pruebas unitarias por escenario</td><td>Aprueba pull request</td></tr>
-                    <tr><td><code>/sw:close</code></td><td>Cerrar</td><td>Historias con tareas verificadas</td><td>Línea base archivada y memoria Engram</td><td>Decide cierre historias</td></tr>
-                    <tr><td><code>/sw:change</code></td><td>Transversal</td><td>Cambio solicitado en desarrollo</td><td>Filtro de alcance y regeneración acotada</td><td>Acepta o rechaza</td></tr>
-                    <tr><td><code>/sw:bug</code></td><td>Transversal</td><td>Defecto detectado frente al contrato</td><td>Corrección guiada por test unitario</td><td>Aprueba corrección</td></tr>
-                    <tr><td><code>/sw:ticket</code></td><td>Transversal</td><td>Incidencia Azure Boards / Mesa ayuda</td><td>Enrutamiento a cambio o a defecto</td><td>Confirma ruta</td></tr>
-                    <tr><td><code>/sw:status</code></td><td>Transversal</td><td>Consulta de estado del proyecto</td><td>Tablero interactivo de avance y calidad</td><td>Prioriza actividades</td></tr>
-                    <tr><td><code>/sw:doctor</code></td><td>Soporte</td><td>Verificación de salud del arnés</td><td>Preflight, versiones y coherencia de plan</td><td>Resuelve advertencias</td></tr>
-                    <tr><td><strong>Skills Método</strong></td><td>Todas las fases</td><td>Invocación automática por comando</td><td>Reglas procedimentales institucionales</td><td>Gobernanza del flujo</td></tr>
-                    <tr><td><strong>Skill Grafo AST</strong></td><td>Entender / Construir</td><td>Consulta de estructura o impacto</td><td>Respuestas deterministas sobre código</td><td>Consulta analítica</td></tr>
+                    <tr>
+                      <td data-label="Comando o skill"><span><code>/sw:status</code><br /><span style="font-size:0.84em;color:var(--subtext);">Solicitud de estado del proyecto</span></span></td>
+                      <td data-label="Fase"><strong>Transversal</strong></td>
+                      <td data-label="Salida">Tablero interactivo; lectura de avance, inestabilidad y pendientes</td>
+                      <td data-label="Control humano">Usa el tablero para priorizar</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comando o skill"><span><code>/sw:sync</code><br /><span style="font-size:0.84em;color:var(--subtext);">Diferencias con las versiones fijadas</span></span></td>
+                      <td data-label="Fase"><strong>Soporte</strong></td>
+                      <td data-label="Salida">Actualización controlada de las herramientas de versión fija</td>
+                      <td data-label="Control humano">Autoriza la actualización</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comando o skill"><span><code>/sw:doctor</code><br /><span style="font-size:0.84em;color:var(--subtext);">Verificación de salud del arnés</span></span></td>
+                      <td data-label="Fase"><strong>Soporte</strong></td>
+                      <td data-label="Salida">Estado de instalación, preflight y coherencia entre plan y contratos</td>
+                      <td data-label="Control humano">Resuelve lo faltante</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comando o skill"><span><strong>Skill de método</strong><br /><span style="font-size:0.84em;color:var(--subtext);">Arrancar, adoptar, procesar requerimientos o tickets, planear y construir</span></span></td>
+                      <td data-label="Fase"><strong>Todas</strong></td>
+                      <td data-label="Salida">Reglas procedimentales del método para el agente activo</td>
+                      <td data-label="Control humano">Ninguno propio (doctrina del flujo)</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comando o skill"><span><strong>Skills de planeación</strong><br /><span style="font-size:0.84em;color:var(--subtext);">Invocadas durante la concepción o la adopción</span></span></td>
+                      <td data-label="Fase"><strong>Entender a Descomponer</strong></td>
+                      <td data-label="Salida">PRD, arquitectura, contratos UX, épicas e historias de usuario</td>
+                      <td data-label="Control humano">Aprueba cada artefacto generado</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comando o skill"><span><strong>Skill del mapa del código</strong><br /><span style="font-size:0.84em;color:var(--subtext);">Consulta de estructura, rutas o dependencias</span></span></td>
+                      <td data-label="Fase"><strong>Entender y Construir</strong></td>
+                      <td data-label="Salida">Respuestas precisas sobre el grafo AST del código real</td>
+                      <td data-label="Control humano">Ninguno propio (consulta determinista)</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comando o skill"><span><strong>Skills de revisión</strong><br /><span style="font-size:0.84em;color:var(--subtext);">Auditoría estática previa a la integración</span></span></td>
+                      <td data-label="Fase"><strong>Revisar y Cerrar</strong></td>
+                      <td data-label="Salida">Dictámenes multi-perspectiva y veredicto de calidad</td>
+                      <td data-label="Control humano">Decide si aprueba la integración</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
+            </figure>
+          </article>
+
+          <!-- E4-6: Instalación y estructura (Figura 6.2) [c4-instalacion] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e4" data-item="c4-instalacion" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
+                <h2 style="margin-bottom:4px;">Instalación y estructura del proyecto: un comando y dos plataformas</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Versión Aracne-SDLC-AI 0.9.0. Las dos plataformas comparten <code>.aracne-sdlc-ai/</code>; cambia dónde guarda cada una sus piezas. <strong>Versiones fijadas:</strong> BMAD 6.11.0, OpenSpec 1.10.0, graphify 0.8.37 y Gentle-AI 4.1.1.</p>
+              </div>
+              <svg viewBox="0 0 1200 548" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Figura 6.2: estructura de carpetas de un proyecto con Aracne, parte común y diferencias entre Claude Code y OpenCode">
+<rect x="0" y="0" width="330" height="44" rx="7" fill="#1B2029" />
+<text x="165" y="29" fill="#FFFFFF" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="19" font-weight="700" text-anchor="middle">npx aracne-sdlc-ai init</text>
+<text x="350" y="19" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Monta el arnés dentro del repositorio del caso: todo lo que el método produce queda versionado</text>
+<text x="350" y="39" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">junto al código.</text>
+<rect x="0" y="62" width="392" height="474" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.6" />
+<rect x="0" y="62" width="392" height="34" rx="8" fill="#2C6B87" />
+<rect x="0" y="80" width="392" height="16" rx="0" fill="#2C6B87" />
+<text x="14" y="85" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700">Común a las dos plataformas</text>
+<text x="14" y="122" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">proyecto/</text>
+<text x="28" y="144" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">docs/architecture-base.md</text>
+<text x="242.5" y="144" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">reglas del proyecto</text>
+<text x="28" y="166" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">.aracne-sdlc-ai/</text>
+<text x="42" y="188" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">config.json</text>
+<text x="143.1" y="188" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">idioma</text>
+<text x="42" y="210" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">bmad/planning-artifacts/</text>
+<text x="56" y="232" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">prd, arquitectura, UX</text>
+<text x="56" y="254" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">epics.md</text>
+<text x="132.8" y="254" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">historias G/W/T</text>
+<text x="42" y="276" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">openspec/</text>
+<text x="56" y="298" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">changes/eNsM-*/</text>
+<text x="189.5" y="298" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">contratos</text>
+<text x="56" y="320" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">changes/archive/</text>
+<text x="56" y="342" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">specs/</text>
+<text x="116.6" y="342" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">línea base</text>
+<text x="42" y="364" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">trace.json</text>
+<text x="135" y="364" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">traza</text>
+<text x="42" y="386" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">sprint-plan.md</text>
+<text x="167.4" y="386" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">olas</text>
+<text x="42" y="408" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">changelog.jsonl</text>
+<text x="175.5" y="408" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">bitácora</text>
+<text x="42" y="430" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">bin/engram, engram/</text>
+<text x="207.9" y="430" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">memoria</text>
+<text x="42" y="452" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">dashboard.html</text>
+<text x="167.4" y="452" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">tablero</text>
+<text x="28" y="474" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">_bmad/</text>
+<text x="88.6" y="474" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">instalación de BMAD</text>
+<text x="28" y="496" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">graphify-out/graph.json</text>
+<text x="226.3" y="496" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">mapa del código</text>
+<text x="28" y="518" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">.gitignore, .graphifyignore</text>
+<rect x="404" y="62" width="392" height="474" rx="8" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.6" />
+<rect x="404" y="62" width="392" height="34" rx="8" fill="#1E5631" />
+<rect x="404" y="80" width="392" height="16" rx="0" fill="#1E5631" />
+<text x="418" y="85" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700">Claude Code</text>
+<text x="418" y="122" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">proyecto/</text>
+<text x="432" y="144" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">.claude/</text>
+<text x="446" y="166" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">commands/sw/*.md</text>
+<text x="587.6" y="166" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">11 comandos /sw:*</text>
+<text x="446" y="188" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">agents/aracne-*.md</text>
+<text x="603.8" y="188" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">10 subagentes</text>
+<text x="446" y="210" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">agents/review-*.md, jd-*.md</text>
+<text x="676.7" y="210" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">8 de Gentle-AI</text>
+<text x="446" y="232" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">skills/aracne-sdlc-ai/</text>
+<text x="636.2" y="232" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">método</text>
+<text x="446" y="254" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">skills/bmad-*/</text>
+<text x="571.4" y="254" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">planeación</text>
+<text x="446" y="276" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">skills/graphify/</text>
+<text x="446" y="298" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">skills/judgment-day, work-unit-commits,</text>
+<text x="446" y="320" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">branch-pr, chained-pr/</text>
+<text x="446" y="342" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">settings.json</text>
+<text x="563.3" y="342" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">hooks de graphify</text>
+<text x="432" y="364" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">CLAUDE.md</text>
+<text x="432" y="386" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">.mcp.json</text>
+<text x="516.9" y="386" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">servidor Engram</text>
+<rect x="808" y="62" width="392" height="474" rx="8" fill="#FFFFFF" stroke="#B07A12" stroke-width="1.6" />
+<rect x="808" y="62" width="392" height="34" rx="8" fill="#B07A12" />
+<rect x="808" y="80" width="392" height="16" rx="0" fill="#B07A12" />
+<text x="822" y="85" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700">OpenCode</text>
+<text x="822" y="122" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">proyecto/</text>
+<text x="836" y="144" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">.opencode/</text>
+<text x="850" y="166" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">commands/sw-*.md</text>
+<text x="991.6" y="166" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">11 comandos /sw-*</text>
+<text x="850" y="188" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">agents/aracne-*.md</text>
+<text x="1007.8" y="188" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">10 subagentes</text>
+<text x="850" y="210" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">skills/graphify/</text>
+<text x="836" y="232" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">.agents/skills/</text>
+<text x="969.5" y="232" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">método y planeación</text>
+<text x="836" y="254" fill="#1F536C" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">.config/opencode/skills/</text>
+<text x="1042.4" y="254" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">skills de Gentle-AI</text>
+<text x="836" y="276" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">AGENTS.md</text>
+<text x="836" y="298" fill="#1B2029" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5">opencode.json</text>
+<text x="953.3" y="298" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-style="italic">servidor Engram</text>
+<rect x="418" y="418" width="364" height="104" rx="6" fill="#EBF5ED" />
+<text x="430" y="440" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13.5">Claude Code lee comandos, subagentes y skills</text>
+<text x="430" y="458" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13.5">de .claude/ y la memoria de .mcp.json.</text>
+<text x="430" y="476" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13.5">Se invoca con /sw:build.</text>
+<rect x="822" y="376" width="364" height="146" rx="6" fill="#FFF7ED" />
+<text x="834" y="398" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13.5">OpenCode lee .opencode/ y .agents/skills/; la</text>
+<text x="834" y="416" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13.5">memoria, de opencode.json.</text>
+<text x="834" y="438" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13.5">Se invoca con /sw-build.</text>
+<text x="834" y="460" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13.5">Gentle-AI registra sus revisores en la</text>
+<text x="834" y="478" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13.5">configuración global del usuario.</text>
+</svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Instalación: <code>npx aracne-sdlc-ai init</code></p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>Común a las dos plataformas.</strong> <code>docs/architecture-base.md</code> (reglas del proyecto); <code>.aracne-sdlc-ai/</code> con <code>config.json</code>, artefactos de BMAD (<code>epics.md</code>), <code>openspec/</code> (<code>changes/</code>, <code>archive/</code>, <code>specs/</code> como línea base), <code>trace.json</code>, <code>sprint-plan.md</code>, <code>changelog.jsonl</code>, memoria Engram y <code>dashboard.html</code>; <code>_bmad/</code> (instalación de BMAD); <code>graphify-out/graph.json</code> (mapa del código); <code>.gitignore</code> y <code>.graphifyignore</code>.</li>
+                  <li><strong>Claude Code.</strong> <code>.claude/commands/sw/*.md</code> (11 comandos <code>/sw:*</code>), <code>agents/aracne-*.md</code> (10 subagentes), <code>agents/review-*.md</code> y <code>jd-*.md</code> (8 de Gentle-AI), <code>skills/</code> (método, planeación, graphify, judgment-day, work-unit-commits, branch-pr y chained-pr), <code>settings.json</code> (hooks de graphify), <code>CLAUDE.md</code> y <code>.mcp.json</code> (servidor Engram).</li>
+                  <li><strong>OpenCode.</strong> <code>.opencode/commands/sw-*.md</code> (11 comandos <code>/sw-*</code>), <code>agents/aracne-*.md</code>, <code>skills/graphify/</code>; <code>.agents/skills/</code> (método y planeación), <code>.config/opencode/skills/</code> (skills de Gentle-AI), <code>AGENTS.md</code> y <code>opencode.json</code> (servidor Engram).</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Figura 6.2 — Estructura de un proyecto con Aracne-SDLC-AI 0.9.0: la parte común y lo que cambia entre Claude Code y OpenCode</figcaption>
+            </figure>
+          </article>
+
+          <!-- E4-7: Flujos de interacción (Figura 6.3) [c4-flujos-interaccion] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e4" data-item="c4-flujos-interaccion" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
+                <h2 style="margin-bottom:4px;">Flujos de interacción entre agentes: una historia, de la idea a la línea base</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">El agente principal orquesta cada comando: carga el contexto, invoca a los subagentes y devuelve el resultado a la persona. Los subagentes trabajan con contexto y herramientas acotados.</p>
+              </div>
+              <svg viewBox="-4 -4 1208 606" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Figura 6.3: diagrama de secuencia entre diez participantes, en seis fases y con tres puertas humanas">
+<defs>
+<marker id="a63b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker>
+<marker id="a63k" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#5B6472" /></marker>
+</defs>
+<rect x="0" y="58" width="1200" height="114" rx="0" fill="#F4F6F9" />
+<line x1="0" y1="172" x2="1200" y2="172" stroke="#FFFFFF" stroke-width="2" />
+<text x="8" y="111.5" fill="#1F2D4D" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">Entender</text>
+<text x="8" y="127.5" fill="#1F2D4D" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">y Decidir</text>
+<rect x="0" y="172" width="1200" height="62" rx="0" fill="#F4F6F9" />
+<line x1="0" y1="234" x2="1200" y2="234" stroke="#FFFFFF" stroke-width="2" />
+<text x="8" y="207.5" fill="#1F2D4D" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">Traducir</text>
+<rect x="0" y="234" width="1200" height="88" rx="0" fill="#F4F6F9" />
+<line x1="0" y1="322" x2="1200" y2="322" stroke="#FFFFFF" stroke-width="2" />
+<text x="8" y="282.5" fill="#1F2D4D" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">Descomponer</text>
+<rect x="0" y="322" width="1200" height="114" rx="0" fill="#F4F6F9" />
+<line x1="0" y1="436" x2="1200" y2="436" stroke="#FFFFFF" stroke-width="2" />
+<text x="8" y="375.5" fill="#1F2D4D" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">Construir</text>
+<text x="8" y="391.5" fill="#1F2D4D" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">y verificar</text>
+<rect x="0" y="436" width="1200" height="62" rx="0" fill="#F4F6F9" />
+<line x1="0" y1="498" x2="1200" y2="498" stroke="#FFFFFF" stroke-width="2" />
+<text x="8" y="471.5" fill="#1F2D4D" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">Integrar</text>
+<rect x="0" y="498" width="1200" height="62" rx="0" fill="#F4F6F9" />
+<line x1="0" y1="560" x2="1200" y2="560" stroke="#FFFFFF" stroke-width="2" />
+<text x="8" y="533.5" fill="#1F2D4D" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">Cerrar</text>
+<line x1="140" y1="46" x2="140" y2="560" stroke="#9AA5B4" stroke-width="1" stroke-dasharray="4,4" />
+<line x1="248" y1="46" x2="248" y2="560" stroke="#9AA5B4" stroke-width="1" stroke-dasharray="4,4" />
+<line x1="356" y1="46" x2="356" y2="560" stroke="#9AA5B4" stroke-width="1" stroke-dasharray="4,4" />
+<line x1="464" y1="46" x2="464" y2="560" stroke="#9AA5B4" stroke-width="1" stroke-dasharray="4,4" />
+<line x1="572" y1="46" x2="572" y2="560" stroke="#9AA5B4" stroke-width="1" stroke-dasharray="4,4" />
+<line x1="680" y1="46" x2="680" y2="560" stroke="#9AA5B4" stroke-width="1" stroke-dasharray="4,4" />
+<line x1="788" y1="46" x2="788" y2="560" stroke="#9AA5B4" stroke-width="1" stroke-dasharray="4,4" />
+<line x1="896" y1="46" x2="896" y2="560" stroke="#9AA5B4" stroke-width="1" stroke-dasharray="4,4" />
+<line x1="1004" y1="46" x2="1004" y2="560" stroke="#9AA5B4" stroke-width="1" stroke-dasharray="4,4" />
+<line x1="1112" y1="46" x2="1112" y2="560" stroke="#9AA5B4" stroke-width="1" stroke-dasharray="4,4" />
+<path d="M140 86 H248" stroke="#2C6B87" stroke-width="1.8" fill="none" marker-end="url(#a63b)" />
+<rect x="77.6" y="67" width="232.8" height="16" rx="3" fill="#F4F6F9" />
+<text x="194" y="80" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">/sw:new: idea y arquitectura base</text>
+<path d="M248 112 H356" stroke="#2C6B87" stroke-width="1.8" fill="none" marker-end="url(#a63b)" />
+<rect x="202.5" y="93" width="199" height="16" rx="3" fill="#F4F6F9" />
+<text x="302" y="106" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">brief, PRD, UX, arquitectura</text>
+<path d="M356 138 H248" stroke="#5B6472" stroke-width="1.6" fill="none" stroke-dasharray="6,4" marker-end="url(#a63k)" />
+<rect x="216" y="119" width="172" height="16" rx="3" fill="#F4F6F9" />
+<text x="302" y="132" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">épicas e historias G/W/T</text>
+<path d="M248 164 H151" stroke="#5B6472" stroke-width="1.6" fill="none" stroke-dasharray="6,4" marker-end="url(#a63k)" />
+<rect x="158" y="145" width="165.2" height="16" rx="3" fill="#F4F6F9" />
+<text x="240.6" y="158" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">aprobar PRD e historias</text>
+<circle cx="140" cy="164" r="7.5" fill="#B42318" />
+<path d="M248 200 H464" stroke="#2C6B87" stroke-width="1.8" fill="none" marker-end="url(#a63b)" />
+<rect x="293.6" y="181" width="124.8" height="16" rx="3" fill="#F4F6F9" />
+<text x="356" y="194" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">epics.md aprobado</text>
+<path d="M464 226 H248" stroke="#5B6472" stroke-width="1.6" fill="none" stroke-dasharray="6,4" marker-end="url(#a63k)" />
+<rect x="280.1" y="207" width="151.8" height="16" rx="3" fill="#F4F6F9" />
+<text x="356" y="220" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">contratos, trace.json</text>
+<path d="M140 262 H248" stroke="#2C6B87" stroke-width="1.8" fill="none" marker-end="url(#a63b)" />
+<rect x="155.2" y="243" width="77.5" height="16" rx="3" fill="#F4F6F9" />
+<text x="194" y="256" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">/sw:sprint</text>
+<path d="M248 288 H572" stroke="#2C6B87" stroke-width="1.8" fill="none" marker-end="url(#a63b)" />
+<rect x="357.8" y="269" width="104.5" height="16" rx="3" fill="#F4F6F9" />
+<text x="410" y="282" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">olas y reparto</text>
+<path d="M572 314 H151" stroke="#5B6472" stroke-width="1.6" fill="none" stroke-dasharray="6,4" marker-end="url(#a63k)" />
+<rect x="290.2" y="295" width="131.5" height="16" rx="3" fill="#F4F6F9" />
+<text x="356" y="308" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">aprobar el reparto</text>
+<circle cx="140" cy="314" r="7.5" fill="#B42318" />
+<path d="M140 350 H248" stroke="#2C6B87" stroke-width="1.8" fill="none" marker-end="url(#a63b)" />
+<rect x="141.8" y="331" width="104.5" height="16" rx="3" fill="#F4F6F9" />
+<text x="194" y="344" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">/sw:build eNsM</text>
+<path d="M248 376 H680" stroke="#2C6B87" stroke-width="1.8" fill="none" marker-end="url(#a63b)" />
+<rect x="421.9" y="357" width="84.2" height="16" rx="3" fill="#F4F6F9" />
+<text x="464" y="370" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">un contrato</text>
+<path d="M680 402 H788" stroke="#2C6B87" stroke-width="1.8" fill="none" marker-end="url(#a63b)" />
+<rect x="675" y="383" width="118" height="16" rx="3" fill="#F4F6F9" />
+<text x="734" y="396" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">código y pruebas</text>
+<path d="M788 428 H896" stroke="#2C6B87" stroke-width="1.8" fill="none" marker-end="url(#a63b)" />
+<rect x="806.6" y="409" width="70.8" height="16" rx="3" fill="#F4F6F9" />
+<text x="842" y="422" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">veredicto</text>
+<path d="M896 464 H1004" stroke="#2C6B87" stroke-width="1.8" fill="none" marker-end="url(#a63b)" />
+<rect x="911.2" y="445" width="77.5" height="16" rx="3" fill="#F4F6F9" />
+<text x="950" y="458" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">dictámenes</text>
+<path d="M1004 490 H151" stroke="#5B6472" stroke-width="1.6" fill="none" stroke-dasharray="6,4" marker-end="url(#a63k)" />
+<rect x="371.2" y="471" width="401.5" height="16" rx="3" fill="#F4F6F9" />
+<text x="572" y="484" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">commits y PR con traza; la persona autoriza la integración</text>
+<circle cx="140" cy="490" r="7.5" fill="#B42318" />
+<path d="M140 526 H248" stroke="#2C6B87" stroke-width="1.8" fill="none" marker-end="url(#a63b)" />
+<rect x="158.6" y="507" width="70.8" height="16" rx="3" fill="#F4F6F9" />
+<text x="194" y="520" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">/sw:close</text>
+<path d="M248 552 H1112" stroke="#2C6B87" stroke-width="1.8" fill="none" marker-end="url(#a63b)" />
+<rect x="580.5" y="533" width="199" height="16" rx="3" fill="#F4F6F9" />
+<text x="680" y="546" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" text-anchor="middle">validar y archivar en specs/</text>
+<rect x="88" y="0" width="104" height="46" rx="6" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.6" />
+<text x="140" y="28" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">Persona</text>
+<rect x="196" y="0" width="104" height="46" rx="6" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.6" />
+<text x="248" y="19" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">Orquestador</text>
+<text x="248" y="35" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">/sw:*</text>
+<rect x="304" y="0" width="104" height="46" rx="6" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.6" />
+<text x="356" y="19" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">Agentes</text>
+<text x="356" y="35" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">BMAD</text>
+<rect x="412" y="0" width="104" height="46" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.6" />
+<text x="464" y="19" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">aracne-</text>
+<text x="464" y="35" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">weaver</text>
+<rect x="520" y="0" width="104" height="46" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.6" />
+<text x="572" y="19" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">aracne-</text>
+<text x="572" y="35" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">sprint-planner</text>
+<rect x="628" y="0" width="104" height="46" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.6" />
+<text x="680" y="19" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">aracne-</text>
+<text x="680" y="35" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">builder</text>
+<rect x="736" y="0" width="104" height="46" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.6" />
+<text x="788" y="19" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">aracne-</text>
+<text x="788" y="35" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">validator</text>
+<rect x="844" y="0" width="104" height="46" rx="6" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.6" />
+<text x="896" y="19" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">Revisores</text>
+<text x="896" y="35" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">Gentle-AI</text>
+<rect x="952" y="0" width="104" height="46" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.6" />
+<text x="1004" y="19" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">aracne-</text>
+<text x="1004" y="35" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">cicd</text>
+<rect x="1060" y="0" width="104" height="46" rx="6" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.6" />
+<text x="1112" y="19" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">aracne-</text>
+<text x="1112" y="35" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" text-anchor="middle">closer</text>
+<circle cx="10" cy="583" r="7.5" fill="#B42318" />
+<text x="24" y="588" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13">Puerta humana: aprobar historias, el reparto e integración (merge)</text>
+<rect x="500" y="573" width="16" height="16" rx="3" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.5" />
+<text x="524" y="588" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13">Subagente propio de Aracne</text>
+<path d="M740 582 H774" stroke="#2C6B87" stroke-width="1.8" fill="none" marker-end="url(#a63b)" />
+<text x="782" y="588" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13">Invocación</text>
+<path d="M880 582 H914" stroke="#5B6472" stroke-width="1.6" fill="none" stroke-dasharray="6,4" marker-end="url(#a63k)" />
+<text x="922" y="588" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13">Respuesta al llamador</text>
+</svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Una historia, de la idea a la línea base</p>
+                <p class="sched-h">Entender y Decidir</p>
+                <ol class="slide-list" style="margin:4px 0 8px;" start="1">
+                  <li><strong>Persona</strong> invoca a <strong>Orquestador</strong>: /sw:new: idea y arquitectura base</li>
+                  <li><strong>Orquestador</strong> invoca a <strong>Agentes BMAD</strong>: brief, PRD, UX, arquitectura</li>
+                  <li><strong>Agentes BMAD</strong> responde a <strong>Orquestador</strong>: épicas e historias G/W/T</li>
+                  <li><strong>Orquestador</strong> responde a <strong>Persona</strong>: aprobar PRD e historias <span class="pill pill--risk">Puerta humana</span></li>
+                </ol>
+                <p class="sched-h">Traducir</p>
+                <ol class="slide-list" style="margin:4px 0 8px;" start="5">
+                  <li><strong>Orquestador</strong> invoca a <strong>aracne-weaver</strong>: epics.md aprobado</li>
+                  <li><strong>aracne-weaver</strong> responde a <strong>Orquestador</strong>: contratos, trace.json</li>
+                </ol>
+                <p class="sched-h">Descomponer</p>
+                <ol class="slide-list" style="margin:4px 0 8px;" start="7">
+                  <li><strong>Persona</strong> invoca a <strong>Orquestador</strong>: /sw:sprint</li>
+                  <li><strong>Orquestador</strong> invoca a <strong>aracne-sprint-planner</strong>: olas y reparto</li>
+                  <li><strong>aracne-sprint-planner</strong> responde a <strong>Persona</strong>: aprobar el reparto <span class="pill pill--risk">Puerta humana</span></li>
+                </ol>
+                <p class="sched-h">Construir y verificar</p>
+                <ol class="slide-list" style="margin:4px 0 8px;" start="10">
+                  <li><strong>Persona</strong> invoca a <strong>Orquestador</strong>: /sw:build eNsM</li>
+                  <li><strong>Orquestador</strong> invoca a <strong>aracne-builder</strong>: un contrato</li>
+                  <li><strong>aracne-builder</strong> invoca a <strong>aracne-validator</strong>: código y pruebas</li>
+                  <li><strong>aracne-validator</strong> invoca a <strong>Revisores Gentle-AI</strong>: veredicto</li>
+                </ol>
+                <p class="sched-h">Integrar</p>
+                <ol class="slide-list" style="margin:4px 0 8px;" start="14">
+                  <li><strong>Revisores Gentle-AI</strong> invoca a <strong>aracne-cicd</strong>: dictámenes</li>
+                  <li><strong>aracne-cicd</strong> responde a <strong>Persona</strong>: commits y PR con traza; la persona autoriza la integración <span class="pill pill--risk">Puerta humana</span></li>
+                </ol>
+                <p class="sched-h">Cerrar</p>
+                <ol class="slide-list" style="margin:4px 0 8px;" start="16">
+                  <li><strong>Persona</strong> invoca a <strong>Orquestador</strong>: /sw:close</li>
+                  <li><strong>Orquestador</strong> invoca a <strong>aracne-closer</strong>: validar y archivar en specs/</li>
+                </ol>
+              </div>
+              <figcaption class="fig-caption">Figura 6.3 — Interacción entre agentes para una historia, de la idea a la línea base. Verde: subagentes propios de Aracne; flechas continuas: invocaciones; discontinuas: respuestas</figcaption>
+            </figure>
+          </article>
+
+          <!-- E4-8: Control humano y ejemplo (Figura 6.4) [c4-control-humano] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e4" data-item="c4-control-humano" data-tone="rose">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
+                <h2 style="margin-bottom:4px;">Puntos de control humano y ejemplo de punta a punta: del requerimiento a la puesta en marcha</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Ejemplo ilustrativo, no una ejecución: la creación de terceros de SICORE Posmedia. Aracne llega hasta la solicitud de integración y la línea base; el despliegue lo ejecuta el pipeline de ATENEA con autorización humana.</p>
+              </div>
+              <svg viewBox="-4 -4 1208 536" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Figura 6.4: recorrido ideal de los pasos 0 a 13, con siete puertas humanas, y las tres puertas del capítulo 6">
+<defs>
+<marker id="a64b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker>
+<marker id="a64k" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#5B6472" /></marker>
+</defs>
+<rect x="0" y="16" width="150" height="104" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="75" y="64" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#1E5631" font-size="17">0</tspan> init y doctor</text>
+<text x="75" y="82.8" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">en el repositorio</text>
+<rect x="175" y="16" width="150" height="104" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<text x="250" y="64" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#2C6B87" font-size="17">1</tspan> Arquitectura</text>
+<text x="250" y="82.8" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">base del área</text>
+<rect x="350" y="16" width="150" height="104" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="425" y="64" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#1E5631" font-size="17">2</tspan> /sw:adopt con el</text>
+<text x="425" y="82.8" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">acta y el Figma</text>
+<rect x="525" y="16" width="150" height="104" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="600" y="54.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#1E5631" font-size="17">3</tspan> PRD, UX y</text>
+<text x="600" y="73.4" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">arquitectura</text>
+<text x="600" y="92.3" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">(BMAD)</text>
+<rect x="700" y="16" width="150" height="104" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="775" y="64" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#1E5631" font-size="17">4</tspan> Épicas e</text>
+<text x="775" y="82.8" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">historias G/W/T</text>
+<rect x="875" y="16" width="150" height="104" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="950" y="54.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#1E5631" font-size="17">5</tspan> Contratos y</text>
+<text x="950" y="73.4" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">traza</text>
+<text x="950" y="92.3" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">(aracne-weaver)</text>
+<rect x="1050" y="16" width="150" height="104" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="1125" y="64" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#1E5631" font-size="17">6</tspan> Olas de trabajo</text>
+<text x="1125" y="82.8" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">(/sw:sprint)</text>
+<rect x="1050" y="176" width="150" height="104" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="1125" y="214.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#1E5631" font-size="17">7</tspan> /sw:build:</text>
+<text x="1125" y="233.4" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">pruebas, código,</text>
+<text x="1125" y="252.3" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">revisión, PR</text>
+<rect x="875" y="176" width="150" height="104" rx="8" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.8" stroke-dasharray="7,4" />
+<text x="950" y="214.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#2C6B87" font-size="17">8</tspan> Integración</text>
+<text x="950" y="233.4" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">continua (Azure</text>
+<text x="950" y="252.3" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">Pipelines)</text>
+<rect x="700" y="176" width="150" height="104" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="775" y="224" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#1E5631" font-size="17">9</tspan> /sw:close:</text>
+<text x="775" y="242.8" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">línea base</text>
+<rect x="525" y="176" width="150" height="104" rx="8" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.8" stroke-dasharray="7,4" />
+<text x="600" y="224" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#2C6B87" font-size="17">10</tspan> Despliegue</text>
+<text x="600" y="242.8" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">a QA</text>
+<rect x="350" y="176" width="150" height="104" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<text x="425" y="214.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#2C6B87" font-size="17">11</tspan> Validación en</text>
+<text x="425" y="233.4" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">preproducción</text>
+<text x="425" y="252.3" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">y firma</text>
+<rect x="175" y="176" width="150" height="104" rx="8" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.8" stroke-dasharray="7,4" />
+<text x="250" y="214.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#2C6B87" font-size="17">12</tspan> Despliegue a</text>
+<text x="250" y="233.4" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">producción</text>
+<text x="250" y="252.3" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">autorizado</text>
+<rect x="0" y="176" width="150" height="104" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<text x="75" y="214.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#2C6B87" font-size="17">13</tspan> Puesta en</text>
+<text x="75" y="233.4" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">marcha y</text>
+<text x="75" y="252.3" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">operación</text>
+<path d="M152 68 H171" stroke="#2C6B87" stroke-width="2" fill="none" marker-end="url(#a64b)" />
+<path d="M327 68 H346" stroke="#2C6B87" stroke-width="2" fill="none" marker-end="url(#a64b)" />
+<path d="M502 68 H521" stroke="#2C6B87" stroke-width="2" fill="none" marker-end="url(#a64b)" />
+<path d="M677 68 H696" stroke="#2C6B87" stroke-width="2" fill="none" marker-end="url(#a64b)" />
+<path d="M852 68 H871" stroke="#2C6B87" stroke-width="2" fill="none" marker-end="url(#a64b)" />
+<path d="M1027 68 H1046" stroke="#2C6B87" stroke-width="2" fill="none" marker-end="url(#a64b)" />
+<path d="M1048 228 H1029" stroke="#2C6B87" stroke-width="2" fill="none" marker-end="url(#a64b)" />
+<path d="M873 228 H854" stroke="#2C6B87" stroke-width="2" fill="none" marker-end="url(#a64b)" />
+<path d="M698 228 H679" stroke="#2C6B87" stroke-width="2" fill="none" marker-end="url(#a64b)" />
+<path d="M523 228 H504" stroke="#2C6B87" stroke-width="2" fill="none" marker-end="url(#a64b)" />
+<path d="M348 228 H329" stroke="#2C6B87" stroke-width="2" fill="none" marker-end="url(#a64b)" />
+<path d="M173 228 H154" stroke="#2C6B87" stroke-width="2" fill="none" marker-end="url(#a64b)" />
+<path d="M1125 122 V174" stroke="#2C6B87" stroke-width="2" fill="none" marker-end="url(#a64b)" />
+<circle cx="496" cy="20" r="8" fill="#B42318" stroke="#FFFFFF" stroke-width="1.5" />
+<circle cx="671" cy="20" r="8" fill="#B42318" stroke="#FFFFFF" stroke-width="1.5" />
+<circle cx="846" cy="20" r="8" fill="#B42318" stroke="#FFFFFF" stroke-width="1.5" />
+<circle cx="1196" cy="20" r="8" fill="#B42318" stroke="#FFFFFF" stroke-width="1.5" />
+<circle cx="1196" cy="180" r="8" fill="#B42318" stroke="#FFFFFF" stroke-width="1.5" />
+<circle cx="496" cy="180" r="8" fill="#B42318" stroke="#FFFFFF" stroke-width="1.5" />
+<circle cx="321" cy="180" r="8" fill="#B42318" stroke="#FFFFFF" stroke-width="1.5" />
+<path d="M75 282 V312 H1125 V283" stroke="#5B6472" stroke-width="1.8" fill="none" stroke-dasharray="6,4" marker-end="url(#a64k)" />
+<rect x="250" y="316" width="700" height="22" rx="3" fill="#FFFFFF" />
+<text x="600" y="332" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14" text-anchor="middle">cambios (/sw:change), defectos (/sw:bug) e incidencias (/sw:ticket) vuelven al flujo</text>
+<text x="0" y="372" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700">Las tres puertas humanas que no se delegan (§6.6)</text>
+<rect x="0" y="384" width="388" height="106" rx="8" fill="#FFF7ED" stroke="#B07A12" stroke-width="1.6" />
+<circle cx="26" cy="412" r="14" fill="#B42318" />
+<text x="26" y="418" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">1</text>
+<text x="50" y="418" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700">Aprobar el PRD y las historias</text>
+<text x="14" y="446" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Antes de que aracne-weaver las traduzca a</text>
+<text x="14" y="464" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">contratos.</text>
+<rect x="406" y="384" width="388" height="106" rx="8" fill="#FFF7ED" stroke="#B07A12" stroke-width="1.6" />
+<circle cx="432" cy="412" r="14" fill="#B42318" />
+<text x="432" y="418" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">2</text>
+<text x="456" y="418" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700">Aprobar el reparto de las olas</text>
+<text x="420" y="446" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Un contrato por persona, según las</text>
+<text x="420" y="464" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">dependencias.</text>
+<rect x="812" y="384" width="388" height="106" rx="8" fill="#FFF7ED" stroke="#B07A12" stroke-width="1.6" />
+<circle cx="838" cy="412" r="14" fill="#B42318" />
+<text x="838" y="418" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700" text-anchor="middle">3</text>
+<text x="862" y="418" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16.5" font-weight="700">Autorizar la integración</text>
+<text x="826" y="446" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">aracne-cicd nunca hace merge ni push a ramas</text>
+<text x="826" y="464" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">protegidas, ni despliega sin autorización</text>
+<text x="826" y="482" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">humana explícita.</text>
+<rect x="0" y="507" width="22" height="18" rx="4" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.6" />
+<text x="30" y="522" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Arnés</text>
+<rect x="100" y="507" width="22" height="18" rx="4" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.6" />
+<text x="130" y="522" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Persona</text>
+<rect x="214" y="507" width="22" height="18" rx="4" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.6" stroke-dasharray="7,4" />
+<text x="244" y="522" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Azure DevOps</text>
+<circle cx="376" cy="516" r="7.5" fill="#B42318" />
+<text x="390" y="522" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Puerta humana (siete en el recorrido: pasos 2, 3, 4, 6, 7, 11 y 12)</text>
+</svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Recorrido ideal: pasos 0 a 13</p>
+                <ol class="slide-list" start="0" style="margin:8px 0;">
+                  <li><strong>0.</strong> init y doctor en el repositorio <em>(Arnés)</em></li>
+                  <li><strong>1.</strong> Arquitectura base del área <em>(Persona)</em></li>
+                  <li><strong>2.</strong> /sw:adopt con el acta y el Figma <em>(Arnés)</em> <span class="pill pill--risk">Puerta humana</span></li>
+                  <li><strong>3.</strong> PRD, UX y arquitectura (BMAD) <em>(Arnés)</em> <span class="pill pill--risk">Puerta humana</span></li>
+                  <li><strong>4.</strong> Épicas e historias G/W/T <em>(Arnés)</em> <span class="pill pill--risk">Puerta humana</span></li>
+                  <li><strong>5.</strong> Contratos y traza (aracne-weaver) <em>(Arnés)</em></li>
+                  <li><strong>6.</strong> Olas de trabajo (/sw:sprint) <em>(Arnés)</em> <span class="pill pill--risk">Puerta humana</span></li>
+                  <li><strong>7.</strong> /sw:build: pruebas, código, revisión, PR <em>(Arnés)</em> <span class="pill pill--risk">Puerta humana</span></li>
+                  <li><strong>8.</strong> Integración continua (Azure Pipelines) <em>(Azure DevOps)</em></li>
+                  <li><strong>9.</strong> /sw:close: línea base <em>(Arnés)</em></li>
+                  <li><strong>10.</strong> Despliegue a QA <em>(Azure DevOps)</em></li>
+                  <li><strong>11.</strong> Validación en preproducción y firma <em>(Persona)</em> <span class="pill pill--risk">Puerta humana</span></li>
+                  <li><strong>12.</strong> Despliegue a producción autorizado <em>(Azure DevOps)</em> <span class="pill pill--risk">Puerta humana</span></li>
+                  <li><strong>13.</strong> Puesta en marcha y operación <em>(Persona)</em></li>
+                </ol>
+                <p class="sched-note">Tras la puesta en marcha, los cambios (<code>/sw:change</code>), defectos (<code>/sw:bug</code>) e incidencias (<code>/sw:ticket</code>) vuelven al flujo.</p>
+                <p class="sched-title">Tres puertas humanas que no se delegan (&sect;6.6)</p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong>1. Aprobar el PRD y las historias</strong>, antes de que <code>aracne-weaver</code> las traduzca a contratos.</li>
+                  <li><strong>2. Aprobar el reparto de las olas</strong>, un contrato por persona.</li>
+                  <li><strong>3. Autorizar la integración.</strong> <code>aracne-cicd</code> nunca hace <em>merge</em> ni <em>push</em> a ramas protegidas, ni despliega sin autorización humana explícita.</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Figura 6.4 — Recorrido ideal de un módulo con Aracne, de la instalación a la puesta en marcha. Verde: arnés; blanco: personas; azul discontinuo: Azure DevOps; puntos rojos: puertas humanas</figcaption>
+            </figure>
+          </article>
+
+          <!-- E4-9: Seguridad (Tabla 6.4) [c4-seguridad] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e4" data-item="c4-seguridad">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
+                <h2 style="margin-bottom:4px;">Criterios de seguridad: ocho riesgos <abbr title="Open Worldwide Application Security Project">OWASP</abbr> contra los controles del arnés</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;"><span class="pill pill--risk">Pendiente</span> <code>/sw:build</code> y <code>/sw:bug</code> permiten la terminal sin restricción: hay que acotarla antes de usarlos en ATENEA. El arnés no tiene identidad propia: actúa con los permisos de la cuenta de la persona.</p>
+              </div>
+              <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
+                <table class="data-table" style="font-size:clamp(0.66rem,min(1.12vw,2.05vh),1.5rem);">
+                  <caption>Tabla 6.4 — Criterios de seguridad del sistema de agentes: riesgo, control en el arnés 0.9.0 y adaptación pendiente</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:19%;font-size:0.82em;">Riesgo</th>
+                      <th style="width:44%;font-size:0.82em;">Control en el arnés 0.9.0</th>
+                      <th style="font-size:0.82em;">Pendiente para ATENEA</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Riesgo"><strong>Abuso de herramientas y acciones no autorizadas</strong></td>
+                      <td data-label="Control en el arnés 0.9.0"><span>Cada comando declara las herramientas que puede usar: <code>/sw:status</code> solo lee; <code>/sw:sprint</code> y <code>/sw:close</code> no escriben archivos</span></td>
+                      <td data-label="Pendiente para ATENEA"><span><span class="pill pill--risk">Terminal sin restricción</span> <code>/sw:build</code> y <code>/sw:bug</code>: acotarla y ejecutarlos solo en equipos y cuentas institucionales</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Riesgo"><strong>Desviación del objetivo y código fuera de especificación</strong></td>
+                      <td data-label="Control en el arnés 0.9.0"><span>Regla de frontera: se podan las skills de BMAD que escriben código sin contrato; el constructor trabaja un contrato a la vez y lo demás pasa por <code>/sw:change</code></span></td>
+                      <td data-label="Pendiente para ATENEA"><span><span class="pill pill--ok">Ninguno</span></span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Riesgo"><strong>Cadena de suministro</strong></td>
+                      <td data-label="Control en el arnés 0.9.0"><span>Versiones fijadas en un solo archivo (BMAD 6.11.0, OpenSpec 1.10.0, graphify 0.8.37, Gentle-AI 4.1.1); el paquete no tiene dependencias npm; instalar desde Homebrew es una decisión explícita del usuario</span></td>
+                      <td data-label="Pendiente para ATENEA"><span>Revisión de esas versiones por seguridad antes de instalar</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Riesgo"><strong>Fuga de datos a terceros</strong></td>
+                      <td data-label="Control en el arnés 0.9.0"><span>La telemetría de OpenSpec se desactiva en cada ejecución</span></td>
+                      <td data-label="Pendiente para ATENEA"><span>Condiciones de datos del proveedor del modelo (anexo D)</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Riesgo"><strong>Servidores MCP no confiables</strong></td>
+                      <td data-label="Control en el arnés 0.9.0"><span>Un único servidor MCP, la memoria local Engram, con el perfil de herramientas del agente</span></td>
+                      <td data-label="Pendiente para ATENEA"><span>Lista de servidores MCP permitidos por la Subgerencia de TIC</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Riesgo"><strong>Secretos y credenciales</strong></td>
+                      <td data-label="Control en el arnés 0.9.0"><span>El arnés no maneja secretos; la plantilla de arquitectura base deja la sección para que el proyecto la defina</span></td>
+                      <td data-label="Pendiente para ATENEA"><span>Definir la regla en la arquitectura base y aplicar el criterio 8 (Tabla 4.4)</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Riesgo"><strong>Integración sin revisión</strong></td>
+                      <td data-label="Control en el arnés 0.9.0"><span>Revisión en cuatro perspectivas (riesgo, fiabilidad, resiliencia y legibilidad) y aprobación humana de la integración</span></td>
+                      <td data-label="Pendiente para ATENEA"><span>Proteger las ramas en Azure DevOps</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Riesgo"><strong>Datos personales en el contexto del modelo</strong></td>
+                      <td data-label="Control en el arnés 0.9.0"><span>Las pruebas se escriben por escenario sobre datos de ejemplo</span></td>
+                      <td data-label="Pendiente para ATENEA"><span>Aplicar el inventario (Tabla 3.10) y los criterios 8 y 9</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- E4-10: Trazabilidad (§6.9) [c4-trazabilidad] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e4" data-item="c4-trazabilidad" data-caption-source="§6.9" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
+                <h2 style="margin-bottom:4px;">Trazabilidad: dos archivos del repositorio enlazan el requisito con el código</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Responde a una necesidad del diagnóstico: hoy no hay vínculo entre el acta y las tareas, y ante la Contraloría se entrega la estimación desglosada.</p>
+              </div>
+              <svg viewBox="-4 -4 1208 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cadena de trazabilidad del requisito a la integración, con trace.json, changelog.jsonl y el estado de la verificación">
+<defs>
+<marker id="a69b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker>
+</defs>
+<rect x="0" y="8" width="170" height="62" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="85" y="47" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700" text-anchor="middle">Requisito</text>
+<path d="M173 39 H202" stroke="#2C6B87" stroke-width="2.2" fill="none" marker-end="url(#a69b)" />
+<rect x="206" y="8" width="170" height="62" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="291" y="47" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700" text-anchor="middle">Historia</text>
+<path d="M379 39 H408" stroke="#2C6B87" stroke-width="2.2" fill="none" marker-end="url(#a69b)" />
+<rect x="412" y="8" width="170" height="62" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<text x="497" y="47" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700" text-anchor="middle">Contrato</text>
+<path d="M585 39 H614" stroke="#2C6B87" stroke-width="2.2" fill="none" marker-end="url(#a69b)" />
+<rect x="618" y="8" width="170" height="62" rx="8" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.8" />
+<text x="703" y="47" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700" text-anchor="middle">Código</text>
+<path d="M791 39 H820" stroke="#2C6B87" stroke-width="2.2" fill="none" marker-end="url(#a69b)" />
+<rect x="824" y="8" width="170" height="62" rx="8" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.8" />
+<text x="909" y="47" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700" text-anchor="middle">Prueba</text>
+<path d="M997 39 H1026" stroke="#2C6B87" stroke-width="2.2" fill="none" marker-end="url(#a69b)" />
+<rect x="1030" y="8" width="170" height="62" rx="8" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.8" />
+<text x="1115" y="47" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700" text-anchor="middle">Integración</text>
+<path d="M2 82 V92 H576 V82" stroke="#1E5631" stroke-width="2" fill="none" />
+<text x="289" y="114" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="middle">Los dos archivos del arnés cubren los primeros eslabones</text>
+<path d="M624 82 V92 H1198 V82" stroke="#2C6B87" stroke-width="2" fill="none" />
+<text x="911" y="114" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="middle">El historial de Git y la solicitud de integración, los últimos</text>
+<rect x="0" y="132" width="578" height="132" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.6" />
+<text x="14" y="158" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" font-weight="700">trace.json</text>
+<text x="14" y="182" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Mapa de traza. Por contrato: épica e historia de origen, requisitos</text>
+<text x="14" y="201" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">que cubre, origen de cada atribución, capacidad, revisión y número de</text>
+<text x="14" y="220" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">escenarios.</text>
+<text x="14" y="243" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Determinista: el mismo archivo de historias produce el mismo mapa.</text>
+<rect x="0" y="276" width="578" height="146" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.6" />
+<text x="14" y="302" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" font-weight="700">changelog.jsonl</text>
+<text x="14" y="326" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Bitácora de corridas. Cada corrida del puente añade una línea con</text>
+<text x="14" y="345" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">fecha, archivo de origen, huella SHA-256 abreviada, opciones y</text>
+<text x="14" y="364" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">contratos producidos.</text>
+<text x="14" y="387" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Solo se añaden líneas; no se reescriben.</text>
+<rect x="622" y="132" width="578" height="132" rx="8" fill="#EAF3F8" stroke="#2C6B87" stroke-width="1.6" />
+<text x="636" y="158" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Git y solicitud de integración</text>
+<text x="636" y="182" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">La PR de aracne-cicd lleva la traza y los commits atómicos.</text>
+<text x="636" y="205" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Dos pruebas protegen la cadena: una evita la pérdida de entradas del</text>
+<text x="636" y="224" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">mapa en una corrida parcial y otra verifica que cada corrida deja una</text>
+<text x="636" y="243" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">línea en la bitácora.</text>
+<rect x="622" y="276" width="578" height="146" rx="8" fill="#FFF7ED" stroke="#B07A12" stroke-width="1.6" />
+<text x="636" y="302" fill="#B07A12" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Estado de la verificación</text>
+<text x="636" y="326" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">182 casos de la suite pasaron en la corrida con el entorno aislado.</text>
+<text x="636" y="349" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Probado fuera de ATENEA; falta instalarlo y adaptarlo a las</text>
+<text x="636" y="368" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">condiciones de ATENEA.</text>
+<rect x="0" y="434" width="1200" height="50" rx="8" fill="#FFFFFF" stroke="#B07A12" stroke-width="1.4" stroke-dasharray="6,4" />
+<text x="14" y="455" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">La traza es versionada y verificable, pero no inmutable: vive en el repositorio y su protección depende de las ramas protegidas y de los</text>
+<text x="14" y="474" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">permisos del gestor de repositorios.</text>
+</svg>
+              <div class="mobile-alt">
+                <p class="sched-title">Cadena de trazabilidad</p>
+                <p style="margin:6px 0;"><strong>Requisito &rarr; historia &rarr; contrato &rarr; c&oacute;digo &rarr; prueba &rarr; integraci&oacute;n.</strong></p>
+                <ul class="slide-list" style="margin:8px 0;">
+                  <li><strong><code>trace.json</code> (mapa de traza).</strong> Por contrato: &eacute;pica e historia de origen, requisitos que cubre, origen de cada atribuci&oacute;n, capacidad, revisi&oacute;n y n&uacute;mero de escenarios. Es determinista: el mismo archivo de historias produce el mismo mapa.</li>
+                  <li><strong><code>changelog.jsonl</code> (bit&aacute;cora de corridas).</strong> Cada corrida del puente a&ntilde;ade una l&iacute;nea con fecha, archivo de origen, huella SHA-256 abreviada, opciones y contratos producidos. Solo se a&ntilde;aden l&iacute;neas.</li>
+                  <li><strong>Git y solicitud de integraci&oacute;n.</strong> Cubren los &uacute;ltimos eslabones; la PR de <code>aracne-cicd</code> lleva la traza.</li>
+                  <li><strong>Estado.</strong> <span class="pill pill--ok">182 casos pasan</span> en el entorno aislado; <span class="pill pill--partial">Probado fuera de ATENEA</span> falta instalarlo y adaptarlo.</li>
+                  <li><strong>L&iacute;mite.</strong> La traza es versionada y verificable, pero no inmutable: su protecci&oacute;n depende de las ramas protegidas y de los permisos del gestor de repositorios.</li>
+                </ul>
+              </div>
+              <figcaption class="fig-caption">Fuente: §6.9 — Cadena de trazabilidad con trace.json y changelog.jsonl, y estado de la verificación (sin figura ni tabla numerada en el informe)</figcaption>
             </figure>
           </article>
 
