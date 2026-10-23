@@ -30,7 +30,8 @@ MANIFEST = {
     "e4": ["c4-arquitectura", "c4-catalogo", "c4-instalacion", "c4-flujos-interaccion",
            "c4-control-humano", "c4-seguridad", "c4-trazabilidad"],
 }
-CAPTION_RE = re.compile(r"^(Figura|Tabla) \d+\.\d+")
+# Unnumbered informe sources (no table or figure) cite their section: "Fuente: §N.M".
+CAPTION_RE = re.compile(r"^((Figura|Tabla) \d+\.\d+|Fuente: §\d+\.\d+)")
 
 DESKTOP_VIEWPORTS = [(1920, 1080), (1366, 768), (1280, 720)]
 MOBILE_PROFILES = {
