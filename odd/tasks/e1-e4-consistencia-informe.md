@@ -121,3 +121,9 @@ See `/home/carlos/.claude/plans/we-need-to-update-snuggly-summit.md` for:
   - In phone landscape, the index chrome (deck chips plus rail) takes about half of the 390px height.
   - `kickoff.html` opened on its own shows 0 slides. In `initApp`, `[data-deck='e1-e4']` matches the hub card.
   - The kickoff card still says "5 puertas humanas".
+
+### Independent verification (parent)
+- Risk assessment (`gentle-ai review assess`, RDD off): high (process_boundary in scripts) -> independent read-only verifier.
+- Result: 58 captions and ~190 facts checked; 0 wrong facts or captions. Fixed: Tabla 5.1 (2/2) subtitle, Tabla 4.1 (2/2) wording, removed unsupported "Habilita/Cierra" links on §7.1 slide, counter default 01 / 64.
+- Left as-is and reported to the user: concept maps (slides 23–24) and cover team names are not in the informe (pre-existing deck content); Tabla 3.10 says "Oracle Cloud Service" while Tablas 3.3/5.7 say Oracle Visual Builder (informe-internal).
+- After fixes: audit (index) 4/4 PASS; presentador_deck.py OK.
