@@ -113,7 +113,7 @@ def go_to(page, idx):
 def slide_label(page, idx):
     return page.evaluate(
         "(i) => { const s = slides[i]; const h = s.querySelector('h2');"
-        " return `#${i} [${s.dataset.module}] ${(h ? h.textContent : '').trim().slice(0, 50)}`; }",
+        " return `#${i} [${s.dataset.module}] ${(h ? h.textContent : '').replace(/\\s+/g, ' ').trim().slice(0, 50)}`; }",
         idx,
     )
 

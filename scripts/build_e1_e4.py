@@ -22,7 +22,7 @@ def generate_e1_e4_html():
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20261022_3" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261023_1" />
   </head>
   <body class="view-deck">
     <div class="ambient"></div>
@@ -2534,7 +2534,7 @@ def generate_e1_e4_html():
       </footer>
     </div>
 
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app.js?v=20261023_1"></script>
   </body>
 </html>
 '''

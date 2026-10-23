@@ -29,9 +29,9 @@ See `/home/carlos/.claude/plans/we-need-to-update-snuggly-summit.md` for:
 
 ## Tasks
 - [x] T0 Write the audit script `scripts/audit_e1e4_deck.py` (coverage manifest, rail, viewports, mobile rules) and run it to RED.
-- [ ] T1 Infrastructure:
-  - [ ] compute `data-first` at runtime in `app.js`
-  - [ ] add CSS for captions, status pills, mobile cards (`td[data-label]`), `.mobile-alt`, sticky first column and tap targets
+- [x] T1 Infrastructure:
+  - [x] compute `data-first` at runtime in `app.js`
+  - [x] add CSS for captions, status pills, mobile cards (`td[data-label]`), `.mobile-alt`, sticky first column and tap targets
 - [ ] T2 Contract module, then the E1 module (C1, plus the prioritized use case).
 - [ ] T3 E2 module (C2).
 - [ ] T4 E3 module (C3: 8 elements).
@@ -45,3 +45,16 @@ See `/home/carlos/.claude/plans/we-need-to-update-snuggly-summit.md` for:
 
 ## Progress / evidence
 (per task: route, commit, checks)
+
+### T0 (done)
+- Route: delegated direct (one writer; trigger: 2+ files plus preparatory reading).
+- Commit: 890de1e `test(deck): agregar auditoría Playwright ...`.
+- Command: `python3 scripts/audit_e1e4_deck.py` -> exit 1 (RED). coverage FAIL (27 items, none has `data-item`), rail FAIL (e3 landed 17 vs 19, e4 20 vs 22, e5 23 vs 25), layout PASS, mobile FAIL (216 problems: dots < 32px, rail titles/buttons < 44px, SVG text 4-9px, tables without `data-label`).
+
+### T1 (done)
+- Route: delegated direct.
+- Changes: `app.js` computes rail targets from `data-module` (fallback `data-first`); CSS for `.fig-caption`/table captions, `.pill--ok|partial|todo|risk`, `.mobile-alt`, `td[data-label]` cards, `.is-scroll-x`, 44px tap targets, 32px dot hit area, safe-area; cache-buster `20261023_1` (css and js).
+- Command: `python3 scripts/audit_e1e4_deck.py` -> coverage FAIL (27, expected: content in T2-T5), rail PASS, layout PASS, mobile FAIL (64 problems, all slide content: SVG text < 11px on 11 slides, tables without `data-label` on 12 slides; chrome tap targets now clean).
+- Smoke: index.html?deck=kickoff (45 slides) and ?deck=e1-e4 (28) navigate with ArrowRight and rail click, no page errors.
+- CSS conventions for later tasks: `slide[data-item]`, `figcaption.fig-caption` ("Figura N.M — ..."), `table > caption`, `.mobile-alt` as direct child of `figure.slide-figure` next to the `svg`, `td[data-label]`, `.is-scroll-x` on wrapper for wide tables, `.pill` variants.
+

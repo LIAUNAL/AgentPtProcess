@@ -255,8 +255,12 @@ function initDeck(deckId) {
 
   railTitles.forEach((title) => {
     title.onclick = () => {
-      const firstSlide = Number(title.dataset.first);
-      if (Number.isFinite(firstSlide)) render(firstSlide);
+      // El destino se calcula del primer slide del deck activo cuyo data-module
+      // coincide con el módulo del rail; data-first queda solo como respaldo.
+      const moduleId = title.closest(".rail-module")?.dataset.module;
+      let target = slides.findIndex((s) => s.dataset.module === moduleId);
+      if (target < 0) target = Number(title.dataset.first);
+      if (Number.isFinite(target) && target >= 0) render(target);
     };
   });
 
