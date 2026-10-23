@@ -763,7 +763,7 @@
                     </tr>
                     <tr>
                       <td data-label="Sistema o proyecto"><strong>Academia Atenea</strong></td>
-                      <td data-label="Tipo">Plataforma de formación sobre Moodle 4.5</td>
+                      <td data-label="Tipo">Plataforma de formación</td>
                       <td data-label="Estado">En operación, fuera del núcleo SICORE</td>
                       <td data-label="Relación con el contrato"><span class="pill pill--partial">Referencia</span> no prioritaria</td>
                     </tr>
@@ -1031,13 +1031,13 @@
               <text x="470" y="433.0" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Node, contenedor Docker</text>
               <rect x="680.0" y="382.0" width="220" height="76" rx="8" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.6" />
               <text x="790" y="416.0" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">Back-end Java 17</text>
-              <text x="790" y="433.0" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Spring Boot 3 + WildFly 34</text>
+              <text x="790" y="433.0" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">Spring Boot 3</text>
               <rect x="995.0" y="382.0" width="200" height="76" rx="8" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.6" />
               <text x="1095" y="416.0" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">Oracle Autonomous</text>
               <text x="1095" y="433.0" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">un esquema por ambiente</text>
               <rect x="675.0" y="490.0" width="230" height="76" rx="8" fill="#FFFFFF" stroke="#4E93B0" stroke-width="1.6" />
               <text x="790" y="515.5" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">Keycloak</text>
-              <text x="790" y="532.5" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">SSO + PostgreSQL</text>
+              <text x="790" y="532.5" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">SSO</text>
               <text x="790" y="549.5" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13" text-anchor="middle">en incorporación</text>
               <path d="M470 224.0 V168.0" stroke="#DFBD76" stroke-width="2.2" fill="none" stroke-dasharray="6,4" marker-end="url(#fi-a)" marker-start="url(#fi-a)" />
               <text x="480" y="201.0" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="13">consultas</text>
@@ -1063,7 +1063,7 @@
                 <ul class="slide-list" style="margin:8px 0;">
                   <li><strong>Herramientas de trabajo:</strong> SharePoint (actas firmadas y Figma) → Desarrolladores (front-end y back-end, Azure DevOps) → Infraestructura (despliegue manual en Docker).</li>
                   <li><strong>Asistente de IA (chat):</strong> Claude con licencias compartidas; los desarrolladores le hacen consultas.</li>
-                  <li><strong>Clúster ATENEA en OCI (QA, preproducción y producción):</strong> Front-end Angular 13 en Docker → Back-end Java 17 con Spring Boot 3 y WildFly 34 → Oracle Autonomous con un esquema por ambiente; el back-end se autentica con Keycloak (SSO + PostgreSQL, en incorporación).</li>
+                  <li><strong>Clúster ATENEA en OCI (QA, preproducción y producción):</strong> Front-end Angular 13 en Docker → Back-end Java 17 con Spring Boot 3 → Oracle Autonomous con un esquema por ambiente; el back-end se autentica con Keycloak (SSO, en incorporación).</li>
                   <li><strong>Clientes y áreas</strong> acceden al front-end por HTTPS.</li>
                   <li><strong>Microsoft Azure:</strong> destino de la migración, fase 1, desde Oracle Cloud.</li>
                 </ul>
@@ -1082,7 +1082,7 @@
                   <strong>Front-end con deuda:</strong> Angular 13 está fuera de soporte; ATENEA reconoce que debe subir a la versión 22 o 23.
                 </li>
                 <li>
-                  <strong>Back-end vigente:</strong> Java 17, Spring Boot 3 y WildFly 34 en Docker; la actualización a Java 21 está pendiente.
+                  <strong>Back-end vigente:</strong> Java 17 y Spring Boot 3 en Docker; la actualización a Java 21 está pendiente.
                 </li>
                 <li>
                   <strong>Código y documentación dispersos:</strong> Oracle Visual Builder en migración a Azure DevOps; actas en SharePoint y prototipos en Figma.
@@ -1113,7 +1113,7 @@
                     </tr>
                     <tr>
                       <td data-label="Capa o función"><strong>Servidor de aplicaciones</strong></td>
-                      <td data-label="Tecnología">WildFly 34, en Docker sobre Linux Ubuntu</td>
+                      <td data-label="Tecnología">En Docker sobre Linux Ubuntu</td>
                       <td data-label="Observaciones">Reemplazó a WebLogic a comienzos de 2026</td>
                     </tr>
                     <tr>
@@ -1123,7 +1123,7 @@
                     </tr>
                     <tr>
                       <td data-label="Capa o función"><strong>Identidad</strong></td>
-                      <td data-label="Tecnología">Keycloak con PostgreSQL</td>
+                      <td data-label="Tecnología">Keycloak</td>
                       <td data-label="Observaciones">En incorporación como inicio de sesión único, con conexión al directorio activo</td>
                     </tr>
                     <tr>
@@ -1324,7 +1324,7 @@
                     </tr>
                     <tr>
                       <td data-label="Área"><strong>Construcción y tecnología</strong></td>
-                      <td data-label="Capacidad actual">Un desarrollador de front-end en Angular y uno de back-end en Java por módulo; WildFly 34 desde 2026</td>
+                      <td data-label="Capacidad actual">Un desarrollador de front-end en Angular y uno de back-end en Java por módulo</td>
                       <td data-label="Brecha">Angular 13 fuera de soporte y actualización a Java 21 pendiente</td>
                     </tr>
                     <tr>
@@ -1883,7 +1883,7 @@
                     </tr>
                     <tr>
                       <td data-label="Fuente"><strong>Academia Atenea</strong></td>
-                      <td data-label="Tecnología">Moodle</td>
+                      <td data-label="Tecnología">Plataforma de formación</td>
                       <td data-label="Clasificación (cláusula décima)">Confidencial: información académica</td>
                       <td data-label="¿Llega al modelo?"><span class="pill pill--risk">No</span></td>
                     </tr>
@@ -2962,7 +2962,7 @@
               <text x="16" y="74" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1">CONTENIDO Y ORIGEN</text>
               <text x="16" y="98" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">Reglas de cada sistema, glosario,</text>
               <text x="16" y="120" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">normativa, convenciones y versiones del</text>
-              <text x="16" y="142" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">stack (Angular 13, Java 17, WildFly 34);</text>
+              <text x="16" y="142" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">stack (Angular 13, Java 17);</text>
               <text x="16" y="164" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">salen de la documentación de</text>
               <text x="16" y="186" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">requerimientos existente y de</text>
               <text x="16" y="208" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17">entrevistas con el equipo.</text>
@@ -3016,7 +3016,7 @@
               <div class="mobile-alt">
                 <p class="sched-title">Tres piezas de contexto</p>
                 <ul class="slide-list" style="margin:8px 0;">
-                  <li><strong>Reglas y negocio.</strong> Reglas de cada sistema, glosario, normativa, convenciones y versiones del stack (Angular 13, Java 17, WildFly 34); salen de la documentación de requerimientos existente y de entrevistas con el equipo. <em>Fases:</em> Entender, Decidir, Construir. <em>Dónde vive:</em> Documento de arquitectura base del repositorio, que manda sobre los valores por defecto del agente.</li>
+                  <li><strong>Reglas y negocio.</strong> Reglas de cada sistema, glosario, normativa, convenciones y versiones del stack (Angular 13, Java 17); salen de la documentación de requerimientos existente y de entrevistas con el equipo. <em>Fases:</em> Entender, Decidir, Construir. <em>Dónde vive:</em> Documento de arquitectura base del repositorio, que manda sobre los valores por defecto del agente.</li>
                   <li><strong>Arquitectura.</strong> Módulos, integraciones, modelo de datos de Oracle y decisiones registradas; ingeniería inversa asistida y validada por el equipo. <em>Fases:</em> Decidir, Construir, cambios. <em>Dónde vive:</em> Arquitectura del proyecto y grafo del código, solo de código.</li>
                   <li><strong>Memoria.</strong> Qué se hizo, por qué, qué falló y qué falta; la genera el flujo desde el primer caso de uso. <em>Fases:</em> Construir, Cerrar, cambios. <em>Dónde vive:</em> Memoria por proyecto dentro del repositorio.</li>
                 </ul>
@@ -3987,7 +3987,7 @@
                   <tbody>
                     <tr>
                       <td data-label="ID"><strong>RNF-01</strong></td>
-                      <td data-label="Requisito">El módulo se construye sobre la plataforma vigente: Angular 13, Java 17 con Spring Boot 3 sobre WildFly 34 y Oracle Autonomous</td>
+                      <td data-label="Requisito">El módulo se construye sobre la plataforma vigente: Angular 13, Java 17 con Spring Boot 3 y Oracle Autonomous</td>
                       <td data-label="Origen">Tabla 3.3</td>
                     </tr>
                     <tr>
@@ -4315,7 +4315,7 @@
 <circle cx="20" cy="96" r="6" fill="#2E7D32" />
 <text x="34" y="101" fill="#1f5f27" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Existente; acceso por VPN</text>
 <rect x="0" y="128" width="370" height="116" rx="8" fill="#F8FAFC" stroke="#7FB4CA" stroke-width="1.5" />
-<text x="14" y="150" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Keycloak con PostgreSQL</text>
+<text x="14" y="150" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Keycloak</text>
 <text x="14" y="171" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Inicio de sesión único de las dos</text>
 <text x="14" y="188" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">aplicaciones, con conexión al directorio</text>
 <text x="14" y="205" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">activo</text>
@@ -4359,7 +4359,7 @@
                 <p class="sched-title">Ocho sistemas integrados</p>
                 <ul class="slide-list" style="margin:8px 0;">
                   <li><strong>Oracle Autonomous (SICORE Posmedia).</strong> Datos del módulo, entre ellos la tabla SE1_00_OFERTA_PROGRAMA_INSTITUCION. <em>Estado:</em> Existente; acceso por VPN.</li>
-                  <li><strong>Keycloak con PostgreSQL.</strong> Inicio de sesión único de las dos aplicaciones, con conexión al directorio activo. <em>Estado:</em> En incorporación.</li>
+                  <li><strong>Keycloak.</strong> Inicio de sesión único de las dos aplicaciones, con conexión al directorio activo. <em>Estado:</em> En incorporación.</li>
                   <li><strong>Servidor de archivos.</strong> Soportes cargados por los estudiantes. <em>Estado:</em> Existente.</li>
                   <li><strong>Gestor documental (SharePoint).</strong> Acta del módulo y evidencia de aprobación. <em>Estado:</em> Existente.</li>
                   <li><strong>Herramienta de diseño (Figma).</strong> Prototipo del módulo. <em>Estado:</em> Existente.</li>
