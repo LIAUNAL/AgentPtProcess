@@ -64,7 +64,7 @@ Este documento describe el rol, arquitectura, entrenamiento visual y directrices
 
 El Agent Presentador gestiona un panel interactivo que permite seleccionar y conmutar entre diferentes presentaciones:
 - **Kick-off: Propuesta y Adopción SDLC-IA**: La propuesta conceptual de entendimiento de agentes en el SDLC (45 slides, 6 módulos + minuta).
-- **Informe Técnico E1–E4: Contrato ATENEA-464-2026**: La presentación ejecutiva del avance del Hito 1 (63 slides: portada y 62 de contenido, 6 módulos: Contrato 6, E1 14, E2 15, E3 12, E4 10, Cierre 5; alineado con el informe vigente y con Aracne-SDLC-AI 0.9.0).
+- **Informe Técnico E1–E4: Contrato ATENEA-464-2026**: La presentación ejecutiva del avance del Hito 1 (64 slides: portada y 63 de contenido, 6 módulos: Contrato 6, E1 14, E2 16, E3 12, E4 10, Cierre 5; alineado con el informe vigente y con Aracne-SDLC-AI 0.9.0).
 - **Mecanismos de activación**:
   1. Botón en la barra superior (rail).
   2. Atajo de teclado: `P` o `M`.

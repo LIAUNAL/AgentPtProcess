@@ -129,7 +129,7 @@ def main():
           <div class="hub-card" data-deck="e1-e4">
             <div class="hub-card-header">
               <span class="hub-card-tag">HITO 1 CONTRACTUAL</span>
-              <span class="hub-card-meta">63 Diapositivas &middot; 6 Módulos</span>
+              <span class="hub-card-meta">64 Diapositivas &middot; 6 Módulos</span>
             </div>
             <div>
               <h2 class="hub-card-title">Informe Técnico E1–E4: Avance de Hito 1</h2>
@@ -172,8 +172,8 @@ def main():
         mod_kickoff = mod_kickoff[:script_idx] + hub_view_html + "\n\n    " + mod_kickoff[script_idx:]
 
     # 9. Actualizar versión en CSS link
-    mod_kickoff = re.sub(r'src="assets/js/app.js[^"]*"', 'src="assets/js/app.js?v=20261023_2"', mod_kickoff)
-    mod_kickoff = re.sub(r'href="assets/css/styles.css\?v=[^"]*"', 'href="assets/css/styles.css?v=20261023_2"', mod_kickoff)
+    mod_kickoff = re.sub(r'src="assets/js/app.js[^"]*"', 'src="assets/js/app.js?v=20261023_3"', mod_kickoff)
+    mod_kickoff = re.sub(r'href="assets/css/styles.css\?v=[^"]*"', 'href="assets/css/styles.css?v=20261023_3"', mod_kickoff)
 
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(mod_kickoff)

@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20261023_2" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261023_3" />
   </head>
   <body class="view-deck">
     <div class="ambient"></div>
@@ -1457,9 +1457,9 @@
                 <h2 style="margin-bottom:4px;">Línea base de madurez: seis de nueve dimensiones en nivel inicial</h2>
                 <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Ninguna dimensión supera el nivel 2; los más bajos están en estándares, trazabilidad, calidad y despliegue. Las métricas DORA completan la línea base.</p>
               </div>
-              <div style="flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:14px;align-items:start;">
+              <div class="fit-grid" style="flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:14px;align-items:start;">
                 <figure style="margin:0;display:flex;flex-direction:column;min-height:0;min-width:0;">
-                  <svg viewBox="0 0 520 372" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Línea base de madurez de nueve dimensiones: nivel actual de ATENEA frente al nivel objetivo al cierre del contrato, en una escala de 1 a 5">
+                  <svg style="flex:1 1 auto;min-height:0;" viewBox="0 0 520 372" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Línea base de madurez de nueve dimensiones: nivel actual de ATENEA frente al nivel objetivo al cierre del contrato, en una escala de 1 a 5">
                   <line x1="228" y1="30" x2="228" y2="318" stroke="#BAC7D5" stroke-width="1" />
                   <text x="228" y="20" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700" text-anchor="middle">1</text>
                   <line x1="296" y1="30" x2="296" y2="318" stroke="#BAC7D5" stroke-width="1" />
@@ -2497,17 +2497,17 @@
             </figure>
           </article>
 
-          <!-- Slide E2-5: Fases y artefactos (Tabla 4.1) [c2-fases] -->
+          <!-- Slide E2-5.1: Fases y artefactos (1/2, Tabla 4.1) [c2-fases] -->
           <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-item="c2-fases">
             <figure class="slide-figure">
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
-                <h2 style="margin-bottom:4px;">Fases y artefactos: qué hace el flujo agéntico y qué decide la persona</h2>
-                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Cada etapa de ATENEA tiene un comando conectado al flujo; Descomponer y Traducir no existen hoy y dos filas atraviesan todo el ciclo.</p>
+                <h2 style="margin-bottom:4px;">Fases y artefactos (1/2): qué hace el flujo agéntico y qué decide la persona</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Cada etapa de ATENEA tiene un comando conectado al flujo; Descomponer y Traducir no existen hoy. Aquí, de entender a traducir.</p>
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.62rem,min(0.95vw,1.55vh),1.5rem);">
-                  <caption>Tabla 4.1 — Intervención agéntica por etapa: brecha que atiende, función del flujo, decisión humana y resultado (texto condensado)</caption>
+                  <caption>Tabla 4.1 — Intervención agéntica por etapa: brecha que atiende, función del flujo, decisión humana y resultado (1/2, texto condensado)</caption>
                   <thead>
                     <tr>
                       <th style="width:10%;font-size:0.82em;">Etapa actual</th>
@@ -2551,6 +2551,34 @@
                       <td data-label="Decisión humana">El desarrollador revisa el contrato; si está mal, se corrige la historia y se regenera</td>
                       <td data-label="Resultado">Contratos verificables; los escenarios son los casos de prueba</td>
                     </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide E2-5.2: Fases y artefactos (2/2, Tabla 4.1) [c2-fases] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e2" data-item="c2-fases">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">3 &middot; Metodología SDLC-IA (E2)</p>
+                <h2 style="margin-bottom:4px;">Fases y artefactos (2/2): qué hace el flujo agéntico y qué decide la persona</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">De construir a cerrar, más las dos filas que atraviesan todo el ciclo: seguimiento e incidentes y cambios.</p>
+              </div>
+              <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
+                <table class="data-table" style="font-size:clamp(0.62rem,min(0.95vw,1.55vh),1.5rem);">
+                  <caption>Tabla 4.1 — Intervención agéntica por etapa: brecha que atiende, función del flujo, decisión humana y resultado (2/2, texto condensado)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:10%;font-size:0.82em;">Etapa actual</th>
+                      <th style="width:9%;font-size:0.82em;">Fase</th>
+                      <th style="width:12%;font-size:0.82em;">Brecha que atiende</th>
+                      <th style="width:30%;font-size:0.82em;">Qué hace el flujo agéntico</th>
+                      <th style="width:21%;font-size:0.82em;">Decisión humana</th>
+                      <th style="font-size:0.82em;">Resultado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
                     <tr>
                       <td data-label="Etapa actual">Desarrollo</td>
                       <td data-label="Fase"><strong>Construir</strong></td>
@@ -6033,6 +6061,6 @@
       </footer>
     </div>
 
-    <script src="assets/js/app.js?v=20261023_2"></script>
+    <script src="assets/js/app.js?v=20261023_3"></script>
   </body>
 </html>

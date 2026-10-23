@@ -2598,3 +2598,59 @@ figcaption.fig-caption,
     padding-right: max(6px, env(safe-area-inset-right));
   }
 }
+
+/* Móvil horizontal (poca altura): el SVG quedaría con texto < 11px; se usa la alternativa HTML */
+@media (max-height: 520px) and (orientation: landscape) {
+  .slide-figure > .mobile-alt {
+    display: block;
+    overflow-y: auto;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .slide-figure:has(> .mobile-alt) > svg {
+    display: none;
+  }
+
+  .slide-figure:has(> .mobile-alt) {
+    overflow-y: auto;
+  }
+
+  .slide.is-figure-full .slide-figure:has(> .mobile-alt) {
+    height: 100%;
+  }
+}
+
+/* Ajuste en tiempo de ejecución (app.js, fitSlide): filas más compactas al llegar al mínimo de texto */
+.data-table.is-tight td,
+.data-table.is-tight th {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  line-height: 1.25;
+}
+
+.slide-content.is-compact .slide-list {
+  font-size: 0.88rem;
+  line-height: 1.36;
+}
+
+.slide-content.is-compact .slide-list li {
+  margin-bottom: 0.25em;
+}
+
+/* Proyector: la cuadrícula de dos figuras toma el alto restante y el SVG se reduce a ese alto */
+@media (min-width: 1041px) and (min-aspect-ratio: 1 / 1) {
+  .slide-figure:has(> .fit-grid) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slide-figure > .fit-grid {
+    grid-template-rows: minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .fit-grid > figure {
+    height: 100%;
+  }
+}

@@ -14,7 +14,7 @@ El proyecto cuenta con un **Panel de Control interactivo** que permite seleccion
    - 45 diapositivas estructuradas en 7 módulos (Minuta contractual, Motivación, Perfiles en evolución, Chat vs Agente, Evidencia empírica, La respuesta metodológica y UN-SpecWeaver).
    - Enfoque conceptual, pedagógico y de adopción institucional.
 2. **Informe Técnico E1–E4: Contrato ATENEA-464-2026** (`?deck=e1-e4` o [`e1-e4.html`](e1-e4.html)):
-   - 63 diapositivas (portada y 62 de contenido) en 6 módulos: Contrato & Alcance, E1 Diagnóstico, E2 Metodología SDLC-IA, E3 Arquitectura y caso de uso, E4 Agentes y skills con Aracne-SDLC-AI 0.9.0, y Decisiones & Cierre.
+   - 64 diapositivas (portada y 63 de contenido) en 6 módulos: Contrato & Alcance, E1 Diagnóstico, E2 Metodología SDLC-IA, E3 Arquitectura y caso de uso, E4 Agentes y skills con Aracne-SDLC-AI 0.9.0, y Decisiones & Cierre.
    - Alineado con el informe técnico vigente (`informe_atenea`, capítulos 1 a 7): cada figura y tabla lleva su leyenda con la numeración del informe (o "Fuente: §N.M" cuando no está numerada) y cada elemento de los componentes C1 a C4 (E1 a E4) tiene su diapositiva marcada con `data-item`.
    - Funciona en móvil: tablas como tarjetas, alternativas `.mobile-alt` para los diagramas y áreas táctiles de 44 px.
 
