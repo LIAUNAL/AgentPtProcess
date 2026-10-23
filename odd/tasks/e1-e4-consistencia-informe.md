@@ -33,7 +33,7 @@ See `/home/carlos/.claude/plans/we-need-to-update-snuggly-summit.md` for:
   - [x] compute `data-first` at runtime in `app.js`
   - [x] add CSS for captions, status pills, mobile cards (`td[data-label]`), `.mobile-alt`, sticky first column and tap targets
 - [x] T2 Contract module, then the E1 module (C1, plus the prioritized use case).
-- [ ] T3 E2 module (C2).
+- [x] T3 E2 module (C2).
 - [ ] T4 E3 module (C3: 8 elements).
 - [ ] T5 E4 module (C4).
 - [ ] T6 Closing module (chapter 7), slide counts, README, hub card and `agent-presentador.md`; then reassemble `index.html`.
@@ -64,3 +64,11 @@ See `/home/carlos/.claude/plans/we-need-to-update-snuggly-summit.md` for:
 - Result: e0 = 6 slides, e1 = 14 slides (Tabla 3.3 split in two, Tabla 3.4 on its own slide for legibility); e3 use-case slide moved to e1 as SVG matrix without invented scores. Tables use inline `font-size:clamp(...)` tuned per table (no `dense`).
 - Checks: coverage -> c1-madurez/brechas/riesgos/datos PASS; c1-caso-uso FAIL only because the caption is "Fuente: §5.4 - ..." (no numbered table in the informe; slide carries `data-caption-source="§5.4"`, audit regex needs an exception). rail PASS. layout PASS (all viewports). mobile: zero failures on e0/e1; 35 remaining are e2-e5 slides (expected). presentador_deck.py: 0 errors.
 - Informe ambiguities: Tabla 3.3 says code is in Oracle Visual Builder while Fig 3.2 shows Azure DevOps under developers and Tabla 3.10 says "Oracle Cloud Service"; hito 1 groups E1-E4 but E4 also covers C5 (pago 2); §5.4 lists 3 candidates and 7 criteria but gives no per-candidate scores.
+
+### T3 (done)
+- Route: delegated direct (one writer; e2 block generated into `scripts/build_e1_e4.py`, regenerated `e1-e4.html` and `index.html`). Trigger: 2+ non-trivial files plus preparatory reading.
+- Commit: 1e10399 `feat(deck): alinear módulo E2 con el informe y agregar roles, puertas, criterios, brechas y distribución`.
+- Result: e2 = 15 slides (indices 21-35 in the deck): rediseño (full, §4.1), 2 concept maps (unchanged), Fig 4.1 flow (full), Tabla 4.1 (full, 6 columns, 8 rows), organización (§4.3), RACI Tabla 4.2, puntos de control (7 gates, §4.4), contexto Tabla 4.3 (3 SVG cards), CI/CD (§4.6), Tabla 4.4 split 1/2 and 2/2, Fig 4.2 brechas, Fig 4.3 + Tabla 4.5 distribución, ruta de adopción (§4.8). The old "5 puertas" content is replaced by the 7-gate strip.
+- Lessons: a full-width table slide needs `style="flex:1 1 auto;min-height:0;height:auto"` on the wrapper (the `figcaption` CSS rule does not apply to `<caption>`); the three two-column SVG slides failed the 844x390 landscape rule, so they became full slides with `.mobile-alt`; the table `clamp()` minimum of 0.72rem must be lowered for 8-row tables.
+- Checks: coverage -> all c1-* and c2-* PASS (only c3-*/c4-* fail, expected); rail PASS; layout PASS (1920x1080, 1366x768, 1280x720); mobile -> zero failures on e0-e2, 21 remaining on e3-e5 (expected); presentador_deck.py -> 0 errors.
+- Informe ambiguities: §4.4 intro points to a "decision" column in Tabla 4.1 and gate markers in Fig 4.1 (4 red gates: firma del acta, aprueba spec y criterios, revisión y merge, despliegue), while the section lists 7 gates (the deck uses 7); Fig 4.1 shows the gate "firma del acta" under Negocio but Tabla 4.1 puts the spec approval with the líder de producto; Tabla 4.1 says Seguimiento "no existe" today; Fig 4.3 gives no "sí" branch for the periodic validation; Tabla 4.1 is shown condensed (wording shortened, same six columns); the informe has no numbered figure/table for §4.3, §4.4, §4.6 and §4.8 (captions use "Fuente: §N.M").
