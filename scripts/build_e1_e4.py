@@ -985,6 +985,69 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
+          <!-- Slide nueva S7: Historias de usuario de ejemplo (Tabla 3.3) -->
+          <article class="slide" data-deck="e1-e4" data-module="e1">
+            <div class="slide-content">
+              <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
+              <h2>Dos historias de usuario reales: formato institucional, criterios en prosa</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Formato F1_P5_TIC:</strong> control de cambios, «como, quiero, para», criterios numerados en prosa y tabla de aprobaciones (A7, A8).
+                </li>
+                <li>
+                  <strong>F-01 con matices:</strong> la de creación de terceros tiene alcance de épica; la de Talentos Excepcionales es del tamaño de una historia.
+                </li>
+                <li>
+                  <strong>Lo que falta en ambas:</strong> criterios escritos como escenarios que se puedan convertir en pruebas.
+                </li>
+                <li>
+                  <strong>Aprobada incompleta:</strong> la de terceros se firmó con partes remitidas a criterios futuros.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table" style="font-size:clamp(0.72rem,min(1.2vw,2.14vh),1.5rem);">
+                  <caption>Tabla 3.3 — Las dos historias de usuario de ejemplo enviadas por ATENEA, en el formato F1_P5_TIC</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:24%;font-size:0.82em;">Rasgo</th>
+                      <th style="width:40%;font-size:0.82em;">Creación de terceros (A7)</th>
+                      <th style="font-size:0.82em;">Talentos Excepcionales (A8)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Rasgo"><strong>Extensión y fechas</strong></td>
+                      <td data-label="Creación de terceros (A7)">12 páginas; creada y aprobada el 14 de agosto de 2026</td>
+                      <td data-label="Talentos Excepcionales (A8)">7 páginas; creada el 2 y aprobada el 6 de octubre de 2026</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Rasgo"><strong>Alcance</strong></td>
+                      <td data-label="Creación de terceros (A7)">Validación del producto financiero en SICORE y creación de terceros en BOGDATA y SEVEN</td>
+                      <td data-label="Talentos Excepcionales (A8)">Ajustes de textos, requisitos, filtros y acceso a una convocatoria cerrada</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Rasgo"><strong>Criterios de aceptación</strong></td>
+                      <td data-label="Creación de terceros (A7)">4, con pestañas y estados, cargas masivas en Excel y correos por motivo de rechazo</td>
+                      <td data-label="Talentos Excepcionales (A8)">5, sobre todo cambios de texto con capturas</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Rasgo"><strong>Lo que queda abierto</strong></td>
+                      <td data-label="Creación de terceros (A7)">7 remisiones a criterios que «se detallarán»; 3 formatos por validar con el equipo de datos</td>
+                      <td data-label="Talentos Excepcionales (A8)">La lista de participantes llega después, en Excel</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Rasgo"><strong>Aprobaciones</strong></td>
+                      <td data-label="Creación de terceros (A7)">5 roles, el mismo día</td>
+                      <td data-label="Talentos Excepcionales (A8)">3 roles</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
           <!-- Slide 10: Infraestructura (Figura 3.2) -->
           <article class="slide is-figure-full" data-deck="e1-e4" data-module="e1" data-tone="amber">
             <figure class="slide-figure">
@@ -1066,7 +1129,7 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- Slide 11: Stack tecnológico 1/2 (Tabla 3.3) -->
+          <!-- Slide 11: Stack tecnológico 1/2 (Tabla 3.4) -->
           <article class="slide" data-deck="e1-e4" data-module="e1">
             <div class="slide-content">
               <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
@@ -1086,7 +1149,7 @@ def generate_e1_e4_html():
             <figure class="slide-figure">
               <div class="data-table-wrapper">
                 <table class="data-table" style="font-size:clamp(0.72rem,min(1.2vw,2.14vh),1.5rem);">
-                  <caption>Tabla 3.3 — Elementos de infraestructura y desarrollo, con su tecnología y su situación (parte 1 de 2)</caption>
+                  <caption>Tabla 3.4 — Elementos de infraestructura y desarrollo, con su tecnología y su situación (parte 1 de 2)</caption>
                   <thead>
                     <tr>
                       <th style="width:20%;font-size:0.82em;">Capa o función</th>
@@ -1097,13 +1160,13 @@ def generate_e1_e4_html():
                   <tbody>
                     <tr>
                       <td data-label="Capa o función"><strong>Front-end</strong></td>
-                      <td data-label="Tecnología">Angular 13 sobre Node, en contenedor Docker</td>
+                      <td data-label="Tecnología">Angular 13.3 con TypeScript 4.6 sobre Node, en contenedor Docker</td>
                       <td data-label="Observaciones">Fuera de soporte; ATENEA reconoce que debe subir a la versión 22 o 23</td>
                     </tr>
                     <tr>
                       <td data-label="Capa o función"><strong>Back-end</strong></td>
-                      <td data-label="Tecnología">Java 17 con Spring Boot 3, empaquetado como .war</td>
-                      <td data-label="Observaciones">Actualización a Java 21 pendiente</td>
+                      <td data-label="Tecnología">Java 17 con Spring Boot 3.3.5, empaquetado como .war; JPA sobre Oracle</td>
+                      <td data-label="Observaciones">Actualización a Java 21 pendiente; el devcontainer del repositorio aún usa una imagen de Java 11</td>
                     </tr>
                     <tr>
                       <td data-label="Capa o función"><strong>Servidor de aplicaciones</strong></td>
@@ -1136,7 +1199,7 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- Slide 12: Ambientes, nube, seguridad y despliegue 2/2 (Tabla 3.3) -->
+          <!-- Slide 12: Ambientes, nube, seguridad y despliegue 2/2 (Tabla 3.4) -->
           <article class="slide" data-deck="e1-e4" data-module="e1">
             <div class="slide-content">
               <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
@@ -1159,7 +1222,7 @@ def generate_e1_e4_html():
             <figure class="slide-figure">
               <div class="data-table-wrapper">
                 <table class="data-table" style="font-size:clamp(0.72rem,min(1.2vw,2.14vh),1.5rem);">
-                  <caption>Tabla 3.3 — Elementos de infraestructura y desarrollo, con su tecnología y su situación (parte 2 de 2)</caption>
+                  <caption>Tabla 3.4 — Elementos de infraestructura y desarrollo, con su tecnología y su situación (parte 2 de 2)</caption>
                   <thead>
                     <tr>
                       <th style="width:20%;font-size:0.82em;">Capa o función</th>
@@ -1186,12 +1249,12 @@ def generate_e1_e4_html():
                     <tr>
                       <td data-label="Capa o función"><strong>Seguridad de aplicaciones</strong></td>
                       <td data-label="Tecnología">Primera revisión en 2026</td>
-                      <td data-label="Observaciones">Librerías desactualizadas y token de sesión en local storage; sin análisis de código ni de dependencias confirmado</td>
+                      <td data-label="Observaciones">Librerías desactualizadas y token de sesión en local storage; sin análisis de código ni de dependencias confirmado. El interceptor solo agrega el token a las peticiones POST y 12 rutas privadas se declaran sin guard en el enrutamiento raíz (por verificar)</td>
                     </tr>
                     <tr>
                       <td data-label="Capa o función"><strong>Pruebas</strong></td>
-                      <td data-label="Tecnología">Sin cobertura automatizada documentada</td>
-                      <td data-label="Observaciones">Validación manual en preproducción</td>
+                      <td data-label="Tecnología">53 clases JUnit 5 con Mockito (43 de renovación); 236 archivos .spec.ts con Karma y Jasmine</td>
+                      <td data-label="Observaciones">Sin CI no corren solas; validación manual en preproducción</td>
                     </tr>
                     <tr>
                       <td data-label="Capa o función"><strong>Integración y despliegue</strong></td>
@@ -1204,7 +1267,7 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- Slide 13: Licencias y servicios de IA (Tabla 3.4) -->
+          <!-- Slide 13: Licencias y servicios de IA (Tabla 3.5) -->
           <article class="slide" data-deck="e1-e4" data-module="e1">
             <div class="slide-content">
               <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
@@ -1227,7 +1290,7 @@ def generate_e1_e4_html():
             <figure class="slide-figure">
               <div class="data-table-wrapper">
                 <table class="data-table" style="font-size:clamp(0.72rem,min(1.2vw,2.14vh),1.5rem);">
-                  <caption>Tabla 3.4 — Licencias y servicios de IA disponibles en ATENEA</caption>
+                  <caption>Tabla 3.5 — Licencias y servicios de IA disponibles en ATENEA</caption>
                   <thead>
                     <tr>
                       <th style="width:28%;font-size:0.82em;">Recurso</th>
@@ -1277,7 +1340,70 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- Slide 14: Capacidades y brechas (Tabla 3.5) [c1-brechas] -->
+          <!-- Slide nueva S7: Arquitectura actual de SICORE Posmedia (Tabla 3.6) -->
+          <article class="slide" data-deck="e1-e4" data-module="e1">
+            <div class="slide-content">
+              <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
+              <h2>Arquitectura actual de SICORE Posmedia: monolito en capas y SPA en Angular</h2>
+              <ul class="slide-list">
+                <li>
+                  <strong>Diagnóstico de ATENEA (A9):</strong> descriptivo, sobre la rama master, enviado el 23 de octubre.
+                </li>
+                <li>
+                  <strong>F-04 en cifras:</strong> varias convenciones conviven para lo mismo en los dos repositorios.
+                </li>
+                <li>
+                  <strong>Arquitectura base:</strong> no parte de cero; falta decidir cuál variante es la norma.
+                </li>
+                <li>
+                  <strong>Para el arnés:</strong> el .gitignore excluye CLAUDE.md y .claude/; esa regla debe ajustarse al instalar.
+                </li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table" style="font-size:clamp(0.72rem,min(1.2vw,2.14vh),1.5rem);">
+                  <caption>Tabla 3.6 — Tamaño y organización de los repositorios de SICORE Posmedia al 23 de octubre de 2026</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:22%;font-size:0.82em;">Aspecto</th>
+                      <th style="width:40%;font-size:0.82em;">sicore-api (back-end)</th>
+                      <th style="font-size:0.82em;">sicore-web (front-end)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Aspecto"><strong>Código</strong></td>
+                      <td data-label="sicore-api (back-end)">1254 archivos Java, unas 118 500 líneas</td>
+                      <td data-label="sicore-web (front-end)">2794 archivos, unas 133 600 líneas de TypeScript</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Aspecto"><strong>Piezas</strong></td>
+                      <td data-label="sicore-api (back-end)">77 controladores, 184 entidades, 179 repositorios; servicios: 57,3 % de los archivos</td>
+                      <td data-label="sicore-web (front-end)">543 componentes, 107 módulos, 108 servicios</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Aspecto"><strong>Acceso a datos</strong></td>
+                      <td data-label="sicore-api (back-end)">574 consultas SQL nativas, acopladas a Oracle</td>
+                      <td data-label="sicore-web (front-end)">Estado en servicios y en local o session storage (139 archivos)</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Aspecto"><strong>Pruebas</strong></td>
+                      <td data-label="sicore-api (back-end)">53 clases; 43 en renovación</td>
+                      <td data-label="sicore-web (front-end)">236 archivos .spec.ts</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Aspecto"><strong>Convenciones</strong></td>
+                      <td data-label="sicore-api (back-end)">Dos manejadores globales de excepciones; DTO en tres paquetes</td>
+                      <td data-label="sicore-web (front-end)">Cinco patrones de carpetas; versiones paralelas de una funcionalidad</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Slide 14: Capacidades y brechas (Tabla 3.7) [c1-brechas] -->
           <article class="slide" data-deck="e1-e4" data-module="e1" data-item="c1-brechas">
             <div class="slide-content">
               <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
@@ -1297,7 +1423,7 @@ def generate_e1_e4_html():
             <figure class="slide-figure">
               <div class="data-table-wrapper">
                 <table class="data-table" style="font-size:clamp(0.72rem,min(1.12vw,2.0vh),1.5rem);">
-                  <caption>Tabla 3.5 — Capacidades actuales y brechas de ATENEA en cada área de trabajo</caption>
+                  <caption>Tabla 3.7 — Capacidades actuales y brechas de ATENEA en cada área de trabajo</caption>
                   <thead>
                     <tr>
                       <th style="width:19%;font-size:0.82em;">Área</th>
@@ -1324,7 +1450,7 @@ def generate_e1_e4_html():
                     <tr>
                       <td data-label="Área"><strong>Revisión, pruebas y despliegue</strong></td>
                       <td data-label="Capacidad actual">Revisión manual de la líder del equipo y validación en preproducción</td>
-                      <td data-label="Brecha">Sin CI/CD ni cobertura automatizada documentada; despliegue que depende de una persona</td>
+                      <td data-label="Brecha">Sin CI/CD; pruebas concentradas en un módulo y sin ejecución automática; despliegue que depende de una persona</td>
                     </tr>
                     <tr>
                       <td data-label="Área"><strong>Seguridad</strong></td>
@@ -1347,7 +1473,7 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- Slide 15: Puntos de fricción (Tabla 3.6) -->
+          <!-- Slide 15: Puntos de fricción (Tabla 3.8) -->
           <article class="slide" data-deck="e1-e4" data-module="e1">
             <div class="slide-content">
               <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
@@ -1367,7 +1493,7 @@ def generate_e1_e4_html():
             <figure class="slide-figure">
               <div class="data-table-wrapper">
                 <table class="data-table" style="font-size:clamp(0.72rem,min(0.97vw,1.73vh),1.5rem);">
-                  <caption>Tabla 3.6 — Puntos de fricción del acta 01 con el dato que los sustenta</caption>
+                  <caption>Tabla 3.8 — Puntos de fricción del acta 01 con el dato que los sustenta</caption>
                   <thead>
                     <tr>
                       <th style="width:7%;font-size:0.82em;">ID</th>
@@ -1381,7 +1507,7 @@ def generate_e1_e4_html():
                       <td data-label="ID"><strong>F-01</strong></td>
                       <td data-label="Fricción">El acta es una épica sin descomponer</td>
                       <td data-label="Efecto">Difícil de estimar, paralelizar y verificar por partes</td>
-                      <td data-label="Dato">Acta de 12 páginas para un módulo; 0 historias y tareas derivadas</td>
+                      <td data-label="Dato">Acta de 12 páginas: 4 criterios, 3 sistemas, 7 remisiones abiertas (A7)</td>
                     </tr>
                     <tr>
                       <td data-label="ID"><strong>F-02</strong></td>
@@ -1399,13 +1525,13 @@ def generate_e1_e4_html():
                       <td data-label="ID"><strong style="color:var(--accent);">F-04</strong></td>
                       <td data-label="Fricción"><strong>Sin arquitecto ni estándar de desarrollo</strong></td>
                       <td data-label="Efecto">Código heterogéneo y deuda técnica</td>
-                      <td data-label="Dato">0 arquitectos; estructura de carpetas a criterio de cada desarrollador</td>
+                      <td data-label="Dato">0 arquitectos; 5 patrones de carpetas en el front-end (A9)</td>
                     </tr>
                     <tr>
                       <td data-label="ID"><strong>F-05</strong></td>
                       <td data-label="Fricción">La calidad se valida al final</td>
                       <td data-label="Efecto">Defectos cerca de producción</td>
-                      <td data-label="Dato">Validación en preproducción; sin cobertura automatizada documentada</td>
+                      <td data-label="Dato">Validación en preproducción; 43 de 53 pruebas en un módulo (A9)</td>
                     </tr>
                     <tr>
                       <td data-label="ID"><strong>F-06</strong></td>
@@ -1528,12 +1654,12 @@ def generate_e1_e4_html():
                   <circle cx="132" cy="344" r="9" fill="#FFFFFF" stroke="#1E5631" stroke-width="3" />
                   <text x="148" y="349" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="13">Objetivo al cierre del contrato</text>
                   </svg>
-                  <figcaption class="fig-caption">Tabla 3.7 — Línea base de madurez por dimensión (niveles CMMI 1 a 5) y nivel objetivo al cierre del contrato</figcaption>
+                  <figcaption class="fig-caption">Tabla 3.9 — Línea base de madurez por dimensión (niveles CMMI 1 a 5) y nivel objetivo al cierre del contrato</figcaption>
                 </figure>
                 <figure style="margin:0;min-height:0;min-width:0;overflow:auto;">
                   <div class="data-table-wrapper">
                     <table class="data-table" style="font-size:clamp(0.72rem,min(0.98vw,1.75vh),1.5rem);">
-                      <caption>Tabla 3.8 — Métricas DORA: situación actual y dato que debe aportar ATENEA</caption>
+                      <caption>Tabla 3.10 — Métricas DORA: situación actual y dato que debe aportar ATENEA</caption>
                       <thead>
                         <tr>
                           <th style="width:24%;font-size:0.82em;">Métrica</th>
@@ -1676,7 +1802,7 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- Slide 18: Matriz de riesgos (Tabla 3.9) [c1-riesgos] -->
+          <!-- Slide 18: Matriz de riesgos (Tabla 3.11) [c1-riesgos] -->
           <article class="slide" data-deck="e1-e4" data-module="e1" data-item="c1-riesgos">
             <div class="slide-content">
               <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
@@ -1696,7 +1822,7 @@ def generate_e1_e4_html():
             <figure class="slide-figure">
               <div class="data-table-wrapper is-scroll-x">
                 <table class="data-table is-scroll-x" style="font-size:clamp(0.72rem,min(1.02vw,1.8vh),1.5rem);">
-                  <caption>Tabla 3.9 — Matriz de riesgos técnicos, versión condensada (P: probabilidad; I: impacto; V = P + I); el informe añade tratamiento y responsable</caption>
+                  <caption>Tabla 3.11 — Matriz de riesgos técnicos, versión condensada (P: probabilidad; I: impacto; V = P + I); el informe añade tratamiento y responsable</caption>
                   <thead>
                     <tr>
                       <th style="width:8%;font-size:0.82em;">ID</th>
@@ -1818,7 +1944,7 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- Slide 19: Inventario de datos (Tabla 3.10) [c1-datos] -->
+          <!-- Slide 19: Inventario de datos (Tabla 3.12) [c1-datos] -->
           <article class="slide" data-deck="e1-e4" data-module="e1" data-item="c1-datos">
             <div class="slide-content">
               <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
@@ -1841,7 +1967,7 @@ def generate_e1_e4_html():
             <figure class="slide-figure">
               <div class="data-table-wrapper">
                 <table class="data-table" style="font-size:clamp(0.72rem,min(1.05vw,1.87vh),1.5rem);">
-                  <caption>Tabla 3.10 — Inventario de sistemas y fuentes de datos, con su clasificación y su uso permitido por los agentes de IA</caption>
+                  <caption>Tabla 3.12 — Inventario de sistemas y fuentes de datos, con su clasificación y su uso permitido por los agentes de IA</caption>
                   <thead>
                     <tr>
                       <th style="width:20%;font-size:0.82em;">Fuente</th>
@@ -4008,12 +4134,12 @@ def generate_e1_e4_html():
                     <tr>
                       <td data-label="ID"><strong>RNF-01</strong></td>
                       <td data-label="Requisito">El módulo se construye sobre la plataforma vigente: Angular 13, Java 17 con Spring Boot 3 y Oracle Autonomous</td>
-                      <td data-label="Origen">Tabla 3.3</td>
+                      <td data-label="Origen">Tabla 3.4</td>
                     </tr>
                     <tr>
                       <td data-label="ID"><strong>RNF-02</strong></td>
                       <td data-label="Requisito">Ningún dato personal llega al modelo; del sistema solo se usa la estructura de la base de datos</td>
-                      <td data-label="Origen">Tabla 3.10</td>
+                      <td data-label="Origen">Tabla 3.12</td>
                     </tr>
                     <tr>
                       <td data-label="ID"><strong>RNF-03</strong></td>
@@ -4038,7 +4164,7 @@ def generate_e1_e4_html():
                     <tr>
                       <td data-label="ID"><strong>RNF-07</strong></td>
                       <td data-label="Requisito">El acceso a la base de datos y a los ambientes se hace por la VPN institucional</td>
-                      <td data-label="Origen">Tabla 3.3</td>
+                      <td data-label="Origen">Tabla 3.4</td>
                     </tr>
                     <tr>
                       <td data-label="ID"><strong>RF-01…</strong></td>
@@ -4399,7 +4525,7 @@ def generate_e1_e4_html():
               <h2>Datos: qué toca el módulo y qué puede llegar al modelo</h2>
               <ul class="slide-list">
                 <li>
-                  <strong>¿Qué es?</strong> las fuentes del inventario del diagnóstico (Tabla 3.10) que toca el módulo; conservan su clasificación y su regla de uso.
+                  <strong>¿Qué es?</strong> las fuentes del inventario del diagnóstico (Tabla 3.12) que toca el módulo; conservan su clasificación y su regla de uso.
                 </li>
                 <li>
                   <strong>Regla:</strong> los datos personales no llegan nunca al modelo.
@@ -5569,7 +5695,7 @@ def generate_e1_e4_html():
                     <tr>
                       <td data-label="Riesgo"><strong>Datos personales en el contexto del modelo</strong></td>
                       <td data-label="Control en el arnés 0.9.0"><span>Las pruebas se escriben por escenario sobre datos de ejemplo</span></td>
-                      <td data-label="Pendiente para ATENEA"><span>Aplicar el inventario (Tabla 3.10) y los criterios 8 y 9</span></td>
+                      <td data-label="Pendiente para ATENEA"><span>Aplicar el inventario (Tabla 3.12) y los criterios 8 y 9</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -5736,13 +5862,13 @@ def generate_e1_e4_html():
                     <tr>
                       <td data-label="Comp."><strong>C1</strong></td>
                       <td data-label="Información"><span>Validación de la probabilidad, el impacto y los responsables de los riesgos técnicos</span></td>
-                      <td data-label="¿Dónde se usa?"><span>Tabla 3.9</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Tabla 3.11</span></td>
                       <td data-label="Origen"><span>A6</span></td>
                     </tr>
                     <tr>
                       <td data-label="Comp."><strong>C1</strong></td>
                       <td data-label="Información"><span>Responsable y volumen de cada fuente de datos, y si QA usa datos reales</span></td>
-                      <td data-label="¿Dónde se usa?"><span>Tabla 3.10</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Tabla 3.12</span></td>
                       <td data-label="Origen"><span>A1</span></td>
                     </tr>
                     <tr>
@@ -5831,7 +5957,7 @@ def generate_e1_e4_html():
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
                 <h2 style="margin-bottom:4px;">Compromisos registrados: cinco, todos con ATENEA o su Subgerencia de TIC</h2>
-                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Compromisos de las sesiones que afectan a E1 a E4, con su responsable y su estado al corte. <span class="pill pill--todo">Abierto</span> cuatro, <span class="pill pill--partial">Parcial en R4</span> uno.</p>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Compromisos de las sesiones que afectan a E1 a E4, con su responsable y su estado al corte. <span class="pill pill--todo">Abierto</span> dos, <span class="pill pill--partial">Parcial en R4</span> uno, <span class="pill pill--ok">Recibido</span> dos (23 de octubre).</p>
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.78rem,min(1.3vw,2.5vh),1.65rem);">
@@ -5851,7 +5977,7 @@ def generate_e1_e4_html():
                       <td data-label="Compromiso"><span>Compartir un requerimiento de ejemplo con su diseño</span></td>
                       <td data-label="Responsable"><span>ATENEA</span></td>
                       <td data-label="Origen"><span>A4, R2</span></td>
-                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Abierto</span></span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--ok" style="font-size:0.72em;">Recibido</span> 23-oct: dos historias de usuario (A7, A8); Figma solo como enlace</span></td>
                     </tr>
                     <tr>
                       <td data-label="N.º"><strong>2</strong></td>
@@ -5872,14 +5998,14 @@ def generate_e1_e4_html():
                       <td data-label="Compromiso"><span>Definir el caso de uso institucional (C3)</span></td>
                       <td data-label="Responsable"><span>ATENEA</span></td>
                       <td data-label="Origen"><span>R3</span></td>
-                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Abierto</span></span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Abierto</span> se definirá la semana del 26-oct, con la transcripción de la reunión del 23</span></td>
                     </tr>
                     <tr>
                       <td data-label="N.º"><strong>5</strong></td>
                       <td data-label="Compromiso"><span>Enviar un documento con la información actual de los proyectos y la estructura de carpetas de back-end y front-end, para entender la arquitectura de los desarrollos</span></td>
                       <td data-label="Responsable"><span>ATENEA</span></td>
                       <td data-label="Origen"><span>R3</span></td>
-                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Abierto</span></span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--ok" style="font-size:0.72em;">Recibido</span> 23-oct (A9)</span></td>
                     </tr>
                   </tbody>
                 </table>
