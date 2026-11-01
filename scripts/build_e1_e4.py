@@ -2036,8 +2036,8 @@ def generate_e1_e4_html():
             <figure class="slide-figure">
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">2 &middot; Diagnóstico ATENEA (E1)</p>
-                <h2 style="margin-bottom:4px;">Caso de uso priorizado: tres candidatos frente a siete criterios</h2>
-                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">La minuta encarga identificar y priorizar el caso de uso (obligación 5); el informe lo deja a ATENEA y aún no está seleccionado.</p>
+                <h2 style="margin-bottom:4px;">Caso de uso priorizado: de tres candidatos a Campus 2600 en Hēma</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">La minuta encarga identificar y priorizar el caso de uso (obligación 5). ATENEA eligió Campus 2600 en Hēma el 23 de octubre y lo acotó a la primera transición el 30 de octubre (R5, R6).</p>
               </div>
               <svg viewBox="0 0 1200 540" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Matriz de tres candidatos de caso de uso frente a siete criterios de selección; el informe no puntúa a los candidatos y ATENEA aún no decide">
               <rect x="474" y="8" width="228" height="170" rx="9" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.4" />
@@ -2056,9 +2056,9 @@ def generate_e1_e4_html():
               <text x="752" y="49" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">terceros, SICORE</text>
               <text x="752" y="66" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Posmedia</text>
               <text x="720" y="92" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">Recomendado en el análisis</text>
-              <text x="720" y="109" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">de inconsistencias (A2); es</text>
-              <text x="720" y="126" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">el caso de referencia de</text>
-              <text x="720" y="143" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">los ocho elementos de C3</text>
+              <text x="720" y="109" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14">de inconsistencias (A2)</text>
+              <text x="720" y="126" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14"></text>
+              <text x="720" y="143" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14"></text>
               <rect x="946" y="8" width="228" height="170" rx="9" fill="#EDF1F7" stroke="#4E93B0" stroke-width="1.4" />
               <circle cx="968" cy="32" r="14" fill="#2C6B87" />
               <text x="968" y="38" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700" text-anchor="middle">3</text>
@@ -2117,16 +2117,16 @@ def generate_e1_e4_html():
               <circle cx="824.0" cy="459.0" r="11" fill="#FFFFFF" stroke="#9DB7C9" stroke-width="2" stroke-dasharray="4,3" />
               <circle cx="1060.0" cy="459.0" r="11" fill="#FFFFFF" stroke="#9DB7C9" stroke-width="2" stroke-dasharray="4,3" />
               <rect x="16" y="492" width="1158" height="36" rx="8" fill="#FFF7ED" stroke="#DFBD76" stroke-width="1.4" />
-              <text x="30" y="516" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">ATENEA aún no decide: el 14 de octubre se acordó que la Agencia define y comunica el caso de uso (R3, R4).</text>
+              <text x="30" y="516" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Elegido: Campus 2600 en Hēma el 23 de octubre (R5), acotado el 30 de octubre a la primera transición (R6).</text>
               </svg>
               <p class="fig-caption" style="margin:0;padding:2px 10px 0;font-size:clamp(0.78rem,0.95vw,0.95rem);">Círculo punteado: sin valorar; el informe propone los criterios, pero no puntúa a cada candidato.</p>
               <div class="mobile-alt">
                 <p class="sched-title">Candidatos y criterios</p>
-                <p class="sched-sub">ATENEA aún no decide el caso de uso.</p>
+                <p class="sched-sub">ATENEA eligió Campus 2600 en Hēma (R5, R6).</p>
                 <ol class="slide-list" style="margin:8px 0;">
                   <li><strong>Servicio unificado con Keycloak:</strong> usuarios, roles y permisos de SICORE Posmedia y SICORE CTeI; la líder del equipo lo consideró probable.</li>
-                  <li><strong>Creación de terceros, SICORE Posmedia:</strong> recomendado en el análisis de inconsistencias; es el caso de referencia de los ocho elementos de C3.</li>
-                  <li><strong>SICORE, HEMA o Academia Atenea:</strong> opción general planteada por ATENEA.</li>
+                  <li><strong>Creación de terceros, SICORE Posmedia:</strong> recomendado en el análisis de inconsistencias.</li>
+                  <li><strong>SICORE, HEMA o Academia Atenea:</strong> opción general planteada por ATENEA; de ella salió Campus 2600 en Hēma.</li>
                 </ol>
                 <p class="sched-sub">Siete criterios propuestos (el informe no puntúa a los candidatos):</p>
                 <ol class="slide-list" style="margin:6px 0;">
@@ -5408,7 +5408,7 @@ def generate_e1_e4_html():
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
                 <h2 style="margin-bottom:4px;">Puntos de control humano y ejemplo de punta a punta: del requerimiento a la puesta en marcha</h2>
-                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Ejemplo ilustrativo, no una ejecución: la creación de terceros de SICORE Posmedia. Aracne llega hasta la solicitud de integración y la línea base; el despliegue lo ejecuta el pipeline de ATENEA con autorización humana.</p>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Caso Campus 2600 en Hēma: los pasos 4 a 6 ya corrieron sobre la reconstrucción de la Universidad (14 historias, 14 contratos, 3 olas); el resto es ilustrativo. Aracne llega hasta la solicitud de integración y la línea base; el despliegue lo ejecuta el pipeline de ATENEA con autorización humana.</p>
               </div>
               <svg viewBox="-4 -4 1208 536" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Figura 6.4: recorrido ideal de los pasos 0 a 13, con siete puertas humanas, y las tres puertas del capítulo 6">
 <defs>
@@ -5423,7 +5423,7 @@ def generate_e1_e4_html():
 <text x="250" y="82.8" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">base del área</text>
 <rect x="350" y="16" width="150" height="104" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
 <text x="425" y="64" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#1E5631" font-size="17">2</tspan> /sw:adopt con el</text>
-<text x="425" y="82.8" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">acta y el Figma</text>
+<text x="425" y="82.8" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">grabación y prototipo</text>
 <rect x="525" y="16" width="150" height="104" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
 <text x="600" y="54.6" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle"><tspan font-weight="700" fill="#1E5631" font-size="17">3</tspan> PRD, UX y</text>
 <text x="600" y="73.4" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5" text-anchor="middle">arquitectura</text>
@@ -5521,7 +5521,7 @@ def generate_e1_e4_html():
                 <ol class="slide-list" start="0" style="margin:8px 0;">
                   <li><strong>0.</strong> init y doctor en el repositorio <em>(Arnés)</em></li>
                   <li><strong>1.</strong> Arquitectura base del área <em>(Persona)</em></li>
-                  <li><strong>2.</strong> /sw:adopt con el acta y el Figma <em>(Arnés)</em> <span class="pill pill--risk">Puerta humana</span></li>
+                  <li><strong>2.</strong> /sw:adopt con la grabación y el prototipo <em>(Arnés)</em> <span class="pill pill--risk">Puerta humana</span></li>
                   <li><strong>3.</strong> PRD, UX y arquitectura (BMAD) <em>(Arnés)</em> <span class="pill pill--risk">Puerta humana</span></li>
                   <li><strong>4.</strong> Épicas e historias G/W/T <em>(Arnés)</em> <span class="pill pill--risk">Puerta humana</span></li>
                   <li><strong>5.</strong> Contratos y traza (aracne-weaver) <em>(Arnés)</em></li>
