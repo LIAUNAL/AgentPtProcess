@@ -22,7 +22,7 @@ def generate_e1_e4_html():
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20261023_4" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261101_1" />
   </head>
   <body class="view-deck">
     <div class="ambient"></div>
@@ -5703,7 +5703,7 @@ def generate_e1_e4_html():
               </ul>
             </div>
             <figure class="slide-figure">
-              <img src="assets/images/aracne-mockup-01-mapa-como-se-conecta-todo.png" loading="lazy" alt="Mockup del mapa de conexiones: la máquina del desarrollador con Claude Code u OpenCode, el servidor de la entidad con interfaz web, API, punto de acceso MCP, agentes propios y base de datos, y Azure DevOps con Azure Repos y Entra ID" />
+              <img data-src="assets/images/aracne-mockup-01-mapa-como-se-conecta-todo.webp" width="1600" height="1059" decoding="async" loading="lazy" alt="Mockup del mapa de conexiones: la máquina del desarrollador con Claude Code u OpenCode, el servidor de la entidad con interfaz web, API, punto de acceso MCP, agentes propios y base de datos, y Azure DevOps con Azure Repos y Entra ID" />
               <figcaption class="fig-caption">Fuente: §4.10. Mockup de concepto: cómo se conectan la máquina del desarrollador, el servidor de la entidad y Azure DevOps</figcaption>
             </figure>
           </article>
@@ -5766,8 +5766,8 @@ def generate_e1_e4_html():
             </div>
             <figure class="slide-figure">
               <div style="flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));grid-template-rows:minmax(0,1fr);gap:8px;">
-                <img src="assets/images/aracne-mockup-02-inicio-tablero-general.png" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup de Inicio: cifras generales, estado del desarrollo por proyecto, novedades y agentes llamados hoy" />
-                <img src="assets/images/aracne-mockup-03-proyectos-y-nuevo-proyecto.png" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup de Proyectos: tabla de proyectos y panel de nuevo proyecto con nombre, repositorio y personas con rol" />
+                <img data-src="assets/images/aracne-mockup-02-inicio-tablero-general.webp" width="1600" height="1695" decoding="async" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup de Inicio: cifras generales, estado del desarrollo por proyecto, novedades y agentes llamados hoy" />
+                <img data-src="assets/images/aracne-mockup-03-proyectos-y-nuevo-proyecto.webp" width="1600" height="1059" decoding="async" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup de Proyectos: tabla de proyectos y panel de nuevo proyecto con nombre, repositorio y personas con rol" />
               </div>
               <figcaption class="fig-caption">Fuente: §4.10. Mockups de Inicio y de Proyectos (vistas parciales)</figcaption>
             </figure>
@@ -5786,8 +5786,8 @@ def generate_e1_e4_html():
             </div>
             <figure class="slide-figure">
               <div style="flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));grid-template-rows:minmax(0,1fr);gap:8px;">
-                <img src="assets/images/aracne-mockup-04-proyecto-chat-y-artefactos.png" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup de un proyecto: chat con los agentes propios, árbol de artefactos del repositorio y ficha del PRD" />
-                <img src="assets/images/aracne-mockup-05-proyecto-descomponer-epicas-historias.png" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup de la descomposición del PRD en épicas e historias escritas como archivos, con la ficha de una historia" />
+                <img data-src="assets/images/aracne-mockup-04-proyecto-chat-y-artefactos.webp" width="1600" height="1271" decoding="async" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup de un proyecto: chat con los agentes propios, árbol de artefactos del repositorio y ficha del PRD" />
+                <img data-src="assets/images/aracne-mockup-05-proyecto-descomponer-epicas-historias.webp" width="1600" height="1389" decoding="async" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup de la descomposición del PRD en épicas e historias escritas como archivos, con la ficha de una historia" />
               </div>
               <figcaption class="fig-caption">Fuente: §4.10. Mockups de un proyecto: chat y artefactos, y descomposición en épicas e historias (vistas parciales)</figcaption>
             </figure>
@@ -5806,8 +5806,8 @@ def generate_e1_e4_html():
             </div>
             <figure class="slide-figure">
               <div style="flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));grid-template-rows:minmax(0,1fr);gap:8px;">
-                <img src="assets/images/aracne-mockup-06-proyecto-flujo-agentico.png" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup del flujo agéntico: seis etapas con sus agentes, número de llamadas, entradas y salidas" />
-                <img src="assets/images/aracne-mockup-07-proyecto-estado-y-flujo-de-requerimientos.png" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup del estado de un proyecto: descomposición del PRD al código y flujo de requerimientos de requisito a contrato" />
+                <img data-src="assets/images/aracne-mockup-06-proyecto-flujo-agentico.webp" width="1600" height="2071" decoding="async" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup del flujo agéntico: seis etapas con sus agentes, número de llamadas, entradas y salidas" />
+                <img data-src="assets/images/aracne-mockup-07-proyecto-estado-y-flujo-de-requerimientos.webp" width="1600" height="1812" decoding="async" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup del estado de un proyecto: descomposición del PRD al código y flujo de requerimientos de requisito a contrato" />
               </div>
               <figcaption class="fig-caption">Fuente: §4.10. Mockups del flujo agéntico y del estado de un proyecto (vistas parciales)</figcaption>
             </figure>
@@ -5825,7 +5825,7 @@ def generate_e1_e4_html():
               </ul>
             </div>
             <figure class="slide-figure">
-              <img src="assets/images/aracne-mockup-08-administracion.png" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup de Administración: matriz de permisos por rol, lista de personas, auditoría de seguridad, arneses e integraciones" />
+              <img data-src="assets/images/aracne-mockup-08-administracion.webp" width="1600" height="2565" decoding="async" loading="lazy" style="min-height:0;object-fit:cover;object-position:top center;" alt="Mockup de Administración: matriz de permisos por rol, lista de personas, auditoría de seguridad, arneses e integraciones" />
               <figcaption class="fig-caption">Fuente: §4.10. Mockup de Administración: personas y roles, auditoría, arneses e integraciones (vista parcial)</figcaption>
             </figure>
           </article>
@@ -6281,7 +6281,7 @@ def generate_e1_e4_html():
       </footer>
     </div>
 
-    <script src="assets/js/app.js?v=20261023_4"></script>
+    <script src="assets/js/app.js?v=20261101_1"></script>
   </body>
 </html>
 '''

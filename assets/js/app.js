@@ -208,10 +208,24 @@ window.addEventListener("resize", scheduleFit);
 window.addEventListener("orientationchange", scheduleFit);
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(scheduleFit);
 
+// Images inside slides carry data-src and load only near the visible slide:
+// every slide sits in the viewport (hidden), so loading="lazy" would not defer them.
+function hydrateImages(center) {
+  for (let i = center - 1; i <= center + 2; i += 1) {
+    const slide = slides[i];
+    if (!slide) continue;
+    slide.querySelectorAll("img[data-src]").forEach((img) => {
+      img.src = img.dataset.src;
+      img.removeAttribute("data-src");
+    });
+  }
+}
+
 function render(index, options = {}) {
   if (slides.length === 0) return;
   const { animate = true } = options;
   const next = Math.max(0, Math.min(index, slides.length - 1));
+  hydrateImages(next);
 
   if (next === current && slides[current]?.classList.contains("is-active")) {
     updateChrome();

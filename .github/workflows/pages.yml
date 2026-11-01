@@ -23,16 +23,33 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-      # /atenea/ publica el mismo deck: copia de index.html con <base href="../">
-      # para que las rutas relativas (assets/...) resuelvan desde la raíz.
-      - name: Build /atenea/ alias
+      # Publish only what the pages use: the three decks, CSS, JS and the
+      # images and video they reference. /atenea/ is a copy of index.html with
+      # <base href="../"> so relative asset paths resolve from the site root.
+      - name: Build site
         run: |
-          mkdir -p atenea
-          sed 's#<head>#<head>\n    <base href="../" />#' index.html > atenea/index.html
-          grep -q '<base href="../" />' atenea/index.html
+          set -euo pipefail
+          mkdir -p _site/atenea
+          cp index.html kickoff.html e1-e4.html .nojekyll _site/
+          cp -R assets/css assets/js _site/
+          mkdir -p _site/assets && mv _site/css _site/js _site/assets/
+          grep -ohE '(src|href)="assets/(images|videos)/[^"?#]+' index.html kickoff.html e1-e4.html \
+            | sed -E 's/^(src|href)="//' | sort -u | while read -r f; do
+              mkdir -p "_site/$(dirname "$f")"; cp "$f" "_site/$f"; done
+          sed 's#<head>#<head>\n    <base href="../" />#' index.html > _site/atenea/index.html
+          grep -q '<base href="../" />' _site/atenea/index.html
+      - name: Check local links
+        run: |
+          set -euo pipefail
+          missing=0
+          for f in $(grep -ohE '(src|href)="assets/[^"?#]+' _site/*.html | sed -E 's/^(src|href)="//' | sort -u); do
+            [ -e "_site/$f" ] || { echo "missing: $f"; missing=1; }
+          done
+          du -sh _site
+          exit $missing
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
