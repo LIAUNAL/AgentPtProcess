@@ -14,7 +14,7 @@ El proyecto cuenta con un **Panel de Control interactivo** que permite seleccion
    - 45 diapositivas estructuradas en 7 módulos (Minuta contractual, Motivación, Perfiles en evolución, Chat vs Agente, Evidencia empírica, La respuesta metodológica y UN-SpecWeaver).
    - Enfoque conceptual, pedagógico y de adopción institucional.
 2. **Informe Técnico E1–E4: Contrato ATENEA-464-2026** (`?deck=e1-e4` o [`e1-e4.html`](e1-e4.html)):
-   - 64 diapositivas (portada y 63 de contenido) en 6 módulos: Contrato & Alcance, E1 Diagnóstico, E2 Metodología SDLC-IA, E3 Arquitectura y caso de uso, E4 Agentes y skills con Aracne-SDLC-AI 0.9.0, y Decisiones & Cierre.
+   - 74 diapositivas (portada y 73 de contenido) en 6 módulos: Contrato & Alcance, E1 Diagnóstico, E2 Metodología SDLC-IA, E3 Arquitectura y caso de uso, E4 Agentes y skills con Aracne-SDLC-AI 0.9.0 y la plataforma Aracne propuesta (mockups de concepto), y Decisiones & Cierre.
    - Alineado con el informe técnico vigente (`informe_atenea`, capítulos 1 a 7): cada figura y tabla lleva su leyenda con la numeración del informe (o "Fuente: §N.M" cuando no está numerada) y cada elemento de los componentes C1 a C4 (E1 a E4) tiene su diapositiva marcada con `data-item`.
    - Funciona en móvil: tablas como tarjetas, alternativas `.mobile-alt` para los diagramas y áreas táctiles de 44 px.
 
@@ -34,15 +34,15 @@ El proyecto cuenta con un **Panel de Control interactivo** que permite seleccion
 | 6 | <abbr title="Stack de especificaciones del deck">UN-SpecWeaver</abbr> | El stack de herramientas, tutorial práctico en terminal con comandos CLI y capturas reales |
 
 ### B. Deck E1–E4 (Informe Técnico de Avance ATENEA-464-2026)
-Mapeo de componentes: C1 a C4 corresponden a los entregables E1 a E4. La portada y 62 diapositivas se reparten así:
+Mapeo de componentes: C1 a C4 corresponden a los entregables E1 a E4. La portada y 73 diapositivas se reparten así:
 
 | # | Módulo | Diapositivas | Tema |
 |---|--------|--------------|------|
 | 1 | Contrato & Alcance | 6 | Estado de E1 a E4 (Tabla 1.1), minuta, obligaciones, entregables y pagos, y cronograma S1 a S22 (Figura 2.1) |
-| 2 | E1 · Diagnóstico ATENEA (C1) | 14 | Portafolio, roles, flujo actual, infraestructura, licencias, brechas, fricción, madurez, DORA, riesgos, datos y caso de uso priorizado |
-| 3 | E2 · Metodología SDLC-IA (C2) | 15 | Seis fases y flujo, intervención agéntica, RACI, siete puntos de control, contexto, CI/CD, definición de terminado, cierre de brechas, distribución y ruta de adopción |
+| 2 | E1 · Diagnóstico ATENEA (C1) | 16 | Portafolio, roles, flujo actual, infraestructura, licencias, brechas, fricción, madurez, DORA, riesgos, datos y caso de uso priorizado |
+| 3 | E2 · Metodología SDLC-IA (C2) | 16 | Seis fases y flujo, intervención agéntica, RACI, siete puntos de control, contexto, CI/CD, definición de terminado, cierre de brechas, distribución y ruta de adopción |
 | 4 | E3 · Arquitectura y caso de uso (C3) | 12 | Composición del arnés, componentes y estado, y los ocho elementos del caso (proceso, requisitos, historias, agentes, flujos, integraciones, datos y aceptación) |
-| 5 | E4 · Agentes y Skills (C4) | 10 | Aracne-SDLC-AI 0.9.0: flujo, 16 agentes, comandos y skills, instalación, interacción entre agentes, control humano, seguridad y trazabilidad |
+| 5 | E4 · Agentes y Skills (C4) | 18 | Aracne-SDLC-AI 0.9.0: flujo, 16 agentes, comandos y skills, instalación, interacción entre agentes, control humano, seguridad y trazabilidad; plataforma Aracne propuesta a ATENEA en ocho diapositivas con mockups de concepto (no es software construido) |
 | 6 | Decisiones & Cierre | 5 | Tres decisiones de ATENEA (§7.1), información pendiente (Tabla 7.1), compromisos (Tabla 7.2) y hoja de ruta Hito 1 a Hito 2 con la ruta de adopción |
 
 ---|--------|------|
