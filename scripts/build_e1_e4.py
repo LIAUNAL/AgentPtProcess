@@ -5890,6 +5890,61 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e4" data-item="c4-extensiones" data-tone="green" data-caption-source="§6.10">
+            <div class="slide-content">
+              <p class="slide-kicker">5 &middot; Agentes y Skills (E4) &middot; Propuesta para la entrega 2</p>
+              <h2>Dos agentes nuevos con su servidor MCP: panorama CTeI y productos de ATENEA</h2>
+              <ul class="slide-list">
+                <li><strong>Solicitud del 30 de octubre:</strong> ATENEA pidió investigar plataformas de ciencia, tecnología e innovación de otros países para encontrar actores, servicios o interacciones que Hēma no contempla.</li>
+                <li><strong>Propuesta de la Universidad:</strong> un segundo agente organiza la arquitectura, el diseño y el código de los productos que ATENEA ya tiene, para reutilizar y decidir mejor.</li>
+                <li><strong>Estado:</strong> diseño en el repositorio del arnés; nada está implementado y ATENEA decide si entran en la entrega 2.</li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table" style="font-size:clamp(0.68rem,min(1.2vw,2.2vh),1.5rem);">
+                  <caption>Fuente: §6.10. Agentes y servidores MCP propuestos para la entrega 2</caption>
+                  <thead>
+                    <tr><th>Agente y MCP</th><th>Dónde entra</th><th>Qué entrega</th><th>Origen</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td data-label="Agente y MCP"><code>aracne-ctei-scout</code> con <code>ctei-landscape</code></td><td data-label="Dónde entra">Antes del <em>brief</em> de producto</td><td data-label="Qué entrega">Estudio de base tecnológica (plataformas, software, patentes y artículos; Bogotá, Colombia, Latinoamérica y el mundo), <code>research-brief.md</code> y requisitos, épicas e historias candidatas</td><td data-label="Origen">Solicitud de ATENEA (R7)</td></tr>
+                    <tr><td data-label="Agente y MCP"><code>aracne-portfolio</code> con <code>atenea-portfolio</code></td><td data-label="Dónde entra"><em>Brief</em>, arquitectura, <code>/sw:adopt</code>, <code>/sw:change</code> y <code>/sw:build</code>, solo como consulta</td><td data-label="Qué entrega">Grafo de productos y componentes, candidatos de reutilización y documentación de código curada al estilo de context7; privado por la confidencialidad del contrato</td><td data-label="Origen">Propuesta de la Universidad</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e4" data-item="c4-extensiones" data-tone="green" data-caption-source="§6.10">
+            <div class="slide-content">
+              <p class="slide-kicker">5 &middot; Agentes y Skills (E4) &middot; Propuesta para la entrega 2</p>
+              <h2>Se construyen como el banco de proyectos del laboratorio</h2>
+              <ul class="slide-list">
+                <li><strong>Referencia:</strong> el banco <code>bancoProyectosPapersLIA</code> ya alimenta la redacción de artículos y propuestas con fichas, clústeres y un servidor MCP.</li>
+                <li><strong>Trazabilidad:</strong> cada afirmación que llega al PRD o a una historia cita el identificador de su ficha.</li>
+                <li><strong>Visualización:</strong> un tablero estático muestra el trabajo de los agentes, con pruebas de calidad visual y de memoria.</li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table" style="font-size:clamp(0.68rem,min(1.2vw,2.2vh),1.5rem);">
+                  <caption>Fuente: §6.10. Piezas del banco del laboratorio que se reutilizan</caption>
+                  <thead>
+                    <tr><th>Pieza</th><th>Cómo se usa en los dos agentes</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td data-label="Pieza"><strong>Fichas Markdown</strong></td><td data-label="Uso">Una por producto o por referente CTeI, con campos fijos</td></tr>
+                    <tr><td data-label="Pieza"><strong>Una sola fuente JSON</strong></td><td data-label="Uso">Taxonomía, clústeres estables y relaciones con los cinco ítems más parecidos</td></tr>
+                    <tr><td data-label="Pieza"><strong>Servidor MCP</strong></td><td data-label="Uso">Búsqueda sobre SQLite FTS5 que se reindexa al cambiar la fuente; <code>export_to_insumos</code> copia fichas a los insumos de <code>/sw:adopt</code></td></tr>
+                    <tr><td data-label="Pieza"><strong>Tablero</strong></td><td data-label="Uso">Constelación 3D, clústeres, buscador, línea de tiempo y un mapa por alcance territorial</td></tr>
+                    <tr><td data-label="Pieza"><strong>Pruebas</strong></td><td data-label="Uso">Playwright para la calidad visual y el consumo de memoria</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
           <!-- ========================================================================= -->
           <!-- MÓDULO 6: Decisiones, Compromisos y Cierre (Capítulo 7)                   -->
           <!-- ========================================================================= -->
