@@ -28,7 +28,7 @@ MANIFEST = {
     "e3": ["c3-proceso", "c3-requisitos", "c3-historias", "c3-arquitectura-agentes",
            "c3-flujos", "c3-integraciones", "c3-datos", "c3-aceptacion"],
     "e4": ["c4-arquitectura", "c4-catalogo", "c4-instalacion", "c4-flujos-interaccion",
-           "c4-control-humano", "c4-seguridad", "c4-trazabilidad"],
+           "c4-control-humano", "c4-seguridad", "c4-trazabilidad", "c4-extensiones"],
 }
 # Unnumbered informe sources (no table or figure) cite their section: "Fuente: §N.M".
 CAPTION_RE = re.compile(r"^((Figura|Tabla) \d+\.\d+|Fuente: §\d+\.\d+)")
