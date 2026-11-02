@@ -11,7 +11,7 @@ Plataforma de presentaciones ejecutivas y técnicas sobre la implementación de 
 El proyecto cuenta con un **Panel de Control interactivo** que permite seleccionar la presentación de interés en cualquier momento mediante el botón en la barra superior o presionando <kbd>P</kbd> / <kbd>M</kbd>:
 
 1. **Kick-off: Propuesta y Adopción SDLC-IA** (`?deck=kickoff` o [`kickoff.html`](kickoff.html)):
-   - 45 diapositivas estructuradas en 7 módulos (Minuta contractual, Motivación, Perfiles en evolución, Chat vs Agente, Evidencia empírica, La respuesta metodológica y UN-SpecWeaver).
+   - 44 diapositivas estructuradas en 7 módulos (Minuta contractual, Motivación, Perfiles en evolución, Chat vs Agente, Evidencia empírica, La respuesta metodológica y UN-SpecWeaver).
    - Enfoque conceptual, pedagógico y de adopción institucional.
 2. **Informe Técnico E1–E4: Contrato ATENEA-464-2026** (`?deck=e1-e4` o [`e1-e4.html`](e1-e4.html)):
    - 74 diapositivas (portada y 73 de contenido) en 6 módulos: Contrato & Alcance, E1 Diagnóstico, E2 Metodología SDLC-IA, E3 Arquitectura y caso de uso, E4 Agentes y skills con Aracne-SDLC-AI 0.9.0 y la plataforma Aracne propuesta (mockups de concepto), y Decisiones & Cierre.

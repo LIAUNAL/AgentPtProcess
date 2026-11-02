@@ -106,7 +106,7 @@ def main():
           <div class="hub-card" data-deck="kickoff">
             <div class="hub-card-header">
               <span class="hub-card-tag tag-blue">PROPUESTA INICIAL</span>
-              <span class="hub-card-meta">45 Diapositivas &middot; 6 Módulos</span>
+              <span class="hub-card-meta">44 Diapositivas &middot; 6 Módulos</span>
             </div>
             <div>
               <h2 class="hub-card-title">Kick-off: Propuesta SDLC-IA</h2>
