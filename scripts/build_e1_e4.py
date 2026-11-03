@@ -55,11 +55,11 @@ def generate_e1_e4_html():
             <div class="rail-dots" id="dots-e3"></div>
           </div>
           <div class="rail-module" data-deck="e1-e4" data-module="e4">
-            <button class="rail-title" type="button" data-first="51">5 · Agentes y Skills E4</button>
+            <button class="rail-title" type="button" data-first="59">5 · Agentes y Skills E4</button>
             <div class="rail-dots" id="dots-e4"></div>
           </div>
           <div class="rail-module" data-deck="e1-e4" data-module="e5">
-            <button class="rail-title" type="button" data-first="69">6 · Decisiones y Cierre</button>
+            <button class="rail-title" type="button" data-first="77">6 · Decisiones y Cierre</button>
             <div class="rail-dots" id="dots-e5"></div>
           </div>
         </nav>
@@ -210,7 +210,7 @@ def generate_e1_e4_html():
               <h2>Estado de los entregables E1 a E4 al corte</h2>
               <ul class="slide-list">
                 <li>
-                  <strong>Corte y fecha de presentación: 23 de octubre de 2026.</strong> El informe se apoya en la minuta, el acta 01 del 7 de octubre y tres sesiones grabadas con ATENEA.
+                  <strong>Corte: 2 de noviembre de 2026.</strong> El informe se apoya en la minuta, el acta 01 del 7 de octubre, tres sesiones grabadas, las sesiones del 23 y del 30 de octubre, tres documentos de ATENEA y sus observaciones escritas del 1 de noviembre.
                 </li>
                 <li>
                   <strong>Hito 1:</strong> E1 a E4 integran el hito 1 del cronograma contractual.
@@ -219,13 +219,13 @@ def generate_e1_e4_html():
                   <strong>E1:</strong> diagnóstico completo, listo para la validación de ATENEA.
                 </li>
                 <li>
-                  <strong>E2 a E4:</strong> propuesta definida para el flujo, la arquitectura y el arnés de agentes.
+                  <strong>E2 a E4:</strong> propuesta definida para el flujo, la arquitectura y el arnés de agentes; el caso de uso Campus 2600 en Hēma quedó definido el 30 de octubre.
                 </li>
               </ul>
             </div>
             <figure class="slide-figure">
-              <svg viewBox="0 -30 520 378" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estado de los entregables E1 a E4 al 23 de octubre de 2026">
-              <text x="6" y="-10" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Corte y fecha de presentación: 23 de octubre de 2026</text>
+              <svg viewBox="0 -30 520 410" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estado de los entregables E1 a E4 al 2 de noviembre de 2026">
+              <text x="6" y="-10" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Corte: 2 de noviembre de 2026</text>
               <rect x="6" y="6" width="508" height="78" rx="9" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.5" />
               <rect x="6" y="6" width="112" height="78" rx="9" fill="#1E5631" />
               <rect x="100" y="6" width="18" height="78" fill="#1E5631" />
@@ -238,31 +238,33 @@ def generate_e1_e4_html():
               <text x="62" y="130" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E2</text>
               <text x="62" y="150" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">SDLC-IA</text>
               <text x="134" y="137" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Flujo propuesto por etapa</text>
-              <rect x="6" y="178" width="508" height="78" rx="9" fill="#FFF7ED" stroke="#8A5A00" stroke-width="1.5" />
-              <rect x="6" y="178" width="112" height="78" rx="9" fill="#8A5A00" />
-              <rect x="100" y="178" width="18" height="78" fill="#8A5A00" />
-              <text x="62" y="216" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E3</text>
-              <text x="62" y="236" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Arquitectura</text>
-              <text x="134" y="213" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Composición definida por tipo</text>
-              <text x="134" y="235" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">de componente</text>
-              <rect x="6" y="264" width="508" height="78" rx="9" fill="#FFF7ED" stroke="#8A5A00" stroke-width="1.5" />
-              <rect x="6" y="264" width="112" height="78" rx="9" fill="#8A5A00" />
-              <rect x="100" y="264" width="18" height="78" fill="#8A5A00" />
-              <text x="62" y="302" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E4</text>
-              <text x="62" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Agentes y skills</text>
-              <text x="134" y="299" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Arnés propuesto y probado</text>
-              <text x="134" y="321" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">fuera de ATENEA</text>
+              <rect x="6" y="178" width="508" height="110" rx="9" fill="#FFF7ED" stroke="#8A5A00" stroke-width="1.5" />
+              <rect x="6" y="178" width="112" height="110" rx="9" fill="#8A5A00" />
+              <rect x="100" y="178" width="18" height="110" fill="#8A5A00" />
+              <text x="62" y="230" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E3</text>
+              <text x="62" y="250" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Arquitectura</text>
+              <text x="134" y="204" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Composición definida por tipo</text>
+              <text x="134" y="225" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">de componente</text>
+              <text x="134" y="250" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="14">Caso Campus 2600 en Hēma definido el 30 de octubre;</text>
+              <text x="134" y="270" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="14">primera reconstrucción: 7 épicas y 14 historias</text>
+              <rect x="6" y="296" width="508" height="78" rx="9" fill="#FFF7ED" stroke="#8A5A00" stroke-width="1.5" />
+              <rect x="6" y="296" width="112" height="78" rx="9" fill="#8A5A00" />
+              <rect x="100" y="296" width="18" height="78" fill="#8A5A00" />
+              <text x="62" y="334" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E4</text>
+              <text x="62" y="354" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Agentes y skills</text>
+              <text x="134" y="331" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Arnés propuesto y probado</text>
+              <text x="134" y="353" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">fuera de ATENEA</text>
               </svg>
               <div class="mobile-alt">
-                <p class="sched-title">Estado de E1 a E4 al 23 de octubre de 2026</p>
+                <p class="sched-title">Estado de E1 a E4 al 2 de noviembre de 2026</p>
                 <ul class="slide-list" style="margin:8px 0;">
                   <li><strong>E1 Diagnóstico:</strong> <span class="pill pill--ok">Diagnóstico completo para validación</span></li>
                   <li><strong>E2 SDLC-IA:</strong> <span class="pill pill--partial">Flujo propuesto por etapa</span></li>
-                  <li><strong>E3 Arquitectura:</strong> <span class="pill pill--partial">Composición definida por tipo de componente</span></li>
+                  <li><strong>E3 Arquitectura:</strong> <span class="pill pill--partial">Composición definida por tipo de componente</span> Caso Campus 2600 en Hēma definido el 30 de octubre, con una primera reconstrucción de 7 épicas y 14 historias.</li>
                   <li><strong>E4 Agentes y skills:</strong> <span class="pill pill--partial">Arnés propuesto y probado fuera de ATENEA</span></li>
                 </ul>
               </div>
-              <figcaption class="fig-caption">Tabla 1.1 — Estado de E1 a E4 al 23 de octubre de 2026</figcaption>
+              <figcaption class="fig-caption">Tabla 1.1. Estado de E1 a E4 al 2 de noviembre de 2026</figcaption>
             </figure>
           </article>
 
@@ -3912,6 +3914,7 @@ def generate_e1_e4_html():
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
                 <h2 style="margin-bottom:4px;">Caso de uso institucional: Campus 2600 en Hēma, primera transición (§5.4)</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;">El caso es el <strong>banco de pruebas</strong> de Aracne-SDLC-AI y de la metodología SDLC-IA: sobre un desarrollo real de ATENEA se recorre el ciclo completo, de las historias de usuario al despliegue. En él conviven tres planos: lo que Hēma tiene hoy en operación, lo que muestra el prototipo de Campus 2600 y lo que entra en el alcance del contrato.</p>
                 <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;"><strong>Selección:</strong> el 23 de octubre de 2026 se escogió una necesidad priorizada por la dirección, representada en un prototipo visual con datos simulados (R5); el 30 de octubre se precisó: módulo Campus 2600 de la plataforma Hēma, del sistema <abbr title="Sistema de Información Core">SICORE</abbr> <abbr title="Ciencia, Tecnología e Innovación">CTeI</abbr>, limitado a los requerimientos ya definidos de la primera transición (R6).</p>
                 <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;"><strong>Alcance:</strong> sin los temas presupuestales, de monetización o aún no aprobados por el área funcional; el motor de emparejamiento de la segunda transición queda fuera. De Campus solo existe un prototipo interactivo, sin repositorio ni desarrollo. <strong>Insumos:</strong> grabación y transcripción del 30 de octubre, prototipo en Angular y acceso a la plataforma de interoperabilidad, que se pedirá por correo formal.</p>
               </div>
@@ -3959,17 +3962,279 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- E3-5: Proceso misional destino (Tabla 5.2) [c3-proceso] -->
+          <!-- E3-4a: Hēma hoy (§5.4.1, Figura 5.3) -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e3" data-tone="emerald">
+            <div class="slide-content">
+              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3) &middot; Caso de uso</p>
+              <h2>Hēma hoy: plataforma sombrilla con cuatro estrategias (§5.4.1)</h2>
+              <ul class="slide-list">
+                <li><strong>Hēma</strong> mapea y articula a los actores de ciencia, tecnología e innovación de Bogotá, y la lidera ATENEA (R6).</li>
+                <li>Reúne <strong>cuatro estrategias</strong>: Ecosistema caracteriza a las entidades y alimenta el directorio de actores; BankPro acompaña a los investigadores en sus postulaciones; las otras dos son Internacionalización y Campus 2600.</li>
+                <li>Comparte <strong>servicios</strong> que cada vertical reutiliza: identidad, datos y <abbr title="Interfaces de programación de aplicaciones">API</abbr>, analítica y convocatorias (A12, A13).</li>
+                <li>En la <strong>versión 2.1.5 de pruebas</strong> funcionan la biblioteca de recursos, los formularios de caracterización, BankPro, los catálogos paramétricos, la administración de usuarios, estrategias y roles, y los reportes de diligenciamiento (P9).</li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <img data-src="assets/images/caso-uso/20-hema-real-bankpro.webp" width="1600" height="888" decoding="async" loading="lazy" alt="Hēma versión 2.1.5 en el ambiente de pruebas: módulo BankPro con el buscador de convocatorias y el acompañamiento en seis pasos" />
+              <figcaption class="fig-caption">Figura 5.3. Hēma versión 2.1.5, ambiente de pruebas; datos de identificación ocultos. Módulo BankPro, cuyo componente de convocatorias compartirá Campus 2600</figcaption>
+            </figure>
+          </article>
+
+          <!-- E3-4b: Campus 2600 dentro de Hēma (§5.4.2, Figuras 5.4 a 5.6) -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e3" data-tone="emerald">
+            <div class="slide-content">
+              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3) &middot; Caso de uso</p>
+              <h2>Campus 2600 dentro de Hēma: una estrategia registrada, sin pantallas de su proceso (§5.4.2)</h2>
+              <ul class="slide-list">
+                <li><strong>Campus 2600</strong> es una convocatoria interna de ATENEA dirigida a tres tipologías de actores, con un presupuesto para cada una (R6).</li>
+                <li>Los servicios a los beneficiarios los prestan dos integradores, <strong>Ceiba y Connect</strong>, que tienen los convenios con las entidades oferentes.</li>
+                <li>Comparte con BankPro el <strong>componente de convocatorias</strong>; la diferencia es que las de BankPro son de terceros.</li>
+                <li>En Hēma 2.1.5 figura como <strong>estrategia activa</strong> con sus roles, pero no hay pantallas de postulación, evaluación, diagnóstico ni hoja de ruta. Su proceso solo existe en un prototipo en Angular.</li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div style="flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:8px;align-content:start;">
+                <figure style="margin:0;min-width:0;display:flex;flex-direction:column;gap:4px;">
+                  <img data-src="assets/images/caso-uso/21-hema-real-estrategias.webp" width="1600" height="888" decoding="async" loading="lazy" style="height:auto;" alt="Hēma versión 2.1.5, Estrategias y roles: Campus 2600, Ecosistema CTeI, BankPro e Internacionalización aparecen activas" />
+                  <figcaption class="fig-caption">Figura 5.4. Hēma versión 2.1.5, ambiente de pruebas; datos de identificación ocultos. Estrategias y roles</figcaption>
+                </figure>
+                <figure style="margin:0;min-width:0;display:flex;flex-direction:column;gap:4px;">
+                  <img data-src="assets/images/caso-uso/08-hema-convocatoria-campus2600.webp" width="1600" height="900" decoding="async" loading="lazy" style="height:auto;" alt="Prototipo de Campus 2600: convocatoria con las tipologías EBCT, EAI y MiPymes y sus topes" />
+                  <figcaption class="fig-caption">Figura 5.5. Prototipo de referencia, con datos simulados. Convocatoria y tipologías</figcaption>
+                </figure>
+                <figure style="margin:0;min-width:0;display:flex;flex-direction:column;gap:4px;">
+                  <img data-src="assets/images/caso-uso/07-hema-directorio-actores.webp" width="1600" height="900" decoding="async" loading="lazy" style="height:auto;" alt="Prototipo de Campus 2600: directorio de actores y oferta de servicios especializados" />
+                  <figcaption class="fig-caption">Figura 5.6. Prototipo de referencia, con datos simulados. Directorio de actores y servicios</figcaption>
+                </figure>
+              </div>
+            </figure>
+          </article>
+
+          <!-- E3-4c: Lo que hay que construir (§5.4.2, Figuras 5.8 a 5.11) -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e3" data-tone="emerald">
+            <div class="slide-content">
+              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3) &middot; Caso de uso</p>
+              <h2>Lo que hay que construir: el proceso que hoy solo está en el prototipo (§5.4.2)</h2>
+              <ul class="slide-list">
+                <li><strong>Sin desarrollar</strong> están la postulación en dos operaciones, la evaluación técnica con panel de jurados, la formalización, el autodiagnóstico y el diagnóstico, la hoja de ruta con su circuito de firmas y el plan de trabajo con los informes de avance (R6).</li>
+                <li>Además de las entidades, en un caso específico puede postularse una <strong>persona natural</strong>.</li>
+                <li>En la hoja de ruta, <strong>cada rol ve una parte</strong>: el postulante no ve el valor de los servicios, el financiero de ATENEA los ve todos con su valor y cada integrador solo los suyos.</li>
+                <li>Una entidad puede tener <strong>varias hojas de ruta parciales</strong> cuando una brecha es prerrequisito de otras, y cada una se formula sobre la <strong>versión aprobada del directorio</strong> en ese momento.</li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div style="flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:8px;align-content:start;">
+                <figure style="margin:0;min-width:0;display:flex;flex-direction:column;gap:4px;">
+                  <img data-src="assets/images/caso-uso/11-hema-mesa-calificacion.webp" width="1600" height="900" decoding="async" loading="lazy" style="height:auto;" alt="Prototipo de Campus 2600: mesa de calificación técnica y verificación de antecedentes legales" />
+                  <figcaption class="fig-caption">Figura 5.8. Mesa de calificación técnica</figcaption>
+                </figure>
+                <figure style="margin:0;min-width:0;display:flex;flex-direction:column;gap:4px;">
+                  <img data-src="assets/images/caso-uso/13-hema-diagnostico-brechas.webp" width="1600" height="900" decoding="async" loading="lazy" style="height:auto;" alt="Prototipo de Campus 2600: diagnóstico de brechas con el cálculo del Delta y la criticidad" />
+                  <figcaption class="fig-caption">Figura 5.9. Diagnóstico de brechas</figcaption>
+                </figure>
+                <figure style="margin:0;min-width:0;display:flex;flex-direction:column;gap:4px;">
+                  <img data-src="assets/images/caso-uso/14-hema-hoja-ruta-presupuesto.webp" width="1600" height="900" decoding="async" loading="lazy" style="height:auto;" alt="Prototipo de Campus 2600: hoja de ruta con control de topes y asignación de integradores" />
+                  <figcaption class="fig-caption">Figura 5.10. Hoja de ruta y topes</figcaption>
+                </figure>
+                <figure style="margin:0;min-width:0;display:flex;flex-direction:column;gap:4px;">
+                  <img data-src="assets/images/caso-uso/16-hema-firmas-hash.webp" width="1600" height="900" decoding="async" loading="lazy" style="height:auto;" alt="Prototipo de Campus 2600: circuito de firmas con hash y compuertas de devolución" />
+                  <figcaption class="fig-caption">Figura 5.11. Circuito de firmas con hash</figcaption>
+                </figure>
+              </div>
+              <figcaption class="fig-caption">Figuras 5.8 a 5.11. Prototipo de referencia, con datos simulados</figcaption>
+            </figure>
+          </article>
+
+          <!-- E3-4d: Delimitación y solicitudes (§5.4.3, Tablas 5.2 y 5.3) -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-tone="emerald">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3) &middot; Caso de uso</p>
+                <h2 style="margin-bottom:4px;">Delimitación del caso y solicitudes a ATENEA (§5.4.3)</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;">El alcance abarca lo ya definido para Campus, sin los temas presupuestales, de monetización o aún no aprobados por el área funcional (R6). Queda abierto el control de topes, que quien presentó el prototipo señaló como el mayor cuello de botella del módulo. Las solicitudes irán por correo formal a Ronald.</p>
+              </div>
+              <div style="flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:10px;">
+                <div class="data-table-wrapper" style="min-height:0;height:auto;">
+                  <table class="data-table" style="font-size:clamp(0.64rem,min(1.05vw,1.9vh),1.4rem);">
+                    <caption>Tabla 5.2. Delimitación del caso Campus 2600: parte del proceso y situación (las seis partes «Dentro» se presentaron en el prototipo, R6)</caption>
+                    <thead>
+                      <tr>
+                        <th style="width:70%;font-size:0.82em;">Parte del proceso</th>
+                        <th style="font-size:0.82em;">Situación</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td data-label="Parte del proceso">Directorio de actores y servicios de Campus, con versiones aprobadas</td><td data-label="Situación"><span class="pill pill--ok">Dentro</span></td></tr>
+                      <tr><td data-label="Parte del proceso">Postulación en dos operaciones con revisión del gestor</td><td data-label="Situación"><span class="pill pill--ok">Dentro</span></td></tr>
+                      <tr><td data-label="Parte del proceso">Evaluación técnica, panel de jurados y <abbr title="Sistema de Administración del Riesgo de Lavado de Activos y de la Financiación del Terrorismo">SARLAFT</abbr> en paralelo</td><td data-label="Situación"><span class="pill pill--ok">Dentro</span></td></tr>
+                      <tr><td data-label="Parte del proceso">Formalización, autodiagnóstico, diagnóstico y cálculo de Δ</td><td data-label="Situación"><span class="pill pill--ok">Dentro</span></td></tr>
+                      <tr><td data-label="Parte del proceso">Hoja de ruta, hojas parciales, visibilidad por rol y firmas con hash</td><td data-label="Situación"><span class="pill pill--ok">Dentro</span></td></tr>
+                      <tr><td data-label="Parte del proceso">Plan de trabajo e informes de avance de los integradores</td><td data-label="Situación"><span class="pill pill--ok">Dentro</span></td></tr>
+                      <tr><td data-label="Parte del proceso">Control de topes por tipología y del reparto entre integradores (solicitud 1)</td><td data-label="Situación"><span class="pill pill--partial">Por confirmar</span></td></tr>
+                      <tr><td data-label="Parte del proceso">Otros temas presupuestales y monetización: sin definición del área funcional</td><td data-label="Situación"><span class="pill pill--todo">Fuera</span></td></tr>
+                      <tr><td data-label="Parte del proceso">Integración con sistemas financieros externos: interfaces simuladas verificables</td><td data-label="Situación"><span class="pill pill--todo">Fuera</span></td></tr>
+                      <tr><td data-label="Parte del proceso">Motor de emparejamiento de oferta y demanda: segunda transición de Hēma</td><td data-label="Situación"><span class="pill pill--todo">Fuera</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="data-table-wrapper" style="min-height:0;height:auto;">
+                  <table class="data-table" style="font-size:clamp(0.64rem,min(1.05vw,1.9vh),1.4rem);">
+                    <caption>Tabla 5.3. Solicitudes a ATENEA para cerrar la delimitación del caso Campus 2600 (texto condensado)</caption>
+                    <thead>
+                      <tr>
+                        <th style="width:6%;font-size:0.82em;">N.º</th>
+                        <th style="width:52%;font-size:0.82em;">Qué se necesita de ATENEA</th>
+                        <th style="font-size:0.82em;">Para qué</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td data-label="N.º"><strong>1</strong></td><td data-label="Qué se necesita">Decidir si el control de topes por tipología y del reparto entre Ceiba y Connect entra en el caso</td><td data-label="Para qué">Incluir o retirar las historias de hoja de ruta que dependen de esas reglas</td></tr>
+                      <tr><td data-label="N.º"><strong>2</strong></td><td data-label="Qué se necesita">Validar las 14 historias reconstruidas por la Universidad</td><td data-label="Para qué">Fijar el alcance que se implementará en los componentes 5 y 6</td></tr>
+                      <tr><td data-label="N.º"><strong>3</strong></td><td data-label="Qué se necesita">Entregar el prototipo de Campus en Angular, como código o con acceso</td><td data-label="Para qué">Tomar de primera mano las reglas ya acordadas</td></tr>
+                      <tr><td data-label="N.º"><strong>4</strong></td><td data-label="Qué se necesita">Indicar las reglas de postulación de una persona natural</td><td data-label="Para qué">Ajustar la historia de postulación y sus criterios</td></tr>
+                      <tr><td data-label="N.º"><strong>5</strong></td><td data-label="Qué se necesita">Compartir los catálogos de Ceiba y Connect y la plantilla de variables de Ecosistema</td><td data-label="Para qué">Diseñar la carga masiva del directorio y sus versiones</td></tr>
+                      <tr><td data-label="N.º"><strong>6</strong></td><td data-label="Qué se necesita">Dar acceso a la carpeta de SharePoint <em>Nuevas historias de usuario</em> que enlaza la arquitectura empresarial (A11)</td><td data-label="Para qué">Reutilizar el componente de convocatorias sin duplicarlo</td></tr>
+                      <tr><td data-label="N.º"><strong>7</strong></td><td data-label="Qué se necesita">Confirmar si Campus se integrará sobre el ambiente de pruebas de Hēma consultado (P9)</td><td data-label="Para qué">Preparar el entorno de integración del caso</td></tr>
+                      <tr><td data-label="N.º"><strong>8</strong></td><td data-label="Qué se necesita">Definir cómo se incorporan los cambios que surjan de la validación con el área funcional</td><td data-label="Para qué">Mantener alineadas las historias</td></tr>
+                      <tr><td data-label="N.º"><strong>9</strong></td><td data-label="Qué se necesita">Validar los candidatos del estudio de referentes que aplican a Campus 2600 (Tabla 5.5)</td><td data-label="Para qué">Decidir si entran como historias del caso o quedan para Hēma</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </figure>
+          </article>
+
+          <!-- E3-4e: Qué hace el agente CTeI (§6.10, Tabla 6.7) -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e3" data-tone="emerald" data-caption-source="§6.10">
+            <div class="slide-content">
+              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3) &middot; Referentes CTeI</p>
+              <h2>El agente de investigación CTeI: un estudio de referentes antes del brief</h2>
+              <ul class="slide-list">
+                <li><strong><code>aracne-ctei-scout</code></strong> prepara estudios de base tecnológica sobre plataformas, software, patentes y artículos de los mercados local, nacional, latinoamericano e internacional.</li>
+                <li>Corre en la fase <strong>Entender</strong> de <code>/sw:new</code>, antes del brief de producto. Deja un <code>research-brief.md</code> con requisitos, épicas e historias candidatas, que el equipo de requerimientos de ATENEA acepta o descarta.</li>
+                <li>Es <strong>opcional</strong>: está construido, no hace parte del paquete 0.9.0 y entra en la versión siguiente del arnés.</li>
+                <li>Los datos del panorama se exploran en el tablero público <a href="https://liaunal.github.io/panoramaPlataformasCTeI/#constelacion" target="_blank" rel="noopener" style="overflow-wrap:anywhere;">https://liaunal.github.io/panoramaPlataformasCTeI/#constelacion</a>.</li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table" style="font-size:clamp(0.68rem,min(1.15vw,2.1vh),1.5rem);">
+                  <caption>Fuente: §6.10 y Tabla 6.7. El agente de investigación CTeI y su servidor MCP</caption>
+                  <thead>
+                    <tr><th style="width:24%;">Pieza</th><th>Qué es</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td data-label="Pieza"><strong>Dónde entra</strong></td><td data-label="Qué es">Antes del brief de producto (<code>bmad-product-brief</code>); alimenta el <abbr title="Product Requirements Document (documento de requisitos de producto)">PRD</abbr>, las épicas y las historias</td></tr>
+                    <tr><td data-label="Pieza"><strong>Servidor <abbr title="Model Context Protocol">MCP</abbr></strong></td><td data-label="Qué es"><code>ctei-landscape</code>, paquete 0.1.0 en un repositorio público (P10); sin versión fijada todavía</td></tr>
+                    <tr><td data-label="Pieza"><strong>Siete herramientas</strong></td><td data-label="Qué es"><code>search_landscape</code> (por tipo y por alcance), <code>get_entry</code>, <code>related_entries</code>, <code>actor_service_matrix</code>, <code>coverage_gaps</code>, <code>taxonomy</code> y <code>export_to_insumos</code></td></tr>
+                    <tr><td data-label="Pieza"><strong>Instalar el agente</strong></td><td data-label="Qué es"><code style="overflow-wrap:anywhere;">aracne-sdlc-ai init --only research</code></td></tr>
+                    <tr><td data-label="Pieza"><strong>Instalar el MCP</strong></td><td data-label="Qué es"><code style="overflow-wrap:anywhere;">uvx --from git+https://github.com/LIAUNAL/panoramaPlataformasCTeI ctei-landscape-mcp</code></td></tr>
+                    <tr><td data-label="Pieza"><strong>Ficha CT000</strong></td><td data-label="Qué es">Resume la conceptualización vigente de Hēma; es privada, se queda con ATENEA y el servidor la lee desde <code>CTEI_REFERENCE_PATH</code></td></tr>
+                    <tr><td data-label="Pieza"><strong>Trazabilidad</strong></td><td data-label="Qué es">Cada afirmación que llega al PRD o a una historia cita el identificador de su ficha</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- E3-4f: La campaña de referentes (§5.4.4) -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e3" data-tone="emerald" data-caption-source="§5.4.4">
+            <div class="slide-content">
+              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3) &middot; Referentes CTeI</p>
+              <h2>La campaña de referentes: 121 fichas en cinco corridas (§5.4.4)</h2>
+              <ul class="slide-list">
+                <li>La reunión del 30 de octubre dejó una <strong>pregunta para el caso</strong> (R7): ¿qué actores, servicios o interacciones tienen otras plataformas CTeI que Hēma no contempla?</li>
+                <li>El <strong>1 de noviembre de 2026</strong> el laboratorio hizo cinco corridas de búsqueda que dejaron 121 fichas: 35 plataformas, 34 patentes, 19 artículos, 8 programas de software y 25 de otros tipos (P10).</li>
+                <li>Por <strong>alcance</strong>, 9 son de Bogotá, 19 nacionales, 33 de América Latina y 60 internacionales.</li>
+                <li>Tiene <strong>límites</strong>: la mayoría de las patentes son de China, Estados Unidos y Europa, y no hay fichas de software latinoamericano.</li>
+                <li>Tablero público: <a href="https://liaunal.github.io/panoramaPlataformasCTeI/#constelacion" target="_blank" rel="noopener" style="overflow-wrap:anywhere;">https://liaunal.github.io/panoramaPlataformasCTeI/#constelacion</a></li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <img data-src="assets/images/caso-uso/panorama-ctei-constelacion.webp" width="1600" height="1100" decoding="async" loading="lazy" alt="Tablero público del panorama de plataformas CTeI en la pestaña Constelación 3D: cada referente es un sistema con sus planetas de alcance, tipo, tema, clúster, actor, interacción y servicio" />
+              <figcaption class="fig-caption">Fuente: §5.4.4. Tablero público del panorama CTeI, vista Constelación 3D (captura del 3 de noviembre de 2026)</figcaption>
+            </figure>
+          </article>
+
+          <!-- E3-4g: Clústeres y Campus 2600 (§5.4.4, Tabla 5.4) -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e3" data-tone="emerald">
+            <div class="slide-content">
+              <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3) &middot; Referentes CTeI</p>
+              <h2>Seis clústeres temáticos y su relación con Campus 2600 (§5.4.4)</h2>
+              <ul class="slide-list">
+                <li>Las 121 fichas se agrupan en <strong>seis clústeres</strong>, ordenados por número de fichas.</li>
+                <li>La columna de relación con Campus 2600 es una <strong>lectura de la Universidad</strong>.</li>
+                <li>El panorama incluye la convocatoria pública del caso como ficha <strong>CT101</strong>, «2600 Campus: convocatoria 2600 Generación Llega Alto», y a uno de sus integradores como <strong>CT100</strong>, «Connect Bogotá Región».</li>
+              </ul>
+            </div>
+            <figure class="slide-figure">
+              <div class="data-table-wrapper">
+                <table class="data-table" style="font-size:clamp(0.68rem,min(1.15vw,2.1vh),1.5rem);">
+                  <caption>Tabla 5.4. Clústeres temáticos del panorama CTeI y su relación con Campus 2600. Panorama: <a href="https://liaunal.github.io/panoramaPlataformasCTeI/#constelacion" target="_blank" rel="noopener" style="overflow-wrap:anywhere;">https://liaunal.github.io/panoramaPlataformasCTeI/#constelacion</a></caption>
+                  <thead>
+                    <tr><th style="width:44%;">Clúster</th><th style="width:10%;">Fichas</th><th>Relación con Campus 2600</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td data-label="Clúster"><strong>C06.</strong> Registro de actores, perfiles de investigadores y sistemas <abbr title="Current Research Information System (sistema de información de investigación)">CRIS</abbr></td><td data-label="Fichas">38</td><td data-label="Relación">Directorio de actores y servicios</td></tr>
+                    <tr><td data-label="Clúster"><strong>C02.</strong> Emparejamiento de oferta y demanda y transferencia tecnológica</td><td data-label="Fichas">36</td><td data-label="Relación">Servicios de los integradores; el motor de emparejamiento queda fuera del caso (Tabla 5.2)</td></tr>
+                    <tr><td data-label="Clúster"><strong>C05.</strong> Observatorios, indicadores y ciencia abierta</td><td data-label="Fichas">18</td><td data-label="Relación">Reportes</td></tr>
+                    <tr><td data-label="Clúster"><strong>C01.</strong> Agencias de financiación de la innovación empresarial</td><td data-label="Fichas">12</td><td data-label="Relación">Convocatoria y postulación</td></tr>
+                    <tr><td data-label="Clúster"><strong>C03.</strong> Emprendimiento, incubación y aceleración</td><td data-label="Fichas">11</td><td data-label="Relación">Beneficiarios (<abbr title="Empresas de Base Científica y Tecnológica">EBCT</abbr>, <abbr title="Empresas de Alto Impacto">EAI</abbr> y MiPymes)</td></tr>
+                    <tr><td data-label="Clúster"><strong>C04.</strong> Infraestructura compartida y gobernanza territorial</td><td data-label="Fichas">6</td><td data-label="Relación">Laboratorios ofrecidos como servicio</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- E3-4h: Brechas y candidatos (§5.4.4, Tabla 5.5) -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-tone="amber">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3) &middot; Referentes CTeI</p>
+                <h2 style="margin-bottom:4px;">Brechas frente a CT000 y candidatos a requisito para Campus 2600 (§5.4.4)</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;">La herramienta <code>coverage_gaps</code> comparó las etiquetas de las 121 fichas con la ficha privada CT000 y encontró <strong>33 brechas</strong>: 12 actores, 13 servicios y 8 interacciones que el panorama tiene y CT000 no (A14). «Una brecha no es un requisito»: puede desaparecer si Hēma ya cubre el tema en Ecosistema o en BankPro, y cada candidato pasa por el equipo de requerimientos de ATENEA. Cinco de los diez candidatos aplican a Campus 2600: 1, 2, 4, 8 y 10.</p>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;"><code>aracne-ctei-scout</code> aún no ha corrido sobre Campus, así que el caso no tiene todavía un <code>research-brief.md</code>; la campaña y la comparación se hicieron con las herramientas del servidor <code>ctei-landscape</code> llamadas directamente.</p>
+              </div>
+              <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
+                <table class="data-table" style="font-size:clamp(0.64rem,min(1.1vw,1.9vh),1.4rem);">
+                  <caption>Tabla 5.5. Candidatos a requisito del estudio de referentes CTeI para validar con ATENEA. Panorama: <a href="https://liaunal.github.io/panoramaPlataformasCTeI/#constelacion" target="_blank" rel="noopener" style="overflow-wrap:anywhere;">https://liaunal.github.io/panoramaPlataformasCTeI/#constelacion</a></caption>
+                  <thead>
+                    <tr>
+                      <th style="width:5%;font-size:0.82em;">N.º</th>
+                      <th style="width:57%;font-size:0.82em;">Candidato</th>
+                      <th style="width:22%;font-size:0.82em;">Fichas que lo respaldan</th>
+                      <th style="font-size:0.82em;">¿Aplica a Campus 2600?</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td data-label="N.º"><strong>1</strong></td><td data-label="Candidato">Oficinas de transferencia, centros de desarrollo tecnológico y parques como actores con perfil propio en el directorio</td><td data-label="Fichas">CT119, CT118, CT110, CT204</td><td data-label="¿Aplica?"><span class="pill pill--ok">Sí</span></td></tr>
+                    <tr><td data-label="N.º"><strong>2</strong></td><td data-label="Candidato">Reconocimiento o certificación de actores en el directorio, enlazado con el de Minciencias</td><td data-label="Fichas">CT110, CT109, CT202</td><td data-label="¿Aplica?"><span class="pill pill--ok">Sí</span></td></tr>
+                    <tr><td data-label="N.º"><strong>3</strong></td><td data-label="Candidato">Perfil del investigador interoperable con CvLAC, GrupLAC y ORCID</td><td data-label="Fichas">CT108, CT200, CT320, CT318, CT501</td><td data-label="¿Aplica?">No directamente</td></tr>
+                    <tr><td data-label="N.º"><strong>4</strong></td><td data-label="Candidato">Red de expertos y búsqueda de evaluadores a partir de perfiles, para el panel de jurados y el panel de expertos del diagnóstico</td><td data-label="Fichas">CT301, CT405, CT406, CT515</td><td data-label="¿Aplica?"><span class="pill pill--ok">Sí</span></td></tr>
+                    <tr><td data-label="N.º"><strong>5</strong></td><td data-label="Candidato">Observatorio e indicadores públicos del sistema de Bogotá con datos abiertos</td><td data-label="Fichas">CT112, CT117, CT107, CT207</td><td data-label="¿Aplica?">No directamente</td></tr>
+                    <tr><td data-label="N.º"><strong>6</strong></td><td data-label="Candidato">Retos de innovación abierta para articular oferta y demanda</td><td data-label="Fichas">CT116, CT100, CT315, CT314</td><td data-label="¿Aplica?">No directamente</td></tr>
+                    <tr><td data-label="N.º"><strong>7</strong></td><td data-label="Candidato">Vitrina de resultados y licenciamiento de tecnologías</td><td data-label="Fichas">CT303, CT312, CT313, CT216</td><td data-label="¿Aplica?">No directamente</td></tr>
+                    <tr><td data-label="N.º"><strong>8</strong></td><td data-label="Candidato">Inversionistas y fondos de capital como actores del directorio, ligados al servicio de levantar capital de la ruta de Campus</td><td data-label="Fichas">CT102, CT204, CT208, CT212</td><td data-label="¿Aplica?"><span class="pill pill--ok">Sí</span></td></tr>
+                    <tr><td data-label="N.º"><strong>9</strong></td><td data-label="Candidato">Eventos y relacionamiento dentro de la plataforma</td><td data-label="Fichas">CT100, CT302</td><td data-label="¿Aplica?">No directamente</td></tr>
+                    <tr><td data-label="N.º"><strong>10</strong></td><td data-label="Candidato">Cofinanciación entre varios actores y consorcios como modalidad de postulación</td><td data-label="Fichas">CT104, CT202, CT203, CT212</td><td data-label="¿Aplica?"><span class="pill pill--ok">Sí</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- E3-5: Proceso misional destino (Tabla 5.6) [c3-proceso] -->
           <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-item="c3-proceso" data-tone="emerald">
             <figure class="slide-figure">
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
                 <h2 style="margin-bottom:4px;">Proceso misional destino: seis etapas de Campus 2600 en Hēma (§5.5)</h2>
-                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;"><strong>Integradores:</strong> CEIBA y CONNECT (Connect Bogotá) prestan los servicios del directorio, hoy en catálogos de Excel; la bolsa se reparte 60&nbsp;% para Ceiba y 40&nbsp;% para Connect (R6). <strong>Prototipo:</strong> convocatoria de un año prorrogable con tres tipologías (<abbr title="Empresas de Base Científica y Tecnológica">EBCT</abbr> hasta $120.000.000, <abbr title="Empresas de Alto Impacto">EAI</abbr> hasta $50.000.000 y MiPymes hasta $25.000.000 COP); los topes son temas presupuestales fuera del alcance mientras el área funcional no los defina.</p>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;"><strong>Integradores:</strong> CEIBA y CONNECT (Connect Bogotá) prestan los servicios del directorio, hoy en catálogos de Excel; la bolsa se reparte 60&nbsp;% para Ceiba y 40&nbsp;% para Connect (R6). <strong>Prototipo:</strong> convocatoria de un año prorrogable con tres tipologías (<abbr title="Empresas de Base Científica y Tecnológica">EBCT</abbr> hasta $120.000.000, <abbr title="Empresas de Alto Impacto">EAI</abbr> hasta $50.000.000 y MiPymes hasta $25.000.000 COP); los topes se describen porque el prototipo los muestra, y su inclusión en el caso queda por confirmar con ATENEA (Tabla 5.3).</p>
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.66rem,min(1.2vw,2.0vh),1.5rem);">
-                  <caption>Tabla 5.2 — Etapas del proceso misional de Campus 2600 en Hēma: etapa, actores, insumo y resultado</caption>
+                  <caption>Tabla 5.6. Etapas del proceso misional de Campus 2600 en Hēma: etapa, actores, insumo y resultado</caption>
                   <thead>
                     <tr>
                       <th style="width:15%;font-size:0.82em;">Etapa</th>
@@ -4021,7 +4286,7 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- E3-6: Requisitos (Tabla 5.3) [c3-requisitos] -->
+          <!-- E3-6: Requisitos (Tabla 5.7) [c3-requisitos] -->
           <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-item="c3-requisitos" data-tone="emerald">
             <figure class="slide-figure">
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
@@ -4030,7 +4295,7 @@ def generate_e1_e4_html():
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.6rem,min(1.05vw,1.7vh),1.3rem);line-height:1.2;">
-                  <caption>Tabla 5.3 — Requisitos del caso de uso Campus 2600: identificador, descripción y origen</caption>
+                  <caption>Tabla 5.7. Requisitos del caso de uso Campus 2600: identificador, descripción y origen</caption>
                   <thead>
                     <tr>
                       <th style="width:8%;font-size:0.82em;">ID</th>
@@ -4135,7 +4400,7 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- E3-7: Historias de usuario (Tabla 5.4) [c3-historias] -->
+          <!-- E3-7: Historias de usuario (Tabla 5.8) [c3-historias] -->
           <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-item="c3-historias" data-tone="emerald">
             <figure class="slide-figure">
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
@@ -4145,7 +4410,7 @@ def generate_e1_e4_html():
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.6rem,min(1.05vw,1.8vh),1.3rem);">
-                  <caption>Tabla 5.4 — Historias de usuario del caso Campus 2600 con criterios de aceptación</caption>
+                  <caption>Tabla 5.8. Historias de usuario del caso Campus 2600 con criterios de aceptación</caption>
                   <thead>
                     <tr>
                       <th style="width:8%;font-size:0.82em;">Historia</th>
@@ -4209,23 +4474,39 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- E3-8: Arquitectura de agentes del caso (Tabla 5.5) [c3-arquitectura-agentes] -->
+          <!-- E3-8: Arquitectura de agentes del caso (Tabla 5.9) [c3-arquitectura-agentes] -->
           <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-item="c3-arquitectura-agentes" data-tone="emerald">
             <figure class="slide-figure">
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
-                <h2 style="margin-bottom:4px;">Arquitectura de agentes del caso: seis fases, cada una con su decisión humana (§5.8)</h2>
+                <h2 style="margin-bottom:4px;">Arquitectura de agentes del caso: siete fases, la primera opcional, cada una con su decisión humana (§5.8)</h2>
                 <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;"><span class="pill pill--ok">Establecido</span> El arnés no tiene identidad propia: actúa con los permisos de la cuenta de la persona en la herramienta agéntica y en el repositorio; los controles combinan las restricciones del comando con la cuenta institucional.</p>
               </div>
-              <svg viewBox="-6 -6 1212 538" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabla 5.5: seis fases del caso, con agentes y comandos, controles y decisión humana de cada una">
+              <svg viewBox="-6 -6 1212 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabla 5.9: siete fases del caso, la primera opcional, con agentes y comandos, controles y decisión humana de cada una">
 <defs><marker id="f55-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#2C6B87" /></marker></defs>
 <text x="46" y="20" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">FASE DEL CASO</text>
 <text x="250" y="20" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">AGENTES Y COMANDOS</text>
 <text x="590" y="20" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">CONTROLES</text>
 <text x="950" y="20" fill="#2C6B87" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" letter-spacing="1">DECISIÓN HUMANA</text>
+<rect x="0" y="34" width="1200" height="74" rx="6" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.4" stroke-dasharray="7,4" />
+<circle cx="24" cy="71.0" r="15" fill="#FFFFFF" stroke="#7FB4CA" stroke-width="2" stroke-dasharray="4,3" />
+<text x="24" y="77.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">1</text>
+<text x="48" y="60" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Estudio de</text>
+<text x="48" y="80" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">referentes</text>
+<text x="48" y="99" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="15" font-style="italic">(opcional)</text>
+<text x="250" y="58" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">aracne-ctei-scout con</text>
+<text x="250" y="77" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">ctei-landscape</text>
+<text x="590" y="58" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Cada afirmación del research-brief.md</text>
+<text x="590" y="77" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">de Campus, construido sobre la</text>
+<text x="590" y="96" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">campaña existente, cita su ficha</text>
+<text x="950" y="58" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">El equipo de requerimientos de</text>
+<text x="950" y="77" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">ATENEA acepta o descarta cada</text>
+<text x="950" y="96" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">candidato</text>
+<path d="M24 88.0 V134.0" stroke="#2C6B87" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#f55-b)" />
+<g transform="translate(0,82)">
 <rect x="0" y="34" width="1200" height="74" rx="6" fill="#F8FAFC" stroke="#D6DEE8" stroke-width="1.2" />
 <circle cx="24" cy="71.0" r="15" fill="#7FB4CA" />
-<text x="24" y="77.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">1</text>
+<text x="24" y="77.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">2</text>
 <text x="48" y="64" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Adopción del área</text>
 <text x="250" y="58" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">/sw:adopt y analista de BMAD, con</text>
 <text x="250" y="77" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">graphify</text>
@@ -4235,7 +4516,7 @@ def generate_e1_e4_html():
 <text x="950" y="77" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">entra al método</text>
 <rect x="0" y="116" width="1200" height="74" rx="6" fill="#FFFFFF" stroke="#D6DEE8" stroke-width="1.2" />
 <circle cx="24" cy="153.0" r="15" fill="#7FB4CA" />
-<text x="24" y="159.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">2</text>
+<text x="24" y="159.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">3</text>
 <text x="48" y="146" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Producto y</text>
 <text x="48" y="167" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">arquitectura</text>
 <text x="250" y="140" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Agentes de producto, experiencia y</text>
@@ -4247,7 +4528,7 @@ def generate_e1_e4_html():
 <text x="950" y="178" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">la arquitectura</text>
 <rect x="0" y="198" width="1200" height="74" rx="6" fill="#F8FAFC" stroke="#D6DEE8" stroke-width="1.2" />
 <circle cx="24" cy="235.0" r="15" fill="#7FB4CA" />
-<text x="24" y="241.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">3</text>
+<text x="24" y="241.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">4</text>
 <text x="48" y="228" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Historias y</text>
 <text x="48" y="249" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">contratos</text>
 <text x="250" y="222" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Agente de historias y aracne-weaver</text>
@@ -4258,7 +4539,7 @@ def generate_e1_e4_html():
 <text x="950" y="241" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">las historias</text>
 <rect x="0" y="280" width="1200" height="74" rx="6" fill="#FFFFFF" stroke="#D6DEE8" stroke-width="1.2" />
 <circle cx="24" cy="317.0" r="15" fill="#7FB4CA" />
-<text x="24" y="323.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">4</text>
+<text x="24" y="323.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">5</text>
 <text x="48" y="310" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Olas</text>
 <text x="250" y="304" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">aracne-sprint-planner con /sw:sprint</text>
 <text x="590" y="304" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">Olas según el orden de las historias</text>
@@ -4267,7 +4548,7 @@ def generate_e1_e4_html():
 <text x="950" y="323" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">el reparto</text>
 <rect x="0" y="362" width="1200" height="74" rx="6" fill="#F8FAFC" stroke="#D6DEE8" stroke-width="1.2" />
 <circle cx="24" cy="399.0" r="15" fill="#7FB4CA" />
-<text x="24" y="405.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">5</text>
+<text x="24" y="405.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">6</text>
 <text x="48" y="392" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Construcción y</text>
 <text x="48" y="413" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">revisión</text>
 <text x="250" y="386" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">aracne-builder, aracne-validator,</text>
@@ -4280,7 +4561,7 @@ def generate_e1_e4_html():
 <text x="950" y="424" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="15">protegida</text>
 <rect x="0" y="444" width="1200" height="74" rx="6" fill="#FFFFFF" stroke="#D6DEE8" stroke-width="1.2" />
 <circle cx="24" cy="481.0" r="15" fill="#7FB4CA" />
-<text x="24" y="487.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">6</text>
+<text x="24" y="487.0" fill="#06080F" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700" text-anchor="middle">7</text>
 <text x="48" y="474" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Cierre y</text>
 <text x="48" y="495" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">operación</text>
 <text x="250" y="468" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="15">aracne-closer, aracne-status,</text>
@@ -4294,23 +4575,25 @@ def generate_e1_e4_html():
 <path d="M24 252.0 V298.0" stroke="#2C6B87" stroke-width="2" marker-end="url(#f55-b)" />
 <path d="M24 334.0 V380.0" stroke="#2C6B87" stroke-width="2" marker-end="url(#f55-b)" />
 <path d="M24 416.0 V462.0" stroke="#2C6B87" stroke-width="2" marker-end="url(#f55-b)" />
+</g>
 </svg>
               <div class="mobile-alt">
-                <p class="sched-title">Seis fases del caso</p>
+                <p class="sched-title">Siete fases del caso, la primera opcional</p>
                 <ul class="slide-list" style="margin:8px 0;">
-                  <li><strong>1. Adopción del área.</strong> <em>Agentes y comandos:</em> /sw:adopt y analista de BMAD, con graphify. <em>Controles:</em> Lee esquemas de datos y pantallas sin modificar repositorios. <em>Decisión humana:</em> Acordar qué parte del sistema entra al método.</li>
-                  <li><strong>2. Producto y arquitectura.</strong> <em>Agentes y comandos:</em> Agentes de producto, experiencia y arquitectura de BMAD. <em>Controles:</em> La arquitectura base del área manda sobre los agentes. <em>Decisión humana:</em> El líder de producto aprueba el PRD; la líder del equipo, la arquitectura.</li>
-                  <li><strong>3. Historias y contratos.</strong> <em>Agentes y comandos:</em> Agente de historias y aracne-weaver con el puente en modo estricto. <em>Controles:</em> Contratos validados y traza en trace.json. <em>Decisión humana:</em> El líder de producto aprueba las historias.</li>
-                  <li><strong>4. Olas.</strong> <em>Agentes y comandos:</em> aracne-sprint-planner con /sw:sprint. <em>Controles:</em> Olas según el orden de las historias en cada épica, sin tocar código. <em>Decisión humana:</em> La líder del equipo aprueba el reparto.</li>
-                  <li><strong>5. Construcción y revisión.</strong> <em>Agentes y comandos:</em> aracne-builder, aracne-validator, revisores review-* y aracne-cicd. <em>Controles:</em> Un contrato a la vez; la terminal de /sw:build se acota a equipos y cuentas institucionales (Tabla 6.4). <em>Decisión humana:</em> La líder del equipo aprueba la integración a la rama protegida.</li>
-                  <li><strong>6. Cierre y operación.</strong> <em>Agentes y comandos:</em> aracne-closer, aracne-status, aracne-ticket y aracne-change. <em>Controles:</em> /sw:status solo lee; los cambios pasan por control de alcance. <em>Decisión humana:</em> Decidir qué historias se cierran y qué vuelve al flujo.</li>
+                  <li><strong>1. Estudio de referentes (opcional).</strong> <em>Agentes y comandos:</em> aracne-ctei-scout con ctei-landscape. <em>Controles:</em> Cada afirmación del research-brief.md de Campus, construido sobre la campaña existente, cita su ficha. <em>Decisión humana:</em> El equipo de requerimientos de ATENEA acepta o descarta cada candidato.</li>
+                  <li><strong>2. Adopción del área.</strong> <em>Agentes y comandos:</em> /sw:adopt y analista de BMAD, con graphify. <em>Controles:</em> Lee esquemas de datos y pantallas sin modificar repositorios. <em>Decisión humana:</em> Acordar qué parte del sistema entra al método.</li>
+                  <li><strong>3. Producto y arquitectura.</strong> <em>Agentes y comandos:</em> Agentes de producto, experiencia y arquitectura de BMAD. <em>Controles:</em> La arquitectura base del área manda sobre los agentes. <em>Decisión humana:</em> El líder de producto aprueba el PRD; la líder del equipo, la arquitectura.</li>
+                  <li><strong>4. Historias y contratos.</strong> <em>Agentes y comandos:</em> Agente de historias y aracne-weaver con el puente en modo estricto. <em>Controles:</em> Contratos validados y traza en trace.json. <em>Decisión humana:</em> El líder de producto aprueba las historias.</li>
+                  <li><strong>5. Olas.</strong> <em>Agentes y comandos:</em> aracne-sprint-planner con /sw:sprint. <em>Controles:</em> Olas según el orden de las historias en cada épica, sin tocar código. <em>Decisión humana:</em> La líder del equipo aprueba el reparto.</li>
+                  <li><strong>6. Construcción y revisión.</strong> <em>Agentes y comandos:</em> aracne-builder, aracne-validator, revisores review-* y aracne-cicd. <em>Controles:</em> Un contrato a la vez; la terminal de /sw:build se acota a equipos y cuentas institucionales (Tabla 6.4). <em>Decisión humana:</em> La líder del equipo aprueba la integración a la rama protegida.</li>
+                  <li><strong>7. Cierre y operación.</strong> <em>Agentes y comandos:</em> aracne-closer, aracne-status, aracne-ticket y aracne-change. <em>Controles:</em> /sw:status solo lee; los cambios pasan por control de alcance. <em>Decisión humana:</em> Decidir qué historias se cierran y qué vuelve al flujo.</li>
                 </ul>
               </div>
-              <figcaption class="fig-caption">Tabla 5.5 — Arquitectura de agentes del caso: fase, agentes y comandos, controles y decisión humana</figcaption>
+              <figcaption class="fig-caption">Tabla 5.9. Arquitectura de agentes del caso: fase, agentes y comandos, controles y decisión humana</figcaption>
             </figure>
           </article>
 
-          <!-- E3-9: Flujos (Tabla 5.6) [c3-flujos] -->
+          <!-- E3-9: Flujos (Tabla 5.10) [c3-flujos] -->
           <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-item="c3-flujos" data-tone="emerald">
             <figure class="slide-figure">
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
@@ -4320,7 +4603,7 @@ def generate_e1_e4_html():
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.66rem,min(1.2vw,2.0vh),1.5rem);">
-                  <caption>Tabla 5.6 — Flujos del caso Campus 2600: tipo de flujo, descripción y resultado</caption>
+                  <caption>Tabla 5.10. Flujos del caso Campus 2600: tipo de flujo, descripción y resultado</caption>
                   <thead>
                     <tr>
                       <th style="width:16%;font-size:0.82em;">Flujo</th>
@@ -4333,7 +4616,7 @@ def generate_e1_e4_html():
                     <tr>
                       <td data-label="Flujo"><strong>Flujo principal</strong></td>
                       <td data-label="Descripción">De la postulación a los informes de avance validados por el gestor</td>
-                      <td data-label="Mecanismo">Secuencia estándar en seis etapas (Tabla 5.2)</td>
+                      <td data-label="Mecanismo">Secuencia estándar en seis etapas (Tabla 5.6)</td>
                       <td data-label="Resultado">Hoja de ruta ejecutada con seguimiento del gestor</td>
                     </tr>
                     <tr>
@@ -4378,7 +4661,7 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- E3-10: Integraciones (Tabla 5.7) [c3-integraciones] -->
+          <!-- E3-10: Integraciones (Tabla 5.11) [c3-integraciones] -->
           <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-item="c3-integraciones" data-tone="emerald">
             <figure class="slide-figure">
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
@@ -4388,7 +4671,7 @@ def generate_e1_e4_html():
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.66rem,min(1.2vw,2.0vh),1.5rem);">
-                  <caption>Tabla 5.7 — Integraciones del caso Campus 2600 con el ecosistema de ATENEA</caption>
+                  <caption>Tabla 5.11. Integraciones del caso Campus 2600 con el ecosistema de ATENEA</caption>
                   <thead>
                     <tr>
                       <th style="width:17%;font-size:0.82em;">Sistema</th>
@@ -4446,7 +4729,7 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- E3-11: Datos (Tabla 5.8) [c3-datos] -->
+          <!-- E3-11: Datos (Tabla 5.12) [c3-datos] -->
           <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-item="c3-datos" data-tone="emerald">
             <figure class="slide-figure">
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
@@ -4456,7 +4739,7 @@ def generate_e1_e4_html():
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.66rem,min(1.2vw,2.0vh),1.5rem);">
-                  <caption>Tabla 5.8 — Clasificación y tratamiento de datos del caso Campus 2600</caption>
+                  <caption>Tabla 5.12. Clasificación y tratamiento de datos del caso Campus 2600</caption>
                   <thead>
                     <tr>
                       <th style="width:20%;font-size:0.82em;">Entidad o dato</th>
@@ -4508,7 +4791,7 @@ def generate_e1_e4_html():
             </figure>
           </article>
 
-          <!-- E3-12: Criterios de aceptación (Tabla 5.9) [c3-aceptacion] -->
+          <!-- E3-12: Criterios de aceptación (Tabla 5.13) [c3-aceptacion] -->
           <article class="slide is-figure-full" data-deck="e1-e4" data-module="e3" data-item="c3-aceptacion" data-tone="emerald">
             <figure class="slide-figure">
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
@@ -4518,7 +4801,7 @@ def generate_e1_e4_html():
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.66rem,min(1.2vw,2.0vh),1.5rem);">
-                  <caption>Tabla 5.9 — Criterios de aceptación del caso Campus 2600: nivel, criterio y validación</caption>
+                  <caption>Tabla 5.13. Criterios de aceptación del caso Campus 2600: nivel, criterio y validación</caption>
                   <thead>
                     <tr>
                       <th style="width:44%;font-size:0.82em;">Criterio de aceptación</th>
@@ -4675,133 +4958,175 @@ def generate_e1_e4_html():
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">5 &middot; Agentes y Skills (E4)</p>
                 <h2 style="margin-bottom:4px;">Agentes base de Aracne (1/2): de entender el requerimiento a construirlo</h2>
-                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Dieciséis agentes base, cada uno con un rol delimitado y una supervisión humana obligatoria. Diez son subagentes <code>aracne-*</code> propios; los de planeación son agentes de <abbr title="Breakthrough Method for Agile AI-Driven Development">BMAD</abbr>.</p>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Dieciséis agentes base, cada uno con un rol delimitado y una supervisión humana obligatoria; diez de ellos son subagentes <code>aracne-*</code> propios y los de planeación son agentes de <abbr title="Breakthrough Method for Agile AI-Driven Development">BMAD</abbr>. Se suman dos agentes opcionales de investigación, construidos después del paquete congelado, que entran en la versión siguiente.</p>
               </div>
-              <svg viewBox="0 -2 1200 556" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabla 6.1 (1/2): ocho agentes base, de entender a construir, con su identificador, lo que producen y el control humano">
+              <svg viewBox="0 -2 1200 594" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabla 6.1 (1/2): diez agentes, de entender a construir, ocho base y dos opcionales, con su identificador, lo que producen y el control humano">
 <rect x="0" y="2" width="18" height="18" rx="3" fill="#EBF5ED" stroke="#1E5631" stroke-width="2" />
 <text x="26" y="17" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Subagente propio aracne-*</text>
 <rect x="255.8" y="2" width="18" height="18" rx="3" fill="#FFFFFF" stroke="#2C6B87" stroke-width="2" />
 <text x="281.8" y="17" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Agente o skill de BMAD</text>
-<rect x="0" y="36" width="285" height="248" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
-<rect x="0" y="36" width="285" height="28" rx="8" fill="#2C6B87" />
-<rect x="0" y="50" width="285" height="14" rx="0" fill="#2C6B87" />
-<text x="12" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Entender</text>
-<text x="273" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">1</text>
-<text x="12" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Analista de Requerimientos</text>
-<text x="12" y="112" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">y CU</text>
-<text x="12" y="133" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">bmad-agent-analyst</text>
-<text x="12" y="163" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
-<text x="12" y="183" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Brief de producto o de adopción</text>
-<text x="12" y="201" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
-<text x="12" y="221" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Valida casos de uso, intención y</text>
-<text x="12" y="239" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">alcance pactado</text>
-<rect x="305" y="36" width="285" height="248" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
-<rect x="305" y="36" width="285" height="28" rx="8" fill="#2C6B87" />
-<rect x="305" y="50" width="285" height="14" rx="0" fill="#2C6B87" />
-<text x="317" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Entender a Decidir</text>
-<text x="578" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">2</text>
-<text x="317" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Product Manager (PM)</text>
-<text x="317" y="112" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">bmad-agent-pm</text>
-<text x="317" y="142" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
-<text x="317" y="162" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">PRD con FR y NFR numerados</text>
-<text x="317" y="180" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
-<text x="317" y="200" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Aprueba el PRD y la priorización</text>
-<text x="317" y="218" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">de requisitos</text>
-<rect x="610" y="36" width="285" height="248" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
-<rect x="610" y="36" width="285" height="28" rx="8" fill="#2C6B87" />
-<rect x="610" y="50" width="285" height="14" rx="0" fill="#2C6B87" />
-<text x="622" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Decidir</text>
-<text x="883" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">3</text>
-<text x="622" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Diseñador UX/UI</text>
-<text x="622" y="112" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">bmad-agent-ux-designer</text>
-<text x="622" y="142" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
-<text x="622" y="162" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">DESIGN.md y especificaciones</text>
-<text x="622" y="180" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">UX-DR</text>
-<text x="622" y="198" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
-<text x="622" y="218" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Aprueba el diseño de interacción,</text>
-<text x="622" y="236" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">las pantallas y los contratos</text>
-<text x="622" y="254" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">visuales</text>
-<rect x="915" y="36" width="285" height="248" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
-<rect x="915" y="36" width="285" height="28" rx="8" fill="#2C6B87" />
-<rect x="915" y="50" width="285" height="14" rx="0" fill="#2C6B87" />
-<text x="927" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Decidir</text>
-<text x="1188" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">4</text>
-<text x="927" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Arquitecto de Software</text>
-<text x="927" y="112" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">bmad-agent-architect</text>
-<text x="927" y="142" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
-<text x="927" y="162" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">ARCHITECTURE-SPINE.md y límites</text>
-<text x="927" y="180" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">modulares</text>
-<text x="927" y="198" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
-<text x="927" y="218" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Aprueba componentes, patrones,</text>
-<text x="927" y="236" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">modelo de datos y contratos</text>
-<rect x="0" y="302" width="285" height="248" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
-<rect x="0" y="302" width="285" height="28" rx="8" fill="#2C6B87" />
-<rect x="0" y="316" width="285" height="14" rx="0" fill="#2C6B87" />
-<text x="12" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Descomponer</text>
-<text x="273" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">5</text>
-<text x="12" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Descompositor de Historias</text>
-<text x="12" y="378" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">skill de BMAD</text>
-<text x="12" y="408" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
-<text x="12" y="428" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Épicas e historias</text>
-<text x="12" y="446" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Given/When/Then</text>
-<text x="12" y="464" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
-<text x="12" y="484" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Aprueba el desglose de historias</text>
-<text x="12" y="502" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">antes de compilar contratos</text>
-<rect x="305" y="302" width="285" height="248" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
-<rect x="305" y="302" width="285" height="28" rx="8" fill="#1E5631" />
-<rect x="305" y="316" width="285" height="14" rx="0" fill="#1E5631" />
-<text x="317" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Traducir</text>
-<text x="578" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">6</text>
-<text x="317" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Tejedor de</text>
-<text x="317" y="378" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Especificaciones</text>
-<text x="317" y="399" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-weaver</text>
-<text x="317" y="429" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
-<text x="317" y="449" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Contratos OpenSpec y trace.json</text>
-<text x="317" y="467" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
-<text x="317" y="487" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Inspecciona los contratos; si hay</text>
-<text x="317" y="505" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">inconsistencias, ajusta la</text>
-<text x="317" y="523" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">historia</text>
-<rect x="610" y="302" width="285" height="248" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
-<rect x="610" y="302" width="285" height="28" rx="8" fill="#1E5631" />
-<rect x="610" y="316" width="285" height="14" rx="0" fill="#1E5631" />
-<text x="622" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Descomponer a Construir</text>
-<text x="883" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">7</text>
-<text x="622" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Planificador de Olas</text>
-<text x="622" y="378" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-sprint-planner</text>
-<text x="622" y="408" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
-<text x="622" y="428" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">sprint-plan.md: olas de trabajo</text>
-<text x="622" y="446" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">paralelo</text>
-<text x="622" y="464" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
-<text x="622" y="484" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Asigna historias (un change por</text>
-<text x="622" y="502" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">persona) y valida dependencias</text>
-<rect x="915" y="302" width="285" height="248" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
-<rect x="915" y="302" width="285" height="28" rx="8" fill="#1E5631" />
-<rect x="915" y="316" width="285" height="14" rx="0" fill="#1E5631" />
-<text x="927" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Construir</text>
-<text x="1188" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">8</text>
-<text x="927" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Constructor SDD-ODD</text>
-<text x="927" y="378" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-builder</text>
-<text x="927" y="408" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
-<text x="927" y="428" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Código y una prueba por escenario</text>
-<text x="927" y="446" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
-<text x="927" y="466" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">Supervisa la codificación; valida</text>
-<text x="927" y="484" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">que no haya código fuera de la</text>
-<text x="927" y="502" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">spec</text>
+<rect x="490" y="2" width="18" height="18" rx="3" fill="#FFFFFF" stroke="#1E5631" stroke-width="2" stroke-dasharray="4,3" />
+<text x="516" y="17" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14.5">Opcional: construido después del paquete 0.9.0, entra en la versión siguiente</text>
+<rect x="0" y="36" width="228" height="268" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<rect x="0" y="36" width="228" height="28" rx="8" fill="#2C6B87" />
+<rect x="0" y="50" width="228" height="14" rx="0" fill="#2C6B87" />
+<text x="10" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700">Entender</text>
+<text x="218" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700" text-anchor="end">1</text>
+<text x="10" y="89" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Analista de</text>
+<text x="10" y="109" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Requerimientos y CU</text>
+<text x="10" y="129" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="700">bmad-agent-analyst</text>
+<text x="10" y="157" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="10" y="176" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Brief de producto o de</text>
+<text x="10" y="194" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">adopción</text>
+<text x="10" y="216" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="10" y="235" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">Valida casos de uso,</text>
+<text x="10" y="253" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">intención y alcance</text>
+<text x="10" y="271" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">pactado</text>
+<rect x="243" y="36" width="228" height="268" rx="8" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.8" stroke-dasharray="7,4" />
+<rect x="243" y="36" width="228" height="28" rx="8" fill="#1E5631" />
+<rect x="243" y="50" width="228" height="14" rx="0" fill="#1E5631" />
+<text x="253" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700">Entender</text>
+<text x="461" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700" text-anchor="end">2</text>
+<text x="253" y="89" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Investigador CTeI</text>
+<text x="253" y="109" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="14.5" font-style="italic">(opcional)</text>
+<text x="253" y="129" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="700">aracne-ctei-scout</text>
+<text x="253" y="157" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="253" y="176" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">research-brief.md con</text>
+<text x="253" y="194" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">requisitos, épicas e</text>
+<text x="253" y="212" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">historias candidatas</text>
+<text x="253" y="234" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="253" y="253" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">Requerimientos acepta o</text>
+<text x="253" y="271" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">descarta cada candidato</text>
+<rect x="486" y="36" width="228" height="268" rx="8" fill="#FFFFFF" stroke="#1E5631" stroke-width="1.8" stroke-dasharray="7,4" />
+<rect x="486" y="36" width="228" height="28" rx="8" fill="#1E5631" />
+<rect x="486" y="50" width="228" height="14" rx="0" fill="#1E5631" />
+<text x="496" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700">Entender a Construir</text>
+<text x="704" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700" text-anchor="end">3</text>
+<text x="496" y="89" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Consultor de</text>
+<text x="496" y="109" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Portafolio <tspan fill="#5B6472" font-size="14.5" font-weight="400" font-style="italic">(opcional)</tspan></text>
+<text x="496" y="129" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="700">aracne-portfolio</text>
+<text x="496" y="157" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="496" y="176" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Productos y componentes</text>
+<text x="496" y="194" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">de ATENEA para reutilizar</text>
+<text x="496" y="216" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="496" y="235" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">Decide qué se reutiliza</text>
+<rect x="729" y="36" width="228" height="268" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<rect x="729" y="36" width="228" height="28" rx="8" fill="#2C6B87" />
+<rect x="729" y="50" width="228" height="14" rx="0" fill="#2C6B87" />
+<text x="739" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700">Entender a Decidir</text>
+<text x="947" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700" text-anchor="end">4</text>
+<text x="739" y="89" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Product Manager (PM)</text>
+<text x="739" y="109" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="700">bmad-agent-pm</text>
+<text x="739" y="137" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="739" y="156" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">PRD con FR y NFR</text>
+<text x="739" y="174" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">numerados</text>
+<text x="739" y="196" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="739" y="215" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">Aprueba el PRD y la</text>
+<text x="739" y="233" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">priorización de requisitos</text>
+<rect x="972" y="36" width="228" height="268" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<rect x="972" y="36" width="228" height="28" rx="8" fill="#2C6B87" />
+<rect x="972" y="50" width="228" height="14" rx="0" fill="#2C6B87" />
+<text x="982" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700">Decidir</text>
+<text x="1190" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700" text-anchor="end">5</text>
+<text x="982" y="89" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Diseñador UX/UI</text>
+<text x="982" y="109" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="700">bmad-agent-ux-designer</text>
+<text x="982" y="137" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="982" y="156" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">DESIGN.md y</text>
+<text x="982" y="174" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">especificaciones UX-DR</text>
+<text x="982" y="196" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="982" y="215" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">Aprueba el diseño de</text>
+<text x="982" y="233" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">interacción, las pantallas</text>
+<text x="982" y="251" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">y los contratos visuales</text>
+<rect x="0" y="322" width="228" height="268" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<rect x="0" y="322" width="228" height="28" rx="8" fill="#2C6B87" />
+<rect x="0" y="336" width="228" height="14" rx="0" fill="#2C6B87" />
+<text x="10" y="342" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700">Decidir</text>
+<text x="218" y="342" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700" text-anchor="end">6</text>
+<text x="10" y="375" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Arquitecto de</text>
+<text x="10" y="395" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Software</text>
+<text x="10" y="415" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="700">bmad-agent-architect</text>
+<text x="10" y="443" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="10" y="462" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">ARCHITECTURE-SPINE.md</text>
+<text x="10" y="480" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">y límites modulares</text>
+<text x="10" y="502" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="10" y="521" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">Aprueba componentes,</text>
+<text x="10" y="539" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">patrones, modelo de datos</text>
+<text x="10" y="557" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">y contratos</text>
+<rect x="243" y="322" width="228" height="268" rx="8" fill="#FFFFFF" stroke="#2C6B87" stroke-width="1.8" />
+<rect x="243" y="322" width="228" height="28" rx="8" fill="#2C6B87" />
+<rect x="243" y="336" width="228" height="14" rx="0" fill="#2C6B87" />
+<text x="253" y="342" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700">Descomponer</text>
+<text x="461" y="342" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700" text-anchor="end">7</text>
+<text x="253" y="375" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Descompositor de</text>
+<text x="253" y="395" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Historias</text>
+<text x="253" y="415" fill="#2C6B87" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="700">skill de BMAD</text>
+<text x="253" y="443" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="253" y="462" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Épicas e historias</text>
+<text x="253" y="480" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Given/When/Then</text>
+<text x="253" y="502" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="253" y="521" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">Aprueba el desglose de</text>
+<text x="253" y="539" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">historias antes de</text>
+<text x="253" y="557" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">compilar contratos</text>
+<rect x="486" y="322" width="228" height="268" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<rect x="486" y="322" width="228" height="28" rx="8" fill="#1E5631" />
+<rect x="486" y="336" width="228" height="14" rx="0" fill="#1E5631" />
+<text x="496" y="342" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700">Traducir</text>
+<text x="704" y="342" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700" text-anchor="end">8</text>
+<text x="496" y="375" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Tejedor de</text>
+<text x="496" y="395" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Especificaciones</text>
+<text x="496" y="415" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="700">aracne-weaver</text>
+<text x="496" y="443" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="496" y="462" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Contratos OpenSpec y</text>
+<text x="496" y="480" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">trace.json</text>
+<text x="496" y="502" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="496" y="521" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">Inspecciona los contratos;</text>
+<text x="496" y="539" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">si hay inconsistencias,</text>
+<text x="496" y="557" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">ajusta la historia</text>
+<rect x="729" y="322" width="228" height="268" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<rect x="729" y="322" width="228" height="28" rx="8" fill="#1E5631" />
+<rect x="729" y="336" width="228" height="14" rx="0" fill="#1E5631" />
+<text x="739" y="342" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700">Descomponer a Construir</text>
+<text x="947" y="342" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700" text-anchor="end">9</text>
+<text x="739" y="375" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Planificador de Olas</text>
+<text x="739" y="395" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="700">aracne-sprint-planner</text>
+<text x="739" y="423" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="739" y="442" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">sprint-plan.md: olas de</text>
+<text x="739" y="460" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">trabajo paralelo</text>
+<text x="739" y="482" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="739" y="501" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">Asigna historias (un</text>
+<text x="739" y="519" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">change por persona) y</text>
+<text x="739" y="537" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">valida dependencias</text>
+<rect x="972" y="322" width="228" height="268" rx="8" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.8" />
+<rect x="972" y="322" width="228" height="28" rx="8" fill="#1E5631" />
+<rect x="972" y="336" width="228" height="14" rx="0" fill="#1E5631" />
+<text x="982" y="342" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700">Construir</text>
+<text x="1190" y="342" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13.5" font-weight="700" text-anchor="end">10</text>
+<text x="982" y="375" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="16" font-weight="700">Constructor SDD-ODD</text>
+<text x="982" y="395" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="700">aracne-builder</text>
+<text x="982" y="423" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
+<text x="982" y="442" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">Código y una prueba por</text>
+<text x="982" y="460" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="14">escenario</text>
+<text x="982" y="482" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Control humano</text>
+<text x="982" y="501" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">Supervisa la codificación;</text>
+<text x="982" y="519" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">valida que no haya código</text>
+<text x="982" y="537" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14">fuera de la spec</text>
 </svg>
               <div class="mobile-alt">
-                <p class="sched-title">Agentes base (1 a 8 de 16)</p>
+                <p class="sched-title">Agentes 1 a 10 de 18: dieciséis base y dos opcionales</p>
                 <ul class="slide-list" style="margin:8px 0;">
                   <li><strong>1. Analista de Requerimientos y CU</strong> (<code>bmad-agent-analyst</code>). <em>Fase:</em> Entender. <em>Produce:</em> Brief de producto o de adopción. <em>Control humano:</em> Valida casos de uso, intención y alcance pactado.</li>
-                  <li><strong>2. Product Manager (PM)</strong> (<code>bmad-agent-pm</code>). <em>Fase:</em> Entender a Decidir. <em>Produce:</em> PRD con FR y NFR numerados. <em>Control humano:</em> Aprueba el PRD y la priorización de requisitos.</li>
-                  <li><strong>3. Diseñador UX/UI</strong> (<code>bmad-agent-ux-designer</code>). <em>Fase:</em> Decidir. <em>Produce:</em> DESIGN.md y especificaciones UX-DR. <em>Control humano:</em> Aprueba el diseño de interacción, las pantallas y los contratos visuales.</li>
-                  <li><strong>4. Arquitecto de Software</strong> (<code>bmad-agent-architect</code>). <em>Fase:</em> Decidir. <em>Produce:</em> ARCHITECTURE-SPINE.md y límites modulares. <em>Control humano:</em> Aprueba componentes, patrones, modelo de datos y contratos.</li>
-                  <li><strong>5. Descompositor de Historias</strong> (skill de BMAD). <em>Fase:</em> Descomponer. <em>Produce:</em> Épicas e historias Given/When/Then. <em>Control humano:</em> Aprueba el desglose de historias antes de compilar contratos.</li>
-                  <li><strong>6. Tejedor de Especificaciones</strong> (<code>aracne-weaver</code>). <em>Fase:</em> Traducir. <em>Produce:</em> Contratos OpenSpec y trace.json. <em>Control humano:</em> Inspecciona los contratos; si hay inconsistencias, ajusta la historia.</li>
-                  <li><strong>7. Planificador de Olas</strong> (<code>aracne-sprint-planner</code>). <em>Fase:</em> Descomponer a Construir. <em>Produce:</em> sprint-plan.md: olas de trabajo paralelo. <em>Control humano:</em> Asigna historias (un change por persona) y valida dependencias.</li>
-                  <li><strong>8. Constructor SDD-ODD</strong> (<code>aracne-builder</code>). <em>Fase:</em> Construir. <em>Produce:</em> Código y una prueba por escenario. <em>Control humano:</em> Supervisa la codificación; valida que no haya código fuera de la spec.</li>
+                  <li><strong>2. Investigador CTeI, opcional</strong> (<code>aracne-ctei-scout</code>). <em>Fase:</em> Entender. <em>Produce:</em> research-brief.md con requisitos, épicas e historias candidatas. <em>Control humano:</em> El equipo de requerimientos acepta o descarta cada candidato.</li>
+                  <li><strong>3. Consultor de Portafolio, opcional</strong> (<code>aracne-portfolio</code>). <em>Fase:</em> Entender a Construir. <em>Produce:</em> Productos y componentes de ATENEA relacionados, candidatos a reutilización. <em>Control humano:</em> Decide qué se reutiliza.</li>
+                  <li><strong>4. Product Manager (PM)</strong> (<code>bmad-agent-pm</code>). <em>Fase:</em> Entender a Decidir. <em>Produce:</em> PRD con FR y NFR numerados. <em>Control humano:</em> Aprueba el PRD y la priorización de requisitos.</li>
+                  <li><strong>5. Diseñador UX/UI</strong> (<code>bmad-agent-ux-designer</code>). <em>Fase:</em> Decidir. <em>Produce:</em> DESIGN.md y especificaciones UX-DR. <em>Control humano:</em> Aprueba el diseño de interacción, las pantallas y los contratos visuales.</li>
+                  <li><strong>6. Arquitecto de Software</strong> (<code>bmad-agent-architect</code>). <em>Fase:</em> Decidir. <em>Produce:</em> ARCHITECTURE-SPINE.md y límites modulares. <em>Control humano:</em> Aprueba componentes, patrones, modelo de datos y contratos.</li>
+                  <li><strong>7. Descompositor de Historias</strong> (skill de BMAD). <em>Fase:</em> Descomponer. <em>Produce:</em> Épicas e historias Given/When/Then. <em>Control humano:</em> Aprueba el desglose de historias antes de compilar contratos.</li>
+                  <li><strong>8. Tejedor de Especificaciones</strong> (<code>aracne-weaver</code>). <em>Fase:</em> Traducir. <em>Produce:</em> Contratos OpenSpec y trace.json. <em>Control humano:</em> Inspecciona los contratos; si hay inconsistencias, ajusta la historia.</li>
+                  <li><strong>9. Planificador de Olas</strong> (<code>aracne-sprint-planner</code>). <em>Fase:</em> Descomponer a Construir. <em>Produce:</em> sprint-plan.md: olas de trabajo paralelo. <em>Control humano:</em> Asigna historias (un change por persona) y valida dependencias.</li>
+                  <li><strong>10. Constructor SDD-ODD</strong> (<code>aracne-builder</code>). <em>Fase:</em> Construir. <em>Produce:</em> Código y una prueba por escenario. <em>Control humano:</em> Supervisa la codificación; valida que no haya código fuera de la spec.</li>
                 </ul>
               </div>
-              <figcaption class="fig-caption">Tabla 6.1 — Agentes base del arnés (1/2): rol, fase, artefacto de salida y supervisión humana, de Entender a Construir</figcaption>
+              <figcaption class="fig-caption">Tabla 6.1. Agentes base del arnés (1/2): rol, fase, artefacto de salida y supervisión humana, de Entender a Construir, con los dos opcionales</figcaption>
             </figure>
           </article>
 
@@ -4822,7 +5147,7 @@ def generate_e1_e4_html():
 <rect x="0" y="36" width="285" height="28" rx="8" fill="#1E5631" />
 <rect x="0" y="50" width="285" height="14" rx="0" fill="#1E5631" />
 <text x="12" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Verificar</text>
-<text x="273" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">9</text>
+<text x="273" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">11</text>
 <text x="12" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Verificador de Contratos y</text>
 <text x="12" y="112" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">QA</text>
 <text x="12" y="133" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-validator</text>
@@ -4837,7 +5162,7 @@ def generate_e1_e4_html():
 <rect x="305" y="36" width="285" height="28" rx="8" fill="#B07A12" />
 <rect x="305" y="50" width="285" height="14" rx="0" fill="#B07A12" />
 <text x="317" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Revisar</text>
-<text x="578" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">10</text>
+<text x="578" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">12</text>
 <text x="317" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Revisores</text>
 <text x="317" y="112" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Multi-Perspectiva</text>
 <text x="317" y="133" fill="#B07A12" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">review-* (Gentle-AI)</text>
@@ -4851,7 +5176,7 @@ def generate_e1_e4_html():
 <rect x="610" y="36" width="285" height="28" rx="8" fill="#1E5631" />
 <rect x="610" y="50" width="285" height="14" rx="0" fill="#1E5631" />
 <text x="622" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Integrar y Entregar</text>
-<text x="883" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">11</text>
+<text x="883" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">13</text>
 <text x="622" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Operador CI/CD e</text>
 <text x="622" y="112" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Integración</text>
 <text x="622" y="133" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-cicd</text>
@@ -4864,7 +5189,7 @@ def generate_e1_e4_html():
 <rect x="915" y="36" width="285" height="28" rx="8" fill="#1E5631" />
 <rect x="915" y="50" width="285" height="14" rx="0" fill="#1E5631" />
 <text x="927" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Cerrar</text>
-<text x="1188" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">12</text>
+<text x="1188" y="56" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">14</text>
 <text x="927" y="91" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Cierre y Línea Base</text>
 <text x="927" y="112" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-closer</text>
 <text x="927" y="142" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
@@ -4877,7 +5202,7 @@ def generate_e1_e4_html():
 <rect x="0" y="302" width="285" height="28" rx="8" fill="#1E5631" />
 <rect x="0" y="316" width="285" height="14" rx="0" fill="#1E5631" />
 <text x="12" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Transversal</text>
-<text x="273" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">13</text>
+<text x="273" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">15</text>
 <text x="12" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Clasificador de</text>
 <text x="12" y="378" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Incidencias</text>
 <text x="12" y="399" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-ticket</text>
@@ -4892,7 +5217,7 @@ def generate_e1_e4_html():
 <rect x="305" y="302" width="285" height="28" rx="8" fill="#1E5631" />
 <rect x="305" y="316" width="285" height="14" rx="0" fill="#1E5631" />
 <text x="317" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Transversal</text>
-<text x="578" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">14</text>
+<text x="578" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">16</text>
 <text x="317" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Control de Cambios y</text>
 <text x="317" y="378" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Alcance</text>
 <text x="317" y="399" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-change</text>
@@ -4906,7 +5231,7 @@ def generate_e1_e4_html():
 <rect x="610" y="302" width="285" height="28" rx="8" fill="#1E5631" />
 <rect x="610" y="316" width="285" height="14" rx="0" fill="#1E5631" />
 <text x="622" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Transversal</text>
-<text x="883" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">15</text>
+<text x="883" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">17</text>
 <text x="622" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Observabilidad y Estado</text>
 <text x="622" y="378" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-status</text>
 <text x="622" y="408" fill="#5B6472" font-family="Space Grotesk,sans-serif" font-size="12.5" font-weight="700">Produce</text>
@@ -4919,7 +5244,7 @@ def generate_e1_e4_html():
 <rect x="915" y="302" width="285" height="28" rx="8" fill="#1E5631" />
 <rect x="915" y="316" width="285" height="14" rx="0" fill="#1E5631" />
 <text x="927" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700">Soporte</text>
-<text x="1188" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">16</text>
+<text x="1188" y="322" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="14.5" font-weight="700" text-anchor="end">18</text>
 <text x="927" y="357" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Salud del Entorno y</text>
 <text x="927" y="378" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Diagnóstico</text>
 <text x="927" y="399" fill="#1E5631" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.5" font-weight="700">aracne-doctor</text>
@@ -4931,19 +5256,19 @@ def generate_e1_e4_html():
 <text x="927" y="523" fill="#1F536C" font-family="Space Grotesk,sans-serif" font-size="14.5">faltantes</text>
 </svg>
               <div class="mobile-alt">
-                <p class="sched-title">Agentes base (9 a 16 de 16)</p>
+                <p class="sched-title">Agentes 11 a 18 de 18: los ocho base restantes</p>
                 <ul class="slide-list" style="margin:8px 0;">
-                  <li><strong>9. Verificador de Contratos y QA</strong> (<code>aracne-validator</code>). <em>Fase:</em> Verificar. <em>Produce:</em> Validación estricta, pruebas E2E e impacto en el grafo. <em>Control humano:</em> Exige el 100 % de pruebas en verde antes de autorizar el cierre.</li>
-                  <li><strong>10. Revisores Multi-Perspectiva</strong> (review-* (Gentle-AI)). <em>Fase:</em> Revisar. <em>Produce:</em> Dictámenes de riesgo y fiabilidad, y veredicto. <em>Control humano:</em> La líder técnica aprueba la calidad según los dictámenes.</li>
-                  <li><strong>11. Operador CI/CD e Integración</strong> (<code>aracne-cicd</code>). <em>Fase:</em> Integrar y Entregar. <em>Produce:</em> Commits atómicos y PR con traza. <em>Control humano:</em> Autoriza el merge a ramas protegidas y el despliegue.</li>
-                  <li><strong>12. Cierre y Línea Base</strong> (<code>aracne-closer</code>). <em>Fase:</em> Cerrar. <em>Produce:</em> Contrato archivado en archive/ y specs/. <em>Control humano:</em> Ratifica el cierre de la historia y su ingreso a la línea base.</li>
-                  <li><strong>13. Clasificador de Incidencias</strong> (<code>aracne-ticket</code>). <em>Fase:</em> Transversal. <em>Produce:</em> Enrutamiento: defecto a corrección, requerimiento a cambio. <em>Control humano:</em> Confirma la clasificación y autoriza abrir el flujo.</li>
-                  <li><strong>14. Control de Cambios y Alcance</strong> (<code>aracne-change</code>). <em>Fase:</em> Transversal. <em>Produce:</em> Clasificación de alcance y regeneración acotada. <em>Control humano:</em> Decide si amplía el alcance o remite a una nueva épica.</li>
-                  <li><strong>15. Observabilidad y Estado</strong> (<code>aracne-status</code>). <em>Fase:</em> Transversal. <em>Produce:</em> Tablero web dashboard.html, inestabilidad y cobertura. <em>Control humano:</em> Dirección y líderes monitorean avance real y riesgos.</li>
-                  <li><strong>16. Salud del Entorno y Diagnóstico</strong> (<code>aracne-doctor</code>). <em>Fase:</em> Soporte. <em>Produce:</em> Diagnóstico de preflight y detección de deriva. <em>Control humano:</em> Ejecuta acciones correctivas ante faltantes.</li>
+                  <li><strong>11. Verificador de Contratos y QA</strong> (<code>aracne-validator</code>). <em>Fase:</em> Verificar. <em>Produce:</em> Validación estricta, pruebas E2E e impacto en el grafo. <em>Control humano:</em> Exige el 100 % de pruebas en verde antes de autorizar el cierre.</li>
+                  <li><strong>12. Revisores Multi-Perspectiva</strong> (review-* (Gentle-AI)). <em>Fase:</em> Revisar. <em>Produce:</em> Dictámenes de riesgo y fiabilidad, y veredicto. <em>Control humano:</em> La líder técnica aprueba la calidad según los dictámenes.</li>
+                  <li><strong>13. Operador CI/CD e Integración</strong> (<code>aracne-cicd</code>). <em>Fase:</em> Integrar y Entregar. <em>Produce:</em> Commits atómicos y PR con traza. <em>Control humano:</em> Autoriza el merge a ramas protegidas y el despliegue.</li>
+                  <li><strong>14. Cierre y Línea Base</strong> (<code>aracne-closer</code>). <em>Fase:</em> Cerrar. <em>Produce:</em> Contrato archivado en archive/ y specs/. <em>Control humano:</em> Ratifica el cierre de la historia y su ingreso a la línea base.</li>
+                  <li><strong>15. Clasificador de Incidencias</strong> (<code>aracne-ticket</code>). <em>Fase:</em> Transversal. <em>Produce:</em> Enrutamiento: defecto a corrección, requerimiento a cambio. <em>Control humano:</em> Confirma la clasificación y autoriza abrir el flujo.</li>
+                  <li><strong>16. Control de Cambios y Alcance</strong> (<code>aracne-change</code>). <em>Fase:</em> Transversal. <em>Produce:</em> Clasificación de alcance y regeneración acotada. <em>Control humano:</em> Decide si amplía el alcance o remite a una nueva épica.</li>
+                  <li><strong>17. Observabilidad y Estado</strong> (<code>aracne-status</code>). <em>Fase:</em> Transversal. <em>Produce:</em> Tablero web dashboard.html, inestabilidad y cobertura. <em>Control humano:</em> Dirección y líderes monitorean avance real y riesgos.</li>
+                  <li><strong>18. Salud del Entorno y Diagnóstico</strong> (<code>aracne-doctor</code>). <em>Fase:</em> Soporte. <em>Produce:</em> Diagnóstico de preflight y detección de deriva. <em>Control humano:</em> Ejecuta acciones correctivas ante faltantes.</li>
                 </ul>
               </div>
-              <figcaption class="fig-caption">Tabla 6.1 — Agentes base del arnés (2/2): rol, fase, artefacto de salida y supervisión humana, de Verificar a Soporte</figcaption>
+              <figcaption class="fig-caption">Tabla 6.1. Agentes base del arnés (2/2): rol, fase, artefacto de salida y supervisión humana, de Verificar a Soporte</figcaption>
             </figure>
           </article>
 
@@ -4970,7 +5295,7 @@ def generate_e1_e4_html():
             <figure class="slide-figure">
               <div class="data-table-wrapper">
                 <table class="data-table" style="font-size:clamp(0.68rem,min(1.15vw,2.05vh),1.5rem);">
-                  <caption>Tabla 6.2 — Comandos y skills por etapa (1/2): disparador, fase, salida y control humano, del arranque al control de cambios (texto condensado)</caption>
+                  <caption>Tabla 6.2. Comandos y skills por etapa (1/2): disparador, fase, salida y control humano, del arranque al control de cambios (texto condensado)</caption>
                   <thead>
                     <tr>
                       <th style="width:30%;font-size:0.82em;">Comando o skill</th>
@@ -4983,7 +5308,7 @@ def generate_e1_e4_html():
                     <tr>
                       <td data-label="Comando o skill"><span><code>/sw:new</code><br /><span style="font-size:0.84em;color:var(--subtext);">Proyecto o servicio nuevo; idea o requerimiento</span></span></td>
                       <td data-label="Fase"><strong>Entender a Traducir</strong></td>
-                      <td data-label="Salida">Brief, PRD, arquitectura, UX, épicas, historias y contratos; no escribe código</td>
+                      <td data-label="Salida">Estudio CTeI opcional antes del brief; brief, PRD, arquitectura, UX, épicas, historias y contratos; no escribe código</td>
                       <td data-label="Control humano">Aprueba PRD, arquitectura e historias</td>
                     </tr>
                     <tr>
@@ -5053,8 +5378,8 @@ def generate_e1_e4_html():
             </div>
             <figure class="slide-figure">
               <div class="data-table-wrapper">
-                <table class="data-table" style="font-size:clamp(0.68rem,min(1.2vw,2.2vh),1.5rem);">
-                  <caption>Tabla 6.2 — Comandos y skills por etapa (2/2): comandos de estado y soporte, y las cuatro familias de skills (texto condensado)</caption>
+                <table class="data-table" style="font-size:clamp(0.64rem,min(1.05vw,1.9vh),1.4rem);">
+                  <caption>Tabla 6.2. Comandos y skills por etapa (2/2): comandos de estado y soporte, la instalación opcional de investigación y las cuatro familias de skills (texto condensado)</caption>
                   <thead>
                     <tr>
                       <th style="width:30%;font-size:0.82em;">Comando o skill</th>
@@ -5081,6 +5406,12 @@ def generate_e1_e4_html():
                       <td data-label="Fase"><strong>Soporte</strong></td>
                       <td data-label="Salida">Estado de instalación, preflight y coherencia entre plan y contratos</td>
                       <td data-label="Control humano">Resuelve lo faltante</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comando o skill"><span><code>aracne-sdlc-ai init --only research</code><br /><span style="font-size:0.84em;color:var(--subtext);">Instalación opcional, fuera del paquete 0.9.0</span></span></td>
+                      <td data-label="Fase"><strong>Soporte</strong></td>
+                      <td data-label="Salida">Agentes <code>aracne-ctei-scout</code> y <code>aracne-portfolio</code> con sus servidores MCP</td>
+                      <td data-label="Control humano">Decide si los instala</td>
                     </tr>
                     <tr>
                       <td data-label="Comando o skill"><span><strong>Skill de método</strong><br /><span style="font-size:0.84em;color:var(--subtext);">Arrancar, adoptar, procesar requerimientos o tickets, planear y construir</span></span></td>
@@ -5816,12 +6147,12 @@ def generate_e1_e4_html():
           <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e4" data-item="c4-plataforma" data-tone="blue" data-caption-source="§4.10">
             <div class="slide-content">
               <p class="slide-kicker">5 &middot; Agentes y Skills (E4) &middot; Plataforma propuesta</p>
-              <h2>Administración: los roles son grupos de Entra ID y los permisos son fijos por rol</h2>
+              <h2>Administración: los roles son grupos del Directorio Activo u otro directorio de la entidad y los permisos son fijos por rol</h2>
               <ul class="slide-list">
                 <li><strong>Cinco roles:</strong> administrador, requerimientos, líder técnica, desarrollador y consultor de la Universidad.</li>
                 <li><strong>Matriz fija:</strong> dice qué puede hacer cada rol y no se edita por persona; solo la líder técnica aprueba integraciones a ramas protegidas.</li>
                 <li><strong>Auditoría de seguridad:</strong> accesos rechazados, sesiones <abbr title="Model Context Protocol">MCP</abbr> activas, commits fuera de <code>docs</code> y cada llamada con su cuenta y resultado.</li>
-                <li><strong>Arneses e integraciones:</strong> versión de los agentes propios y del paquete general; conexión con Entra ID, Azure Repos, los modelos con clave corporativa y el punto de acceso MCP.</li>
+                <li><strong>Arneses e integraciones:</strong> versión de los agentes propios y del paquete general; conexión con el Directorio Activo u otro directorio de la entidad, Azure Repos, los modelos con clave corporativa y el punto de acceso MCP.</li>
               </ul>
             </div>
             <figure class="slide-figure">
@@ -5892,34 +6223,39 @@ def generate_e1_e4_html():
 
           <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e4" data-item="c4-extensiones" data-tone="green" data-caption-source="§6.10">
             <div class="slide-content">
-              <p class="slide-kicker">5 &middot; Agentes y Skills (E4) &middot; Propuesta para la entrega 2</p>
+              <p class="slide-kicker">5 &middot; Agentes y Skills (E4) &middot; Agentes de investigación</p>
               <h2>Dos agentes nuevos con su servidor MCP: panorama CTeI y productos de ATENEA</h2>
               <ul class="slide-list">
                 <li><strong>Solicitud del 30 de octubre:</strong> ATENEA pidió investigar plataformas de ciencia, tecnología e innovación de otros países para encontrar actores, servicios o interacciones que Hēma no contempla.</li>
                 <li><strong>Propuesta de la Universidad:</strong> un segundo agente organiza la arquitectura, el diseño y el código de los productos que ATENEA ya tiene, para reutilizar y decidir mejor.</li>
-                <li><strong>Estado:</strong> diseño en el repositorio del arnés; nada está implementado y ATENEA decide si entran en la entrega 2.</li>
+                <li><strong>Estado:</strong> los dos están construidos y son de instalación opcional; no hacen parte de la versión 0.9.0 y entran en la versión siguiente.</li>
               </ul>
             </div>
-            <figure class="slide-figure">
-              <div class="data-table-wrapper">
+            <figure class="slide-figure" style="display:flex;flex-direction:column;gap:6px;">
+              <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.68rem,min(1.2vw,2.2vh),1.5rem);">
-                  <caption>Fuente: §6.10. Agentes y servidores MCP propuestos para la entrega 2</caption>
+                  <caption>Tabla 6.7. Agentes y servidores MCP de investigación, construidos y de instalación opcional, fuera del paquete 0.9.0</caption>
                   <thead>
-                    <tr><th>Agente y MCP</th><th>Dónde entra</th><th>Qué entrega</th><th>Origen</th></tr>
+                    <tr><th>Agente y MCP</th><th>Dónde entra</th><th>Qué entrega</th><th>Origen y estado</th></tr>
                   </thead>
                   <tbody>
-                    <tr><td data-label="Agente y MCP"><code>aracne-ctei-scout</code> con <code>ctei-landscape</code></td><td data-label="Dónde entra">Antes del <em>brief</em> de producto</td><td data-label="Qué entrega">Estudio de base tecnológica (plataformas, software, patentes y artículos; Bogotá, Colombia, Latinoamérica y el mundo), <code>research-brief.md</code> y requisitos, épicas e historias candidatas</td><td data-label="Origen">Solicitud de ATENEA (R7)</td></tr>
-                    <tr><td data-label="Agente y MCP"><code>aracne-portfolio</code> con <code>atenea-portfolio</code></td><td data-label="Dónde entra"><em>Brief</em>, arquitectura, <code>/sw:adopt</code>, <code>/sw:change</code> y <code>/sw:build</code>, solo como consulta</td><td data-label="Qué entrega">Grafo de productos y componentes, candidatos de reutilización y documentación de código curada al estilo de context7; privado por la confidencialidad del contrato</td><td data-label="Origen">Propuesta de la Universidad</td></tr>
+                    <tr><td data-label="Agente y MCP"><code>aracne-ctei-scout</code> con <code>ctei-landscape</code></td><td data-label="Dónde entra">Antes del <em>brief</em> de producto</td><td data-label="Qué entrega">Estudio de base tecnológica (plataformas, software, patentes y artículos; Bogotá, Colombia, Latinoamérica y el mundo), <code>research-brief.md</code> y requisitos, épicas e historias candidatas</td><td data-label="Origen y estado">Solicitud de ATENEA (R7); construido, opcional</td></tr>
+                    <tr><td data-label="Agente y MCP"><code>aracne-portfolio</code> con <code>atenea-portfolio</code></td><td data-label="Dónde entra"><em>Brief</em>, arquitectura, <code>/sw:adopt</code>, <code>/sw:change</code> y <code>/sw:build</code>, solo como consulta</td><td data-label="Qué entrega">Grafo de productos y componentes, candidatos de reutilización y documentación de código curada al estilo de context7; privado por la confidencialidad del contrato</td><td data-label="Origen y estado">Propuesta de la Universidad; construido, opcional</td></tr>
                   </tbody>
                 </table>
               </div>
+              <ul class="slide-list" style="flex:0 0 auto;margin:6px 4px 0;font-size:clamp(0.8rem,1vw,1rem);">
+                <li>Los dos agentes se instalan con <code>aracne-sdlc-ai init --only research</code>.</li>
+                <li>El servidor <code>ctei-landscape</code> es público y se instala con <code style="overflow-wrap:anywhere;">uvx --from git+https://github.com/LIAUNAL/panoramaPlataformasCTeI ctei-landscape-mcp</code>.</li>
+                <li>Sus datos se exploran en <a href="https://liaunal.github.io/panoramaPlataformasCTeI/#constelacion" target="_blank" rel="noopener" style="overflow-wrap:anywhere;">https://liaunal.github.io/panoramaPlataformasCTeI/#constelacion</a>.</li>
+              </ul>
             </figure>
           </article>
 
           <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e4" data-item="c4-extensiones" data-tone="green" data-caption-source="§6.10">
             <div class="slide-content">
-              <p class="slide-kicker">5 &middot; Agentes y Skills (E4) &middot; Propuesta para la entrega 2</p>
-              <h2>Se construyen como el banco de proyectos del laboratorio</h2>
+              <p class="slide-kicker">5 &middot; Agentes y Skills (E4) &middot; Agentes de investigación</p>
+              <h2>Se construyeron como el banco de proyectos del laboratorio</h2>
               <ul class="slide-list">
                 <li><strong>Referencia:</strong> el banco <code>bancoProyectosPapersLIA</code> ya alimenta la redacción de artículos y propuestas con fichas, clústeres y un servidor MCP.</li>
                 <li><strong>Trazabilidad:</strong> cada afirmación que llega al PRD o a una historia cita el identificador de su ficha.</li>
@@ -5929,7 +6265,7 @@ def generate_e1_e4_html():
             <figure class="slide-figure">
               <div class="data-table-wrapper">
                 <table class="data-table" style="font-size:clamp(0.68rem,min(1.2vw,2.2vh),1.5rem);">
-                  <caption>Fuente: §6.10. Piezas del banco del laboratorio que se reutilizan</caption>
+                  <caption>Fuente: §6.10. Piezas del banco del laboratorio que se reutilizaron</caption>
                   <thead>
                     <tr><th>Pieza</th><th>Cómo se usa en los dos agentes</th></tr>
                   </thead>
@@ -5973,9 +6309,10 @@ def generate_e1_e4_html():
 <text x="434" y="50" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700">2 · Entorno y accesos</text>
 <text x="434" y="112" fill="#1B2029" font-family="Space Grotesk,sans-serif" font-size="19" font-weight="700">Entorno agéntico en Azure</text>
 <text x="434" y="148" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">✓ VPN y Hēma QA recibidos</text>
-<text x="434" y="173" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">✓ Flujo centralizado (Entra ID)</text>
-<text x="434" y="198" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">✓ Requisitos mínimos propuestos</text>
-<text x="434" y="223" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">→ GoToCloud: martes 3-nov, 4 p. m.</text>
+<text x="434" y="173" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">✓ Flujo centralizado (Directorio Activo</text>
+<text x="452" y="198" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">u otro directorio de la entidad)</text>
+<text x="434" y="223" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">✓ Requisitos mínimos propuestos</text>
+<text x="434" y="248" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">→ GoToCloud: martes 3-nov, 4 p. m.</text>
 <rect x="828" y="10" width="372" height="330" rx="12" fill="#FFFFFF" stroke="#1E5631" stroke-width="2" />
 <rect x="828" y="10" width="372" height="62" rx="12" fill="#1E5631" />
 <rect x="828" y="50" width="372" height="22" fill="#1E5631" />
@@ -6003,12 +6340,12 @@ def generate_e1_e4_html():
             <figure class="slide-figure">
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
-                <h2 style="margin-bottom:4px;">Información pendiente para cerrar C1 a C4 (1/2)</h2>
+                <h2 style="margin-bottom:4px;">Información pendiente para cerrar C1 a C4 y C7 (1/2)</h2>
                 <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Lo que falta depende de información que solo tiene ATENEA; el informe marca cada dato como pendiente en lugar de suponerlo. Componentes C1 y C3.</p>
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.7rem,min(1.2vw,2.25vh),1.55rem);">
-                  <caption>Tabla 7.1 — Información que debe aportar ATENEA para cerrar los componentes C1 a C4 (1/2)</caption>
+                  <caption>Tabla 7.1. Información que debe aportar ATENEA para cerrar los componentes C1 a C4 y C7 (1/2)</caption>
                   <thead>
                     <tr>
                       <th style="width:9%;font-size:0.82em;">Comp.</th>
@@ -6065,12 +6402,12 @@ def generate_e1_e4_html():
             <figure class="slide-figure">
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
-                <h2 style="margin-bottom:4px;">Información pendiente para cerrar C1 a C4 (2/2)</h2>
+                <h2 style="margin-bottom:4px;">Información pendiente para cerrar C1 a C4 y C7 (2/2)</h2>
                 <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Lo que falta depende de información que solo tiene ATENEA; el informe marca cada dato como pendiente en lugar de suponerlo. Componentes C3, C2 y C4.</p>
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.7rem,min(1.2vw,2.25vh),1.55rem);">
-                  <caption>Tabla 7.1 — Información que debe aportar ATENEA para cerrar los componentes C1 a C4 (2/2)</caption>
+                  <caption>Tabla 7.1. Información que debe aportar ATENEA para cerrar los componentes C1 a C4 y C7 (2/2)</caption>
                   <thead>
                     <tr>
                       <th style="width:9%;font-size:0.82em;">Comp.</th>
@@ -6109,6 +6446,18 @@ def generate_e1_e4_html():
                       <td data-label="Información"><span>Lista de servidores MCP y herramientas permitidas, y protección de ramas en Azure DevOps</span></td>
                       <td data-label="¿Dónde se usa?"><span>Tabla 6.4</span></td>
                       <td data-label="Origen"><span>R4</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comp."><strong>C4</strong></td>
+                      <td data-label="Información"><span>Aprobación de los servidores MCP de investigación (<code>ctei-landscape</code> y <code>atenea-portfolio</code>), una vez la Universidad fije su versión con una etiqueta</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Tabla 6.6</span></td>
+                      <td data-label="Origen"><span>A10</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comp."><strong>C4</strong></td>
+                      <td data-label="Información"><span>Validación de la ficha de referencia de Hēma (CT000) que usa el agente de investigación CTeI</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Sección 6.10</span></td>
+                      <td data-label="Origen"><span>R7</span></td>
                     </tr>
                   </tbody>
                 </table>
