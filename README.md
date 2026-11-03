@@ -14,7 +14,7 @@ El proyecto cuenta con un **Panel de Control interactivo** que permite seleccion
    - 44 diapositivas estructuradas en 7 módulos (Minuta contractual, Motivación, Perfiles en evolución, Chat vs Agente, Evidencia empírica, La respuesta metodológica y UN-SpecWeaver).
    - Enfoque conceptual, pedagógico y de adopción institucional.
 2. **Informe Técnico E1–E4: Contrato ATENEA-464-2026** (`?deck=e1-e4` o [`e1-e4.html`](e1-e4.html)):
-   - 84 diapositivas (portada y 83 de contenido) en 6 módulos: Contrato & Alcance, E1 Diagnóstico, E2 Metodología SDLC-IA, E3 Arquitectura y caso de uso (Hēma hoy, Campus 2600, delimitación y referentes CTeI, con capturas), E4 Agentes y skills con Aracne-SDLC-AI 0.9.0, la plataforma Aracne propuesta (mockups de concepto) y los dos agentes de investigación ya construidos, de instalación opcional, y Decisiones & Cierre.
+   - 85 diapositivas (portada y 84 de contenido) en 6 módulos: Contrato & Alcance, E1 Diagnóstico, E2 Metodología SDLC-IA, E3 Arquitectura y caso de uso (Hēma hoy, Campus 2600, delimitación y referentes CTeI, con capturas), E4 Agentes y skills con Aracne-SDLC-AI 0.9.0, la plataforma Aracne propuesta (mockups de concepto) y los dos agentes de investigación ya construidos, de instalación opcional, y Decisiones & Cierre, que termina con el paquete de instalación de Aracne y Aegis.
    - Alineado con el informe técnico vigente (`informe_atenea`, capítulos 1 a 7): cada figura y tabla lleva su leyenda con la numeración del informe (o "Fuente: §N.M" cuando no está numerada) y cada elemento de los componentes C1 a C4 (E1 a E4) tiene su diapositiva marcada con `data-item`.
    - Funciona en móvil: tablas como tarjetas, alternativas `.mobile-alt` para los diagramas y áreas táctiles de 44 px.
 
@@ -34,7 +34,7 @@ El proyecto cuenta con un **Panel de Control interactivo** que permite seleccion
 | 6 | <abbr title="Stack de especificaciones del deck">UN-SpecWeaver</abbr> | El stack de herramientas, tutorial práctico en terminal con comandos CLI y capturas reales |
 
 ### B. Deck E1–E4 (Informe Técnico de Avance ATENEA-464-2026)
-Mapeo de componentes: C1 a C4 corresponden a los entregables E1 a E4. La portada y 83 diapositivas de contenido se reparten así:
+Mapeo de componentes: C1 a C4 corresponden a los entregables E1 a E4. La portada y 84 diapositivas de contenido se reparten así:
 
 | # | Módulo | Diapositivas | Tema |
 |---|--------|--------------|------|

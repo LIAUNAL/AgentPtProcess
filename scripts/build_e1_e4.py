@@ -6654,6 +6654,36 @@ def generate_e1_e4_html():
               <figcaption class="fig-caption">Fuente: Figura 2.1 y §4.8 — Hito 1 (S1 a S13) y Hito 2 (S14 a S22) con la ruta de adopción (el informe no tiene una sección de próximos pasos)</figcaption>
             </figure>
           </article>
+
+          <!-- E5-6: Instalación de Aracne y Aegis (paquete de entrega) [cierre-instalacion] -->
+          <article class="slide is-figure-wide" data-deck="e1-e4" data-module="e5" data-item="cierre-instalacion" data-tone="emerald">
+            <div class="slide-content">
+              <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1) &middot; Paquete de instalación</p>
+              <h2>Instalación de Aracne y Aegis</h2>
+              <ul class="slide-list">
+                <li><strong>Aracne:</strong> guía a un asistente de inteligencia artificial para construir software en orden: planear, construir y revisar.</li>
+                <li><strong>Aegis:</strong> da a cada persona su cuenta y un saldo mensual para usar la inteligencia artificial.</li>
+                <li><strong>Verificación:</strong> cada paquete trae su huella SHA-256 para comprobar que llegó completo.</li>
+              </ul>
+            </div>
+            <figure class="slide-figure" style="display:flex;flex-direction:column;gap:6px;">
+              <div class="data-table-wrapper" style="flex:0 0 auto;min-height:0;height:auto;">
+                <table class="data-table" style="font-size:clamp(0.9rem,min(1.7vw,3vh),1.5rem);">
+                  <caption>La entrega tiene dos partes: el servidor y los computadores de las personas usuarias</caption>
+                  <thead>
+                    <tr><th>Parte</th><th>Qué incluye</th><th>Dónde se instala</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td data-label="Parte"><strong>1. Servidor Aegis</strong></td><td data-label="Qué incluye">Una guía en Word y un paquete para instalar Aegis con Docker</td><td data-label="Dónde se instala">Servidor Linux</td></tr>
+                    <tr><td data-label="Parte"><strong>2. Computadores con Windows</strong></td><td data-label="Qué incluye">Un tutorial paso a paso con capturas reales, pensado para personas sin experiencia técnica, y el paquete de Aracne</td><td data-label="Dónde se instala">Computadores con Windows</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="slide-list" style="flex:0 0 auto;margin:10px 4px 0;font-size:clamp(0.9rem,1.3vw,1.2rem);">
+                <li><strong>Descarga:</strong> <a href="https://drive.google.com/drive/folders/1vQbMZurvoBqzIMZMAEAUgQ_FEePQgrtj?usp=sharing" target="_blank" rel="noopener" style="overflow-wrap:anywhere;">https://drive.google.com/drive/folders/1vQbMZurvoBqzIMZMAEAUgQ_FEePQgrtj?usp=sharing</a></li>
+              </ul>
+            </figure>
+          </article>
         </main>
       </div>
 
