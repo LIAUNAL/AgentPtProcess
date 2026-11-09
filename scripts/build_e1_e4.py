@@ -210,7 +210,7 @@ def generate_e1_e4_html():
               <h2>Estado de los entregables E1 a E4 al corte</h2>
               <ul class="slide-list">
                 <li>
-                  <strong>Corte: 2 de noviembre de 2026.</strong> El informe se apoya en la minuta, el acta 01 del 7 de octubre, tres sesiones grabadas, las sesiones del 23 y del 30 de octubre, tres documentos de ATENEA y sus observaciones escritas del 1 de noviembre.
+                  <strong>Corte: 6 de noviembre de 2026.</strong> El informe se apoya en la minuta, el acta 01 del 7 de octubre, tres sesiones grabadas, la sesión del 23 de octubre, las dos del 30 de octubre y la del 6 de noviembre, registradas en las actas 05 a 08. Se suman tres documentos de ATENEA y sus observaciones escritas del 1 de noviembre.
                 </li>
                 <li>
                   <strong>Hito 1:</strong> E1 a E4 integran el hito 1 del cronograma contractual.
@@ -219,13 +219,13 @@ def generate_e1_e4_html():
                   <strong>E1:</strong> diagnóstico completo, listo para la validación de ATENEA.
                 </li>
                 <li>
-                  <strong>E2 a E4:</strong> propuesta definida para el flujo, la arquitectura y el arnés de agentes; el caso de uso Campus 2600 en Hēma quedó definido el 30 de octubre.
+                  <strong>E2 a E4:</strong> propuesta definida para el flujo, la arquitectura y el arnés de agentes; el caso de uso Campus 2600 en Hēma quedó definido el 30 de octubre, y su reconstrucción se ajustó con las respuestas de ATENEA del 6 de noviembre.
                 </li>
               </ul>
             </div>
             <figure class="slide-figure">
-              <svg viewBox="0 -30 520 410" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estado de los entregables E1 a E4 al 2 de noviembre de 2026">
-              <text x="6" y="-10" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Corte: 2 de noviembre de 2026</text>
+              <svg viewBox="0 -30 520 410" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estado de los entregables E1 a E4 al 6 de noviembre de 2026">
+              <text x="6" y="-10" fill="#1E5631" font-family="Space Grotesk,sans-serif" font-size="15" font-weight="700">Corte: 6 de noviembre de 2026</text>
               <rect x="6" y="6" width="508" height="78" rx="9" fill="#EBF5ED" stroke="#1E5631" stroke-width="1.5" />
               <rect x="6" y="6" width="112" height="78" rx="9" fill="#1E5631" />
               <rect x="100" y="6" width="18" height="78" fill="#1E5631" />
@@ -243,10 +243,11 @@ def generate_e1_e4_html():
               <rect x="100" y="178" width="18" height="110" fill="#8A5A00" />
               <text x="62" y="230" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="24" font-weight="700" text-anchor="middle">E3</text>
               <text x="62" y="250" fill="#FFFFFF" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Arquitectura</text>
-              <text x="134" y="204" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Composición definida por tipo</text>
-              <text x="134" y="225" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">de componente</text>
-              <text x="134" y="250" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="14">Caso Campus 2600 en Hēma definido el 30 de octubre;</text>
-              <text x="134" y="270" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="14">primera reconstrucción: 7 épicas y 14 historias</text>
+              <text x="134" y="200" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">Composición definida por tipo</text>
+              <text x="134" y="219" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">de componente</text>
+              <text x="134" y="240" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="13.5">Caso Campus 2600 en Hēma definido el 30 de octubre;</text>
+              <text x="134" y="258" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="13.5">primera reconstrucción: 7 épicas y 14 historias,</text>
+              <text x="134" y="276" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="13.5">ajustada con las respuestas del 6 de noviembre</text>
               <rect x="6" y="296" width="508" height="78" rx="9" fill="#FFF7ED" stroke="#8A5A00" stroke-width="1.5" />
               <rect x="6" y="296" width="112" height="78" rx="9" fill="#8A5A00" />
               <rect x="100" y="296" width="18" height="78" fill="#8A5A00" />
@@ -256,15 +257,15 @@ def generate_e1_e4_html():
               <text x="134" y="353" fill="#8A5A00" font-family="Space Grotesk,sans-serif" font-size="17" font-weight="700">fuera de ATENEA</text>
               </svg>
               <div class="mobile-alt">
-                <p class="sched-title">Estado de E1 a E4 al 2 de noviembre de 2026</p>
+                <p class="sched-title">Estado de E1 a E4 al 6 de noviembre de 2026</p>
                 <ul class="slide-list" style="margin:8px 0;">
                   <li><strong>E1 Diagnóstico:</strong> <span class="pill pill--ok">Diagnóstico completo para validación</span></li>
                   <li><strong>E2 SDLC-IA:</strong> <span class="pill pill--partial">Flujo propuesto por etapa</span></li>
-                  <li><strong>E3 Arquitectura:</strong> <span class="pill pill--partial">Composición definida por tipo de componente</span> Caso Campus 2600 en Hēma definido el 30 de octubre, con una primera reconstrucción de 7 épicas y 14 historias.</li>
+                  <li><strong>E3 Arquitectura:</strong> <span class="pill pill--partial">Composición definida por tipo de componente</span> Caso Campus 2600 en Hēma definido el 30 de octubre, con una primera reconstrucción de 7 épicas y 14 historias, ajustada con las respuestas de ATENEA del 6 de noviembre.</li>
                   <li><strong>E4 Agentes y skills:</strong> <span class="pill pill--partial">Arnés propuesto y probado fuera de ATENEA</span></li>
                 </ul>
               </div>
-              <figcaption class="fig-caption">Tabla 1.1. Estado de E1 a E4 al 2 de noviembre de 2026</figcaption>
+              <figcaption class="fig-caption">Tabla 1.1. Estado de E1 a E4 al 6 de noviembre de 2026</figcaption>
             </figure>
           </article>
 
@@ -4055,11 +4056,11 @@ def generate_e1_e4_html():
               </div>
               <div style="flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:10px;">
                 <div class="data-table-wrapper" style="min-height:0;height:auto;">
-                  <table class="data-table" style="font-size:clamp(0.64rem,min(1.05vw,1.9vh),1.4rem);">
+                  <table class="data-table" style="font-size:clamp(0.64rem,min(1.0vw,1.75vh),1.4rem);">
                     <caption>Tabla 5.2. Delimitación del caso Campus 2600: parte del proceso y situación (las seis partes «Dentro» se presentaron en el prototipo, R6)</caption>
                     <thead>
                       <tr>
-                        <th style="width:70%;font-size:0.82em;">Parte del proceso</th>
+                        <th style="width:78%;font-size:0.82em;">Parte del proceso</th>
                         <th style="font-size:0.82em;">Situación</th>
                       </tr>
                     </thead>
@@ -4069,16 +4070,17 @@ def generate_e1_e4_html():
                       <tr><td data-label="Parte del proceso">Evaluación técnica, panel de jurados y <abbr title="Sistema de Administración del Riesgo de Lavado de Activos y de la Financiación del Terrorismo">SARLAFT</abbr> en paralelo</td><td data-label="Situación"><span class="pill pill--ok">Dentro</span></td></tr>
                       <tr><td data-label="Parte del proceso">Formalización, autodiagnóstico, diagnóstico y cálculo de Δ</td><td data-label="Situación"><span class="pill pill--ok">Dentro</span></td></tr>
                       <tr><td data-label="Parte del proceso">Hoja de ruta, hojas parciales, visibilidad por rol y firmas con hash</td><td data-label="Situación"><span class="pill pill--ok">Dentro</span></td></tr>
-                      <tr><td data-label="Parte del proceso">Plan de trabajo e informes de avance de los integradores</td><td data-label="Situación"><span class="pill pill--ok">Dentro</span></td></tr>
-                      <tr><td data-label="Parte del proceso">Control de topes por tipología y del reparto entre integradores (solicitud 1)</td><td data-label="Situación"><span class="pill pill--partial">Por confirmar</span></td></tr>
+                      <tr><td data-label="Parte del proceso">Plan de trabajo e informes de avance de los integradores (prioridad con la hoja de ruta, R8)</td><td data-label="Situación"><span class="pill pill--ok">Dentro</span></td></tr>
+                      <tr><td data-label="Parte del proceso">Topes por tipología (solicitud 1); reparto eliminado (R8)</td><td data-label="Situación"><span class="pill pill--partial">Por confirmar</span></td></tr>
                       <tr><td data-label="Parte del proceso">Otros temas presupuestales y monetización: sin definición del área funcional</td><td data-label="Situación"><span class="pill pill--todo">Fuera</span></td></tr>
                       <tr><td data-label="Parte del proceso">Integración con sistemas financieros externos: interfaces simuladas verificables</td><td data-label="Situación"><span class="pill pill--todo">Fuera</span></td></tr>
                       <tr><td data-label="Parte del proceso">Motor de emparejamiento de oferta y demanda: segunda transición de Hēma</td><td data-label="Situación"><span class="pill pill--todo">Fuera</span></td></tr>
+                      <tr><td data-label="Parte del proceso">Espacios físicos de Campus 2600: posible segundo caso (R8)</td><td data-label="Situación"><span class="pill pill--todo">Fuera</span></td></tr>
                     </tbody>
                   </table>
                 </div>
                 <div class="data-table-wrapper" style="min-height:0;height:auto;">
-                  <table class="data-table" style="font-size:clamp(0.64rem,min(1.05vw,1.9vh),1.4rem);">
+                  <table class="data-table" style="font-size:clamp(0.64rem,min(1.0vw,1.75vh),1.4rem);">
                     <caption>Tabla 5.3. Solicitudes a ATENEA para cerrar la delimitación del caso Campus 2600 (texto condensado)</caption>
                     <thead>
                       <tr>
@@ -4230,16 +4232,16 @@ def generate_e1_e4_html():
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
                 <h2 style="margin-bottom:4px;">Proceso misional destino: seis etapas de Campus 2600 en Hēma (§5.5)</h2>
-                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;"><strong>Integradores:</strong> CEIBA y CONNECT (Connect Bogotá) prestan los servicios del directorio, hoy en catálogos de Excel; la bolsa se reparte 60&nbsp;% para Ceiba y 40&nbsp;% para Connect (R6). <strong>Prototipo:</strong> convocatoria de un año prorrogable con tres tipologías (<abbr title="Empresas de Base Científica y Tecnológica">EBCT</abbr> hasta $120.000.000, <abbr title="Empresas de Alto Impacto">EAI</abbr> hasta $50.000.000 y MiPymes hasta $25.000.000 COP); los topes se describen porque el prototipo los muestra, y su inclusión en el caso queda por confirmar con ATENEA (Tabla 5.3).</p>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;"><strong>Integradores:</strong> CEIBA y CONNECT (Connect Bogotá) prestan los servicios del directorio, hoy en catálogos de Excel, con una plantilla de variables ya acordada; el reparto de 60&nbsp;% y 40&nbsp;% (R6) se descartó por una sola bolsa por beneficiario (R8). <strong>Prototipo:</strong> convocatoria de un año prorrogable con tres tipologías (<abbr title="Empresas de Base Científica y Tecnológica">EBCT</abbr> hasta $120.000.000, <abbr title="Empresas de Alto Impacto">EAI</abbr> hasta $50.000.000 y MiPymes hasta $25.000.000 COP); los topes se describen porque el prototipo los muestra, y su inclusión en el caso queda por confirmar con ATENEA (Tabla 5.3).</p>
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
-                <table class="data-table" style="font-size:clamp(0.66rem,min(1.2vw,2.0vh),1.5rem);">
+                <table class="data-table" style="font-size:clamp(0.66rem,min(1.15vw,1.9vh),1.5rem);">
                   <caption>Tabla 5.6. Etapas del proceso misional de Campus 2600 en Hēma: etapa, actores, insumo y resultado</caption>
                   <thead>
                     <tr>
                       <th style="width:15%;font-size:0.82em;">Etapa</th>
-                      <th style="width:20%;font-size:0.82em;">Actores</th>
-                      <th style="width:30%;font-size:0.82em;">Insumos</th>
+                      <th style="width:24%;font-size:0.82em;">Actores</th>
+                      <th style="width:26%;font-size:0.82em;">Insumos</th>
                       <th style="font-size:0.82em;">Resultados</th>
                     </tr>
                   </thead>
@@ -4254,7 +4256,7 @@ def generate_e1_e4_html():
                       <td data-label="Etapa"><strong>2. Postulación técnica</strong></td>
                       <td data-label="Actores">Emprendimiento o spin-off y gestor de Campus</td>
                       <td data-label="Insumos">Operación primaria, con documentos habilitantes, y secundaria, con foco estratégico, antecedentes legales y <abbr title="Sistema de Administración del Riesgo de Lavado de Activos y de la Financiación del Terrorismo">SARLAFT</abbr></td>
-                      <td data-label="Resultados">Radicado (ejemplo: RAD-OP1-2024-00145); el gestor aprueba, pide subsanación o rechaza cada etapa</td>
+                      <td data-label="Resultados">Radicado (ejemplo: RAD-OP1-2024-00145); el gestor aprueba, pide subsanación o rechaza cada etapa; subsanan solo habilitantes, antecedentes legales y <abbr title="Sistema de Administración del Riesgo de Lavado de Activos y de la Financiación del Terrorismo">SARLAFT</abbr></td>
                     </tr>
                     <tr>
                       <td data-label="Etapa"><strong>3. Calificación y filtro</strong></td>
@@ -4266,13 +4268,13 @@ def generate_e1_e4_html():
                       <td data-label="Etapa"><strong>4. Diagnóstico de brechas</strong></td>
                       <td data-label="Actores">Entidad, gestor y, si se requiere, panel de expertos</td>
                       <td data-label="Insumos">Autodiagnóstico de la entidad y diagnóstico del gestor</td>
-                      <td data-label="Resultados">Diferencia (Δ) con el promedio de las evaluaciones; brechas, criticidad y servicios propuestos</td>
+                      <td data-label="Resultados">Diferencia (Δ) entre autodiagnóstico y diagnóstico del gestor (con el del panel), sin promediar; brechas, criticidad y servicios</td>
                     </tr>
                     <tr>
                       <td data-label="Etapa"><strong>5. Hoja de ruta y firmas</strong></td>
-                      <td data-label="Actores">Gestor, financiero, emprendedor, integradores, gerente y supervisor del convenio</td>
-                      <td data-label="Insumos">Brechas, versión aprobada del catálogo y presupuesto de la tipología, repartido 60&nbsp;% Ceiba y 40&nbsp;% Connect</td>
-                      <td data-label="Resultados">Hoja de ruta firmada por hash y congelada; si alguien la rechaza, vuelve a la etapa de ficha</td>
+                      <td data-label="Actores">Gestor; gestión presupuestal, gerente y dirección general de ATENEA; representantes legales de la entidad y de Ceiba o Connect</td>
+                      <td data-label="Insumos">Brechas, versión aprobada del catálogo y presupuesto de la tipología, sin reparto fijo entre integradores</td>
+                      <td data-label="Resultados">Hoja de ruta firmada por hash y congelada; si un firmante la devuelve, el circuito de firmas se reinicia</td>
                     </tr>
                     <tr>
                       <td data-label="Etapa"><strong>6. Ejecución y cierre</strong></td>
@@ -4298,9 +4300,9 @@ def generate_e1_e4_html():
                   <caption>Tabla 5.7. Requisitos del caso de uso Campus 2600: identificador, descripción y origen</caption>
                   <thead>
                     <tr>
-                      <th style="width:8%;font-size:0.82em;">ID</th>
+                      <th style="width:7%;font-size:0.82em;">ID</th>
                       <th style="font-size:0.82em;">Requisito</th>
-                      <th style="width:15%;font-size:0.82em;">Origen</th>
+                      <th style="width:12%;font-size:0.82em;">Origen</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -4341,8 +4343,8 @@ def generate_e1_e4_html():
                     </tr>
                     <tr>
                       <td data-label="ID"><strong>RF-02</strong></td>
-                      <td data-label="Requisito">Postulación en operación primaria y secundaria (<abbr title="Sistema de Administración del Riesgo de Lavado de Activos y de la Financiación del Terrorismo">SARLAFT</abbr>); el gestor aprueba, pide subsanación o rechaza; sin prerrequisitos no se continúa</td>
-                      <td data-label="Origen">R6</td>
+                      <td data-label="Requisito">Postulación primaria y secundaria; el gestor aprueba, rechaza o pide subsanar habilitantes, antecedentes legales o <abbr title="Sistema de Administración del Riesgo de Lavado de Activos y de la Financiación del Terrorismo">SARLAFT</abbr>; sin prerrequisitos no se continúa</td>
+                      <td data-label="Origen">R6; R8</td>
                     </tr>
                     <tr>
                       <td data-label="ID"><strong>RF-03</strong></td>
@@ -4351,8 +4353,8 @@ def generate_e1_e4_html():
                     </tr>
                     <tr>
                       <td data-label="ID"><strong>RF-04</strong></td>
-                      <td data-label="Requisito">Autodiagnóstico, diagnóstico del gestor con posible panel de expertos y Δ con el promedio de las evaluaciones</td>
-                      <td data-label="Origen">R6</td>
+                      <td data-label="Requisito">Autodiagnóstico, diagnóstico del gestor con el del panel de expertos y Δ como diferencia entre ambos, sin promedio</td>
+                      <td data-label="Origen">R6; R8</td>
                     </tr>
                     <tr>
                       <td data-label="ID"><strong>RF-05</strong></td>
@@ -4371,13 +4373,13 @@ def generate_e1_e4_html():
                     </tr>
                     <tr>
                       <td data-label="ID"><strong>RF-08</strong></td>
-                      <td data-label="Requisito">Firmas por hash del financiero, el emprendedor, los integradores, el gerente y el supervisor, que hoy van por correo</td>
-                      <td data-label="Origen">R6</td>
+                      <td data-label="Requisito">Firmas por hash, en orden: gestión presupuestal, representante legal de la entidad, de Ceiba o Connect, gerente y dirección general; hoy van por correo</td>
+                      <td data-label="Origen">R6; R8</td>
                     </tr>
                     <tr>
                       <td data-label="ID"><strong>RF-09</strong></td>
-                      <td data-label="Requisito">Si algún firmante la rechaza, la hoja de ruta regresa a la etapa de ficha</td>
-                      <td data-label="Origen">R6</td>
+                      <td data-label="Requisito">Si un firmante la devuelve, las firmas se reinician desde el primero</td>
+                      <td data-label="Origen">R6; R8</td>
                     </tr>
                     <tr>
                       <td data-label="ID"><strong>RF-10</strong></td>
@@ -4406,7 +4408,7 @@ def generate_e1_e4_html():
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
                 <h2 style="margin-bottom:4px;">Historias de usuario: 7 épicas y 14 historias reconstruidas, ocho de muestra (§5.7)</h2>
-                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;"><strong>Reconstrucción:</strong> la Universidad la hizo con la grabación y el prototipo; queda pendiente de validación con ATENEA (R6). El arnés generó 14 contratos OpenSpec, uno por historia, y el plan de sprint los ordenó en tres olas de 7, 5 y 2 según el orden de las historias dentro de cada épica; las dependencias entre épicas todavía no se detectan. <strong>Por resolver al validar:</strong> HU-03 rechaza de forma automática por SARLAFT, que la sesión trató como requisito paralelo, y HU-08 devuelve a borrador, cuando en la sesión la hoja regresa a la etapa de ficha.</p>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;"><strong>Reconstrucción:</strong> la Universidad la hizo con la grabación y el prototipo; queda pendiente de validación con ATENEA (R6). El arnés generó 14 contratos OpenSpec, uno por historia, y el plan de sprint los ordenó en tres olas de 7, 5 y 2 según el orden de las historias dentro de cada épica; las dependencias entre épicas todavía no se detectan. <strong>Por resolver al validar:</strong> HU-03 rechaza de forma automática por SARLAFT, que la sesión trató como requisito paralelo, y HU-08 devuelve a borrador, cuando en la sesión la hoja regresa a la etapa de ficha. El 6 de noviembre se resolvió parte: incumplir SARLAFT es rechazo definitivo tras la subsanación, y una hoja devuelta reinicia las firmas (R8).</p>
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.6rem,min(1.05vw,1.8vh),1.3rem);">
@@ -4440,9 +4442,9 @@ def generate_e1_e4_html():
                     </tr>
                     <tr>
                       <td data-label="Historia"><strong>HU-04</strong></td>
-                      <td data-label="Nombre y rol">Cálculo de brechas (panel de expertos)</td>
-                      <td data-label="Criterios Given/When/Then"><em>Given</em> el autodiagnóstico y las calificaciones, <em>When</em> se cierra la evaluación, <em>Then</em> se calcula el Δ y se clasifican las brechas</td>
-                      <td data-label="Prueba automatizada">Algorítmica: promedio ponderado y delta</td>
+                      <td data-label="Nombre y rol">Cálculo de brechas (gestor Hēma)</td>
+                      <td data-label="Criterios Given/When/Then"><em>Given</em> el autodiagnóstico y el diagnóstico del gestor, con el del panel de expertos, <em>When</em> se cierra el diagnóstico, <em>Then</em> se calcula el Δ como la diferencia entre ambos y se clasifican las brechas</td>
+                      <td data-label="Prueba automatizada">Algorítmica: delta como diferencia, sin promedio</td>
                     </tr>
                     <tr>
                       <td data-label="Historia"><strong>HU-05</strong></td>
@@ -4599,7 +4601,7 @@ def generate_e1_e4_html():
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
                 <h2 style="margin-bottom:4px;">Flujos del caso: el principal y seis de excepción y contingencia (§5.9)</h2>
-                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;"><strong>Cambios del 30 de octubre:</strong> la subsanación la decide el gestor en cada etapa; los documentos SARLAFT se gestionan en paralelo y condicionan la formalización; una hoja de ruta rechazada regresa a la etapa de ficha.</p>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;"><strong>Cambios del 30 de octubre:</strong> la subsanación la decide el gestor en cada etapa; los documentos SARLAFT se gestionan en paralelo y condicionan la formalización; una hoja de ruta rechazada regresa a la etapa de ficha. El 6 de noviembre, ATENEA limitó la subsanación a los habilitantes, los antecedentes legales y los documentos SARLAFT, con un plazo que fija quien la pide, y estableció que una hoja de ruta devuelta reinicia el circuito de firmas (R8).</p>
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.66rem,min(1.2vw,2.0vh),1.5rem);">
@@ -4621,8 +4623,8 @@ def generate_e1_e4_html():
                     </tr>
                     <tr>
                       <td data-label="Flujo"><strong>Subsanación</strong></td>
-                      <td data-label="Descripción">Documentos habilitantes o de la operación secundaria incompletos</td>
-                      <td data-label="Mecanismo">El gestor aprueba, pide subsanación o rechaza</td>
+                      <td data-label="Descripción">Habilitantes, antecedentes legales o documentos <abbr title="Sistema de Administración del Riesgo de Lavado de Activos y de la Financiación del Terrorismo">SARLAFT</abbr> incompletos</td>
+                      <td data-label="Mecanismo">El administrador de Campus, el líder de habilitación o los habilitadores devuelven con un plazo; el postulante subsana</td>
                       <td data-label="Resultado">Sin los prerrequisitos no se continúa</td>
                     </tr>
                     <tr>
@@ -4645,8 +4647,8 @@ def generate_e1_e4_html():
                     </tr>
                     <tr>
                       <td data-label="Flujo"><strong>Objeción en firmas</strong></td>
-                      <td data-label="Descripción">Rechazo de cualquier firmante de la hoja de ruta</td>
-                      <td data-label="Mecanismo">Regreso a la etapa de ficha</td>
+                      <td data-label="Descripción">Devolución de cualquier firmante de la hoja de ruta</td>
+                      <td data-label="Mecanismo">Reinicio del circuito de firmas</td>
                       <td data-label="Resultado">Nueva concertación y nuevo circuito de firmas</td>
                     </tr>
                     <tr>
@@ -4667,7 +4669,7 @@ def generate_e1_e4_html():
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">4 &middot; Arquitectura del Arnés (E3)</p>
                 <h2 style="margin-bottom:4px;">Integraciones: siete sistemas de ATENEA con los que se articula el caso (§5.10)</h2>
-                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;"><strong>Pendientes:</strong> la estructura de Azure se revisa con GoToCloud el martes 3 de noviembre de 2026, a las 4 p.&nbsp;m.; la ubicación de la wiki de Azure DevOps se define en la siguiente reunión; el motor de emparejamiento queda para la segunda transición.</p>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;margin-bottom:2px;"><strong>Pendientes:</strong> la reunión con GoToCloud sobre la estructura de Azure se hizo el 3 de noviembre de 2026 y la Universidad presentó su análisis el 6 de noviembre (R8); la ubicación de la wiki de Azure DevOps se define en la siguiente reunión; el motor de emparejamiento queda para la segunda transición.</p>
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
                 <table class="data-table" style="font-size:clamp(0.66rem,min(1.2vw,2.0vh),1.5rem);">
@@ -4685,7 +4687,7 @@ def generate_e1_e4_html():
                       <td data-label="Sistema"><strong>Azure Repos y Pipelines</strong></td>
                       <td data-label="Función en el caso">Control de versiones, compilación continua y despliegue del código</td>
                       <td data-label="Protocolo e interfaz">Git sobre HTTPS y agentes de Azure DevOps</td>
-                      <td data-label="Estado"><span class="pill pill--partial">En migración</span> estructura de Azure en revisión con GoToCloud el 3 de noviembre de 2026</td>
+                      <td data-label="Estado"><span class="pill pill--partial">En migración</span> estructura de Azure presentada por GoToCloud el 3 de noviembre de 2026</td>
                     </tr>
                     <tr>
                       <td data-label="Sistema"><strong>Wiki del proyecto en Azure DevOps</strong></td>
@@ -6293,7 +6295,7 @@ def generate_e1_e4_html():
                 <h2 style="margin-bottom:4px;">Estado de las tres decisiones y cierre de Hito 1</h2>
                 <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Resolución integral de las observaciones de supervisión para habilitar la radicación de la Factura 1 (ventana 1–15 de noviembre).</p>
               </div>
-              <svg viewBox="-4 0 1208 350" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estado de las tres decisiones de ATENEA: caso de uso seleccionado con 14 historias reconstruidas por validar, entorno en Azure en curso y siete observaciones resueltas">
+              <svg viewBox="-4 0 1208 350" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estado de las tres decisiones de ATENEA: caso de uso seleccionado con 14 historias reconstruidas por validar, entorno en Azure en curso con la reunión de GoToCloud realizada y siete observaciones resueltas">
 <rect x="0" y="10" width="372" height="330" rx="12" fill="#FFFFFF" stroke="#1E5631" stroke-width="2" />
 <rect x="0" y="10" width="372" height="62" rx="12" fill="#1E5631" />
 <rect x="0" y="50" width="372" height="22" fill="#1E5631" />
@@ -6312,7 +6314,9 @@ def generate_e1_e4_html():
 <text x="434" y="173" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">✓ Flujo centralizado (Directorio Activo</text>
 <text x="452" y="198" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">u otro directorio de la entidad)</text>
 <text x="434" y="223" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">✓ Requisitos mínimos propuestos</text>
-<text x="434" y="248" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">→ GoToCloud: martes 3-nov, 4 p. m.</text>
+<text x="434" y="248" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">✓ Reunión con GoToCloud el 3-nov</text>
+<text x="434" y="273" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">✓ Análisis presentado el 6-nov</text>
+<text x="434" y="298" fill="#454F61" font-family="Space Grotesk,sans-serif" font-size="16">→ Código de Hēma: 9 y 10-nov</text>
 <rect x="828" y="10" width="372" height="330" rx="12" fill="#FFFFFF" stroke="#1E5631" stroke-width="2" />
 <rect x="828" y="10" width="372" height="62" rx="12" fill="#1E5631" />
 <rect x="828" y="50" width="372" height="22" fill="#1E5631" />
@@ -6327,7 +6331,7 @@ def generate_e1_e4_html():
                 <p class="sched-title">Estado de las decisiones</p>
                 <ol class="slide-list" style="margin:8px 0;">
                   <li><strong>Campus 2600 en Hēma (C3):</strong> seleccionado; 7 épicas y 14 historias reconstruidas por la Universidad a partir de la grabación y el prototipo, pendientes de validación con ATENEA; 14 contratos OpenSpec y prueba de humo del arnés.</li>
-                  <li><strong>Entorno en Azure:</strong> VPN y Hēma recibidos; requisitos técnicos mínimos propuestos para la reunión con GoToCloud del martes 3 de noviembre a las 4 p. m.</li>
+                  <li><strong>Entorno en Azure:</strong> VPN y Hēma recibidos; requisitos técnicos mínimos propuestos; la reunión con GoToCloud se hizo el 3 de noviembre y la Universidad presentó su análisis el 6 de noviembre; el código fuente y los repositorios de Hēma están previstos entre el 9 y el 10 de noviembre (R8).</li>
                   <li><strong>Diagnóstico y carta:</strong> 7 observaciones resueltas con la versión 0.9.0 (241 pruebas) para radicar la Factura 1 ($150M).</li>
                 </ol>
               </div>
@@ -6344,13 +6348,13 @@ def generate_e1_e4_html():
                 <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Lo que falta depende de información que solo tiene ATENEA; el informe marca cada dato como pendiente en lugar de suponerlo. Componentes C1 y C3.</p>
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
-                <table class="data-table" style="font-size:clamp(0.7rem,min(1.2vw,2.25vh),1.55rem);">
+                <table class="data-table" style="font-size:clamp(0.66rem,min(1.1vw,2.0vh),1.45rem);">
                   <caption>Tabla 7.1. Información que debe aportar ATENEA para cerrar los componentes C1 a C4 y C7 (1/2)</caption>
                   <thead>
                     <tr>
                       <th style="width:9%;font-size:0.82em;">Comp.</th>
-                      <th style="width:48%;font-size:0.82em;">Información</th>
-                      <th style="width:28%;font-size:0.82em;">¿Dónde se usa?</th>
+                      <th style="width:52%;font-size:0.82em;">Información</th>
+                      <th style="width:24%;font-size:0.82em;">¿Dónde se usa?</th>
                       <th style="font-size:0.82em;">Origen</th>
                     </tr>
                   </thead>
@@ -6358,7 +6362,7 @@ def generate_e1_e4_html():
                     <tr>
                       <td data-label="Comp."><strong>C1</strong></td>
                       <td data-label="Información"><span>Validación de la línea base de madurez y datos de despliegues, fallos y tiempos de recuperación</span></td>
-                      <td data-label="¿Dónde se usa?"><span>Tablas 3.7 y 3.8</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Tablas 3.9 y 3.10</span></td>
                       <td data-label="Origen"><span>R3, A4</span></td>
                     </tr>
                     <tr>
@@ -6375,20 +6379,32 @@ def generate_e1_e4_html():
                     </tr>
                     <tr>
                       <td data-label="Comp."><strong>C1, C3</strong></td>
-                      <td data-label="Información"><span>Selección del caso de uso y acta y diseño del módulo elegido</span></td>
+                      <td data-label="Información"><span>Acceso a la plataforma de interoperabilidad y envío de las historias de usuario existentes, que ATENEA mandará en un archivo comprimido; validación de las 14 historias reconstruidas</span></td>
                       <td data-label="¿Dónde se usa?"><span>Secciones 5.4 a 5.12 y anexo E</span></td>
-                      <td data-label="Origen"><span>R2, R3</span></td>
+                      <td data-label="Origen"><span>R5, R6, R8</span></td>
                     </tr>
                     <tr>
                       <td data-label="Comp."><strong>C3</strong></td>
-                      <td data-label="Información"><span>Proceso actual de la liquidación de apoyos económicos, con usuarios y volumen</span></td>
-                      <td data-label="¿Dónde se usa?"><span>Sección 5.5 (Tabla 5.2)</span></td>
-                      <td data-label="Origen"><span>A6</span></td>
+                      <td data-label="Información"><span>Reglas de Campus aún sin respuesta: la pregunta en revisión del área funcional, el rol que lidera la convocatoria, los criterios del panel de asignación y los topes por tipología en la hoja de ruta</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Sección 5.5</span></td>
+                      <td data-label="Origen"><span>R6, R8</span></td>
                     </tr>
                     <tr>
                       <td data-label="Comp."><strong>C3</strong></td>
-                      <td data-label="Información"><span>Protocolo, autenticación y responsable de cada integración</span></td>
-                      <td data-label="¿Dónde se usa?"><span>Tabla 5.7</span></td>
+                      <td data-label="Información"><span>Protocolo, autenticación (Directorio Activo o directorio interno de la entidad) y responsable de cada integración</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Tabla 5.11</span></td>
+                      <td data-label="Origen"><span>A6, R6</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comp."><strong>C3</strong></td>
+                      <td data-label="Información"><span>Código fuente y acceso a los repositorios de Hēma, previstos entre el 9 y el 10 de noviembre, y definición del repositorio definitivo del proyecto Campus; el piloto usó <code>LIAUNAL/Atenea-Demo</code></span></td>
+                      <td data-label="¿Dónde se usa?"><span>Sección 6.11</span></td>
+                      <td data-label="Origen"><span>PC, R8</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comp."><strong>C3</strong></td>
+                      <td data-label="Información"><span>Entidades y columnas del módulo para el juego de datos sintéticos</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Tabla 5.12</span></td>
                       <td data-label="Origen"><span>A6</span></td>
                     </tr>
                   </tbody>
@@ -6403,49 +6419,43 @@ def generate_e1_e4_html():
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
                 <h2 style="margin-bottom:4px;">Información pendiente para cerrar C1 a C4 y C7 (2/2)</h2>
-                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Lo que falta depende de información que solo tiene ATENEA; el informe marca cada dato como pendiente en lugar de suponerlo. Componentes C3, C2 y C4.</p>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Lo que falta depende de información que solo tiene ATENEA; el informe marca cada dato como pendiente en lugar de suponerlo. Componentes C2, C4 y C7.</p>
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
-                <table class="data-table" style="font-size:clamp(0.7rem,min(1.2vw,2.25vh),1.55rem);">
+                <table class="data-table" style="font-size:clamp(0.66rem,min(1.1vw,2.0vh),1.45rem);">
                   <caption>Tabla 7.1. Información que debe aportar ATENEA para cerrar los componentes C1 a C4 y C7 (2/2)</caption>
                   <thead>
                     <tr>
                       <th style="width:9%;font-size:0.82em;">Comp.</th>
-                      <th style="width:48%;font-size:0.82em;">Información</th>
-                      <th style="width:28%;font-size:0.82em;">¿Dónde se usa?</th>
+                      <th style="width:52%;font-size:0.82em;">Información</th>
+                      <th style="width:24%;font-size:0.82em;">¿Dónde se usa?</th>
                       <th style="font-size:0.82em;">Origen</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td data-label="Comp."><strong>C3</strong></td>
-                      <td data-label="Información"><span>Entidades y columnas del módulo para el juego de datos sintéticos</span></td>
-                      <td data-label="¿Dónde se usa?"><span>Tabla 5.8</span></td>
-                      <td data-label="Origen"><span>A6</span></td>
-                    </tr>
-                    <tr>
                       <td data-label="Comp."><strong>C2</strong></td>
                       <td data-label="Información"><span>Designación del equipo y dedicación de cada rol</span></td>
-                      <td data-label="¿Dónde se usa?"><span>Tabla 4.2</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Tabla 4.3</span></td>
                       <td data-label="Origen"><span>A5</span></td>
                     </tr>
                     <tr>
                       <td data-label="Comp."><strong>C2</strong></td>
                       <td data-label="Información"><span>Validación de los umbrales de calidad y seguridad y adopción de la política de uso de IA</span></td>
-                      <td data-label="¿Dónde se usa?"><span>Tabla 4.4 y anexo D</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Tabla 4.5 y anexo D</span></td>
                       <td data-label="Origen"><span>R4</span></td>
                     </tr>
                     <tr>
                       <td data-label="Comp."><strong>C2, C4</strong></td>
                       <td data-label="Información"><span>Informe de la revisión de seguridad de las aplicaciones</span></td>
-                      <td data-label="¿Dónde se usa?"><span>Tablas 3.9 y 6.4</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Tablas 3.11 y 6.4</span></td>
                       <td data-label="Origen"><span>R2</span></td>
                     </tr>
                     <tr>
                       <td data-label="Comp."><strong>C4</strong></td>
-                      <td data-label="Información"><span>Lista de servidores MCP y herramientas permitidas, y protección de ramas en Azure DevOps</span></td>
-                      <td data-label="¿Dónde se usa?"><span>Tabla 6.4</span></td>
-                      <td data-label="Origen"><span>R4</span></td>
+                      <td data-label="Información"><span>Aprobación de la lista de servidores MCP y herramientas, de la acotación de la terminal y protección de ramas en Azure DevOps</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Tablas 6.6 y 6.5</span></td>
+                      <td data-label="Origen"><span>R4, A10</span></td>
                     </tr>
                     <tr>
                       <td data-label="Comp."><strong>C4</strong></td>
@@ -6459,29 +6469,41 @@ def generate_e1_e4_html():
                       <td data-label="¿Dónde se usa?"><span>Sección 6.10</span></td>
                       <td data-label="Origen"><span>R7</span></td>
                     </tr>
+                    <tr>
+                      <td data-label="Comp."><strong>C7</strong></td>
+                      <td data-label="Información"><span>Estándar de despliegue de la entidad: por servidor o Kubernetes, registro de imágenes, ambientes y variables</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Sección 4.6</span></td>
+                      <td data-label="Origen"><span>A10</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Comp."><strong>C2</strong></td>
+                      <td data-label="Información"><span>Decisión sobre la distribución recomendada: servidor de la entidad, grupos del directorio y depósito de paquetes</span></td>
+                      <td data-label="¿Dónde se usa?"><span>Sección 4.10</span></td>
+                      <td data-label="Origen"><span>A10</span></td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
             </figure>
           </article>
 
-          <!-- E5-4: Compromisos registrados (Tabla 7.2) [cierre-compromisos] -->
+          <!-- E5-4: Compromisos registrados (1/2) (Tabla 7.2) [cierre-compromisos] -->
           <article class="slide is-figure-full" data-deck="e1-e4" data-module="e5" data-item="cierre-compromisos">
             <figure class="slide-figure">
               <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
                 <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
-                <h2 style="margin-bottom:4px;">Compromisos registrados: cinco, todos con ATENEA o su Subgerencia de TIC</h2>
-                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Compromisos de las sesiones que afectan a E1 a E4, con su responsable y su estado al corte. <span class="pill pill--todo">Abierto</span> dos, <span class="pill pill--partial">Parcial en R4</span> uno, <span class="pill pill--ok">Recibido</span> dos (23 de octubre).</p>
+                <h2 style="margin-bottom:4px;">Compromisos registrados en las sesiones: dieciocho al 6 de noviembre (1/2)</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Compromisos de las sesiones que afectan a E1 a E4, con su responsable y su estado al corte. Del 1 al 9: los de las sesiones de octubre, dos actualizados con la sesión del 6 de noviembre (R8).</p>
               </div>
               <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
-                <table class="data-table" style="font-size:clamp(0.78rem,min(1.3vw,2.5vh),1.65rem);">
-                  <caption>Tabla 7.2 — Compromisos de las sesiones que afectan a E1 a E4: responsable, origen y estado al corte</caption>
+                <table class="data-table" style="font-size:clamp(0.62rem,min(1.05vw,1.9vh),1.4rem);">
+                  <caption>Tabla 7.2. Compromisos de las sesiones que afectan a E1 a E4: responsable, origen y estado al corte (1/2)</caption>
                   <thead>
                     <tr>
-                      <th style="width:6%;font-size:0.82em;">N.º</th>
-                      <th style="width:46%;font-size:0.82em;">Compromiso</th>
-                      <th style="width:18%;font-size:0.82em;">Responsable</th>
-                      <th style="width:12%;font-size:0.82em;">Origen</th>
+                      <th style="width:5%;font-size:0.82em;">N.º</th>
+                      <th style="width:43%;font-size:0.82em;">Compromiso</th>
+                      <th style="width:16%;font-size:0.82em;">Responsable</th>
+                      <th style="width:10%;font-size:0.82em;">Origen</th>
                       <th style="font-size:0.82em;">Estado al corte</th>
                     </tr>
                   </thead>
@@ -6512,7 +6534,7 @@ def generate_e1_e4_html():
                       <td data-label="Compromiso"><span>Definir el caso de uso institucional (C3)</span></td>
                       <td data-label="Responsable"><span>ATENEA</span></td>
                       <td data-label="Origen"><span>R3</span></td>
-                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Abierto</span> se definirá la semana del 26-oct, con la transcripción de la reunión del 23</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--ok" style="font-size:0.72em;">Definido</span> en R5 y R6: Campus 2600 en Hēma, limitado a los requerimientos de la primera transición</span></td>
                     </tr>
                     <tr>
                       <td data-label="N.º"><strong>5</strong></td>
@@ -6520,6 +6542,124 @@ def generate_e1_e4_html():
                       <td data-label="Responsable"><span>ATENEA</span></td>
                       <td data-label="Origen"><span>R3</span></td>
                       <td data-label="Estado al corte"><span><span class="pill pill--ok" style="font-size:0.72em;">Recibido</span> 23-oct (A9)</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>6</strong></td>
+                      <td data-label="Compromiso"><span>Revisar internamente el planteamiento de mantener la implementación del caso de uso en los componentes 5 y 6</span></td>
+                      <td data-label="Responsable"><span>ATENEA</span></td>
+                      <td data-label="Origen"><span>R6</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Abierto</span> sin fecha</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>7</strong></td>
+                      <td data-label="Compromiso"><span>Solicitar por correo formal a Ronald el acceso al prototipo y a la plataforma de interoperabilidad</span></td>
+                      <td data-label="Responsable"><span>Jorge (Universidad Nacional)</span></td>
+                      <td data-label="Origen"><span>R6</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Sin fecha</span> en el acta</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>8</strong></td>
+                      <td data-label="Compromiso"><span>Facilitar el prototipo en Angular, el acceso o una sesión sobre la plataforma desplegada y, si es posible, las historias de usuario existentes</span></td>
+                      <td data-label="Responsable"><span>John y Juan Carlos (ATENEA)</span></td>
+                      <td data-label="Origen"><span>R6, R8</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--partial" style="font-size:0.72em;">Parcial</span> prototipo recibido; historias de usuario por enviar en un archivo comprimido</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>9</strong></td>
+                      <td data-label="Compromiso"><span>Elaborar la primera iteración del documento de épica o historias de usuario reconstruidas y validarlo con ATENEA</span></td>
+                      <td data-label="Responsable"><span>Universidad Nacional</span></td>
+                      <td data-label="Origen"><span>R6, R8</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--partial" style="font-size:0.72em;">Parcial</span> primera iteración hecha (sección 5.7); ATENEA respondió el 6-nov la mayoría de las preguntas del levantamiento; validación pendiente</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- E5-5: Compromisos registrados (2/2) (Tabla 7.2) [cierre-compromisos] -->
+          <article class="slide is-figure-full" data-deck="e1-e4" data-module="e5" data-item="cierre-compromisos">
+            <figure class="slide-figure">
+              <div class="fig-head" style="flex:0 0 auto;padding:4px 10px 2px;">
+                <p class="slide-kicker">6 &middot; Decisiones y Cierre (Hito 1)</p>
+                <h2 style="margin-bottom:4px;">Compromisos registrados en las sesiones: dieciocho al 6 de noviembre (2/2)</h2>
+                <p style="font-size:clamp(0.86rem,1.05vw,1rem);line-height:1.4;">Del 10 al 18: la reunión con GoToCloud y el envío de los entregables ya se cumplieron, y la sesión del 6 de noviembre sumó cinco compromisos, entre ellos el código de Hēma y la facturación del primer hito (R8).</p>
+              </div>
+              <div class="data-table-wrapper" style="flex:1 1 auto;min-height:0;height:auto;">
+                <table class="data-table" style="font-size:clamp(0.62rem,min(1.05vw,1.9vh),1.4rem);">
+                  <caption>Tabla 7.2. Compromisos de las sesiones que afectan a E1 a E4: responsable, origen y estado al corte (2/2)</caption>
+                  <thead>
+                    <tr>
+                      <th style="width:5%;font-size:0.82em;">N.º</th>
+                      <th style="width:43%;font-size:0.82em;">Compromiso</th>
+                      <th style="width:16%;font-size:0.82em;">Responsable</th>
+                      <th style="width:10%;font-size:0.82em;">Origen</th>
+                      <th style="font-size:0.82em;">Estado al corte</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="N.º"><strong>10</strong></td>
+                      <td data-label="Compromiso"><span>Asistir a la reunión técnica con GoToCloud sobre la estructura de Azure</span></td>
+                      <td data-label="Responsable"><span>ATENEA y Universidad Nacional</span></td>
+                      <td data-label="Origen"><span>R6, R7, R8</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--ok" style="font-size:0.72em;">Realizada</span> 3-nov; la Universidad presentó su análisis el 6-nov</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>11</strong></td>
+                      <td data-label="Compromiso"><span>Enviar los entregables 1 a 4 ajustados, con el flujo de requerimientos con agentes y el plan de implementación para la reunión con el director de la Agencia</span></td>
+                      <td data-label="Responsable"><span>Universidad Nacional</span></td>
+                      <td data-label="Origen"><span>R7, R8</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--ok" style="font-size:0.72em;">Enviados</span> 3-nov, a primera hora</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>12</strong></td>
+                      <td data-label="Compromiso"><span>Enviar el acceso al ambiente de pruebas con una cuenta genérica de VPN, la documentación de arquitectura empresarial y la presentación de contexto de Hēma</span></td>
+                      <td data-label="Responsable"><span>ATENEA</span></td>
+                      <td data-label="Origen"><span>R7</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--ok" style="font-size:0.72em;">Recibidos</span> VPN, acceso a Hēma QA, arquitectura empresarial (A11) y presentación de contexto con su resumen (A12, A13)</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>13</strong></td>
+                      <td data-label="Compromiso"><span>Presentar una propuesta de agente para investigar plataformas de ciencia, tecnología e innovación como insumo del levantamiento de requerimientos</span></td>
+                      <td data-label="Responsable"><span>Universidad Nacional</span></td>
+                      <td data-label="Origen"><span>R7</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--ok" style="font-size:0.72em;">Construidos</span> agentes de instalación opcional, para la versión siguiente del arnés (sección 6.10)</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>14</strong></td>
+                      <td data-label="Compromiso"><span>Entregar el código fuente de Hēma, bajo la confidencialidad del contrato, y dar acceso a sus repositorios en Azure DevOps con una licencia Basic</span></td>
+                      <td data-label="Responsable"><span>ATENEA</span></td>
+                      <td data-label="Origen"><span>R8</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Previsto</span> entre el 9 y el 10-nov</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>15</strong></td>
+                      <td data-label="Compromiso"><span>Enviar la hoja de roles y permisos validada, las respuestas actualizadas, los lineamientos de las operaciones de Campus, la plantilla de servicios, las historias de usuario y las especificaciones de BankPro</span></td>
+                      <td data-label="Responsable"><span>ATENEA</span></td>
+                      <td data-label="Origen"><span>R8</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Previsto</span> hoja de roles para el 9-nov; lo demás sin fecha</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>16</strong></td>
+                      <td data-label="Compromiso"><span>Enviar por correo los comentarios a la tercera iteración del entregable 1 y designar un interlocutor para Hēma</span></td>
+                      <td data-label="Responsable"><span>ATENEA</span></td>
+                      <td data-label="Origen"><span>R8</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Sin fecha</span> en el acta</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>17</strong></td>
+                      <td data-label="Compromiso"><span>Reunirse los miércoles para la parte técnica y los viernes para el seguimiento</span></td>
+                      <td data-label="Responsable"><span>ATENEA y Universidad Nacional</span></td>
+                      <td data-label="Origen"><span>R8</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--ok" style="font-size:0.72em;">Acordado</span> 6-nov</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="N.º"><strong>18</strong></td>
+                      <td data-label="Compromiso"><span>Tramitar la facturación del primer hito: constancia de recibido a satisfacción, formatos firmados, acta de aceptación e informe de actividades</span></td>
+                      <td data-label="Responsable"><span>ATENEA y Universidad Nacional</span></td>
+                      <td data-label="Origen"><span>R8</span></td>
+                      <td data-label="Estado al corte"><span><span class="pill pill--todo" style="font-size:0.72em;">Previsto</span> radicación antes del 13-nov</span></td>
                     </tr>
                   </tbody>
                 </table>
